@@ -5534,9 +5534,6 @@
         4NfQBKDBr6EJQIOfYkBAE4AGP4Ik/f8xMPA/MuaFdBU2yV0AAAAASUVORK5CYII=
 </value>
   </data>
-  <metadata name="RunParametersTLP.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="ArmUpArrowPnl.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         /9j/4AAQSkZJRgABAQEAYABgAAD/4QC8RXhpZgAATU0AKgAAAAgAAwE7AAIAAAALAAAAModpAAQAAAAB
@@ -5900,6 +5897,9 @@
         Sw5A60UUANAG0UUUUAf/2Q==
 </value>
   </data>
+  <metadata name="RunParametersTLP.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="LinearLeftArrowPnl.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         /9j/4AAQSkZJRgABAQEAYABgAAD/4QC8RXhpZgAATU0AKgAAAAgAAwE7AAIAAAALAAAAModpAAQAAAAB

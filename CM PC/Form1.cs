@@ -20,7 +20,7 @@ namespace SpaceUSB
     {
         //  all the following directories will be under the base directory:
 
-        public string pcCode = "2024-07-16";
+        public string pcCode = "2024-07-17";
 
         public string cmPath = "C:\\cmRUN\\";    // base directory. can be changed by the user
         public string logPath = "logfiles\\";
@@ -484,6 +484,9 @@ namespace SpaceUSB
                 if (!anyErrorGotTrue && anyError)    // will happen for one cycle after anyError was set
                 {
                     ErrorsLog();
+                    //if (commandToRun == GeneralFunctions.INIT_CM)   // if the is a running command of INIT_CM then end its thread
+                    //    goHomeThread.Abort();
+                    //    // maybe i just need to add ( ... && !anyError) to the (!aborted) in the thread it self
                 }
                 anyErrorGotTrue = anyError;
 

@@ -396,7 +396,7 @@ namespace SpaceUSB
             return SendCommand(AddressBank.Trinamic, Instruction.GetGlobalInOut, outputNum, AddressBank.setOutputs, "0");
         }
 
-        public Response GetInput(string InputNum)
+        public Response GetDigitalInput(string InputNum)
         {
             /// <summary>
                         /// This function will send SGP command which set a global param/user to the specified value according to the specified Bank num & Variable num
@@ -406,6 +406,18 @@ namespace SpaceUSB
                         /// <param name="value">   value   => Value </param>
 
             return SendCommand(AddressBank.Trinamic, Instruction.GetGlobalInOut, InputNum, AddressBank.getDigitalInputs, "0");
+        }
+
+        public Response GetAnalogInput(string InputNum)  // TODO : check with ali id need put these param lines 
+        {
+            /////// <summary>
+                        /// This function will send GIO command which gets the specified inputs value
+                        ///////// </summary>
+                        ///////// <param name="numBank"> numBank => Motor </param>
+                        ///////// <param name="numVar">  numVar  => Type  </param>
+                        ///////// <param name="value">   value   => Value </param>
+
+            return SendCommand(AddressBank.Trinamic, Instruction.GetGlobalInOut, InputNum, AddressBank.getAnalogInputs, "0");
         }
 
         //-------------------------------------------------------------------------

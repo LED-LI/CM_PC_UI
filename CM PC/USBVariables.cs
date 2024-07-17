@@ -4,6 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+// last modified by : LED
+// last modified at : 2024-07-17
+
 namespace SpaceUSB
 {
     public static class MotorsNum
@@ -18,14 +21,14 @@ namespace SpaceUSB
     }
     public static class TrinamicInputs
     {
-        public const string In_capHolderHome = "0";
+        public const string In_thumbRestDistance = "0";
         public const string In_pwrDrawer = "1";
         public const string In_NeedleDetected = "2";
-        public const string In_3 = "3";
-        public const string In_slidingDoor = "4";
+        public const string In_slidingDoor = "3";
+        public const string In_liquidPresence = "4";
         public const string In_drawerOverflow = "5";
         public const string In_drawerClose = "6";
-        public const string In_7 = "7";
+        public const string In_capHolderHome = "7";
     }
     public static class TrinamicMuxInputs
     // multiplexed by Out_Multiplexer
@@ -81,6 +84,7 @@ namespace SpaceUSB
         public const string CmdSpecificAddress = "1";
         public const string setOutputs = "2";
         public const string getDigitalInputs = "0";
+        public const string getAnalogInputs = "1";
         public const string actualPosition = "1";
         public const string RightLimitSwStatus = "10";
     }

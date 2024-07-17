@@ -105,7 +105,6 @@
             this.Vial2StatusTB = new System.Windows.Forms.TextBox();
             this.Vial1StatusTB = new System.Windows.Forms.TextBox();
             this.Vial3InPlaceTB = new System.Windows.Forms.TextBox();
-            this.Vial2InPlaceTB = new System.Windows.Forms.TextBox();
             this.Vial1InPlaceTB = new System.Windows.Forms.TextBox();
             this.Vial3WithdrawMlTB = new System.Windows.Forms.TextBox();
             this.Vial2WithdrawMlTB = new System.Windows.Forms.TextBox();
@@ -162,6 +161,7 @@
             this.Vial4FillMlTB = new System.Windows.Forms.TextBox();
             this.vibrationTime56TB = new System.Windows.Forms.TextBox();
             this.syringeInPlaceTB = new System.Windows.Forms.TextBox();
+            this.Vial2InPlaceTB = new System.Windows.Forms.TextBox();
             this.calibrateTP = new System.Windows.Forms.TabPage();
             this.calibrateTLP = new System.Windows.Forms.TableLayoutPanel();
             this.panel44 = new System.Windows.Forms.Panel();
@@ -580,10 +580,10 @@
             this.adminTP.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.adminTP.Controls.Add(this.UserAdminTLP);
             this.adminTP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.adminTP.Location = new System.Drawing.Point(4, 30);
+            this.adminTP.Location = new System.Drawing.Point(4, 26);
             this.adminTP.Name = "adminTP";
             this.adminTP.Padding = new System.Windows.Forms.Padding(3);
-            this.adminTP.Size = new System.Drawing.Size(2378, 1083);
+            this.adminTP.Size = new System.Drawing.Size(2378, 1087);
             this.adminTP.TabIndex = 3;
             this.adminTP.Text = "USER - ADMIN";
             this.adminTP.Enter += new System.EventHandler(this.adminTP_Enter);
@@ -602,7 +602,7 @@
             this.UserAdminTLP.RowCount = 2;
             this.UserAdminTLP.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 38.96595F));
             this.UserAdminTLP.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 61.03405F));
-            this.UserAdminTLP.Size = new System.Drawing.Size(2368, 1073);
+            this.UserAdminTLP.Size = new System.Drawing.Size(2368, 1077);
             this.UserAdminTLP.TabIndex = 78;
             // 
             // tableLayoutPanel9
@@ -697,7 +697,7 @@
             this.label62.AutoSize = true;
             this.label62.Location = new System.Drawing.Point(12, 4);
             this.label62.Name = "label62";
-            this.label62.Size = new System.Drawing.Size(164, 50);
+            this.label62.Size = new System.Drawing.Size(132, 40);
             this.label62.TabIndex = 73;
             this.label62.Text = "PW file empty\r\nenter master PW:";
             // 
@@ -708,7 +708,7 @@
             this.masterPWtb.Location = new System.Drawing.Point(205, 10);
             this.masterPWtb.Name = "masterPWtb";
             this.masterPWtb.PasswordChar = '*';
-            this.masterPWtb.Size = new System.Drawing.Size(199, 30);
+            this.masterPWtb.Size = new System.Drawing.Size(199, 26);
             this.masterPWtb.TabIndex = 72;
             this.masterPWtb.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.masterPWtb_PreviewKeyDown);
             // 
@@ -739,9 +739,9 @@
             // 
             this.label64.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label64.AutoSize = true;
-            this.label64.Location = new System.Drawing.Point(129, 42);
+            this.label64.Location = new System.Drawing.Point(138, 44);
             this.label64.Name = "label64";
-            this.label64.Size = new System.Drawing.Size(91, 25);
+            this.label64.Size = new System.Drawing.Size(72, 20);
             this.label64.TabIndex = 72;
             this.label64.Text = "User PW";
             // 
@@ -763,19 +763,19 @@
             // 
             this.userNameTB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.userNameTB.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.userNameTB.Location = new System.Drawing.Point(472, 3);
+            this.userNameTB.Location = new System.Drawing.Point(472, 5);
             this.userNameTB.Name = "userNameTB";
-            this.userNameTB.Size = new System.Drawing.Size(102, 30);
+            this.userNameTB.Size = new System.Drawing.Size(102, 26);
             this.userNameTB.TabIndex = 65;
             // 
             // userPWtb
             // 
             this.userPWtb.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.userPWtb.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.userPWtb.Location = new System.Drawing.Point(472, 39);
+            this.userPWtb.Location = new System.Drawing.Point(472, 41);
             this.userPWtb.Name = "userPWtb";
             this.userPWtb.PasswordChar = '*';
-            this.userPWtb.Size = new System.Drawing.Size(102, 30);
+            this.userPWtb.Size = new System.Drawing.Size(102, 26);
             this.userPWtb.TabIndex = 66;
             this.userPWtb.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.userPWtb_PreviewKeyDown);
             // 
@@ -783,9 +783,9 @@
             // 
             this.label63.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label63.AutoSize = true;
-            this.label63.Location = new System.Drawing.Point(121, 5);
+            this.label63.Location = new System.Drawing.Point(131, 8);
             this.label63.Name = "label63";
-            this.label63.Size = new System.Drawing.Size(107, 25);
+            this.label63.Size = new System.Drawing.Size(87, 20);
             this.label63.TabIndex = 66;
             this.label63.Text = "User name";
             // 
@@ -804,9 +804,9 @@
             // 
             this.addToLogTB.BackColor = System.Drawing.SystemColors.MenuBar;
             this.addToLogTB.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.addToLogTB.Location = new System.Drawing.Point(106, 0);
+            this.addToLogTB.Location = new System.Drawing.Point(85, 0);
             this.addToLogTB.Name = "addToLogTB";
-            this.addToLogTB.Size = new System.Drawing.Size(801, 30);
+            this.addToLogTB.Size = new System.Drawing.Size(822, 26);
             this.addToLogTB.TabIndex = 74;
             // 
             // label72
@@ -815,7 +815,7 @@
             this.label72.Dock = System.Windows.Forms.DockStyle.Left;
             this.label72.Location = new System.Drawing.Point(0, 0);
             this.label72.Name = "label72";
-            this.label72.Size = new System.Drawing.Size(106, 25);
+            this.label72.Size = new System.Drawing.Size(85, 20);
             this.label72.TabIndex = 78;
             this.label72.Text = "Add to log:";
             // 
@@ -823,9 +823,9 @@
             // 
             this.addRemovePnl.Controls.Add(this.addRemoveUsersTLP);
             this.addRemovePnl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.addRemovePnl.Location = new System.Drawing.Point(4, 421);
+            this.addRemovePnl.Location = new System.Drawing.Point(4, 423);
             this.addRemovePnl.Name = "addRemovePnl";
-            this.addRemovePnl.Size = new System.Drawing.Size(915, 648);
+            this.addRemovePnl.Size = new System.Drawing.Size(915, 650);
             this.addRemovePnl.TabIndex = 69;
             this.addRemovePnl.TabStop = false;
             this.addRemovePnl.Text = "Add / Remove users";
@@ -860,7 +860,7 @@
             this.addRemoveUsersTLP.Controls.Add(this.changeParamsBtn, 3, 5);
             this.addRemoveUsersTLP.Controls.Add(this.label74, 0, 10);
             this.addRemoveUsersTLP.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.addRemoveUsersTLP.Location = new System.Drawing.Point(3, 26);
+            this.addRemoveUsersTLP.Location = new System.Drawing.Point(3, 22);
             this.addRemoveUsersTLP.Name = "addRemoveUsersTLP";
             this.addRemoveUsersTLP.RowCount = 12;
             this.addRemoveUsersTLP.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.807517F));
@@ -876,16 +876,16 @@
             this.addRemoveUsersTLP.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.63333F));
             this.addRemoveUsersTLP.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.73782F));
             this.addRemoveUsersTLP.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.addRemoveUsersTLP.Size = new System.Drawing.Size(909, 619);
+            this.addRemoveUsersTLP.Size = new System.Drawing.Size(909, 625);
             this.addRemoveUsersTLP.TabIndex = 77;
             // 
             // label65
             // 
             this.label65.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label65.AutoSize = true;
-            this.label65.Location = new System.Drawing.Point(3, 54);
+            this.label65.Location = new System.Drawing.Point(3, 57);
             this.label65.Name = "label65";
-            this.label65.Size = new System.Drawing.Size(132, 25);
+            this.label65.Size = new System.Drawing.Size(104, 20);
             this.label65.TabIndex = 77;
             this.label65.Text = "New user PW";
             // 
@@ -894,18 +894,18 @@
             this.newUserPwTB.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.newUserPwTB.BackColor = System.Drawing.SystemColors.MenuBar;
             this.addRemoveUsersTLP.SetColumnSpan(this.newUserPwTB, 2);
-            this.newUserPwTB.Location = new System.Drawing.Point(230, 51);
+            this.newUserPwTB.Location = new System.Drawing.Point(230, 54);
             this.newUserPwTB.Name = "newUserPwTB";
-            this.newUserPwTB.Size = new System.Drawing.Size(146, 30);
+            this.newUserPwTB.Size = new System.Drawing.Size(146, 26);
             this.newUserPwTB.TabIndex = 75;
             // 
             // label66
             // 
             this.label66.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label66.AutoSize = true;
-            this.label66.Location = new System.Drawing.Point(3, 104);
+            this.label66.Location = new System.Drawing.Point(3, 108);
             this.label66.Name = "label66";
-            this.label66.Size = new System.Drawing.Size(96, 25);
+            this.label66.Size = new System.Drawing.Size(78, 20);
             this.label66.TabIndex = 78;
             this.label66.Text = "Is admin?";
             // 
@@ -914,10 +914,10 @@
             this.IsAdminCkb.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.IsAdminCkb.AutoSize = true;
             this.IsAdminCkb.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.IsAdminCkb.Location = new System.Drawing.Point(230, 108);
+            this.IsAdminCkb.Location = new System.Drawing.Point(230, 111);
             this.IsAdminCkb.MaximumSize = new System.Drawing.Size(25, 25);
             this.IsAdminCkb.Name = "IsAdminCkb";
-            this.IsAdminCkb.Size = new System.Drawing.Size(18, 17);
+            this.IsAdminCkb.Size = new System.Drawing.Size(15, 14);
             this.IsAdminCkb.TabIndex = 76;
             this.IsAdminCkb.UseVisualStyleBackColor = false;
             // 
@@ -926,7 +926,7 @@
             this.viewBackupBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.viewBackupBtn.BackColor = System.Drawing.Color.AntiqueWhite;
             this.viewBackupBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.viewBackupBtn.Location = new System.Drawing.Point(748, 541);
+            this.viewBackupBtn.Location = new System.Drawing.Point(748, 548);
             this.viewBackupBtn.Name = "viewBackupBtn";
             this.viewBackupBtn.Size = new System.Drawing.Size(93, 51);
             this.viewBackupBtn.TabIndex = 96;
@@ -939,7 +939,7 @@
             this.viewParamsBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.viewParamsBtn.BackColor = System.Drawing.Color.AntiqueWhite;
             this.viewParamsBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.viewParamsBtn.Location = new System.Drawing.Point(528, 541);
+            this.viewParamsBtn.Location = new System.Drawing.Point(528, 548);
             this.viewParamsBtn.Name = "viewParamsBtn";
             this.viewParamsBtn.Size = new System.Drawing.Size(79, 51);
             this.viewParamsBtn.TabIndex = 97;
@@ -952,7 +952,7 @@
             this.viewPwBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.viewPwBtn.BackColor = System.Drawing.Color.AntiqueWhite;
             this.viewPwBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.viewPwBtn.Location = new System.Drawing.Point(295, 541);
+            this.viewPwBtn.Location = new System.Drawing.Point(295, 548);
             this.viewPwBtn.Name = "viewPwBtn";
             this.viewPwBtn.Size = new System.Drawing.Size(91, 51);
             this.viewPwBtn.TabIndex = 98;
@@ -965,7 +965,7 @@
             this.viewLogBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.viewLogBtn.BackColor = System.Drawing.Color.AntiqueWhite;
             this.viewLogBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.viewLogBtn.Location = new System.Drawing.Point(66, 541);
+            this.viewLogBtn.Location = new System.Drawing.Point(66, 548);
             this.viewLogBtn.Name = "viewLogBtn";
             this.viewLogBtn.Size = new System.Drawing.Size(95, 51);
             this.viewLogBtn.TabIndex = 95;
@@ -978,7 +978,7 @@
             this.newUserBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.newUserBtn.BackColor = System.Drawing.Color.AntiqueWhite;
             this.newUserBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.newUserBtn.Location = new System.Drawing.Point(755, 37);
+            this.newUserBtn.Location = new System.Drawing.Point(755, 38);
             this.newUserBtn.Name = "newUserBtn";
             this.addRemoveUsersTLP.SetRowSpan(this.newUserBtn, 3);
             this.newUserBtn.Size = new System.Drawing.Size(79, 70);
@@ -992,18 +992,18 @@
             this.newUserNameTB.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.newUserNameTB.BackColor = System.Drawing.SystemColors.MenuBar;
             this.addRemoveUsersTLP.SetColumnSpan(this.newUserNameTB, 2);
-            this.newUserNameTB.Location = new System.Drawing.Point(230, 7);
+            this.newUserNameTB.Location = new System.Drawing.Point(230, 10);
             this.newUserNameTB.Name = "newUserNameTB";
-            this.newUserNameTB.Size = new System.Drawing.Size(146, 30);
+            this.newUserNameTB.Size = new System.Drawing.Size(146, 26);
             this.newUserNameTB.TabIndex = 74;
             // 
             // newUserTB
             // 
             this.newUserTB.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.newUserTB.AutoSize = true;
-            this.newUserTB.Location = new System.Drawing.Point(3, 10);
+            this.newUserTB.Location = new System.Drawing.Point(3, 13);
             this.newUserTB.Name = "newUserTB";
-            this.newUserTB.Size = new System.Drawing.Size(148, 25);
+            this.newUserTB.Size = new System.Drawing.Size(119, 20);
             this.newUserTB.TabIndex = 75;
             this.newUserTB.Text = "New user name";
             // 
@@ -1011,9 +1011,9 @@
             // 
             this.label69.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label69.AutoSize = true;
-            this.label69.Location = new System.Drawing.Point(3, 165);
+            this.label69.Location = new System.Drawing.Point(3, 170);
             this.label69.Name = "label69";
-            this.label69.Size = new System.Drawing.Size(112, 25);
+            this.label69.Size = new System.Drawing.Size(90, 20);
             this.label69.TabIndex = 85;
             this.label69.Text = "Erase user:";
             // 
@@ -1022,9 +1022,9 @@
             this.eraseUserTB.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.eraseUserTB.BackColor = System.Drawing.SystemColors.MenuBar;
             this.addRemoveUsersTLP.SetColumnSpan(this.eraseUserTB, 2);
-            this.eraseUserTB.Location = new System.Drawing.Point(230, 163);
+            this.eraseUserTB.Location = new System.Drawing.Point(230, 167);
             this.eraseUserTB.Name = "eraseUserTB";
-            this.eraseUserTB.Size = new System.Drawing.Size(146, 30);
+            this.eraseUserTB.Size = new System.Drawing.Size(146, 26);
             this.eraseUserTB.TabIndex = 86;
             // 
             // eraseUserBtn
@@ -1032,7 +1032,7 @@
             this.eraseUserBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.eraseUserBtn.BackColor = System.Drawing.Color.AntiqueWhite;
             this.eraseUserBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.eraseUserBtn.Location = new System.Drawing.Point(755, 165);
+            this.eraseUserBtn.Location = new System.Drawing.Point(755, 167);
             this.eraseUserBtn.Name = "eraseUserBtn";
             this.eraseUserBtn.Size = new System.Drawing.Size(79, 26);
             this.eraseUserBtn.TabIndex = 87;
@@ -1044,9 +1044,9 @@
             // 
             this.label68.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label68.AutoSize = true;
-            this.label68.Location = new System.Drawing.Point(3, 264);
+            this.label68.Location = new System.Drawing.Point(3, 270);
             this.label68.Name = "label68";
-            this.label68.Size = new System.Drawing.Size(125, 25);
+            this.label68.Size = new System.Drawing.Size(101, 20);
             this.label68.TabIndex = 82;
             this.label68.Text = "Files location";
             // 
@@ -1056,9 +1056,9 @@
             this.FilesPathTB.BackColor = System.Drawing.SystemColors.MenuBar;
             this.addRemoveUsersTLP.SetColumnSpan(this.FilesPathTB, 2);
             this.FilesPathTB.Enabled = false;
-            this.FilesPathTB.Location = new System.Drawing.Point(230, 262);
+            this.FilesPathTB.Location = new System.Drawing.Point(230, 267);
             this.FilesPathTB.Name = "FilesPathTB";
-            this.FilesPathTB.Size = new System.Drawing.Size(146, 30);
+            this.FilesPathTB.Size = new System.Drawing.Size(146, 26);
             this.FilesPathTB.TabIndex = 88;
             // 
             // maxBadPWtb
@@ -1066,9 +1066,9 @@
             this.maxBadPWtb.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.maxBadPWtb.BackColor = System.Drawing.SystemColors.MenuBar;
             this.addRemoveUsersTLP.SetColumnSpan(this.maxBadPWtb, 2);
-            this.maxBadPWtb.Location = new System.Drawing.Point(230, 302);
+            this.maxBadPWtb.Location = new System.Drawing.Point(230, 306);
             this.maxBadPWtb.Name = "maxBadPWtb";
-            this.maxBadPWtb.Size = new System.Drawing.Size(146, 30);
+            this.maxBadPWtb.Size = new System.Drawing.Size(146, 26);
             this.maxBadPWtb.TabIndex = 90;
             this.maxBadPWtb.Text = "4";
             // 
@@ -1076,9 +1076,9 @@
             // 
             this.label67.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label67.AutoSize = true;
-            this.label67.Location = new System.Drawing.Point(3, 303);
+            this.label67.Location = new System.Drawing.Point(3, 309);
             this.label67.Name = "label67";
-            this.label67.Size = new System.Drawing.Size(142, 25);
+            this.label67.Size = new System.Drawing.Size(110, 20);
             this.label67.TabIndex = 89;
             this.label67.Text = "Max bad PWs:";
             // 
@@ -1086,9 +1086,9 @@
             // 
             this.label70.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label70.AutoSize = true;
-            this.label70.Location = new System.Drawing.Point(3, 341);
+            this.label70.Location = new System.Drawing.Point(3, 348);
             this.label70.Name = "label70";
-            this.label70.Size = new System.Drawing.Size(148, 25);
+            this.label70.Size = new System.Drawing.Size(118, 20);
             this.label70.TabIndex = 91;
             this.label70.Text = "Months for PW:";
             // 
@@ -1097,9 +1097,9 @@
             this.monthsForPWtb.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.monthsForPWtb.BackColor = System.Drawing.SystemColors.MenuBar;
             this.addRemoveUsersTLP.SetColumnSpan(this.monthsForPWtb, 2);
-            this.monthsForPWtb.Location = new System.Drawing.Point(230, 339);
+            this.monthsForPWtb.Location = new System.Drawing.Point(230, 345);
             this.monthsForPWtb.Name = "monthsForPWtb";
-            this.monthsForPWtb.Size = new System.Drawing.Size(146, 30);
+            this.monthsForPWtb.Size = new System.Drawing.Size(146, 26);
             this.monthsForPWtb.TabIndex = 92;
             // 
             // changeParamsBtn
@@ -1107,7 +1107,7 @@
             this.changeParamsBtn.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.changeParamsBtn.BackColor = System.Drawing.Color.AntiqueWhite;
             this.changeParamsBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.changeParamsBtn.Location = new System.Drawing.Point(755, 321);
+            this.changeParamsBtn.Location = new System.Drawing.Point(755, 327);
             this.changeParamsBtn.Name = "changeParamsBtn";
             this.addRemoveUsersTLP.SetRowSpan(this.changeParamsBtn, 4);
             this.changeParamsBtn.Size = new System.Drawing.Size(79, 96);
@@ -1121,9 +1121,9 @@
             this.label74.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label74.AutoSize = true;
             this.addRemoveUsersTLP.SetColumnSpan(this.label74, 3);
-            this.label74.Location = new System.Drawing.Point(3, 468);
+            this.label74.Location = new System.Drawing.Point(3, 478);
             this.label74.Name = "label74";
-            this.label74.Size = new System.Drawing.Size(311, 25);
+            this.label74.Size = new System.Drawing.Size(252, 20);
             this.label74.TabIndex = 101;
             this.label74.Text = "View / Print log and parameter files";
             // 
@@ -1131,11 +1131,11 @@
             // 
             this.RunTP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.RunTP.Controls.Add(this.RunSC);
-            this.RunTP.Location = new System.Drawing.Point(4, 30);
+            this.RunTP.Location = new System.Drawing.Point(4, 26);
             this.RunTP.Margin = new System.Windows.Forms.Padding(3, 3, 10, 3);
             this.RunTP.Name = "RunTP";
             this.RunTP.Padding = new System.Windows.Forms.Padding(3);
-            this.RunTP.Size = new System.Drawing.Size(2378, 1083);
+            this.RunTP.Size = new System.Drawing.Size(2378, 1087);
             this.RunTP.TabIndex = 0;
             this.RunTP.Text = "RUN";
             this.RunTP.Enter += new System.EventHandler(this.RunTP_Enter);
@@ -1160,7 +1160,7 @@
             this.RunSC.Panel2.Controls.Add(this.RunParametersTLP);
             this.RunSC.Panel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.RunSC.Panel2MinSize = 70;
-            this.RunSC.Size = new System.Drawing.Size(2372, 1077);
+            this.RunSC.Size = new System.Drawing.Size(2372, 1081);
             this.RunSC.SplitterDistance = 278;
             this.RunSC.TabIndex = 0;
             // 
@@ -1238,10 +1238,10 @@
             this.RunAbortBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.RunAbortBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RunAbortBtn.ForeColor = System.Drawing.Color.White;
-            this.RunAbortBtn.Location = new System.Drawing.Point(113, 16);
+            this.RunAbortBtn.Location = new System.Drawing.Point(126, 20);
             this.RunAbortBtn.Margin = new System.Windows.Forms.Padding(5);
             this.RunAbortBtn.Name = "RunAbortBtn";
-            this.RunAbortBtn.Size = new System.Drawing.Size(139, 56);
+            this.RunAbortBtn.Size = new System.Drawing.Size(112, 47);
             this.RunAbortBtn.TabIndex = 29;
             this.RunAbortBtn.Text = "ABORT";
             this.RunAbortBtn.UseVisualStyleBackColor = false;
@@ -1252,10 +1252,10 @@
             this.label28.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label28.AutoSize = true;
             this.label28.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label28.Location = new System.Drawing.Point(1946, 226);
+            this.label28.Location = new System.Drawing.Point(1957, 229);
             this.label28.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(86, 28);
+            this.label28.Size = new System.Drawing.Size(65, 21);
             this.label28.TabIndex = 32;
             this.label28.Text = "V i a l  6";
             // 
@@ -1288,11 +1288,11 @@
             this.CMrunsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CMrunsBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CMrunsBtn.ForeColor = System.Drawing.Color.Black;
-            this.CMrunsBtn.Location = new System.Drawing.Point(2181, 24);
+            this.CMrunsBtn.Location = new System.Drawing.Point(2120, 8);
             this.CMrunsBtn.Margin = new System.Windows.Forms.Padding(5);
             this.CMrunsBtn.Name = "CMrunsBtn";
             this.CMrunsBtn.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.CMrunsBtn.Size = new System.Drawing.Size(121, 40);
+            this.CMrunsBtn.Size = new System.Drawing.Size(244, 71);
             this.CMrunsBtn.TabIndex = 51;
             this.CMrunsBtn.Text = "view RUNs";
             this.CMrunsBtn.UseVisualStyleBackColor = false;
@@ -1303,10 +1303,10 @@
             this.DateTimeNowTxt.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.DateTimeNowTxt.BackColor = System.Drawing.Color.AntiqueWhite;
             this.DateTimeNowTxt.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.DateTimeNowTxt.Location = new System.Drawing.Point(92, 114);
+            this.DateTimeNowTxt.Location = new System.Drawing.Point(92, 116);
             this.DateTimeNowTxt.Margin = new System.Windows.Forms.Padding(5);
             this.DateTimeNowTxt.Name = "DateTimeNowTxt";
-            this.DateTimeNowTxt.Size = new System.Drawing.Size(181, 34);
+            this.DateTimeNowTxt.Size = new System.Drawing.Size(181, 29);
             this.DateTimeNowTxt.TabIndex = 48;
             this.DateTimeNowTxt.Text = "Date Time";
             this.DateTimeNowTxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -1316,10 +1316,10 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(698, 226);
+            this.label1.Location = new System.Drawing.Point(708, 229);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(83, 28);
+            this.label1.Size = new System.Drawing.Size(62, 21);
             this.label1.TabIndex = 49;
             this.label1.Text = "V i a l  1";
             // 
@@ -1328,10 +1328,10 @@
             this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(946, 226);
+            this.label8.Location = new System.Drawing.Point(957, 229);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(86, 28);
+            this.label8.Size = new System.Drawing.Size(65, 21);
             this.label8.TabIndex = 3;
             this.label8.Text = "V i a l  2";
             // 
@@ -1340,10 +1340,10 @@
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(1196, 226);
+            this.label7.Location = new System.Drawing.Point(1207, 229);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(86, 28);
+            this.label7.Size = new System.Drawing.Size(65, 21);
             this.label7.TabIndex = 2;
             this.label7.Text = "V i a l  3";
             // 
@@ -1352,10 +1352,10 @@
             this.label26.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label26.AutoSize = true;
             this.label26.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.Location = new System.Drawing.Point(1446, 226);
+            this.label26.Location = new System.Drawing.Point(1457, 229);
             this.label26.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(87, 28);
+            this.label26.Size = new System.Drawing.Size(65, 21);
             this.label26.TabIndex = 30;
             this.label26.Text = "V i a l  4";
             // 
@@ -1364,10 +1364,10 @@
             this.label27.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label27.AutoSize = true;
             this.label27.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.Location = new System.Drawing.Point(1696, 226);
+            this.label27.Location = new System.Drawing.Point(1707, 229);
             this.label27.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(86, 28);
+            this.label27.Size = new System.Drawing.Size(65, 21);
             this.label27.TabIndex = 31;
             this.label27.Text = "V i a l  5";
             // 
@@ -1453,10 +1453,10 @@
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(2178, 226);
+            this.label4.Location = new System.Drawing.Point(2193, 229);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(128, 28);
+            this.label4.Size = new System.Drawing.Size(98, 21);
             this.label4.TabIndex = 0;
             this.label4.Text = "S Y R I N G E";
             // 
@@ -1465,10 +1465,10 @@
             this.label12.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(458, 226);
+            this.label12.Location = new System.Drawing.Point(464, 229);
             this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(63, 28);
+            this.label12.Size = new System.Drawing.Size(50, 21);
             this.label12.TabIndex = 88;
             this.label12.Text = "B A G";
             // 
@@ -1477,9 +1477,9 @@
             this.runUserNameTB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.runUserNameTB.BackColor = System.Drawing.Color.AntiqueWhite;
             this.runUserNameTB.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.runUserNameTB.Location = new System.Drawing.Point(90, 223);
+            this.runUserNameTB.Location = new System.Drawing.Point(90, 225);
             this.runUserNameTB.Name = "runUserNameTB";
-            this.runUserNameTB.Size = new System.Drawing.Size(185, 34);
+            this.runUserNameTB.Size = new System.Drawing.Size(185, 29);
             this.runUserNameTB.TabIndex = 53;
             this.runUserNameTB.Text = "user name";
             this.runUserNameTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -1507,7 +1507,6 @@
             this.RunParametersTLP.Controls.Add(this.Vial2StatusTB, 3, 5);
             this.RunParametersTLP.Controls.Add(this.Vial1StatusTB, 2, 5);
             this.RunParametersTLP.Controls.Add(this.Vial3InPlaceTB, 4, 4);
-            this.RunParametersTLP.Controls.Add(this.Vial2InPlaceTB, 3, 4);
             this.RunParametersTLP.Controls.Add(this.Vial1InPlaceTB, 2, 4);
             this.RunParametersTLP.Controls.Add(this.Vial3WithdrawMlTB, 4, 2);
             this.RunParametersTLP.Controls.Add(this.Vial2WithdrawMlTB, 3, 2);
@@ -1563,6 +1562,7 @@
             this.RunParametersTLP.Controls.Add(this.Vial4FillMlTB, 5, 3);
             this.RunParametersTLP.Controls.Add(this.vibrationTime56TB, 6, 8);
             this.RunParametersTLP.Controls.Add(this.syringeInPlaceTB, 8, 4);
+            this.RunParametersTLP.Controls.Add(this.Vial2InPlaceTB, 3, 4);
             this.RunParametersTLP.Dock = System.Windows.Forms.DockStyle.Fill;
             this.RunParametersTLP.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.RunParametersTLP.Location = new System.Drawing.Point(0, 0);
@@ -1581,7 +1581,7 @@
             this.RunParametersTLP.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.264448F));
             this.RunParametersTLP.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.264448F));
             this.RunParametersTLP.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.267366F));
-            this.RunParametersTLP.Size = new System.Drawing.Size(2370, 793);
+            this.RunParametersTLP.Size = new System.Drawing.Size(2370, 797);
             this.RunParametersTLP.TabIndex = 1;
             this.RunParametersTLP.TabStop = true;
             // 
@@ -1589,9 +1589,9 @@
             // 
             this.BagSizeMlTB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.BagSizeMlTB.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.BagSizeMlTB.Location = new System.Drawing.Point(427, 16);
+            this.BagSizeMlTB.Location = new System.Drawing.Point(427, 18);
             this.BagSizeMlTB.Name = "BagSizeMlTB";
-            this.BagSizeMlTB.Size = new System.Drawing.Size(125, 34);
+            this.BagSizeMlTB.Size = new System.Drawing.Size(125, 29);
             this.BagSizeMlTB.TabIndex = 1;
             this.BagSizeMlTB.Text = "0";
             this.BagSizeMlTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -1601,9 +1601,9 @@
             this.mLinVial1TB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.mLinVial1TB.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.mLinVial1TB.Enabled = false;
-            this.mLinVial1TB.Location = new System.Drawing.Point(677, 81);
+            this.mLinVial1TB.Location = new System.Drawing.Point(677, 83);
             this.mLinVial1TB.Name = "mLinVial1TB";
-            this.mLinVial1TB.Size = new System.Drawing.Size(125, 34);
+            this.mLinVial1TB.Size = new System.Drawing.Size(125, 29);
             this.mLinVial1TB.TabIndex = 44;
             this.mLinVial1TB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -1612,9 +1612,9 @@
             this.Vial3ErrorTB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Vial3ErrorTB.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.Vial3ErrorTB.Enabled = false;
-            this.Vial3ErrorTB.Location = new System.Drawing.Point(1177, 412);
+            this.Vial3ErrorTB.Location = new System.Drawing.Point(1177, 415);
             this.Vial3ErrorTB.Name = "Vial3ErrorTB";
-            this.Vial3ErrorTB.Size = new System.Drawing.Size(125, 34);
+            this.Vial3ErrorTB.Size = new System.Drawing.Size(125, 29);
             this.Vial3ErrorTB.TabIndex = 42;
             this.Vial3ErrorTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -1623,9 +1623,9 @@
             this.Vial2ErrorTB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Vial2ErrorTB.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.Vial2ErrorTB.Enabled = false;
-            this.Vial2ErrorTB.Location = new System.Drawing.Point(927, 412);
+            this.Vial2ErrorTB.Location = new System.Drawing.Point(927, 415);
             this.Vial2ErrorTB.Name = "Vial2ErrorTB";
-            this.Vial2ErrorTB.Size = new System.Drawing.Size(125, 34);
+            this.Vial2ErrorTB.Size = new System.Drawing.Size(125, 29);
             this.Vial2ErrorTB.TabIndex = 112;
             this.Vial2ErrorTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -1634,9 +1634,9 @@
             this.Vial1ErrorTB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Vial1ErrorTB.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.Vial1ErrorTB.Enabled = false;
-            this.Vial1ErrorTB.Location = new System.Drawing.Point(677, 412);
+            this.Vial1ErrorTB.Location = new System.Drawing.Point(677, 415);
             this.Vial1ErrorTB.Name = "Vial1ErrorTB";
-            this.Vial1ErrorTB.Size = new System.Drawing.Size(125, 34);
+            this.Vial1ErrorTB.Size = new System.Drawing.Size(125, 29);
             this.Vial1ErrorTB.TabIndex = 113;
             this.Vial1ErrorTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -1645,9 +1645,9 @@
             this.Vial3StatusTB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Vial3StatusTB.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.Vial3StatusTB.Enabled = false;
-            this.Vial3StatusTB.Location = new System.Drawing.Point(1177, 347);
+            this.Vial3StatusTB.Location = new System.Drawing.Point(1177, 350);
             this.Vial3StatusTB.Name = "Vial3StatusTB";
-            this.Vial3StatusTB.Size = new System.Drawing.Size(125, 34);
+            this.Vial3StatusTB.Size = new System.Drawing.Size(125, 29);
             this.Vial3StatusTB.TabIndex = 41;
             this.Vial3StatusTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -1656,9 +1656,9 @@
             this.Vial2StatusTB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Vial2StatusTB.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.Vial2StatusTB.Enabled = false;
-            this.Vial2StatusTB.Location = new System.Drawing.Point(927, 347);
+            this.Vial2StatusTB.Location = new System.Drawing.Point(927, 350);
             this.Vial2StatusTB.Name = "Vial2StatusTB";
-            this.Vial2StatusTB.Size = new System.Drawing.Size(125, 34);
+            this.Vial2StatusTB.Size = new System.Drawing.Size(125, 29);
             this.Vial2StatusTB.TabIndex = 111;
             this.Vial2StatusTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -1667,9 +1667,9 @@
             this.Vial1StatusTB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Vial1StatusTB.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.Vial1StatusTB.Enabled = false;
-            this.Vial1StatusTB.Location = new System.Drawing.Point(677, 347);
+            this.Vial1StatusTB.Location = new System.Drawing.Point(677, 350);
             this.Vial1StatusTB.Name = "Vial1StatusTB";
-            this.Vial1StatusTB.Size = new System.Drawing.Size(125, 34);
+            this.Vial1StatusTB.Size = new System.Drawing.Size(125, 29);
             this.Vial1StatusTB.TabIndex = 99;
             this.Vial1StatusTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -1678,31 +1678,20 @@
             this.Vial3InPlaceTB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Vial3InPlaceTB.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.Vial3InPlaceTB.Enabled = false;
-            this.Vial3InPlaceTB.Location = new System.Drawing.Point(1177, 279);
+            this.Vial3InPlaceTB.Location = new System.Drawing.Point(1177, 282);
             this.Vial3InPlaceTB.Name = "Vial3InPlaceTB";
-            this.Vial3InPlaceTB.Size = new System.Drawing.Size(125, 34);
+            this.Vial3InPlaceTB.Size = new System.Drawing.Size(125, 29);
             this.Vial3InPlaceTB.TabIndex = 40;
             this.Vial3InPlaceTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // Vial2InPlaceTB
-            // 
-            this.Vial2InPlaceTB.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.Vial2InPlaceTB.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.Vial2InPlaceTB.Enabled = false;
-            this.Vial2InPlaceTB.Location = new System.Drawing.Point(927, 279);
-            this.Vial2InPlaceTB.Name = "Vial2InPlaceTB";
-            this.Vial2InPlaceTB.Size = new System.Drawing.Size(125, 34);
-            this.Vial2InPlaceTB.TabIndex = 88;
-            this.Vial2InPlaceTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // Vial1InPlaceTB
             // 
             this.Vial1InPlaceTB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Vial1InPlaceTB.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.Vial1InPlaceTB.Enabled = false;
-            this.Vial1InPlaceTB.Location = new System.Drawing.Point(677, 279);
+            this.Vial1InPlaceTB.Location = new System.Drawing.Point(677, 282);
             this.Vial1InPlaceTB.Name = "Vial1InPlaceTB";
-            this.Vial1InPlaceTB.Size = new System.Drawing.Size(125, 34);
+            this.Vial1InPlaceTB.Size = new System.Drawing.Size(125, 29);
             this.Vial1InPlaceTB.TabIndex = 77;
             this.Vial1InPlaceTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -1710,9 +1699,9 @@
             // 
             this.Vial3WithdrawMlTB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Vial3WithdrawMlTB.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.Vial3WithdrawMlTB.Location = new System.Drawing.Point(1177, 146);
+            this.Vial3WithdrawMlTB.Location = new System.Drawing.Point(1177, 148);
             this.Vial3WithdrawMlTB.Name = "Vial3WithdrawMlTB";
-            this.Vial3WithdrawMlTB.Size = new System.Drawing.Size(125, 34);
+            this.Vial3WithdrawMlTB.Size = new System.Drawing.Size(125, 29);
             this.Vial3WithdrawMlTB.TabIndex = 10;
             this.Vial3WithdrawMlTB.Text = "0";
             this.Vial3WithdrawMlTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -1721,9 +1710,9 @@
             // 
             this.Vial2WithdrawMlTB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Vial2WithdrawMlTB.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.Vial2WithdrawMlTB.Location = new System.Drawing.Point(927, 146);
+            this.Vial2WithdrawMlTB.Location = new System.Drawing.Point(927, 148);
             this.Vial2WithdrawMlTB.Name = "Vial2WithdrawMlTB";
-            this.Vial2WithdrawMlTB.Size = new System.Drawing.Size(125, 34);
+            this.Vial2WithdrawMlTB.Size = new System.Drawing.Size(125, 29);
             this.Vial2WithdrawMlTB.TabIndex = 9;
             this.Vial2WithdrawMlTB.Text = "0";
             this.Vial2WithdrawMlTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -1733,9 +1722,9 @@
             this.mLinVial3TB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.mLinVial3TB.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.mLinVial3TB.Enabled = false;
-            this.mLinVial3TB.Location = new System.Drawing.Point(1177, 81);
+            this.mLinVial3TB.Location = new System.Drawing.Point(1177, 83);
             this.mLinVial3TB.Name = "mLinVial3TB";
-            this.mLinVial3TB.Size = new System.Drawing.Size(125, 34);
+            this.mLinVial3TB.Size = new System.Drawing.Size(125, 29);
             this.mLinVial3TB.TabIndex = 67;
             this.mLinVial3TB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -1744,9 +1733,9 @@
             this.mLinVial2TB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.mLinVial2TB.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.mLinVial2TB.Enabled = false;
-            this.mLinVial2TB.Location = new System.Drawing.Point(927, 81);
+            this.mLinVial2TB.Location = new System.Drawing.Point(927, 83);
             this.mLinVial2TB.Name = "mLinVial2TB";
-            this.mLinVial2TB.Size = new System.Drawing.Size(125, 34);
+            this.mLinVial2TB.Size = new System.Drawing.Size(125, 29);
             this.mLinVial2TB.TabIndex = 56;
             this.mLinVial2TB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -1754,9 +1743,9 @@
             // 
             this.Vial3SizeMlTB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Vial3SizeMlTB.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.Vial3SizeMlTB.Location = new System.Drawing.Point(1177, 16);
+            this.Vial3SizeMlTB.Location = new System.Drawing.Point(1177, 18);
             this.Vial3SizeMlTB.Name = "Vial3SizeMlTB";
-            this.Vial3SizeMlTB.Size = new System.Drawing.Size(125, 34);
+            this.Vial3SizeMlTB.Size = new System.Drawing.Size(125, 29);
             this.Vial3SizeMlTB.TabIndex = 4;
             this.Vial3SizeMlTB.Text = "0";
             this.Vial3SizeMlTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -1765,9 +1754,9 @@
             // 
             this.Vial2SizeMlTB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Vial2SizeMlTB.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.Vial2SizeMlTB.Location = new System.Drawing.Point(927, 16);
+            this.Vial2SizeMlTB.Location = new System.Drawing.Point(927, 18);
             this.Vial2SizeMlTB.Name = "Vial2SizeMlTB";
-            this.Vial2SizeMlTB.Size = new System.Drawing.Size(125, 34);
+            this.Vial2SizeMlTB.Size = new System.Drawing.Size(125, 29);
             this.Vial2SizeMlTB.TabIndex = 3;
             this.Vial2SizeMlTB.Text = "0";
             this.Vial2SizeMlTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -1777,10 +1766,10 @@
             this.num01Lbl.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.num01Lbl.AutoSize = true;
             this.num01Lbl.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.num01Lbl.Location = new System.Drawing.Point(137, 19);
+            this.num01Lbl.Location = new System.Drawing.Point(147, 22);
             this.num01Lbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.num01Lbl.Name = "num01Lbl";
-            this.num01Lbl.Size = new System.Drawing.Size(91, 28);
+            this.num01Lbl.Size = new System.Drawing.Size(71, 21);
             this.num01Lbl.TabIndex = 0;
             this.num01Lbl.Text = "Size [ml]";
             // 
@@ -1789,10 +1778,10 @@
             this.num02Lbl.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.num02Lbl.AutoSize = true;
             this.num02Lbl.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.num02Lbl.Location = new System.Drawing.Point(84, 84);
+            this.num02Lbl.Location = new System.Drawing.Point(105, 87);
             this.num02Lbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.num02Lbl.Name = "num02Lbl";
-            this.num02Lbl.Size = new System.Drawing.Size(197, 28);
+            this.num02Lbl.Size = new System.Drawing.Size(155, 21);
             this.num02Lbl.TabIndex = 2;
             this.num02Lbl.Text = "Current volume [ml]";
             // 
@@ -1801,10 +1790,10 @@
             this.label13.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(133, 350);
+            this.label13.Location = new System.Drawing.Point(145, 354);
             this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(98, 28);
+            this.label13.Size = new System.Drawing.Size(75, 21);
             this.label13.TabIndex = 4;
             this.label13.Text = "S t a t u s";
             // 
@@ -1813,10 +1802,10 @@
             this.label14.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(150, 415);
+            this.label14.Location = new System.Drawing.Point(156, 419);
             this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(64, 28);
+            this.label14.Size = new System.Drawing.Size(53, 21);
             this.label14.TabIndex = 5;
             this.label14.Text = "Errors";
             // 
@@ -1825,10 +1814,10 @@
             this.label17.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(95, 661);
+            this.label17.Location = new System.Drawing.Point(112, 669);
             this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(175, 56);
+            this.label17.Size = new System.Drawing.Size(141, 42);
             this.label17.TabIndex = 8;
             this.label17.Text = "vibration strength\r\n[% pwm] (10-100)";
             // 
@@ -1837,10 +1826,10 @@
             this.label16.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(112, 596);
+            this.label16.Location = new System.Drawing.Point(127, 604);
             this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(141, 56);
+            this.label16.Size = new System.Drawing.Size(110, 42);
             this.label16.TabIndex = 7;
             this.label16.Text = "vibration HZ\r\n[1/sec] (4-100)";
             // 
@@ -1848,9 +1837,9 @@
             // 
             this.Vial4SizeMlTB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Vial4SizeMlTB.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.Vial4SizeMlTB.Location = new System.Drawing.Point(1427, 16);
+            this.Vial4SizeMlTB.Location = new System.Drawing.Point(1427, 18);
             this.Vial4SizeMlTB.Name = "Vial4SizeMlTB";
-            this.Vial4SizeMlTB.Size = new System.Drawing.Size(125, 34);
+            this.Vial4SizeMlTB.Size = new System.Drawing.Size(125, 29);
             this.Vial4SizeMlTB.TabIndex = 5;
             this.Vial4SizeMlTB.Text = "0";
             this.Vial4SizeMlTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -1860,9 +1849,9 @@
             this.mLinVial4TB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.mLinVial4TB.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.mLinVial4TB.Enabled = false;
-            this.mLinVial4TB.Location = new System.Drawing.Point(1427, 81);
+            this.mLinVial4TB.Location = new System.Drawing.Point(1427, 83);
             this.mLinVial4TB.Name = "mLinVial4TB";
-            this.mLinVial4TB.Size = new System.Drawing.Size(125, 34);
+            this.mLinVial4TB.Size = new System.Drawing.Size(125, 29);
             this.mLinVial4TB.TabIndex = 51;
             this.mLinVial4TB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -1871,9 +1860,9 @@
             this.Vial4InPlaceTB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Vial4InPlaceTB.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.Vial4InPlaceTB.Enabled = false;
-            this.Vial4InPlaceTB.Location = new System.Drawing.Point(1427, 279);
+            this.Vial4InPlaceTB.Location = new System.Drawing.Point(1427, 282);
             this.Vial4InPlaceTB.Name = "Vial4InPlaceTB";
-            this.Vial4InPlaceTB.Size = new System.Drawing.Size(125, 34);
+            this.Vial4InPlaceTB.Size = new System.Drawing.Size(125, 29);
             this.Vial4InPlaceTB.TabIndex = 53;
             this.Vial4InPlaceTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -1882,9 +1871,9 @@
             this.Vial4StatusTB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Vial4StatusTB.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.Vial4StatusTB.Enabled = false;
-            this.Vial4StatusTB.Location = new System.Drawing.Point(1427, 347);
+            this.Vial4StatusTB.Location = new System.Drawing.Point(1427, 350);
             this.Vial4StatusTB.Name = "Vial4StatusTB";
-            this.Vial4StatusTB.Size = new System.Drawing.Size(125, 34);
+            this.Vial4StatusTB.Size = new System.Drawing.Size(125, 29);
             this.Vial4StatusTB.TabIndex = 54;
             this.Vial4StatusTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -1893,9 +1882,9 @@
             this.Vial4ErrorTB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Vial4ErrorTB.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.Vial4ErrorTB.Enabled = false;
-            this.Vial4ErrorTB.Location = new System.Drawing.Point(1427, 412);
+            this.Vial4ErrorTB.Location = new System.Drawing.Point(1427, 415);
             this.Vial4ErrorTB.Name = "Vial4ErrorTB";
-            this.Vial4ErrorTB.Size = new System.Drawing.Size(125, 34);
+            this.Vial4ErrorTB.Size = new System.Drawing.Size(125, 29);
             this.Vial4ErrorTB.TabIndex = 55;
             this.Vial4ErrorTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -1904,9 +1893,9 @@
             this.vibrationHzTB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.vibrationHzTB.BackColor = System.Drawing.SystemColors.MenuBar;
             this.RunParametersTLP.SetColumnSpan(this.vibrationHzTB, 3);
-            this.vibrationHzTB.Location = new System.Drawing.Point(1545, 607);
+            this.vibrationHzTB.Location = new System.Drawing.Point(1545, 610);
             this.vibrationHzTB.Name = "vibrationHzTB";
-            this.vibrationHzTB.Size = new System.Drawing.Size(389, 34);
+            this.vibrationHzTB.Size = new System.Drawing.Size(389, 29);
             this.vibrationHzTB.TabIndex = 19;
             this.vibrationHzTB.Text = "25";
             this.vibrationHzTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -1918,9 +1907,9 @@
             this.vibrationStrengthTB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.vibrationStrengthTB.BackColor = System.Drawing.SystemColors.MenuBar;
             this.RunParametersTLP.SetColumnSpan(this.vibrationStrengthTB, 3);
-            this.vibrationStrengthTB.Location = new System.Drawing.Point(1545, 672);
+            this.vibrationStrengthTB.Location = new System.Drawing.Point(1545, 675);
             this.vibrationStrengthTB.Name = "vibrationStrengthTB";
-            this.vibrationStrengthTB.Size = new System.Drawing.Size(389, 34);
+            this.vibrationStrengthTB.Size = new System.Drawing.Size(389, 29);
             this.vibrationStrengthTB.TabIndex = 20;
             this.vibrationStrengthTB.Text = "40";
             this.vibrationStrengthTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -1931,9 +1920,9 @@
             // 
             this.Vial5SizeMlTB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Vial5SizeMlTB.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.Vial5SizeMlTB.Location = new System.Drawing.Point(1677, 16);
+            this.Vial5SizeMlTB.Location = new System.Drawing.Point(1677, 18);
             this.Vial5SizeMlTB.Name = "Vial5SizeMlTB";
-            this.Vial5SizeMlTB.Size = new System.Drawing.Size(125, 34);
+            this.Vial5SizeMlTB.Size = new System.Drawing.Size(125, 29);
             this.Vial5SizeMlTB.TabIndex = 6;
             this.Vial5SizeMlTB.Text = "0";
             this.Vial5SizeMlTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -1943,9 +1932,9 @@
             this.mLinVial5TB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.mLinVial5TB.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.mLinVial5TB.Enabled = false;
-            this.mLinVial5TB.Location = new System.Drawing.Point(1677, 81);
+            this.mLinVial5TB.Location = new System.Drawing.Point(1677, 83);
             this.mLinVial5TB.Name = "mLinVial5TB";
-            this.mLinVial5TB.Size = new System.Drawing.Size(125, 34);
+            this.mLinVial5TB.Size = new System.Drawing.Size(125, 29);
             this.mLinVial5TB.TabIndex = 64;
             this.mLinVial5TB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -1953,9 +1942,9 @@
             // 
             this.Vial5WithdrawMlTB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Vial5WithdrawMlTB.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.Vial5WithdrawMlTB.Location = new System.Drawing.Point(1677, 146);
+            this.Vial5WithdrawMlTB.Location = new System.Drawing.Point(1677, 148);
             this.Vial5WithdrawMlTB.Name = "Vial5WithdrawMlTB";
-            this.Vial5WithdrawMlTB.Size = new System.Drawing.Size(125, 34);
+            this.Vial5WithdrawMlTB.Size = new System.Drawing.Size(125, 29);
             this.Vial5WithdrawMlTB.TabIndex = 12;
             this.Vial5WithdrawMlTB.Text = "0";
             this.Vial5WithdrawMlTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -1965,9 +1954,9 @@
             this.Vial5InPlaceTB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Vial5InPlaceTB.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.Vial5InPlaceTB.Enabled = false;
-            this.Vial5InPlaceTB.Location = new System.Drawing.Point(1677, 279);
+            this.Vial5InPlaceTB.Location = new System.Drawing.Point(1677, 282);
             this.Vial5InPlaceTB.Name = "Vial5InPlaceTB";
-            this.Vial5InPlaceTB.Size = new System.Drawing.Size(125, 34);
+            this.Vial5InPlaceTB.Size = new System.Drawing.Size(125, 29);
             this.Vial5InPlaceTB.TabIndex = 66;
             this.Vial5InPlaceTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -1976,9 +1965,9 @@
             this.Vial5StatusTB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Vial5StatusTB.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.Vial5StatusTB.Enabled = false;
-            this.Vial5StatusTB.Location = new System.Drawing.Point(1677, 347);
+            this.Vial5StatusTB.Location = new System.Drawing.Point(1677, 350);
             this.Vial5StatusTB.Name = "Vial5StatusTB";
-            this.Vial5StatusTB.Size = new System.Drawing.Size(125, 34);
+            this.Vial5StatusTB.Size = new System.Drawing.Size(125, 29);
             this.Vial5StatusTB.TabIndex = 67;
             this.Vial5StatusTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -1987,9 +1976,9 @@
             this.Vial5ErrorTB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Vial5ErrorTB.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.Vial5ErrorTB.Enabled = false;
-            this.Vial5ErrorTB.Location = new System.Drawing.Point(1677, 412);
+            this.Vial5ErrorTB.Location = new System.Drawing.Point(1677, 415);
             this.Vial5ErrorTB.Name = "Vial5ErrorTB";
-            this.Vial5ErrorTB.Size = new System.Drawing.Size(125, 34);
+            this.Vial5ErrorTB.Size = new System.Drawing.Size(125, 29);
             this.Vial5ErrorTB.TabIndex = 68;
             this.Vial5ErrorTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -1997,9 +1986,9 @@
             // 
             this.Vial6SizeMlTB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Vial6SizeMlTB.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.Vial6SizeMlTB.Location = new System.Drawing.Point(1927, 16);
+            this.Vial6SizeMlTB.Location = new System.Drawing.Point(1927, 18);
             this.Vial6SizeMlTB.Name = "Vial6SizeMlTB";
-            this.Vial6SizeMlTB.Size = new System.Drawing.Size(125, 34);
+            this.Vial6SizeMlTB.Size = new System.Drawing.Size(125, 29);
             this.Vial6SizeMlTB.TabIndex = 7;
             this.Vial6SizeMlTB.Text = "0";
             this.Vial6SizeMlTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -2009,9 +1998,9 @@
             this.mLinVial6TB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.mLinVial6TB.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.mLinVial6TB.Enabled = false;
-            this.mLinVial6TB.Location = new System.Drawing.Point(1927, 81);
+            this.mLinVial6TB.Location = new System.Drawing.Point(1927, 83);
             this.mLinVial6TB.Name = "mLinVial6TB";
-            this.mLinVial6TB.Size = new System.Drawing.Size(125, 34);
+            this.mLinVial6TB.Size = new System.Drawing.Size(125, 29);
             this.mLinVial6TB.TabIndex = 77;
             this.mLinVial6TB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -2019,9 +2008,9 @@
             // 
             this.Vial6WithdrawMlTB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Vial6WithdrawMlTB.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.Vial6WithdrawMlTB.Location = new System.Drawing.Point(1927, 146);
+            this.Vial6WithdrawMlTB.Location = new System.Drawing.Point(1927, 148);
             this.Vial6WithdrawMlTB.Name = "Vial6WithdrawMlTB";
-            this.Vial6WithdrawMlTB.Size = new System.Drawing.Size(125, 34);
+            this.Vial6WithdrawMlTB.Size = new System.Drawing.Size(125, 29);
             this.Vial6WithdrawMlTB.TabIndex = 13;
             this.Vial6WithdrawMlTB.Text = "0";
             this.Vial6WithdrawMlTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -2031,9 +2020,9 @@
             this.Vial6InPlaceTB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Vial6InPlaceTB.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.Vial6InPlaceTB.Enabled = false;
-            this.Vial6InPlaceTB.Location = new System.Drawing.Point(1927, 279);
+            this.Vial6InPlaceTB.Location = new System.Drawing.Point(1927, 282);
             this.Vial6InPlaceTB.Name = "Vial6InPlaceTB";
-            this.Vial6InPlaceTB.Size = new System.Drawing.Size(125, 34);
+            this.Vial6InPlaceTB.Size = new System.Drawing.Size(125, 29);
             this.Vial6InPlaceTB.TabIndex = 79;
             this.Vial6InPlaceTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -2042,9 +2031,9 @@
             this.Vial6StatusTB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Vial6StatusTB.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.Vial6StatusTB.Enabled = false;
-            this.Vial6StatusTB.Location = new System.Drawing.Point(1927, 347);
+            this.Vial6StatusTB.Location = new System.Drawing.Point(1927, 350);
             this.Vial6StatusTB.Name = "Vial6StatusTB";
-            this.Vial6StatusTB.Size = new System.Drawing.Size(125, 34);
+            this.Vial6StatusTB.Size = new System.Drawing.Size(125, 29);
             this.Vial6StatusTB.TabIndex = 80;
             this.Vial6StatusTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -2053,9 +2042,9 @@
             this.Vial6ErrorTB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Vial6ErrorTB.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.Vial6ErrorTB.Enabled = false;
-            this.Vial6ErrorTB.Location = new System.Drawing.Point(1927, 412);
+            this.Vial6ErrorTB.Location = new System.Drawing.Point(1927, 415);
             this.Vial6ErrorTB.Name = "Vial6ErrorTB";
-            this.Vial6ErrorTB.Size = new System.Drawing.Size(125, 34);
+            this.Vial6ErrorTB.Size = new System.Drawing.Size(125, 29);
             this.Vial6ErrorTB.TabIndex = 81;
             this.Vial6ErrorTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -2063,9 +2052,9 @@
             // 
             this.Vial1SizeMlTB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Vial1SizeMlTB.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.Vial1SizeMlTB.Location = new System.Drawing.Point(677, 16);
+            this.Vial1SizeMlTB.Location = new System.Drawing.Point(677, 18);
             this.Vial1SizeMlTB.Name = "Vial1SizeMlTB";
-            this.Vial1SizeMlTB.Size = new System.Drawing.Size(125, 34);
+            this.Vial1SizeMlTB.Size = new System.Drawing.Size(125, 29);
             this.Vial1SizeMlTB.TabIndex = 2;
             this.Vial1SizeMlTB.Text = "0";
             this.Vial1SizeMlTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -2075,9 +2064,9 @@
             this.mLinBagTB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.mLinBagTB.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.mLinBagTB.Enabled = false;
-            this.mLinBagTB.Location = new System.Drawing.Point(427, 81);
+            this.mLinBagTB.Location = new System.Drawing.Point(427, 83);
             this.mLinBagTB.Name = "mLinBagTB";
-            this.mLinBagTB.Size = new System.Drawing.Size(125, 34);
+            this.mLinBagTB.Size = new System.Drawing.Size(125, 29);
             this.mLinBagTB.TabIndex = 89;
             this.mLinBagTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -2086,9 +2075,9 @@
             this.BagInPlaceTB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.BagInPlaceTB.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.BagInPlaceTB.Enabled = false;
-            this.BagInPlaceTB.Location = new System.Drawing.Point(427, 279);
+            this.BagInPlaceTB.Location = new System.Drawing.Point(427, 282);
             this.BagInPlaceTB.Name = "BagInPlaceTB";
-            this.BagInPlaceTB.Size = new System.Drawing.Size(125, 34);
+            this.BagInPlaceTB.Size = new System.Drawing.Size(125, 29);
             this.BagInPlaceTB.TabIndex = 91;
             this.BagInPlaceTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -2097,9 +2086,9 @@
             this.BagStatusTB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.BagStatusTB.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.BagStatusTB.Enabled = false;
-            this.BagStatusTB.Location = new System.Drawing.Point(427, 347);
+            this.BagStatusTB.Location = new System.Drawing.Point(427, 350);
             this.BagStatusTB.Name = "BagStatusTB";
-            this.BagStatusTB.Size = new System.Drawing.Size(125, 34);
+            this.BagStatusTB.Size = new System.Drawing.Size(125, 29);
             this.BagStatusTB.TabIndex = 92;
             this.BagStatusTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -2108,9 +2097,9 @@
             this.BagErrorTB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.BagErrorTB.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.BagErrorTB.Enabled = false;
-            this.BagErrorTB.Location = new System.Drawing.Point(427, 412);
+            this.BagErrorTB.Location = new System.Drawing.Point(427, 415);
             this.BagErrorTB.Name = "BagErrorTB";
-            this.BagErrorTB.Size = new System.Drawing.Size(125, 34);
+            this.BagErrorTB.Size = new System.Drawing.Size(125, 29);
             this.BagErrorTB.TabIndex = 93;
             this.BagErrorTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -2118,10 +2107,10 @@
             // 
             this.label20.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(97, 531);
+            this.label20.Location = new System.Drawing.Point(114, 539);
             this.label20.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(170, 56);
+            this.label20.Size = new System.Drawing.Size(136, 42);
             this.label20.TabIndex = 106;
             this.label20.Text = "vibrate time [sec]\r\n  (0 for NO)";
             // 
@@ -2130,10 +2119,10 @@
             this.label15.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(114, 480);
+            this.label15.Location = new System.Drawing.Point(127, 484);
             this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(137, 28);
+            this.label15.Size = new System.Drawing.Size(110, 21);
             this.label15.TabIndex = 6;
             this.label15.Text = "vibrating now";
             // 
@@ -2142,9 +2131,9 @@
             this.isVibrating4TB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.isVibrating4TB.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.isVibrating4TB.Enabled = false;
-            this.isVibrating4TB.Location = new System.Drawing.Point(1427, 477);
+            this.isVibrating4TB.Location = new System.Drawing.Point(1427, 480);
             this.isVibrating4TB.Name = "isVibrating4TB";
-            this.isVibrating4TB.Size = new System.Drawing.Size(125, 34);
+            this.isVibrating4TB.Size = new System.Drawing.Size(125, 29);
             this.isVibrating4TB.TabIndex = 56;
             this.isVibrating4TB.Text = "N O";
             this.isVibrating4TB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -2155,9 +2144,9 @@
             this.isVibrating56TB.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.RunParametersTLP.SetColumnSpan(this.isVibrating56TB, 2);
             this.isVibrating56TB.Enabled = false;
-            this.isVibrating56TB.Location = new System.Drawing.Point(1736, 477);
+            this.isVibrating56TB.Location = new System.Drawing.Point(1736, 480);
             this.isVibrating56TB.Name = "isVibrating56TB";
-            this.isVibrating56TB.Size = new System.Drawing.Size(257, 34);
+            this.isVibrating56TB.Size = new System.Drawing.Size(257, 29);
             this.isVibrating56TB.TabIndex = 69;
             this.isVibrating56TB.Text = "N O";
             this.isVibrating56TB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -2166,9 +2155,9 @@
             // 
             this.vibrationTime4TB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.vibrationTime4TB.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.vibrationTime4TB.Location = new System.Drawing.Point(1427, 542);
+            this.vibrationTime4TB.Location = new System.Drawing.Point(1427, 545);
             this.vibrationTime4TB.Name = "vibrationTime4TB";
-            this.vibrationTime4TB.Size = new System.Drawing.Size(125, 34);
+            this.vibrationTime4TB.Size = new System.Drawing.Size(125, 29);
             this.vibrationTime4TB.TabIndex = 17;
             this.vibrationTime4TB.Text = "0";
             this.vibrationTime4TB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -2179,9 +2168,9 @@
             // 
             this.Vial1WithdrawMlTB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Vial1WithdrawMlTB.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.Vial1WithdrawMlTB.Location = new System.Drawing.Point(677, 146);
+            this.Vial1WithdrawMlTB.Location = new System.Drawing.Point(677, 148);
             this.Vial1WithdrawMlTB.Name = "Vial1WithdrawMlTB";
-            this.Vial1WithdrawMlTB.Size = new System.Drawing.Size(125, 34);
+            this.Vial1WithdrawMlTB.Size = new System.Drawing.Size(125, 29);
             this.Vial1WithdrawMlTB.TabIndex = 8;
             this.Vial1WithdrawMlTB.Text = "0";
             this.Vial1WithdrawMlTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -2191,9 +2180,9 @@
             this.mLbagToFillTB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.mLbagToFillTB.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.mLbagToFillTB.Enabled = false;
-            this.mLbagToFillTB.Location = new System.Drawing.Point(427, 146);
+            this.mLbagToFillTB.Location = new System.Drawing.Point(427, 148);
             this.mLbagToFillTB.Name = "mLbagToFillTB";
-            this.mLbagToFillTB.Size = new System.Drawing.Size(125, 34);
+            this.mLbagToFillTB.Size = new System.Drawing.Size(125, 29);
             this.mLbagToFillTB.TabIndex = 107;
             this.mLbagToFillTB.Text = "0";
             this.mLbagToFillTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -2204,7 +2193,7 @@
             this.panel24.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel24.Location = new System.Drawing.Point(4, 264);
             this.panel24.Name = "panel24";
-            this.panel24.Size = new System.Drawing.Size(357, 64);
+            this.panel24.Size = new System.Drawing.Size(357, 65);
             this.panel24.TabIndex = 108;
             // 
             // label18
@@ -2215,7 +2204,7 @@
             this.label18.Location = new System.Drawing.Point(95, 8);
             this.label18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(175, 28);
+            this.label18.Size = new System.Drawing.Size(139, 21);
             this.label18.TabIndex = 4;
             this.label18.Text = "Bag / Vial in place";
             // 
@@ -2228,7 +2217,7 @@
             this.TestVibrate56Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.TestVibrate56Btn.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TestVibrate56Btn.ForeColor = System.Drawing.Color.Black;
-            this.TestVibrate56Btn.Location = new System.Drawing.Point(1736, 741);
+            this.TestVibrate56Btn.Location = new System.Drawing.Point(1736, 743);
             this.TestVibrate56Btn.Name = "TestVibrate56Btn";
             this.TestVibrate56Btn.Size = new System.Drawing.Size(257, 32);
             this.TestVibrate56Btn.TabIndex = 80;
@@ -2244,7 +2233,7 @@
             this.TestVibrate4Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.TestVibrate4Btn.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TestVibrate4Btn.ForeColor = System.Drawing.Color.Black;
-            this.TestVibrate4Btn.Location = new System.Drawing.Point(1427, 741);
+            this.TestVibrate4Btn.Location = new System.Drawing.Point(1427, 743);
             this.TestVibrate4Btn.Name = "TestVibrate4Btn";
             this.TestVibrate4Btn.Size = new System.Drawing.Size(125, 32);
             this.TestVibrate4Btn.TabIndex = 80;
@@ -2256,10 +2245,10 @@
             // 
             this.num03Lbl.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.num03Lbl.AutoSize = true;
-            this.num03Lbl.Location = new System.Drawing.Point(105, 214);
+            this.num03Lbl.Location = new System.Drawing.Point(122, 217);
             this.num03Lbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.num03Lbl.Name = "num03Lbl";
-            this.num03Lbl.Size = new System.Drawing.Size(154, 28);
+            this.num03Lbl.Size = new System.Drawing.Size(120, 21);
             this.num03Lbl.TabIndex = 2;
             this.num03Lbl.Text = "Fill volume [ml]";
             // 
@@ -2267,10 +2256,10 @@
             // 
             this.label19.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(74, 149);
+            this.label19.Location = new System.Drawing.Point(97, 152);
             this.label19.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(216, 28);
+            this.label19.Size = new System.Drawing.Size(170, 21);
             this.label19.TabIndex = 109;
             this.label19.Text = "Withdraw volume [ml]";
             // 
@@ -2278,9 +2267,9 @@
             // 
             this.Vial5FillMlTB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Vial5FillMlTB.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.Vial5FillMlTB.Location = new System.Drawing.Point(1677, 211);
+            this.Vial5FillMlTB.Location = new System.Drawing.Point(1677, 213);
             this.Vial5FillMlTB.Name = "Vial5FillMlTB";
-            this.Vial5FillMlTB.Size = new System.Drawing.Size(125, 34);
+            this.Vial5FillMlTB.Size = new System.Drawing.Size(125, 29);
             this.Vial5FillMlTB.TabIndex = 15;
             this.Vial5FillMlTB.Text = "0";
             this.Vial5FillMlTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -2289,9 +2278,9 @@
             // 
             this.Vial6FillMlTB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Vial6FillMlTB.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.Vial6FillMlTB.Location = new System.Drawing.Point(1927, 211);
+            this.Vial6FillMlTB.Location = new System.Drawing.Point(1927, 213);
             this.Vial6FillMlTB.Name = "Vial6FillMlTB";
-            this.Vial6FillMlTB.Size = new System.Drawing.Size(125, 34);
+            this.Vial6FillMlTB.Size = new System.Drawing.Size(125, 29);
             this.Vial6FillMlTB.TabIndex = 16;
             this.Vial6FillMlTB.Text = "0";
             this.Vial6FillMlTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -2300,9 +2289,9 @@
             // 
             this.Vial4WithdrawMlTB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Vial4WithdrawMlTB.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.Vial4WithdrawMlTB.Location = new System.Drawing.Point(1427, 146);
+            this.Vial4WithdrawMlTB.Location = new System.Drawing.Point(1427, 148);
             this.Vial4WithdrawMlTB.Name = "Vial4WithdrawMlTB";
-            this.Vial4WithdrawMlTB.Size = new System.Drawing.Size(125, 34);
+            this.Vial4WithdrawMlTB.Size = new System.Drawing.Size(125, 29);
             this.Vial4WithdrawMlTB.TabIndex = 11;
             this.Vial4WithdrawMlTB.Text = "0";
             this.Vial4WithdrawMlTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -2311,9 +2300,9 @@
             // 
             this.Vial4FillMlTB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Vial4FillMlTB.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.Vial4FillMlTB.Location = new System.Drawing.Point(1427, 211);
+            this.Vial4FillMlTB.Location = new System.Drawing.Point(1427, 213);
             this.Vial4FillMlTB.Name = "Vial4FillMlTB";
-            this.Vial4FillMlTB.Size = new System.Drawing.Size(125, 34);
+            this.Vial4FillMlTB.Size = new System.Drawing.Size(125, 29);
             this.Vial4FillMlTB.TabIndex = 14;
             this.Vial4FillMlTB.Text = "0";
             this.Vial4FillMlTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -2323,9 +2312,9 @@
             this.vibrationTime56TB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.vibrationTime56TB.BackColor = System.Drawing.SystemColors.MenuBar;
             this.RunParametersTLP.SetColumnSpan(this.vibrationTime56TB, 2);
-            this.vibrationTime56TB.Location = new System.Drawing.Point(1736, 542);
+            this.vibrationTime56TB.Location = new System.Drawing.Point(1736, 545);
             this.vibrationTime56TB.Name = "vibrationTime56TB";
-            this.vibrationTime56TB.Size = new System.Drawing.Size(257, 34);
+            this.vibrationTime56TB.Size = new System.Drawing.Size(257, 29);
             this.vibrationTime56TB.TabIndex = 18;
             this.vibrationTime56TB.Text = "0";
             this.vibrationTime56TB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -2337,21 +2326,32 @@
             this.syringeInPlaceTB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.syringeInPlaceTB.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.syringeInPlaceTB.Enabled = false;
-            this.syringeInPlaceTB.Location = new System.Drawing.Point(2176, 279);
+            this.syringeInPlaceTB.Location = new System.Drawing.Point(2176, 282);
             this.syringeInPlaceTB.Name = "syringeInPlaceTB";
-            this.syringeInPlaceTB.Size = new System.Drawing.Size(132, 34);
+            this.syringeInPlaceTB.Size = new System.Drawing.Size(132, 29);
             this.syringeInPlaceTB.TabIndex = 114;
             this.syringeInPlaceTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // Vial2InPlaceTB
+            // 
+            this.Vial2InPlaceTB.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Vial2InPlaceTB.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.Vial2InPlaceTB.Enabled = false;
+            this.Vial2InPlaceTB.Location = new System.Drawing.Point(927, 282);
+            this.Vial2InPlaceTB.Name = "Vial2InPlaceTB";
+            this.Vial2InPlaceTB.Size = new System.Drawing.Size(125, 29);
+            this.Vial2InPlaceTB.TabIndex = 88;
+            this.Vial2InPlaceTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // calibrateTP
             // 
             this.calibrateTP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.calibrateTP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.calibrateTP.Controls.Add(this.calibrateTLP);
-            this.calibrateTP.Location = new System.Drawing.Point(4, 30);
+            this.calibrateTP.Location = new System.Drawing.Point(4, 26);
             this.calibrateTP.Name = "calibrateTP";
             this.calibrateTP.Padding = new System.Windows.Forms.Padding(3);
-            this.calibrateTP.Size = new System.Drawing.Size(2378, 1083);
+            this.calibrateTP.Size = new System.Drawing.Size(2378, 1087);
             this.calibrateTP.TabIndex = 4;
             this.calibrateTP.Text = "CALIBRATE";
             this.calibrateTP.Enter += new System.EventHandler(this.calibrateTP_Enter);
@@ -2437,16 +2437,16 @@
             this.calibrateTLP.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.4297F));
             this.calibrateTLP.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.4297F));
             this.calibrateTLP.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 0.9803921F));
-            this.calibrateTLP.Size = new System.Drawing.Size(2370, 1075);
+            this.calibrateTLP.Size = new System.Drawing.Size(2370, 1079);
             this.calibrateTLP.TabIndex = 3;
             // 
             // panel44
             // 
             this.panel44.Controls.Add(this.label24);
             this.panel44.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel44.Location = new System.Drawing.Point(1684, 948);
+            this.panel44.Location = new System.Drawing.Point(1684, 955);
             this.panel44.Name = "panel44";
-            this.panel44.Size = new System.Drawing.Size(324, 104);
+            this.panel44.Size = new System.Drawing.Size(324, 105);
             this.panel44.TabIndex = 68;
             // 
             // label24
@@ -2456,7 +2456,7 @@
             this.label24.Location = new System.Drawing.Point(3, 3);
             this.label24.Margin = new System.Windows.Forms.Padding(3, 3, 3, 0);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(0, 28);
+            this.label24.Size = new System.Drawing.Size(0, 21);
             this.label24.TabIndex = 67;
             // 
             // panel5
@@ -2465,9 +2465,9 @@
             this.panel5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel5.BackgroundImage")));
             this.panel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel5.Location = new System.Drawing.Point(2015, 226);
+            this.panel5.Location = new System.Drawing.Point(2015, 228);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(324, 215);
+            this.panel5.Size = new System.Drawing.Size(324, 216);
             this.panel5.TabIndex = 51;
             // 
             // panel6
@@ -2476,10 +2476,10 @@
             this.panel6.Controls.Add(this.M_ArmLocationTb);
             this.panel6.Controls.Add(this.label11);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel6.Location = new System.Drawing.Point(688, 123);
+            this.panel6.Location = new System.Drawing.Point(688, 124);
             this.panel6.Margin = new System.Windows.Forms.Padding(0);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(330, 99);
+            this.panel6.Size = new System.Drawing.Size(330, 100);
             this.panel6.TabIndex = 35;
             // 
             // M_ArmLocationTb
@@ -2487,9 +2487,9 @@
             this.M_ArmLocationTb.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.M_ArmLocationTb.BackColor = System.Drawing.SystemColors.MenuBar;
             this.M_ArmLocationTb.Enabled = false;
-            this.M_ArmLocationTb.Location = new System.Drawing.Point(218, 61);
+            this.M_ArmLocationTb.Location = new System.Drawing.Point(218, 62);
             this.M_ArmLocationTb.Name = "M_ArmLocationTb";
-            this.M_ArmLocationTb.Size = new System.Drawing.Size(80, 29);
+            this.M_ArmLocationTb.Size = new System.Drawing.Size(80, 25);
             this.M_ArmLocationTb.TabIndex = 2;
             // 
             // label11
@@ -2499,7 +2499,7 @@
             this.label11.Location = new System.Drawing.Point(2, 2);
             this.label11.Margin = new System.Windows.Forms.Padding(2);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(96, 25);
+            this.label11.Size = new System.Drawing.Size(77, 20);
             this.label11.TabIndex = 0;
             this.label11.Text = "Arm [deg]";
             // 
@@ -2509,10 +2509,10 @@
             this.panel2.Controls.Add(this.M_LinearLocationTb);
             this.panel2.Controls.Add(this.label10);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(357, 123);
+            this.panel2.Location = new System.Drawing.Point(357, 124);
             this.panel2.Margin = new System.Windows.Forms.Padding(0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(330, 99);
+            this.panel2.Size = new System.Drawing.Size(330, 100);
             this.panel2.TabIndex = 34;
             // 
             // M_LinearLocationTb
@@ -2520,9 +2520,9 @@
             this.M_LinearLocationTb.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.M_LinearLocationTb.BackColor = System.Drawing.SystemColors.MenuBar;
             this.M_LinearLocationTb.Enabled = false;
-            this.M_LinearLocationTb.Location = new System.Drawing.Point(222, 61);
+            this.M_LinearLocationTb.Location = new System.Drawing.Point(222, 62);
             this.M_LinearLocationTb.Name = "M_LinearLocationTb";
-            this.M_LinearLocationTb.Size = new System.Drawing.Size(80, 29);
+            this.M_LinearLocationTb.Size = new System.Drawing.Size(80, 25);
             this.M_LinearLocationTb.TabIndex = 2;
             // 
             // label10
@@ -2532,7 +2532,7 @@
             this.label10.Location = new System.Drawing.Point(2, 2);
             this.label10.Margin = new System.Windows.Forms.Padding(2);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(113, 25);
+            this.label10.Size = new System.Drawing.Size(89, 20);
             this.label10.TabIndex = 0;
             this.label10.Text = "Linear [mm]";
             // 
@@ -2542,10 +2542,10 @@
             this.panel1.Controls.Add(this.M_VerticalLocationTb);
             this.panel1.Controls.Add(this.label9);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(26, 123);
+            this.panel1.Location = new System.Drawing.Point(26, 124);
             this.panel1.Margin = new System.Windows.Forms.Padding(0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(330, 99);
+            this.panel1.Size = new System.Drawing.Size(330, 100);
             this.panel1.TabIndex = 52;
             // 
             // M_VerticalLocationTb
@@ -2553,9 +2553,9 @@
             this.M_VerticalLocationTb.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.M_VerticalLocationTb.BackColor = System.Drawing.SystemColors.MenuBar;
             this.M_VerticalLocationTb.Enabled = false;
-            this.M_VerticalLocationTb.Location = new System.Drawing.Point(218, 61);
+            this.M_VerticalLocationTb.Location = new System.Drawing.Point(218, 62);
             this.M_VerticalLocationTb.Name = "M_VerticalLocationTb";
-            this.M_VerticalLocationTb.Size = new System.Drawing.Size(80, 29);
+            this.M_VerticalLocationTb.Size = new System.Drawing.Size(80, 25);
             this.M_VerticalLocationTb.TabIndex = 1;
             // 
             // label9
@@ -2565,7 +2565,7 @@
             this.label9.Location = new System.Drawing.Point(2, 2);
             this.label9.Margin = new System.Windows.Forms.Padding(2);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(124, 25);
+            this.label9.Size = new System.Drawing.Size(98, 20);
             this.label9.TabIndex = 0;
             this.label9.Text = "Vertical [mm]";
             // 
@@ -2575,9 +2575,9 @@
             this.panel22.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel22.BackgroundImage")));
             this.panel22.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.panel22.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel22.Location = new System.Drawing.Point(1684, 226);
+            this.panel22.Location = new System.Drawing.Point(1684, 228);
             this.panel22.Name = "panel22";
-            this.panel22.Size = new System.Drawing.Size(324, 215);
+            this.panel22.Size = new System.Drawing.Size(324, 216);
             this.panel22.TabIndex = 50;
             // 
             // panel21
@@ -2586,9 +2586,9 @@
             this.panel21.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel21.BackgroundImage")));
             this.panel21.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.panel21.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel21.Location = new System.Drawing.Point(1353, 226);
+            this.panel21.Location = new System.Drawing.Point(1353, 228);
             this.panel21.Name = "panel21";
-            this.panel21.Size = new System.Drawing.Size(324, 215);
+            this.panel21.Size = new System.Drawing.Size(324, 216);
             this.panel21.TabIndex = 50;
             // 
             // panel20
@@ -2597,9 +2597,9 @@
             this.panel20.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel20.BackgroundImage")));
             this.panel20.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.panel20.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel20.Location = new System.Drawing.Point(1022, 226);
+            this.panel20.Location = new System.Drawing.Point(1022, 228);
             this.panel20.Name = "panel20";
-            this.panel20.Size = new System.Drawing.Size(324, 215);
+            this.panel20.Size = new System.Drawing.Size(324, 216);
             this.panel20.TabIndex = 50;
             // 
             // panel19
@@ -2608,9 +2608,9 @@
             this.panel19.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel19.BackgroundImage")));
             this.panel19.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.panel19.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel19.Location = new System.Drawing.Point(691, 226);
+            this.panel19.Location = new System.Drawing.Point(691, 228);
             this.panel19.Name = "panel19";
-            this.panel19.Size = new System.Drawing.Size(324, 215);
+            this.panel19.Size = new System.Drawing.Size(324, 216);
             this.panel19.TabIndex = 51;
             // 
             // panel13
@@ -2619,9 +2619,9 @@
             this.panel13.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel13.BackgroundImage")));
             this.panel13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.panel13.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel13.Location = new System.Drawing.Point(360, 226);
+            this.panel13.Location = new System.Drawing.Point(360, 228);
             this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(324, 215);
+            this.panel13.Size = new System.Drawing.Size(324, 216);
             this.panel13.TabIndex = 49;
             // 
             // panel15
@@ -2630,9 +2630,9 @@
             this.panel15.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel15.BackgroundImage")));
             this.panel15.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.panel15.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel15.Location = new System.Drawing.Point(29, 226);
+            this.panel15.Location = new System.Drawing.Point(29, 228);
             this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(324, 215);
+            this.panel15.Size = new System.Drawing.Size(324, 216);
             this.panel15.TabIndex = 50;
             // 
             // panel10
@@ -2644,9 +2644,9 @@
             this.panel10.Controls.Add(this.M_PistonLocationTb);
             this.panel10.Controls.Add(this.label80);
             this.panel10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel10.Location = new System.Drawing.Point(1022, 126);
+            this.panel10.Location = new System.Drawing.Point(1022, 127);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(324, 93);
+            this.panel10.Size = new System.Drawing.Size(324, 94);
             this.panel10.TabIndex = 44;
             // 
             // label85
@@ -2656,7 +2656,7 @@
             this.label85.Location = new System.Drawing.Point(287, 58);
             this.label85.Margin = new System.Windows.Forms.Padding(2);
             this.label85.Name = "label85";
-            this.label85.Size = new System.Drawing.Size(28, 25);
+            this.label85.Size = new System.Drawing.Size(21, 20);
             this.label85.TabIndex = 38;
             this.label85.Text = "%";
             // 
@@ -2665,9 +2665,9 @@
             this.LD_valTb.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.LD_valTb.BackColor = System.Drawing.SystemColors.MenuBar;
             this.LD_valTb.Enabled = false;
-            this.LD_valTb.Location = new System.Drawing.Point(204, 58);
+            this.LD_valTb.Location = new System.Drawing.Point(204, 59);
             this.LD_valTb.Name = "LD_valTb";
-            this.LD_valTb.Size = new System.Drawing.Size(80, 29);
+            this.LD_valTb.Size = new System.Drawing.Size(80, 25);
             this.LD_valTb.TabIndex = 37;
             // 
             // label84
@@ -2677,7 +2677,7 @@
             this.label84.Location = new System.Drawing.Point(189, 3);
             this.label84.Margin = new System.Windows.Forms.Padding(2);
             this.label84.Name = "label84";
-            this.label84.Size = new System.Drawing.Size(133, 25);
+            this.label84.Size = new System.Drawing.Size(104, 20);
             this.label84.TabIndex = 36;
             this.label84.Text = "Laser Distance";
             // 
@@ -2686,9 +2686,9 @@
             this.M_PistonLocationTb.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.M_PistonLocationTb.BackColor = System.Drawing.SystemColors.MenuBar;
             this.M_PistonLocationTb.Enabled = false;
-            this.M_PistonLocationTb.Location = new System.Drawing.Point(11, 58);
+            this.M_PistonLocationTb.Location = new System.Drawing.Point(11, 59);
             this.M_PistonLocationTb.Name = "M_PistonLocationTb";
-            this.M_PistonLocationTb.Size = new System.Drawing.Size(80, 29);
+            this.M_PistonLocationTb.Size = new System.Drawing.Size(80, 25);
             this.M_PistonLocationTb.TabIndex = 35;
             // 
             // label80
@@ -2698,7 +2698,7 @@
             this.label80.Location = new System.Drawing.Point(2, 2);
             this.label80.Margin = new System.Windows.Forms.Padding(2);
             this.label80.Name = "label80";
-            this.label80.Size = new System.Drawing.Size(113, 25);
+            this.label80.Size = new System.Drawing.Size(89, 20);
             this.label80.TabIndex = 34;
             this.label80.Text = "Piston [mm]";
             // 
@@ -2709,9 +2709,9 @@
             this.panel12.Controls.Add(this.textBox4);
             this.panel12.Controls.Add(this.label81);
             this.panel12.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel12.Location = new System.Drawing.Point(1353, 126);
+            this.panel12.Location = new System.Drawing.Point(1353, 127);
             this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(324, 93);
+            this.panel12.Size = new System.Drawing.Size(324, 94);
             this.panel12.TabIndex = 42;
             // 
             // M_headRotateLocationTb
@@ -2719,9 +2719,9 @@
             this.M_headRotateLocationTb.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.M_headRotateLocationTb.BackColor = System.Drawing.SystemColors.MenuBar;
             this.M_headRotateLocationTb.Enabled = false;
-            this.M_headRotateLocationTb.Location = new System.Drawing.Point(214, 58);
+            this.M_headRotateLocationTb.Location = new System.Drawing.Point(214, 59);
             this.M_headRotateLocationTb.Name = "M_headRotateLocationTb";
-            this.M_headRotateLocationTb.Size = new System.Drawing.Size(80, 29);
+            this.M_headRotateLocationTb.Size = new System.Drawing.Size(80, 25);
             this.M_headRotateLocationTb.TabIndex = 36;
             // 
             // textBox4
@@ -2729,9 +2729,9 @@
             this.textBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox4.BackColor = System.Drawing.SystemColors.MenuBar;
             this.textBox4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.textBox4.Location = new System.Drawing.Point(-772, 464);
+            this.textBox4.Location = new System.Drawing.Point(-772, 465);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(118, 34);
+            this.textBox4.Size = new System.Drawing.Size(118, 29);
             this.textBox4.TabIndex = 66;
             this.textBox4.Text = "0";
             this.textBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -2745,7 +2745,7 @@
             this.label81.Location = new System.Drawing.Point(2, 2);
             this.label81.Margin = new System.Windows.Forms.Padding(2);
             this.label81.Name = "label81";
-            this.label81.Size = new System.Drawing.Size(163, 25);
+            this.label81.Size = new System.Drawing.Size(133, 20);
             this.label81.TabIndex = 35;
             this.label81.Text = "Head Rotate [deg]";
             // 
@@ -2755,9 +2755,9 @@
             this.panel18.Controls.Add(this.label83);
             this.panel18.Controls.Add(this.M_CapHolderLocationTB);
             this.panel18.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel18.Location = new System.Drawing.Point(2015, 126);
+            this.panel18.Location = new System.Drawing.Point(2015, 127);
             this.panel18.Name = "panel18";
-            this.panel18.Size = new System.Drawing.Size(324, 93);
+            this.panel18.Size = new System.Drawing.Size(324, 94);
             this.panel18.TabIndex = 6;
             // 
             // label83
@@ -2767,7 +2767,7 @@
             this.label83.Location = new System.Drawing.Point(3, 3);
             this.label83.Margin = new System.Windows.Forms.Padding(3, 3, 0, 0);
             this.label83.Name = "label83";
-            this.label83.Size = new System.Drawing.Size(146, 25);
+            this.label83.Size = new System.Drawing.Size(117, 20);
             this.label83.TabIndex = 3;
             this.label83.Text = "CapHolder[mm]";
             // 
@@ -2776,9 +2776,9 @@
             this.M_CapHolderLocationTB.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.M_CapHolderLocationTB.BackColor = System.Drawing.SystemColors.MenuBar;
             this.M_CapHolderLocationTB.Enabled = false;
-            this.M_CapHolderLocationTB.Location = new System.Drawing.Point(218, 58);
+            this.M_CapHolderLocationTB.Location = new System.Drawing.Point(218, 59);
             this.M_CapHolderLocationTB.Name = "M_CapHolderLocationTB";
-            this.M_CapHolderLocationTB.Size = new System.Drawing.Size(80, 29);
+            this.M_CapHolderLocationTB.Size = new System.Drawing.Size(80, 25);
             this.M_CapHolderLocationTB.TabIndex = 4;
             // 
             // panel14
@@ -2787,9 +2787,9 @@
             this.panel14.Controls.Add(this.M_DisposeLocationTb);
             this.panel14.Controls.Add(this.label82);
             this.panel14.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel14.Location = new System.Drawing.Point(1684, 126);
+            this.panel14.Location = new System.Drawing.Point(1684, 127);
             this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(324, 93);
+            this.panel14.Size = new System.Drawing.Size(324, 94);
             this.panel14.TabIndex = 43;
             // 
             // M_DisposeLocationTb
@@ -2797,9 +2797,9 @@
             this.M_DisposeLocationTb.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.M_DisposeLocationTb.BackColor = System.Drawing.SystemColors.MenuBar;
             this.M_DisposeLocationTb.Enabled = false;
-            this.M_DisposeLocationTb.Location = new System.Drawing.Point(212, 58);
+            this.M_DisposeLocationTb.Location = new System.Drawing.Point(212, 59);
             this.M_DisposeLocationTb.Name = "M_DisposeLocationTb";
-            this.M_DisposeLocationTb.Size = new System.Drawing.Size(80, 29);
+            this.M_DisposeLocationTb.Size = new System.Drawing.Size(80, 25);
             this.M_DisposeLocationTb.TabIndex = 37;
             // 
             // label82
@@ -2809,7 +2809,7 @@
             this.label82.Location = new System.Drawing.Point(2, 2);
             this.label82.Margin = new System.Windows.Forms.Padding(2);
             this.label82.Name = "label82";
-            this.label82.Size = new System.Drawing.Size(127, 25);
+            this.label82.Size = new System.Drawing.Size(102, 20);
             this.label82.TabIndex = 36;
             this.label82.Text = "Dispose [mm]";
             // 
@@ -2824,11 +2824,11 @@
             this.tableLayoutPanel7.Controls.Add(this.ArmDownArrowPnl, 0, 0);
             this.tableLayoutPanel7.Controls.Add(this.ArmHomeBtn, 1, 0);
             this.tableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel7.Location = new System.Drawing.Point(691, 559);
+            this.tableLayoutPanel7.Location = new System.Drawing.Point(691, 563);
             this.tableLayoutPanel7.Name = "tableLayoutPanel7";
             this.tableLayoutPanel7.RowCount = 1;
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel7.Size = new System.Drawing.Size(324, 160);
+            this.tableLayoutPanel7.Size = new System.Drawing.Size(324, 161);
             this.tableLayoutPanel7.TabIndex = 57;
             // 
             // ArmUpArrowPnl
@@ -2839,7 +2839,7 @@
             this.ArmUpArrowPnl.Location = new System.Drawing.Point(249, 10);
             this.ArmUpArrowPnl.Margin = new System.Windows.Forms.Padding(10);
             this.ArmUpArrowPnl.Name = "ArmUpArrowPnl";
-            this.ArmUpArrowPnl.Size = new System.Drawing.Size(65, 140);
+            this.ArmUpArrowPnl.Size = new System.Drawing.Size(65, 141);
             this.ArmUpArrowPnl.TabIndex = 3;
             // 
             // ArmDownArrowPnl
@@ -2850,7 +2850,7 @@
             this.ArmDownArrowPnl.Location = new System.Drawing.Point(10, 10);
             this.ArmDownArrowPnl.Margin = new System.Windows.Forms.Padding(10);
             this.ArmDownArrowPnl.Name = "ArmDownArrowPnl";
-            this.ArmDownArrowPnl.Size = new System.Drawing.Size(64, 140);
+            this.ArmDownArrowPnl.Size = new System.Drawing.Size(64, 141);
             this.ArmDownArrowPnl.TabIndex = 2;
             // 
             // ArmHomeBtn
@@ -2860,7 +2860,7 @@
             this.ArmHomeBtn.Location = new System.Drawing.Point(94, 15);
             this.ArmHomeBtn.Margin = new System.Windows.Forms.Padding(10, 15, 10, 15);
             this.ArmHomeBtn.Name = "ArmHomeBtn";
-            this.ArmHomeBtn.Size = new System.Drawing.Size(135, 130);
+            this.ArmHomeBtn.Size = new System.Drawing.Size(135, 131);
             this.ArmHomeBtn.TabIndex = 2;
             this.ArmHomeBtn.Text = "HOME";
             this.ArmHomeBtn.UseVisualStyleBackColor = true;
@@ -2877,11 +2877,11 @@
             this.tableLayoutPanel8.Controls.Add(this.LinearLeftArrowPnl, 0, 0);
             this.tableLayoutPanel8.Controls.Add(this.LinearRightArrowPnl, 2, 0);
             this.tableLayoutPanel8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel8.Location = new System.Drawing.Point(360, 559);
+            this.tableLayoutPanel8.Location = new System.Drawing.Point(360, 563);
             this.tableLayoutPanel8.Name = "tableLayoutPanel8";
             this.tableLayoutPanel8.RowCount = 1;
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel8.Size = new System.Drawing.Size(324, 160);
+            this.tableLayoutPanel8.Size = new System.Drawing.Size(324, 161);
             this.tableLayoutPanel8.TabIndex = 58;
             // 
             // LinearHomeBtn
@@ -2891,7 +2891,7 @@
             this.LinearHomeBtn.Location = new System.Drawing.Point(94, 15);
             this.LinearHomeBtn.Margin = new System.Windows.Forms.Padding(10, 15, 10, 15);
             this.LinearHomeBtn.Name = "LinearHomeBtn";
-            this.LinearHomeBtn.Size = new System.Drawing.Size(135, 130);
+            this.LinearHomeBtn.Size = new System.Drawing.Size(135, 131);
             this.LinearHomeBtn.TabIndex = 1;
             this.LinearHomeBtn.Text = "HOME";
             this.LinearHomeBtn.UseVisualStyleBackColor = true;
@@ -2904,7 +2904,7 @@
             this.LinearLeftArrowPnl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.LinearLeftArrowPnl.Location = new System.Drawing.Point(3, 3);
             this.LinearLeftArrowPnl.Name = "LinearLeftArrowPnl";
-            this.LinearLeftArrowPnl.Size = new System.Drawing.Size(78, 154);
+            this.LinearLeftArrowPnl.Size = new System.Drawing.Size(78, 155);
             this.LinearLeftArrowPnl.TabIndex = 2;
             // 
             // LinearRightArrowPnl
@@ -2914,7 +2914,7 @@
             this.LinearRightArrowPnl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.LinearRightArrowPnl.Location = new System.Drawing.Point(242, 3);
             this.LinearRightArrowPnl.Name = "LinearRightArrowPnl";
-            this.LinearRightArrowPnl.Size = new System.Drawing.Size(79, 154);
+            this.LinearRightArrowPnl.Size = new System.Drawing.Size(79, 155);
             this.LinearRightArrowPnl.TabIndex = 2;
             // 
             // tableLayoutPanel11
@@ -2928,11 +2928,11 @@
             this.tableLayoutPanel11.Controls.Add(this.VerticalHomeBtn, 1, 0);
             this.tableLayoutPanel11.Controls.Add(this.VerticalUpArrowPnl, 0, 0);
             this.tableLayoutPanel11.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel11.Location = new System.Drawing.Point(29, 559);
+            this.tableLayoutPanel11.Location = new System.Drawing.Point(29, 563);
             this.tableLayoutPanel11.Name = "tableLayoutPanel11";
             this.tableLayoutPanel11.RowCount = 1;
             this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel11.Size = new System.Drawing.Size(324, 160);
+            this.tableLayoutPanel11.Size = new System.Drawing.Size(324, 161);
             this.tableLayoutPanel11.TabIndex = 59;
             // 
             // VerticalDownArrowPnl
@@ -2943,7 +2943,7 @@
             this.VerticalDownArrowPnl.Location = new System.Drawing.Point(249, 10);
             this.VerticalDownArrowPnl.Margin = new System.Windows.Forms.Padding(10);
             this.VerticalDownArrowPnl.Name = "VerticalDownArrowPnl";
-            this.VerticalDownArrowPnl.Size = new System.Drawing.Size(65, 140);
+            this.VerticalDownArrowPnl.Size = new System.Drawing.Size(65, 141);
             this.VerticalDownArrowPnl.TabIndex = 2;
             // 
             // VerticalHomeBtn
@@ -2954,7 +2954,7 @@
             this.VerticalHomeBtn.Location = new System.Drawing.Point(94, 15);
             this.VerticalHomeBtn.Margin = new System.Windows.Forms.Padding(10, 15, 10, 15);
             this.VerticalHomeBtn.Name = "VerticalHomeBtn";
-            this.VerticalHomeBtn.Size = new System.Drawing.Size(135, 130);
+            this.VerticalHomeBtn.Size = new System.Drawing.Size(135, 131);
             this.VerticalHomeBtn.TabIndex = 0;
             this.VerticalHomeBtn.Text = "HOME";
             this.VerticalHomeBtn.UseVisualStyleBackColor = false;
@@ -2968,7 +2968,7 @@
             this.VerticalUpArrowPnl.Location = new System.Drawing.Point(10, 10);
             this.VerticalUpArrowPnl.Margin = new System.Windows.Forms.Padding(10);
             this.VerticalUpArrowPnl.Name = "VerticalUpArrowPnl";
-            this.VerticalUpArrowPnl.Size = new System.Drawing.Size(64, 140);
+            this.VerticalUpArrowPnl.Size = new System.Drawing.Size(64, 141);
             this.VerticalUpArrowPnl.TabIndex = 1;
             // 
             // tableLayoutPanel13
@@ -2982,11 +2982,11 @@
             this.tableLayoutPanel13.Controls.Add(this.PistonHomeBtn, 1, 0);
             this.tableLayoutPanel13.Controls.Add(this.PistonOutArrowPnl, 2, 0);
             this.tableLayoutPanel13.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel13.Location = new System.Drawing.Point(1022, 559);
+            this.tableLayoutPanel13.Location = new System.Drawing.Point(1022, 563);
             this.tableLayoutPanel13.Name = "tableLayoutPanel13";
             this.tableLayoutPanel13.RowCount = 1;
             this.tableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel13.Size = new System.Drawing.Size(324, 160);
+            this.tableLayoutPanel13.Size = new System.Drawing.Size(324, 161);
             this.tableLayoutPanel13.TabIndex = 60;
             // 
             // PistonInArrowPnl
@@ -2996,7 +2996,7 @@
             this.PistonInArrowPnl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PistonInArrowPnl.Location = new System.Drawing.Point(3, 3);
             this.PistonInArrowPnl.Name = "PistonInArrowPnl";
-            this.PistonInArrowPnl.Size = new System.Drawing.Size(78, 154);
+            this.PistonInArrowPnl.Size = new System.Drawing.Size(78, 155);
             this.PistonInArrowPnl.TabIndex = 2;
             // 
             // PistonHomeBtn
@@ -3006,7 +3006,7 @@
             this.PistonHomeBtn.Location = new System.Drawing.Point(94, 15);
             this.PistonHomeBtn.Margin = new System.Windows.Forms.Padding(10, 15, 10, 15);
             this.PistonHomeBtn.Name = "PistonHomeBtn";
-            this.PistonHomeBtn.Size = new System.Drawing.Size(135, 130);
+            this.PistonHomeBtn.Size = new System.Drawing.Size(135, 131);
             this.PistonHomeBtn.TabIndex = 3;
             this.PistonHomeBtn.Text = "HOME";
             this.PistonHomeBtn.UseVisualStyleBackColor = true;
@@ -3019,7 +3019,7 @@
             this.PistonOutArrowPnl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PistonOutArrowPnl.Location = new System.Drawing.Point(242, 3);
             this.PistonOutArrowPnl.Name = "PistonOutArrowPnl";
-            this.PistonOutArrowPnl.Size = new System.Drawing.Size(79, 154);
+            this.PistonOutArrowPnl.Size = new System.Drawing.Size(79, 155);
             this.PistonOutArrowPnl.TabIndex = 2;
             // 
             // tableLayoutPanel15
@@ -3033,11 +3033,11 @@
             this.tableLayoutPanel15.Controls.Add(this.SyringeUpArrowPnl, 0, 0);
             this.tableLayoutPanel15.Controls.Add(this.HeadRotateHomeBtn, 1, 0);
             this.tableLayoutPanel15.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel15.Location = new System.Drawing.Point(1353, 559);
+            this.tableLayoutPanel15.Location = new System.Drawing.Point(1353, 563);
             this.tableLayoutPanel15.Name = "tableLayoutPanel15";
             this.tableLayoutPanel15.RowCount = 1;
             this.tableLayoutPanel15.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel15.Size = new System.Drawing.Size(324, 160);
+            this.tableLayoutPanel15.Size = new System.Drawing.Size(324, 161);
             this.tableLayoutPanel15.TabIndex = 61;
             // 
             // SyringeDownArrowPnl
@@ -3048,7 +3048,7 @@
             this.SyringeDownArrowPnl.Location = new System.Drawing.Point(249, 10);
             this.SyringeDownArrowPnl.Margin = new System.Windows.Forms.Padding(10);
             this.SyringeDownArrowPnl.Name = "SyringeDownArrowPnl";
-            this.SyringeDownArrowPnl.Size = new System.Drawing.Size(65, 140);
+            this.SyringeDownArrowPnl.Size = new System.Drawing.Size(65, 141);
             this.SyringeDownArrowPnl.TabIndex = 2;
             // 
             // SyringeUpArrowPnl
@@ -3059,7 +3059,7 @@
             this.SyringeUpArrowPnl.Location = new System.Drawing.Point(10, 10);
             this.SyringeUpArrowPnl.Margin = new System.Windows.Forms.Padding(10);
             this.SyringeUpArrowPnl.Name = "SyringeUpArrowPnl";
-            this.SyringeUpArrowPnl.Size = new System.Drawing.Size(64, 140);
+            this.SyringeUpArrowPnl.Size = new System.Drawing.Size(64, 141);
             this.SyringeUpArrowPnl.TabIndex = 2;
             // 
             // HeadRotateHomeBtn
@@ -3069,7 +3069,7 @@
             this.HeadRotateHomeBtn.Location = new System.Drawing.Point(94, 15);
             this.HeadRotateHomeBtn.Margin = new System.Windows.Forms.Padding(10, 15, 10, 15);
             this.HeadRotateHomeBtn.Name = "HeadRotateHomeBtn";
-            this.HeadRotateHomeBtn.Size = new System.Drawing.Size(135, 130);
+            this.HeadRotateHomeBtn.Size = new System.Drawing.Size(135, 131);
             this.HeadRotateHomeBtn.TabIndex = 4;
             this.HeadRotateHomeBtn.Text = "HOME";
             this.HeadRotateHomeBtn.UseVisualStyleBackColor = true;
@@ -3086,11 +3086,11 @@
             this.tableLayoutPanel16.Controls.Add(this.DisposeArrowPnl, 0, 0);
             this.tableLayoutPanel16.Controls.Add(this.Spare51Btn, 1, 0);
             this.tableLayoutPanel16.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel16.Location = new System.Drawing.Point(1684, 559);
+            this.tableLayoutPanel16.Location = new System.Drawing.Point(1684, 563);
             this.tableLayoutPanel16.Name = "tableLayoutPanel16";
             this.tableLayoutPanel16.RowCount = 1;
             this.tableLayoutPanel16.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel16.Size = new System.Drawing.Size(324, 160);
+            this.tableLayoutPanel16.Size = new System.Drawing.Size(324, 161);
             this.tableLayoutPanel16.TabIndex = 62;
             // 
             // DisposeBackArrowPnl
@@ -3100,7 +3100,7 @@
             this.DisposeBackArrowPnl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DisposeBackArrowPnl.Location = new System.Drawing.Point(242, 3);
             this.DisposeBackArrowPnl.Name = "DisposeBackArrowPnl";
-            this.DisposeBackArrowPnl.Size = new System.Drawing.Size(79, 154);
+            this.DisposeBackArrowPnl.Size = new System.Drawing.Size(79, 155);
             this.DisposeBackArrowPnl.TabIndex = 2;
             // 
             // DisposeArrowPnl
@@ -3110,7 +3110,7 @@
             this.DisposeArrowPnl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DisposeArrowPnl.Location = new System.Drawing.Point(3, 3);
             this.DisposeArrowPnl.Name = "DisposeArrowPnl";
-            this.DisposeArrowPnl.Size = new System.Drawing.Size(78, 154);
+            this.DisposeArrowPnl.Size = new System.Drawing.Size(78, 155);
             this.DisposeArrowPnl.TabIndex = 2;
             // 
             // Spare51Btn
@@ -3120,7 +3120,7 @@
             this.Spare51Btn.Location = new System.Drawing.Point(94, 15);
             this.Spare51Btn.Margin = new System.Windows.Forms.Padding(10, 15, 10, 15);
             this.Spare51Btn.Name = "Spare51Btn";
-            this.Spare51Btn.Size = new System.Drawing.Size(135, 130);
+            this.Spare51Btn.Size = new System.Drawing.Size(135, 131);
             this.Spare51Btn.TabIndex = 5;
             this.Spare51Btn.Text = "HOME";
             this.Spare51Btn.UseVisualStyleBackColor = true;
@@ -3137,11 +3137,11 @@
             this.tableLayoutPanel17.Controls.Add(this.CapHoldArowPnl, 0, 0);
             this.tableLayoutPanel17.Controls.Add(this.CapHolderHomeBtn, 1, 0);
             this.tableLayoutPanel17.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel17.Location = new System.Drawing.Point(2015, 559);
+            this.tableLayoutPanel17.Location = new System.Drawing.Point(2015, 563);
             this.tableLayoutPanel17.Name = "tableLayoutPanel17";
             this.tableLayoutPanel17.RowCount = 1;
             this.tableLayoutPanel17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel17.Size = new System.Drawing.Size(324, 160);
+            this.tableLayoutPanel17.Size = new System.Drawing.Size(324, 161);
             this.tableLayoutPanel17.TabIndex = 63;
             // 
             // CapReleaseArowPnl
@@ -3152,7 +3152,7 @@
             this.CapReleaseArowPnl.Location = new System.Drawing.Point(249, 10);
             this.CapReleaseArowPnl.Margin = new System.Windows.Forms.Padding(10);
             this.CapReleaseArowPnl.Name = "CapReleaseArowPnl";
-            this.CapReleaseArowPnl.Size = new System.Drawing.Size(65, 140);
+            this.CapReleaseArowPnl.Size = new System.Drawing.Size(65, 141);
             this.CapReleaseArowPnl.TabIndex = 3;
             // 
             // CapHoldArowPnl
@@ -3163,7 +3163,7 @@
             this.CapHoldArowPnl.Location = new System.Drawing.Point(10, 10);
             this.CapHoldArowPnl.Margin = new System.Windows.Forms.Padding(10);
             this.CapHoldArowPnl.Name = "CapHoldArowPnl";
-            this.CapHoldArowPnl.Size = new System.Drawing.Size(64, 140);
+            this.CapHoldArowPnl.Size = new System.Drawing.Size(64, 141);
             this.CapHoldArowPnl.TabIndex = 2;
             // 
             // CapHolderHomeBtn
@@ -3173,7 +3173,7 @@
             this.CapHolderHomeBtn.Location = new System.Drawing.Point(94, 15);
             this.CapHolderHomeBtn.Margin = new System.Windows.Forms.Padding(10, 15, 10, 15);
             this.CapHolderHomeBtn.Name = "CapHolderHomeBtn";
-            this.CapHolderHomeBtn.Size = new System.Drawing.Size(135, 130);
+            this.CapHolderHomeBtn.Size = new System.Drawing.Size(135, 131);
             this.CapHolderHomeBtn.TabIndex = 6;
             this.CapHolderHomeBtn.Text = "HOME";
             this.CapHolderHomeBtn.UseVisualStyleBackColor = true;
@@ -3203,7 +3203,7 @@
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(661, 110);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(661, 111);
             this.tableLayoutPanel1.TabIndex = 54;
             // 
             // Jog01RB
@@ -3212,9 +3212,9 @@
             this.Jog01RB.AutoSize = true;
             this.Jog01RB.CheckAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.Jog01RB.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Jog01RB.Location = new System.Drawing.Point(595, 35);
+            this.Jog01RB.Location = new System.Drawing.Point(596, 38);
             this.Jog01RB.Name = "Jog01RB";
-            this.Jog01RB.Size = new System.Drawing.Size(35, 40);
+            this.Jog01RB.Size = new System.Drawing.Size(32, 34);
             this.Jog01RB.TabIndex = 6;
             this.Jog01RB.TabStop = true;
             this.Jog01RB.Text = "0.1";
@@ -3227,9 +3227,9 @@
             this.Jog02RB.AutoSize = true;
             this.Jog02RB.CheckAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.Jog02RB.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Jog02RB.Location = new System.Drawing.Point(499, 35);
+            this.Jog02RB.Location = new System.Drawing.Point(501, 38);
             this.Jog02RB.Name = "Jog02RB";
-            this.Jog02RB.Size = new System.Drawing.Size(35, 40);
+            this.Jog02RB.Size = new System.Drawing.Size(32, 34);
             this.Jog02RB.TabIndex = 5;
             this.Jog02RB.TabStop = true;
             this.Jog02RB.Text = "0.2";
@@ -3242,9 +3242,9 @@
             this.Jog04RB.AutoSize = true;
             this.Jog04RB.CheckAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.Jog04RB.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Jog04RB.Location = new System.Drawing.Point(405, 35);
+            this.Jog04RB.Location = new System.Drawing.Point(407, 38);
             this.Jog04RB.Name = "Jog04RB";
-            this.Jog04RB.Size = new System.Drawing.Size(35, 40);
+            this.Jog04RB.Size = new System.Drawing.Size(32, 34);
             this.Jog04RB.TabIndex = 4;
             this.Jog04RB.TabStop = true;
             this.Jog04RB.Text = "0.4";
@@ -3257,9 +3257,9 @@
             this.Jog1RB.AutoSize = true;
             this.Jog1RB.CheckAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.Jog1RB.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Jog1RB.Location = new System.Drawing.Point(318, 35);
+            this.Jog1RB.Location = new System.Drawing.Point(319, 38);
             this.Jog1RB.Name = "Jog1RB";
-            this.Jog1RB.Size = new System.Drawing.Size(22, 40);
+            this.Jog1RB.Size = new System.Drawing.Size(20, 34);
             this.Jog1RB.TabIndex = 3;
             this.Jog1RB.TabStop = true;
             this.Jog1RB.Text = "1";
@@ -3273,9 +3273,9 @@
             this.Jog2RB.CheckAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.Jog2RB.Checked = true;
             this.Jog2RB.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Jog2RB.Location = new System.Drawing.Point(224, 35);
+            this.Jog2RB.Location = new System.Drawing.Point(225, 38);
             this.Jog2RB.Name = "Jog2RB";
-            this.Jog2RB.Size = new System.Drawing.Size(22, 40);
+            this.Jog2RB.Size = new System.Drawing.Size(20, 34);
             this.Jog2RB.TabIndex = 2;
             this.Jog2RB.TabStop = true;
             this.Jog2RB.Text = "2";
@@ -3288,9 +3288,9 @@
             this.Jog5RB.AutoSize = true;
             this.Jog5RB.CheckAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.Jog5RB.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Jog5RB.Location = new System.Drawing.Point(130, 35);
+            this.Jog5RB.Location = new System.Drawing.Point(131, 38);
             this.Jog5RB.Name = "Jog5RB";
-            this.Jog5RB.Size = new System.Drawing.Size(22, 40);
+            this.Jog5RB.Size = new System.Drawing.Size(20, 34);
             this.Jog5RB.TabIndex = 1;
             this.Jog5RB.Text = "5";
             this.Jog5RB.UseVisualStyleBackColor = true;
@@ -3302,9 +3302,9 @@
             this.Jog20RB.AutoSize = true;
             this.Jog20RB.CheckAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.Jog20RB.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Jog20RB.Location = new System.Drawing.Point(31, 35);
+            this.Jog20RB.Location = new System.Drawing.Point(33, 38);
             this.Jog20RB.Name = "Jog20RB";
-            this.Jog20RB.Size = new System.Drawing.Size(31, 40);
+            this.Jog20RB.Size = new System.Drawing.Size(28, 34);
             this.Jog20RB.TabIndex = 0;
             this.Jog20RB.TabStop = true;
             this.Jog20RB.Text = "20";
@@ -3318,7 +3318,7 @@
             this.panel40.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel40.Location = new System.Drawing.Point(1353, 15);
             this.panel40.Name = "panel40";
-            this.panel40.Size = new System.Drawing.Size(324, 104);
+            this.panel40.Size = new System.Drawing.Size(324, 105);
             this.panel40.TabIndex = 65;
             // 
             // goDistanceTB
@@ -3326,9 +3326,9 @@
             this.goDistanceTB.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.goDistanceTB.BackColor = System.Drawing.SystemColors.MenuBar;
             this.goDistanceTB.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.goDistanceTB.Location = new System.Drawing.Point(222, 72);
+            this.goDistanceTB.Location = new System.Drawing.Point(222, 73);
             this.goDistanceTB.Name = "goDistanceTB";
-            this.goDistanceTB.Size = new System.Drawing.Size(92, 29);
+            this.goDistanceTB.Size = new System.Drawing.Size(92, 25);
             this.goDistanceTB.TabIndex = 65;
             this.goDistanceTB.Text = "2";
             this.goDistanceTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -3341,7 +3341,7 @@
             this.label3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.label3.Location = new System.Drawing.Point(3, 5);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(157, 23);
+            this.label3.Size = new System.Drawing.Size(122, 17);
             this.label3.TabIndex = 64;
             this.label3.Text = "mm/degrees to go:";
             // 
@@ -3353,11 +3353,11 @@
             this.tableLayoutPanel5.Controls.Add(this.ArmUpBtn, 1, 0);
             this.tableLayoutPanel5.Controls.Add(this.ArmDownBtn, 0, 0);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(691, 448);
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(691, 451);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 1;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(324, 104);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(324, 105);
             this.tableLayoutPanel5.TabIndex = 69;
             // 
             // ArmUpBtn
@@ -3374,7 +3374,7 @@
             this.ArmUpBtn.Location = new System.Drawing.Point(162, 0);
             this.ArmUpBtn.Margin = new System.Windows.Forms.Padding(0);
             this.ArmUpBtn.Name = "ArmUpBtn";
-            this.ArmUpBtn.Size = new System.Drawing.Size(162, 104);
+            this.ArmUpBtn.Size = new System.Drawing.Size(162, 105);
             this.ArmUpBtn.TabIndex = 6;
             this.ArmUpBtn.Text = "UP\r\n`+`";
             this.ArmUpBtn.UseVisualStyleBackColor = false;
@@ -3394,7 +3394,7 @@
             this.ArmDownBtn.Location = new System.Drawing.Point(0, 0);
             this.ArmDownBtn.Margin = new System.Windows.Forms.Padding(0);
             this.ArmDownBtn.Name = "ArmDownBtn";
-            this.ArmDownBtn.Size = new System.Drawing.Size(162, 104);
+            this.ArmDownBtn.Size = new System.Drawing.Size(162, 105);
             this.ArmDownBtn.TabIndex = 5;
             this.ArmDownBtn.Text = "Down\r\n  `-`";
             this.ArmDownBtn.UseVisualStyleBackColor = false;
@@ -3408,11 +3408,11 @@
             this.tableLayoutPanel6.Controls.Add(this.ReleaseCapBtn, 1, 0);
             this.tableLayoutPanel6.Controls.Add(this.HoldCapBtn, 0, 0);
             this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel6.Location = new System.Drawing.Point(2015, 448);
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(2015, 451);
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
             this.tableLayoutPanel6.RowCount = 1;
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(324, 104);
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(324, 105);
             this.tableLayoutPanel6.TabIndex = 70;
             // 
             // ReleaseCapBtn
@@ -3429,7 +3429,7 @@
             this.ReleaseCapBtn.Location = new System.Drawing.Point(162, 0);
             this.ReleaseCapBtn.Margin = new System.Windows.Forms.Padding(0);
             this.ReleaseCapBtn.Name = "ReleaseCapBtn";
-            this.ReleaseCapBtn.Size = new System.Drawing.Size(162, 104);
+            this.ReleaseCapBtn.Size = new System.Drawing.Size(162, 105);
             this.ReleaseCapBtn.TabIndex = 12;
             this.ReleaseCapBtn.Text = "Release \r\nCap";
             this.ReleaseCapBtn.UseVisualStyleBackColor = false;
@@ -3449,7 +3449,7 @@
             this.HoldCapBtn.Location = new System.Drawing.Point(0, 0);
             this.HoldCapBtn.Margin = new System.Windows.Forms.Padding(0);
             this.HoldCapBtn.Name = "HoldCapBtn";
-            this.HoldCapBtn.Size = new System.Drawing.Size(162, 104);
+            this.HoldCapBtn.Size = new System.Drawing.Size(162, 105);
             this.HoldCapBtn.TabIndex = 11;
             this.HoldCapBtn.Text = "Hold\r\nCap";
             this.HoldCapBtn.UseVisualStyleBackColor = false;
@@ -3463,11 +3463,11 @@
             this.tableLayoutPanel14.Controls.Add(this.VerticalDownBtn, 1, 0);
             this.tableLayoutPanel14.Controls.Add(this.VerticalUpBtn, 0, 0);
             this.tableLayoutPanel14.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel14.Location = new System.Drawing.Point(29, 448);
+            this.tableLayoutPanel14.Location = new System.Drawing.Point(29, 451);
             this.tableLayoutPanel14.Name = "tableLayoutPanel14";
             this.tableLayoutPanel14.RowCount = 1;
             this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel14.Size = new System.Drawing.Size(324, 104);
+            this.tableLayoutPanel14.Size = new System.Drawing.Size(324, 105);
             this.tableLayoutPanel14.TabIndex = 71;
             // 
             // VerticalDownBtn
@@ -3484,7 +3484,7 @@
             this.VerticalDownBtn.Location = new System.Drawing.Point(162, 0);
             this.VerticalDownBtn.Margin = new System.Windows.Forms.Padding(0);
             this.VerticalDownBtn.Name = "VerticalDownBtn";
-            this.VerticalDownBtn.Size = new System.Drawing.Size(162, 104);
+            this.VerticalDownBtn.Size = new System.Drawing.Size(162, 105);
             this.VerticalDownBtn.TabIndex = 3;
             this.VerticalDownBtn.Text = "Down\r\n`PD`";
             this.VerticalDownBtn.UseVisualStyleBackColor = false;
@@ -3504,7 +3504,7 @@
             this.VerticalUpBtn.Location = new System.Drawing.Point(0, 0);
             this.VerticalUpBtn.Margin = new System.Windows.Forms.Padding(0);
             this.VerticalUpBtn.Name = "VerticalUpBtn";
-            this.VerticalUpBtn.Size = new System.Drawing.Size(162, 104);
+            this.VerticalUpBtn.Size = new System.Drawing.Size(162, 105);
             this.VerticalUpBtn.TabIndex = 2;
             this.VerticalUpBtn.Text = "UP\r\n`PU`";
             this.VerticalUpBtn.UseVisualStyleBackColor = false;
@@ -3518,11 +3518,11 @@
             this.tableLayoutPanel18.Controls.Add(this.LinearRightBtn, 1, 0);
             this.tableLayoutPanel18.Controls.Add(this.LinearLeftBtn, 0, 0);
             this.tableLayoutPanel18.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel18.Location = new System.Drawing.Point(360, 448);
+            this.tableLayoutPanel18.Location = new System.Drawing.Point(360, 451);
             this.tableLayoutPanel18.Name = "tableLayoutPanel18";
             this.tableLayoutPanel18.RowCount = 1;
             this.tableLayoutPanel18.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel18.Size = new System.Drawing.Size(324, 104);
+            this.tableLayoutPanel18.Size = new System.Drawing.Size(324, 105);
             this.tableLayoutPanel18.TabIndex = 72;
             // 
             // LinearRightBtn
@@ -3539,7 +3539,7 @@
             this.LinearRightBtn.Location = new System.Drawing.Point(162, 0);
             this.LinearRightBtn.Margin = new System.Windows.Forms.Padding(0);
             this.LinearRightBtn.Name = "LinearRightBtn";
-            this.LinearRightBtn.Size = new System.Drawing.Size(162, 104);
+            this.LinearRightBtn.Size = new System.Drawing.Size(162, 105);
             this.LinearRightBtn.TabIndex = 4;
             this.LinearRightBtn.Text = "Right\r\n`]`";
             this.LinearRightBtn.UseVisualStyleBackColor = false;
@@ -3559,7 +3559,7 @@
             this.LinearLeftBtn.Location = new System.Drawing.Point(0, 0);
             this.LinearLeftBtn.Margin = new System.Windows.Forms.Padding(0);
             this.LinearLeftBtn.Name = "LinearLeftBtn";
-            this.LinearLeftBtn.Size = new System.Drawing.Size(162, 104);
+            this.LinearLeftBtn.Size = new System.Drawing.Size(162, 105);
             this.LinearLeftBtn.TabIndex = 1;
             this.LinearLeftBtn.Text = "Left\r\n`[`";
             this.LinearLeftBtn.UseVisualStyleBackColor = false;
@@ -3573,11 +3573,11 @@
             this.tableLayoutPanel19.Controls.Add(this.PistonOutBtn, 1, 0);
             this.tableLayoutPanel19.Controls.Add(this.PistonInBtn, 0, 0);
             this.tableLayoutPanel19.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel19.Location = new System.Drawing.Point(1022, 448);
+            this.tableLayoutPanel19.Location = new System.Drawing.Point(1022, 451);
             this.tableLayoutPanel19.Name = "tableLayoutPanel19";
             this.tableLayoutPanel19.RowCount = 1;
             this.tableLayoutPanel19.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel19.Size = new System.Drawing.Size(324, 104);
+            this.tableLayoutPanel19.Size = new System.Drawing.Size(324, 105);
             this.tableLayoutPanel19.TabIndex = 73;
             // 
             // PistonOutBtn
@@ -3594,7 +3594,7 @@
             this.PistonOutBtn.Location = new System.Drawing.Point(162, 0);
             this.PistonOutBtn.Margin = new System.Windows.Forms.Padding(0);
             this.PistonOutBtn.Name = "PistonOutBtn";
-            this.PistonOutBtn.Size = new System.Drawing.Size(162, 104);
+            this.PistonOutBtn.Size = new System.Drawing.Size(162, 105);
             this.PistonOutBtn.TabIndex = 8;
             this.PistonOutBtn.Text = "Piston Out\r\n \'END\'";
             this.PistonOutBtn.UseVisualStyleBackColor = false;
@@ -3614,7 +3614,7 @@
             this.PistonInBtn.Location = new System.Drawing.Point(0, 0);
             this.PistonInBtn.Margin = new System.Windows.Forms.Padding(0);
             this.PistonInBtn.Name = "PistonInBtn";
-            this.PistonInBtn.Size = new System.Drawing.Size(162, 104);
+            this.PistonInBtn.Size = new System.Drawing.Size(162, 105);
             this.PistonInBtn.TabIndex = 7;
             this.PistonInBtn.Text = "Piston In\r\n \'HOME\'";
             this.PistonInBtn.UseVisualStyleBackColor = false;
@@ -3628,11 +3628,11 @@
             this.tableLayoutPanel20.Controls.Add(this.SyringeDownBtn, 0, 0);
             this.tableLayoutPanel20.Controls.Add(this.SyringeUpBtn, 1, 0);
             this.tableLayoutPanel20.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel20.Location = new System.Drawing.Point(1353, 448);
+            this.tableLayoutPanel20.Location = new System.Drawing.Point(1353, 451);
             this.tableLayoutPanel20.Name = "tableLayoutPanel20";
             this.tableLayoutPanel20.RowCount = 1;
             this.tableLayoutPanel20.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel20.Size = new System.Drawing.Size(324, 104);
+            this.tableLayoutPanel20.Size = new System.Drawing.Size(324, 105);
             this.tableLayoutPanel20.TabIndex = 74;
             // 
             // SyringeDownBtn
@@ -3649,7 +3649,7 @@
             this.SyringeDownBtn.Location = new System.Drawing.Point(0, 0);
             this.SyringeDownBtn.Margin = new System.Windows.Forms.Padding(0);
             this.SyringeDownBtn.Name = "SyringeDownBtn";
-            this.SyringeDownBtn.Size = new System.Drawing.Size(162, 104);
+            this.SyringeDownBtn.Size = new System.Drawing.Size(162, 105);
             this.SyringeDownBtn.TabIndex = 10;
             this.SyringeDownBtn.Text = "Syring down\r\n`\"`\r\n(keypad)";
             this.SyringeDownBtn.UseVisualStyleBackColor = false;
@@ -3669,7 +3669,7 @@
             this.SyringeUpBtn.Location = new System.Drawing.Point(162, 0);
             this.SyringeUpBtn.Margin = new System.Windows.Forms.Padding(0);
             this.SyringeUpBtn.Name = "SyringeUpBtn";
-            this.SyringeUpBtn.Size = new System.Drawing.Size(162, 104);
+            this.SyringeUpBtn.Size = new System.Drawing.Size(162, 105);
             this.SyringeUpBtn.TabIndex = 9;
             this.SyringeUpBtn.Text = "Syring Up\r\n`+/=`\r\n(keypad)";
             this.SyringeUpBtn.UseVisualStyleBackColor = false;
@@ -3683,11 +3683,11 @@
             this.tableLayoutPanel21.Controls.Add(this.DiposeBackBtn, 1, 0);
             this.tableLayoutPanel21.Controls.Add(this.DisposeBtn, 0, 0);
             this.tableLayoutPanel21.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel21.Location = new System.Drawing.Point(1684, 448);
+            this.tableLayoutPanel21.Location = new System.Drawing.Point(1684, 451);
             this.tableLayoutPanel21.Name = "tableLayoutPanel21";
             this.tableLayoutPanel21.RowCount = 1;
             this.tableLayoutPanel21.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel21.Size = new System.Drawing.Size(324, 104);
+            this.tableLayoutPanel21.Size = new System.Drawing.Size(324, 105);
             this.tableLayoutPanel21.TabIndex = 75;
             // 
             // DiposeBackBtn
@@ -3704,7 +3704,7 @@
             this.DiposeBackBtn.Location = new System.Drawing.Point(162, 0);
             this.DiposeBackBtn.Margin = new System.Windows.Forms.Padding(0);
             this.DiposeBackBtn.Name = "DiposeBackBtn";
-            this.DiposeBackBtn.Size = new System.Drawing.Size(162, 104);
+            this.DiposeBackBtn.Size = new System.Drawing.Size(162, 105);
             this.DiposeBackBtn.TabIndex = 12;
             this.DiposeBackBtn.Text = "Back-\r\n  ward";
             this.DiposeBackBtn.UseVisualStyleBackColor = false;
@@ -3724,7 +3724,7 @@
             this.DisposeBtn.Location = new System.Drawing.Point(0, 0);
             this.DisposeBtn.Margin = new System.Windows.Forms.Padding(0);
             this.DisposeBtn.Name = "DisposeBtn";
-            this.DisposeBtn.Size = new System.Drawing.Size(162, 104);
+            this.DisposeBtn.Size = new System.Drawing.Size(162, 105);
             this.DisposeBtn.TabIndex = 11;
             this.DisposeBtn.Text = "dispose";
             this.DisposeBtn.UseVisualStyleBackColor = false;
@@ -3737,7 +3737,7 @@
             this.panel4.Location = new System.Drawing.Point(693, 17);
             this.panel4.Margin = new System.Windows.Forms.Padding(5);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(320, 100);
+            this.panel4.Size = new System.Drawing.Size(320, 101);
             this.panel4.TabIndex = 53;
             // 
             // calibrateHOMEbtn
@@ -3756,7 +3756,7 @@
             this.calibrateHOMEbtn.Margin = new System.Windows.Forms.Padding(10, 25, 10, 25);
             this.calibrateHOMEbtn.Name = "calibrateHOMEbtn";
             this.calibrateHOMEbtn.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.calibrateHOMEbtn.Size = new System.Drawing.Size(320, 100);
+            this.calibrateHOMEbtn.Size = new System.Drawing.Size(320, 101);
             this.calibrateHOMEbtn.TabIndex = 36;
             this.calibrateHOMEbtn.Text = "HOME";
             this.calibrateHOMEbtn.UseVisualStyleBackColor = false;
@@ -3769,7 +3769,7 @@
             this.panel8.Location = new System.Drawing.Point(31, 17);
             this.panel8.Margin = new System.Windows.Forms.Padding(5);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(320, 100);
+            this.panel8.Size = new System.Drawing.Size(320, 101);
             this.panel8.TabIndex = 38;
             // 
             // CalibrateAbortBtn
@@ -3785,7 +3785,7 @@
             this.CalibrateAbortBtn.Location = new System.Drawing.Point(0, 0);
             this.CalibrateAbortBtn.Margin = new System.Windows.Forms.Padding(15);
             this.CalibrateAbortBtn.Name = "CalibrateAbortBtn";
-            this.CalibrateAbortBtn.Size = new System.Drawing.Size(320, 100);
+            this.CalibrateAbortBtn.Size = new System.Drawing.Size(320, 101);
             this.CalibrateAbortBtn.TabIndex = 30;
             this.CalibrateAbortBtn.Text = "ABORT";
             this.CalibrateAbortBtn.UseVisualStyleBackColor = false;
@@ -3798,9 +3798,9 @@
             this.panel3.Controls.Add(this.setDockHeightTB);
             this.panel3.Controls.Add(this.setDockHeightBtn);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(29, 837);
+            this.panel3.Location = new System.Drawing.Point(29, 843);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(324, 104);
+            this.panel3.Size = new System.Drawing.Size(324, 105);
             this.panel3.TabIndex = 83;
             // 
             // oopsDockHeightBtn
@@ -3818,7 +3818,7 @@
             // 
             this.GoToDockHightBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.GoToDockHightBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.GoToDockHightBtn.Location = new System.Drawing.Point(3, 74);
+            this.GoToDockHightBtn.Location = new System.Drawing.Point(3, 75);
             this.GoToDockHightBtn.Name = "GoToDockHightBtn";
             this.GoToDockHightBtn.Size = new System.Drawing.Size(58, 30);
             this.GoToDockHightBtn.TabIndex = 84;
@@ -3831,9 +3831,9 @@
             this.setDockHeightTB.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.setDockHeightTB.BackColor = System.Drawing.SystemColors.MenuBar;
             this.setDockHeightTB.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.setDockHeightTB.Location = new System.Drawing.Point(216, 75);
+            this.setDockHeightTB.Location = new System.Drawing.Point(216, 76);
             this.setDockHeightTB.Name = "setDockHeightTB";
-            this.setDockHeightTB.Size = new System.Drawing.Size(105, 34);
+            this.setDockHeightTB.Size = new System.Drawing.Size(105, 29);
             this.setDockHeightTB.TabIndex = 2;
             this.setDockHeightTB.Text = "0";
             this.setDockHeightTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -3857,9 +3857,9 @@
             this.panel30.Controls.Add(this.setBumpPosVertBtn);
             this.panel30.Controls.Add(this.setBumpPosVertTB);
             this.panel30.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel30.Location = new System.Drawing.Point(29, 726);
+            this.panel30.Location = new System.Drawing.Point(29, 731);
             this.panel30.Name = "panel30";
-            this.panel30.Size = new System.Drawing.Size(324, 104);
+            this.panel30.Size = new System.Drawing.Size(324, 105);
             this.panel30.TabIndex = 67;
             // 
             // oopsBumpPosVertBtn
@@ -3877,7 +3877,7 @@
             // 
             this.GoToBumpPosVertBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.GoToBumpPosVertBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.GoToBumpPosVertBtn.Location = new System.Drawing.Point(3, 71);
+            this.GoToBumpPosVertBtn.Location = new System.Drawing.Point(3, 72);
             this.GoToBumpPosVertBtn.Name = "GoToBumpPosVertBtn";
             this.GoToBumpPosVertBtn.Size = new System.Drawing.Size(58, 30);
             this.GoToBumpPosVertBtn.TabIndex = 84;
@@ -3900,9 +3900,9 @@
             this.setBumpPosVertTB.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.setBumpPosVertTB.BackColor = System.Drawing.SystemColors.MenuBar;
             this.setBumpPosVertTB.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.setBumpPosVertTB.Location = new System.Drawing.Point(216, 72);
+            this.setBumpPosVertTB.Location = new System.Drawing.Point(216, 73);
             this.setBumpPosVertTB.Name = "setBumpPosVertTB";
-            this.setBumpPosVertTB.Size = new System.Drawing.Size(105, 34);
+            this.setBumpPosVertTB.Size = new System.Drawing.Size(105, 29);
             this.setBumpPosVertTB.TabIndex = 66;
             this.setBumpPosVertTB.Text = "0";
             this.setBumpPosVertTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -3914,9 +3914,9 @@
             this.panel39.Controls.Add(this.NeedleLengthCBX);
             this.panel39.Controls.Add(this.NeedleLengthLbl);
             this.panel39.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel39.Location = new System.Drawing.Point(2015, 948);
+            this.panel39.Location = new System.Drawing.Point(2015, 955);
             this.panel39.Name = "panel39";
-            this.panel39.Size = new System.Drawing.Size(324, 104);
+            this.panel39.Size = new System.Drawing.Size(324, 105);
             this.panel39.TabIndex = 68;
             // 
             // NeedleLengthCBX
@@ -3927,7 +3927,7 @@
             "40"});
             this.NeedleLengthCBX.Location = new System.Drawing.Point(29, 33);
             this.NeedleLengthCBX.Name = "NeedleLengthCBX";
-            this.NeedleLengthCBX.Size = new System.Drawing.Size(143, 36);
+            this.NeedleLengthCBX.Size = new System.Drawing.Size(143, 29);
             this.NeedleLengthCBX.TabIndex = 69;
             this.NeedleLengthCBX.Text = "40";
             this.NeedleLengthCBX.Leave += new System.EventHandler(this.NeedleLengthCMX_Leave);
@@ -3941,16 +3941,16 @@
             this.NeedleLengthLbl.Location = new System.Drawing.Point(3, 3);
             this.NeedleLengthLbl.Margin = new System.Windows.Forms.Padding(3, 3, 3, 0);
             this.NeedleLengthLbl.Name = "NeedleLengthLbl";
-            this.NeedleLengthLbl.Size = new System.Drawing.Size(169, 23);
+            this.NeedleLengthLbl.Size = new System.Drawing.Size(132, 17);
             this.NeedleLengthLbl.TabIndex = 67;
             this.NeedleLengthLbl.Text = "Needle Length [mm]";
             // 
             // panel23
             // 
             this.panel23.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel23.Location = new System.Drawing.Point(2015, 726);
+            this.panel23.Location = new System.Drawing.Point(2015, 731);
             this.panel23.Name = "panel23";
-            this.panel23.Size = new System.Drawing.Size(324, 104);
+            this.panel23.Size = new System.Drawing.Size(324, 105);
             this.panel23.TabIndex = 84;
             // 
             // panel42
@@ -3959,9 +3959,9 @@
             this.panel42.Controls.Add(this.NeedleGaugeLbl);
             this.panel42.Controls.Add(this.label22);
             this.panel42.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel42.Location = new System.Drawing.Point(2015, 837);
+            this.panel42.Location = new System.Drawing.Point(2015, 843);
             this.panel42.Name = "panel42";
-            this.panel42.Size = new System.Drawing.Size(324, 104);
+            this.panel42.Size = new System.Drawing.Size(324, 105);
             this.panel42.TabIndex = 68;
             // 
             // NeedleGaugeCBX
@@ -3974,7 +3974,7 @@
             "21"});
             this.NeedleGaugeCBX.Location = new System.Drawing.Point(28, 33);
             this.NeedleGaugeCBX.Name = "NeedleGaugeCBX";
-            this.NeedleGaugeCBX.Size = new System.Drawing.Size(143, 36);
+            this.NeedleGaugeCBX.Size = new System.Drawing.Size(143, 29);
             this.NeedleGaugeCBX.TabIndex = 68;
             this.NeedleGaugeCBX.Text = "16";
             this.NeedleGaugeCBX.Leave += new System.EventHandler(this.NeedleGaugeCBX_Leave);
@@ -3988,7 +3988,7 @@
             this.NeedleGaugeLbl.Location = new System.Drawing.Point(4, 6);
             this.NeedleGaugeLbl.Margin = new System.Windows.Forms.Padding(3, 3, 3, 0);
             this.NeedleGaugeLbl.Name = "NeedleGaugeLbl";
-            this.NeedleGaugeLbl.Size = new System.Drawing.Size(119, 23);
+            this.NeedleGaugeLbl.Size = new System.Drawing.Size(93, 17);
             this.NeedleGaugeLbl.TabIndex = 67;
             this.NeedleGaugeLbl.Text = "Needle Gauge";
             // 
@@ -3999,7 +3999,7 @@
             this.label22.Location = new System.Drawing.Point(3, 3);
             this.label22.Margin = new System.Windows.Forms.Padding(3, 3, 3, 0);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(0, 28);
+            this.label22.Size = new System.Drawing.Size(0, 21);
             this.label22.TabIndex = 67;
             // 
             // panel9
@@ -4009,9 +4009,9 @@
             this.panel9.Controls.Add(this.setArmVialTB);
             this.panel9.Controls.Add(this.setArmVialBtn);
             this.panel9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel9.Location = new System.Drawing.Point(691, 726);
+            this.panel9.Location = new System.Drawing.Point(691, 731);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(324, 104);
+            this.panel9.Size = new System.Drawing.Size(324, 105);
             this.panel9.TabIndex = 84;
             // 
             // oopsArmVialBtn
@@ -4029,7 +4029,7 @@
             // 
             this.GoToArmVialBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.GoToArmVialBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.GoToArmVialBtn.Location = new System.Drawing.Point(3, 73);
+            this.GoToArmVialBtn.Location = new System.Drawing.Point(3, 74);
             this.GoToArmVialBtn.Name = "GoToArmVialBtn";
             this.GoToArmVialBtn.Size = new System.Drawing.Size(58, 30);
             this.GoToArmVialBtn.TabIndex = 84;
@@ -4042,9 +4042,9 @@
             this.setArmVialTB.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.setArmVialTB.BackColor = System.Drawing.SystemColors.MenuBar;
             this.setArmVialTB.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.setArmVialTB.Location = new System.Drawing.Point(216, 74);
+            this.setArmVialTB.Location = new System.Drawing.Point(216, 75);
             this.setArmVialTB.Name = "setArmVialTB";
-            this.setArmVialTB.Size = new System.Drawing.Size(105, 34);
+            this.setArmVialTB.Size = new System.Drawing.Size(105, 29);
             this.setArmVialTB.TabIndex = 79;
             this.setArmVialTB.Text = "0";
             this.setArmVialTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -4069,9 +4069,9 @@
             this.panel45.Controls.Add(this.label31);
             this.panel45.Controls.Add(this.setBumpBottomTB);
             this.panel45.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel45.Location = new System.Drawing.Point(29, 948);
+            this.panel45.Location = new System.Drawing.Point(29, 955);
             this.panel45.Name = "panel45";
-            this.panel45.Size = new System.Drawing.Size(324, 104);
+            this.panel45.Size = new System.Drawing.Size(324, 105);
             this.panel45.TabIndex = 68;
             // 
             // oopsBumpBottomBtn
@@ -4089,7 +4089,7 @@
             // 
             this.GoToBumpBottomBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.GoToBumpBottomBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.GoToBumpBottomBtn.Location = new System.Drawing.Point(3, 73);
+            this.GoToBumpBottomBtn.Location = new System.Drawing.Point(3, 74);
             this.GoToBumpBottomBtn.Name = "GoToBumpBottomBtn";
             this.GoToBumpBottomBtn.Size = new System.Drawing.Size(58, 30);
             this.GoToBumpBottomBtn.TabIndex = 84;
@@ -4114,7 +4114,7 @@
             this.label31.Location = new System.Drawing.Point(3, 3);
             this.label31.Margin = new System.Windows.Forms.Padding(3, 3, 3, 0);
             this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(0, 28);
+            this.label31.Size = new System.Drawing.Size(0, 21);
             this.label31.TabIndex = 67;
             // 
             // setBumpBottomTB
@@ -4122,9 +4122,9 @@
             this.setBumpBottomTB.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.setBumpBottomTB.BackColor = System.Drawing.SystemColors.MenuBar;
             this.setBumpBottomTB.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.setBumpBottomTB.Location = new System.Drawing.Point(216, 73);
+            this.setBumpBottomTB.Location = new System.Drawing.Point(216, 74);
             this.setBumpBottomTB.Name = "setBumpBottomTB";
-            this.setBumpBottomTB.Size = new System.Drawing.Size(105, 34);
+            this.setBumpBottomTB.Size = new System.Drawing.Size(105, 29);
             this.setBumpBottomTB.TabIndex = 66;
             this.setBumpBottomTB.Text = "0";
             this.setBumpBottomTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -4138,9 +4138,9 @@
             this.panel17.Controls.Add(this.setVial4BottomTB);
             this.panel17.Controls.Add(this.setVial4BottomBtn);
             this.panel17.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel17.Location = new System.Drawing.Point(360, 948);
+            this.panel17.Location = new System.Drawing.Point(360, 955);
             this.panel17.Name = "panel17";
-            this.panel17.Size = new System.Drawing.Size(324, 104);
+            this.panel17.Size = new System.Drawing.Size(324, 105);
             this.panel17.TabIndex = 84;
             // 
             // oopsVial4BottomBtn
@@ -4158,7 +4158,7 @@
             // 
             this.GoToVial4BottomBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.GoToVial4BottomBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.GoToVial4BottomBtn.Location = new System.Drawing.Point(3, 76);
+            this.GoToVial4BottomBtn.Location = new System.Drawing.Point(3, 77);
             this.GoToVial4BottomBtn.Name = "GoToVial4BottomBtn";
             this.GoToVial4BottomBtn.Size = new System.Drawing.Size(58, 30);
             this.GoToVial4BottomBtn.TabIndex = 84;
@@ -4171,9 +4171,9 @@
             this.setVial4BottomTB.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.setVial4BottomTB.BackColor = System.Drawing.SystemColors.MenuBar;
             this.setVial4BottomTB.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.setVial4BottomTB.Location = new System.Drawing.Point(216, 76);
+            this.setVial4BottomTB.Location = new System.Drawing.Point(216, 77);
             this.setVial4BottomTB.Name = "setVial4BottomTB";
-            this.setVial4BottomTB.Size = new System.Drawing.Size(105, 34);
+            this.setVial4BottomTB.Size = new System.Drawing.Size(105, 29);
             this.setVial4BottomTB.TabIndex = 82;
             this.setVial4BottomTB.Text = "0";
             this.setVial4BottomTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -4197,9 +4197,9 @@
             this.panel27.Controls.Add(this.setArmAtBotomTB);
             this.panel27.Controls.Add(this.setArmAtBotomBtn);
             this.panel27.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel27.Location = new System.Drawing.Point(691, 948);
+            this.panel27.Location = new System.Drawing.Point(691, 955);
             this.panel27.Name = "panel27";
-            this.panel27.Size = new System.Drawing.Size(324, 104);
+            this.panel27.Size = new System.Drawing.Size(324, 105);
             this.panel27.TabIndex = 87;
             // 
             // oopsArmAtBotomBtn
@@ -4217,7 +4217,7 @@
             // 
             this.GoToArmAtBottomBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.GoToArmAtBottomBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.GoToArmAtBottomBtn.Location = new System.Drawing.Point(3, 74);
+            this.GoToArmAtBottomBtn.Location = new System.Drawing.Point(3, 75);
             this.GoToArmAtBottomBtn.Name = "GoToArmAtBottomBtn";
             this.GoToArmAtBottomBtn.Size = new System.Drawing.Size(58, 30);
             this.GoToArmAtBottomBtn.TabIndex = 84;
@@ -4230,9 +4230,9 @@
             this.setArmAtBotomTB.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.setArmAtBotomTB.BackColor = System.Drawing.SystemColors.MenuBar;
             this.setArmAtBotomTB.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.setArmAtBotomTB.Location = new System.Drawing.Point(216, 74);
+            this.setArmAtBotomTB.Location = new System.Drawing.Point(216, 75);
             this.setArmAtBotomTB.Name = "setArmAtBotomTB";
-            this.setArmAtBotomTB.Size = new System.Drawing.Size(105, 34);
+            this.setArmAtBotomTB.Size = new System.Drawing.Size(105, 29);
             this.setArmAtBotomTB.TabIndex = 79;
             this.setArmAtBotomTB.Text = "0";
             this.setArmAtBotomTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -4255,9 +4255,9 @@
             this.panel11.Controls.Add(this.GoToPistonStartBtn);
             this.panel11.Controls.Add(this.setPistonStartTB);
             this.panel11.Controls.Add(this.setPistonStartBtn);
-            this.panel11.Location = new System.Drawing.Point(1022, 726);
+            this.panel11.Location = new System.Drawing.Point(1022, 731);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(324, 104);
+            this.panel11.Size = new System.Drawing.Size(322, 99);
             this.panel11.TabIndex = 84;
             // 
             // oopsPistonStartBtn
@@ -4275,7 +4275,7 @@
             // 
             this.GoToPistonStartBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.GoToPistonStartBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.GoToPistonStartBtn.Location = new System.Drawing.Point(3, 72);
+            this.GoToPistonStartBtn.Location = new System.Drawing.Point(3, 67);
             this.GoToPistonStartBtn.Name = "GoToPistonStartBtn";
             this.GoToPistonStartBtn.Size = new System.Drawing.Size(58, 30);
             this.GoToPistonStartBtn.TabIndex = 84;
@@ -4288,9 +4288,9 @@
             this.setPistonStartTB.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.setPistonStartTB.BackColor = System.Drawing.SystemColors.MenuBar;
             this.setPistonStartTB.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.setPistonStartTB.Location = new System.Drawing.Point(216, 69);
+            this.setPistonStartTB.Location = new System.Drawing.Point(214, 64);
             this.setPistonStartTB.Name = "setPistonStartTB";
-            this.setPistonStartTB.Size = new System.Drawing.Size(105, 34);
+            this.setPistonStartTB.Size = new System.Drawing.Size(105, 29);
             this.setPistonStartTB.TabIndex = 80;
             this.setPistonStartTB.Text = "0";
             this.setPistonStartTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -4314,9 +4314,9 @@
             this.panel25.Controls.Add(this.setDropVials123TB);
             this.panel25.Controls.Add(this.setDropVials123Btn);
             this.panel25.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel25.Location = new System.Drawing.Point(1684, 726);
+            this.panel25.Location = new System.Drawing.Point(1684, 731);
             this.panel25.Name = "panel25";
-            this.panel25.Size = new System.Drawing.Size(324, 104);
+            this.panel25.Size = new System.Drawing.Size(324, 105);
             this.panel25.TabIndex = 88;
             // 
             // oopsDropVials123Btn
@@ -4334,7 +4334,7 @@
             // 
             this.GoToDropVials123Btn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.GoToDropVials123Btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.GoToDropVials123Btn.Location = new System.Drawing.Point(3, 74);
+            this.GoToDropVials123Btn.Location = new System.Drawing.Point(3, 75);
             this.GoToDropVials123Btn.Name = "GoToDropVials123Btn";
             this.GoToDropVials123Btn.Size = new System.Drawing.Size(58, 30);
             this.GoToDropVials123Btn.TabIndex = 83;
@@ -4347,9 +4347,9 @@
             this.setDropVials123TB.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.setDropVials123TB.BackColor = System.Drawing.SystemColors.MenuBar;
             this.setDropVials123TB.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.setDropVials123TB.Location = new System.Drawing.Point(216, 74);
+            this.setDropVials123TB.Location = new System.Drawing.Point(216, 75);
             this.setDropVials123TB.Name = "setDropVials123TB";
-            this.setDropVials123TB.Size = new System.Drawing.Size(105, 34);
+            this.setDropVials123TB.Size = new System.Drawing.Size(105, 29);
             this.setDropVials123TB.TabIndex = 82;
             this.setDropVials123TB.Text = "0";
             this.setDropVials123TB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -4373,9 +4373,9 @@
             this.panel7.Controls.Add(this.setHeadAtBottomTB);
             this.panel7.Controls.Add(this.setHeadAtBottomBtn);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel7.Location = new System.Drawing.Point(1353, 948);
+            this.panel7.Location = new System.Drawing.Point(1353, 955);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(324, 104);
+            this.panel7.Size = new System.Drawing.Size(324, 105);
             this.panel7.TabIndex = 84;
             // 
             // oopsHeadAtBottomBtn
@@ -4393,7 +4393,7 @@
             // 
             this.GoToHeadAtBottomBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.GoToHeadAtBottomBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.GoToHeadAtBottomBtn.Location = new System.Drawing.Point(3, 74);
+            this.GoToHeadAtBottomBtn.Location = new System.Drawing.Point(3, 75);
             this.GoToHeadAtBottomBtn.Name = "GoToHeadAtBottomBtn";
             this.GoToHeadAtBottomBtn.Size = new System.Drawing.Size(58, 30);
             this.GoToHeadAtBottomBtn.TabIndex = 84;
@@ -4406,9 +4406,9 @@
             this.setHeadAtBottomTB.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.setHeadAtBottomTB.BackColor = System.Drawing.SystemColors.MenuBar;
             this.setHeadAtBottomTB.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.setHeadAtBottomTB.Location = new System.Drawing.Point(236, 74);
+            this.setHeadAtBottomTB.Location = new System.Drawing.Point(236, 75);
             this.setHeadAtBottomTB.Name = "setHeadAtBottomTB";
-            this.setHeadAtBottomTB.Size = new System.Drawing.Size(86, 34);
+            this.setHeadAtBottomTB.Size = new System.Drawing.Size(86, 29);
             this.setHeadAtBottomTB.TabIndex = 78;
             this.setHeadAtBottomTB.Text = "0";
             this.setHeadAtBottomTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -4433,9 +4433,9 @@
             this.panel41.Controls.Add(this.label2);
             this.panel41.Controls.Add(this.setArmDisposeVials456TB);
             this.panel41.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel41.Location = new System.Drawing.Point(691, 837);
+            this.panel41.Location = new System.Drawing.Point(691, 843);
             this.panel41.Name = "panel41";
-            this.panel41.Size = new System.Drawing.Size(324, 104);
+            this.panel41.Size = new System.Drawing.Size(324, 105);
             this.panel41.TabIndex = 68;
             // 
             // oopsArmDisposeVials456Btn
@@ -4453,7 +4453,7 @@
             // 
             this.GoToDropVials456Btn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.GoToDropVials456Btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.GoToDropVials456Btn.Location = new System.Drawing.Point(3, 74);
+            this.GoToDropVials456Btn.Location = new System.Drawing.Point(3, 75);
             this.GoToDropVials456Btn.Name = "GoToDropVials456Btn";
             this.GoToDropVials456Btn.Size = new System.Drawing.Size(58, 30);
             this.GoToDropVials456Btn.TabIndex = 84;
@@ -4478,7 +4478,7 @@
             this.label2.Location = new System.Drawing.Point(3, 3);
             this.label2.Margin = new System.Windows.Forms.Padding(3, 3, 3, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(0, 28);
+            this.label2.Size = new System.Drawing.Size(0, 21);
             this.label2.TabIndex = 67;
             // 
             // setArmDisposeVials456TB
@@ -4486,9 +4486,9 @@
             this.setArmDisposeVials456TB.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.setArmDisposeVials456TB.BackColor = System.Drawing.SystemColors.MenuBar;
             this.setArmDisposeVials456TB.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.setArmDisposeVials456TB.Location = new System.Drawing.Point(216, 74);
+            this.setArmDisposeVials456TB.Location = new System.Drawing.Point(216, 75);
             this.setArmDisposeVials456TB.Name = "setArmDisposeVials456TB";
-            this.setArmDisposeVials456TB.Size = new System.Drawing.Size(105, 34);
+            this.setArmDisposeVials456TB.Size = new System.Drawing.Size(105, 29);
             this.setArmDisposeVials456TB.TabIndex = 66;
             this.setArmDisposeVials456TB.Text = "0";
             this.setArmDisposeVials456TB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -4502,9 +4502,9 @@
             this.panel26.Controls.Add(this.setCenterOfVial1TB);
             this.panel26.Controls.Add(this.setCenterOfVial1Btn);
             this.panel26.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel26.Location = new System.Drawing.Point(360, 726);
+            this.panel26.Location = new System.Drawing.Point(360, 731);
             this.panel26.Name = "panel26";
-            this.panel26.Size = new System.Drawing.Size(324, 104);
+            this.panel26.Size = new System.Drawing.Size(324, 105);
             this.panel26.TabIndex = 86;
             // 
             // oopsCenterOfVial1Btn
@@ -4522,7 +4522,7 @@
             // 
             this.GoToCenterOfVial1Btn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.GoToCenterOfVial1Btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.GoToCenterOfVial1Btn.Location = new System.Drawing.Point(3, 71);
+            this.GoToCenterOfVial1Btn.Location = new System.Drawing.Point(3, 72);
             this.GoToCenterOfVial1Btn.Name = "GoToCenterOfVial1Btn";
             this.GoToCenterOfVial1Btn.Size = new System.Drawing.Size(58, 30);
             this.GoToCenterOfVial1Btn.TabIndex = 84;
@@ -4535,9 +4535,9 @@
             this.setCenterOfVial1TB.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.setCenterOfVial1TB.BackColor = System.Drawing.SystemColors.MenuBar;
             this.setCenterOfVial1TB.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.setCenterOfVial1TB.Location = new System.Drawing.Point(216, 72);
+            this.setCenterOfVial1TB.Location = new System.Drawing.Point(216, 73);
             this.setCenterOfVial1TB.Name = "setCenterOfVial1TB";
-            this.setCenterOfVial1TB.Size = new System.Drawing.Size(105, 34);
+            this.setCenterOfVial1TB.Size = new System.Drawing.Size(105, 29);
             this.setCenterOfVial1TB.TabIndex = 80;
             this.setCenterOfVial1TB.Text = "0";
             this.setCenterOfVial1TB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -4561,9 +4561,9 @@
             this.panel28.Controls.Add(this.setCapLoadingTB);
             this.panel28.Controls.Add(this.setCapLoadingBtn);
             this.panel28.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel28.Location = new System.Drawing.Point(360, 837);
+            this.panel28.Location = new System.Drawing.Point(360, 843);
             this.panel28.Name = "panel28";
-            this.panel28.Size = new System.Drawing.Size(324, 104);
+            this.panel28.Size = new System.Drawing.Size(324, 105);
             this.panel28.TabIndex = 89;
             // 
             // oopsCapLoadingBtn
@@ -4581,7 +4581,7 @@
             // 
             this.GoToCapLoadingBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.GoToCapLoadingBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.GoToCapLoadingBtn.Location = new System.Drawing.Point(3, 72);
+            this.GoToCapLoadingBtn.Location = new System.Drawing.Point(3, 73);
             this.GoToCapLoadingBtn.Name = "GoToCapLoadingBtn";
             this.GoToCapLoadingBtn.Size = new System.Drawing.Size(58, 30);
             this.GoToCapLoadingBtn.TabIndex = 84;
@@ -4594,9 +4594,9 @@
             this.setCapLoadingTB.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.setCapLoadingTB.BackColor = System.Drawing.SystemColors.MenuBar;
             this.setCapLoadingTB.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.setCapLoadingTB.Location = new System.Drawing.Point(216, 74);
+            this.setCapLoadingTB.Location = new System.Drawing.Point(216, 75);
             this.setCapLoadingTB.Name = "setCapLoadingTB";
-            this.setCapLoadingTB.Size = new System.Drawing.Size(105, 34);
+            this.setCapLoadingTB.Size = new System.Drawing.Size(105, 29);
             this.setCapLoadingTB.TabIndex = 80;
             this.setCapLoadingTB.Text = "0";
             this.setCapLoadingTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -4617,9 +4617,9 @@
             // 
             this.panel29.Controls.Add(this.label23);
             this.panel29.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel29.Location = new System.Drawing.Point(1684, 837);
+            this.panel29.Location = new System.Drawing.Point(1684, 843);
             this.panel29.Name = "panel29";
-            this.panel29.Size = new System.Drawing.Size(324, 104);
+            this.panel29.Size = new System.Drawing.Size(324, 105);
             this.panel29.TabIndex = 90;
             // 
             // label23
@@ -4629,7 +4629,7 @@
             this.label23.Location = new System.Drawing.Point(3, 3);
             this.label23.Margin = new System.Windows.Forms.Padding(3, 3, 3, 0);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(0, 28);
+            this.label23.Size = new System.Drawing.Size(0, 21);
             this.label23.TabIndex = 67;
             // 
             // panel34
@@ -4639,9 +4639,9 @@
             this.panel34.Controls.Add(this.setHeadRotateTopTB);
             this.panel34.Controls.Add(this.setHeadRotateTopBtn);
             this.panel34.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel34.Location = new System.Drawing.Point(1353, 726);
+            this.panel34.Location = new System.Drawing.Point(1353, 731);
             this.panel34.Name = "panel34";
-            this.panel34.Size = new System.Drawing.Size(324, 104);
+            this.panel34.Size = new System.Drawing.Size(324, 105);
             this.panel34.TabIndex = 91;
             // 
             // oopsHeadRotateTopBtn
@@ -4659,7 +4659,7 @@
             // 
             this.GoToHeadRotateTopBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.GoToHeadRotateTopBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.GoToHeadRotateTopBtn.Location = new System.Drawing.Point(3, 73);
+            this.GoToHeadRotateTopBtn.Location = new System.Drawing.Point(3, 74);
             this.GoToHeadRotateTopBtn.Name = "GoToHeadRotateTopBtn";
             this.GoToHeadRotateTopBtn.Size = new System.Drawing.Size(58, 30);
             this.GoToHeadRotateTopBtn.TabIndex = 84;
@@ -4672,9 +4672,9 @@
             this.setHeadRotateTopTB.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.setHeadRotateTopTB.BackColor = System.Drawing.SystemColors.MenuBar;
             this.setHeadRotateTopTB.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.setHeadRotateTopTB.Location = new System.Drawing.Point(214, 74);
+            this.setHeadRotateTopTB.Location = new System.Drawing.Point(214, 75);
             this.setHeadRotateTopTB.Name = "setHeadRotateTopTB";
-            this.setHeadRotateTopTB.Size = new System.Drawing.Size(107, 34);
+            this.setHeadRotateTopTB.Size = new System.Drawing.Size(107, 29);
             this.setHeadRotateTopTB.TabIndex = 81;
             this.setHeadRotateTopTB.Text = "0";
             this.setHeadRotateTopTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -4698,9 +4698,9 @@
             this.panel16.Controls.Add(this.setHeadRotateStartTB);
             this.panel16.Controls.Add(this.setHeadRotateStartBtn);
             this.panel16.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel16.Location = new System.Drawing.Point(1353, 837);
+            this.panel16.Location = new System.Drawing.Point(1353, 843);
             this.panel16.Name = "panel16";
-            this.panel16.Size = new System.Drawing.Size(324, 104);
+            this.panel16.Size = new System.Drawing.Size(324, 105);
             this.panel16.TabIndex = 84;
             // 
             // oopsHeadRotateStartBtn
@@ -4718,7 +4718,7 @@
             // 
             this.GoToHeadRotateStartBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.GoToHeadRotateStartBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.GoToHeadRotateStartBtn.Location = new System.Drawing.Point(3, 73);
+            this.GoToHeadRotateStartBtn.Location = new System.Drawing.Point(3, 74);
             this.GoToHeadRotateStartBtn.Name = "GoToHeadRotateStartBtn";
             this.GoToHeadRotateStartBtn.Size = new System.Drawing.Size(58, 30);
             this.GoToHeadRotateStartBtn.TabIndex = 84;
@@ -4731,9 +4731,9 @@
             this.setHeadRotateStartTB.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.setHeadRotateStartTB.BackColor = System.Drawing.SystemColors.MenuBar;
             this.setHeadRotateStartTB.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.setHeadRotateStartTB.Location = new System.Drawing.Point(214, 74);
+            this.setHeadRotateStartTB.Location = new System.Drawing.Point(214, 75);
             this.setHeadRotateStartTB.Name = "setHeadRotateStartTB";
-            this.setHeadRotateStartTB.Size = new System.Drawing.Size(107, 34);
+            this.setHeadRotateStartTB.Size = new System.Drawing.Size(107, 29);
             this.setHeadRotateStartTB.TabIndex = 81;
             this.setHeadRotateStartTB.Text = "0";
             this.setHeadRotateStartTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -4758,9 +4758,9 @@
             this.panel35.Controls.Add(this.LD_maxVolTB);
             this.panel35.Controls.Add(this.LD_minVolBtn);
             this.panel35.Controls.Add(this.LD_maxVolBtn);
-            this.panel35.Location = new System.Drawing.Point(1022, 837);
+            this.panel35.Location = new System.Drawing.Point(1022, 843);
             this.panel35.Name = "panel35";
-            this.panel35.Size = new System.Drawing.Size(324, 104);
+            this.panel35.Size = new System.Drawing.Size(322, 99);
             this.panel35.TabIndex = 92;
             // 
             // button2
@@ -4779,9 +4779,9 @@
             this.LD_minVolTB.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.LD_minVolTB.BackColor = System.Drawing.SystemColors.MenuBar;
             this.LD_minVolTB.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.LD_minVolTB.Location = new System.Drawing.Point(11, 67);
+            this.LD_minVolTB.Location = new System.Drawing.Point(9, 62);
             this.LD_minVolTB.Name = "LD_minVolTB";
-            this.LD_minVolTB.Size = new System.Drawing.Size(105, 34);
+            this.LD_minVolTB.Size = new System.Drawing.Size(105, 29);
             this.LD_minVolTB.TabIndex = 86;
             this.LD_minVolTB.Text = "0";
             this.LD_minVolTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -4804,9 +4804,9 @@
             this.LD_maxVolTB.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.LD_maxVolTB.BackColor = System.Drawing.SystemColors.MenuBar;
             this.LD_maxVolTB.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.LD_maxVolTB.Location = new System.Drawing.Point(206, 67);
+            this.LD_maxVolTB.Location = new System.Drawing.Point(204, 62);
             this.LD_maxVolTB.Name = "LD_maxVolTB";
-            this.LD_maxVolTB.Size = new System.Drawing.Size(105, 34);
+            this.LD_maxVolTB.Size = new System.Drawing.Size(105, 29);
             this.LD_maxVolTB.TabIndex = 80;
             this.LD_maxVolTB.Text = "0";
             this.LD_maxVolTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -4839,9 +4839,9 @@
             this.panel36.Controls.Add(this.label71);
             this.panel36.Controls.Add(this.LD_acceptedDevTB);
             this.panel36.Controls.Add(this.LD_definedVolTB);
-            this.panel36.Location = new System.Drawing.Point(1022, 948);
+            this.panel36.Location = new System.Drawing.Point(1022, 955);
             this.panel36.Name = "panel36";
-            this.panel36.Size = new System.Drawing.Size(324, 104);
+            this.panel36.Size = new System.Drawing.Size(322, 99);
             this.panel36.TabIndex = 93;
             // 
             // label75
@@ -4851,7 +4851,7 @@
             this.label75.Location = new System.Drawing.Point(218, 3);
             this.label75.Margin = new System.Windows.Forms.Padding(2);
             this.label75.Name = "label75";
-            this.label75.Size = new System.Drawing.Size(76, 50);
+            this.label75.Size = new System.Drawing.Size(60, 40);
             this.label75.TabIndex = 83;
             this.label75.Text = "defined\r\nvolume";
             // 
@@ -4862,7 +4862,7 @@
             this.label71.Location = new System.Drawing.Point(2, 2);
             this.label71.Margin = new System.Windows.Forms.Padding(2);
             this.label71.Name = "label71";
-            this.label71.Size = new System.Drawing.Size(123, 50);
+            this.label71.Size = new System.Drawing.Size(97, 40);
             this.label71.TabIndex = 82;
             this.label71.Text = "accepted \r\ndeviation [%]";
             // 
@@ -4871,9 +4871,9 @@
             this.LD_acceptedDevTB.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.LD_acceptedDevTB.BackColor = System.Drawing.SystemColors.MenuBar;
             this.LD_acceptedDevTB.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.LD_acceptedDevTB.Location = new System.Drawing.Point(3, 67);
+            this.LD_acceptedDevTB.Location = new System.Drawing.Point(1, 62);
             this.LD_acceptedDevTB.Name = "LD_acceptedDevTB";
-            this.LD_acceptedDevTB.Size = new System.Drawing.Size(105, 34);
+            this.LD_acceptedDevTB.Size = new System.Drawing.Size(105, 29);
             this.LD_acceptedDevTB.TabIndex = 81;
             this.LD_acceptedDevTB.Text = "0";
             this.LD_acceptedDevTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -4885,9 +4885,9 @@
             this.LD_definedVolTB.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.LD_definedVolTB.BackColor = System.Drawing.SystemColors.MenuBar;
             this.LD_definedVolTB.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.LD_definedVolTB.Location = new System.Drawing.Point(216, 74);
+            this.LD_definedVolTB.Location = new System.Drawing.Point(214, 69);
             this.LD_definedVolTB.Name = "LD_definedVolTB";
-            this.LD_definedVolTB.Size = new System.Drawing.Size(105, 34);
+            this.LD_definedVolTB.Size = new System.Drawing.Size(105, 29);
             this.LD_definedVolTB.TabIndex = 80;
             this.LD_definedVolTB.Text = "0";
             this.LD_definedVolTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -4898,10 +4898,10 @@
             // 
             this.SetupsTP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.SetupsTP.Controls.Add(this.setupTLP);
-            this.SetupsTP.Location = new System.Drawing.Point(4, 30);
+            this.SetupsTP.Location = new System.Drawing.Point(4, 26);
             this.SetupsTP.Name = "SetupsTP";
             this.SetupsTP.Padding = new System.Windows.Forms.Padding(3);
-            this.SetupsTP.Size = new System.Drawing.Size(2378, 1083);
+            this.SetupsTP.Size = new System.Drawing.Size(2378, 1087);
             this.SetupsTP.TabIndex = 5;
             this.SetupsTP.Text = "setups";
             this.SetupsTP.Enter += new System.EventHandler(this.SetupsTP_Enter);
@@ -4933,7 +4933,7 @@
             this.setupTLP.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.setupTLP.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.setupTLP.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.setupTLP.Size = new System.Drawing.Size(2372, 1077);
+            this.setupTLP.Size = new System.Drawing.Size(2372, 1081);
             this.setupTLP.TabIndex = 1;
             // 
             // GBpanelPNL
@@ -4963,10 +4963,10 @@
             this.GBpanelPNL.Controls.Add(this.runInProcessTB);
             this.GBpanelPNL.Dock = System.Windows.Forms.DockStyle.Fill;
             this.GBpanelPNL.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GBpanelPNL.Location = new System.Drawing.Point(1189, 218);
+            this.GBpanelPNL.Location = new System.Drawing.Point(1189, 220);
             this.GBpanelPNL.Name = "GBpanelPNL";
             this.setupTLP.SetRowSpan(this.GBpanelPNL, 5);
-            this.GBpanelPNL.Size = new System.Drawing.Size(1179, 528);
+            this.GBpanelPNL.Size = new System.Drawing.Size(1179, 533);
             this.GBpanelPNL.TabIndex = 60;
             this.GBpanelPNL.TabStop = false;
             this.GBpanelPNL.Text = "for debug";
@@ -4977,7 +4977,7 @@
             this.textBox3.Location = new System.Drawing.Point(-473, 91);
             this.textBox3.Name = "textBox3";
             this.textBox3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.textBox3.Size = new System.Drawing.Size(120, 34);
+            this.textBox3.Size = new System.Drawing.Size(120, 29);
             this.textBox3.TabIndex = 71;
             // 
             // runCommandTB
@@ -4996,7 +4996,7 @@
             this.commandToRunTB.BackColor = System.Drawing.SystemColors.MenuBar;
             this.commandToRunTB.Location = new System.Drawing.Point(163, 158);
             this.commandToRunTB.Name = "commandToRunTB";
-            this.commandToRunTB.Size = new System.Drawing.Size(112, 34);
+            this.commandToRunTB.Size = new System.Drawing.Size(112, 29);
             this.commandToRunTB.TabIndex = 83;
             this.commandToRunTB.Text = "0";
             this.commandToRunTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -5007,7 +5007,7 @@
             this.textBox2.Location = new System.Drawing.Point(-473, 59);
             this.textBox2.Name = "textBox2";
             this.textBox2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.textBox2.Size = new System.Drawing.Size(120, 34);
+            this.textBox2.Size = new System.Drawing.Size(120, 29);
             this.textBox2.TabIndex = 63;
             // 
             // label21
@@ -5015,7 +5015,7 @@
             this.label21.AutoSize = true;
             this.label21.Location = new System.Drawing.Point(27, 160);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(167, 28);
+            this.label21.Size = new System.Drawing.Size(133, 21);
             this.label21.TabIndex = 82;
             this.label21.Text = "command to Run:";
             // 
@@ -5024,7 +5024,7 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(376, 28);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(64, 28);
+            this.label5.Size = new System.Drawing.Size(52, 21);
             this.label5.TabIndex = 81;
             this.label5.Text = "result:";
             // 
@@ -5034,7 +5034,7 @@
             this.setGBresultTB.Enabled = false;
             this.setGBresultTB.Location = new System.Drawing.Point(390, 53);
             this.setGBresultTB.Name = "setGBresultTB";
-            this.setGBresultTB.Size = new System.Drawing.Size(112, 34);
+            this.setGBresultTB.Size = new System.Drawing.Size(112, 29);
             this.setGBresultTB.TabIndex = 80;
             this.setGBresultTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -5044,7 +5044,7 @@
             this.textBox1.Location = new System.Drawing.Point(-473, 28);
             this.textBox1.Name = "textBox1";
             this.textBox1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.textBox1.Size = new System.Drawing.Size(120, 34);
+            this.textBox1.Size = new System.Drawing.Size(120, 29);
             this.textBox1.TabIndex = 59;
             // 
             // label60
@@ -5052,7 +5052,7 @@
             this.label60.AutoSize = true;
             this.label60.Location = new System.Drawing.Point(376, 82);
             this.label60.Name = "label60";
-            this.label60.Size = new System.Drawing.Size(64, 28);
+            this.label60.Size = new System.Drawing.Size(52, 21);
             this.label60.TabIndex = 79;
             this.label60.Text = "result:";
             // 
@@ -5061,7 +5061,7 @@
             this.label73.AutoSize = true;
             this.label73.Location = new System.Drawing.Point(11, 82);
             this.label73.Name = "label73";
-            this.label73.Size = new System.Drawing.Size(108, 28);
+            this.label73.Size = new System.Drawing.Size(86, 21);
             this.label73.TabIndex = 78;
             this.label73.Text = "enter GB #:";
             // 
@@ -5070,7 +5070,7 @@
             this.label59.AutoSize = true;
             this.label59.Location = new System.Drawing.Point(148, 28);
             this.label59.Name = "label59";
-            this.label59.Size = new System.Drawing.Size(159, 28);
+            this.label59.Size = new System.Drawing.Size(128, 21);
             this.label59.TabIndex = 77;
             this.label59.Text = "enter value [INT]:";
             // 
@@ -5079,7 +5079,7 @@
             this.label58.AutoSize = true;
             this.label58.Location = new System.Drawing.Point(11, 28);
             this.label58.Name = "label58";
-            this.label58.Size = new System.Drawing.Size(108, 28);
+            this.label58.Size = new System.Drawing.Size(86, 21);
             this.label58.TabIndex = 76;
             this.label58.Text = "enter GB #:";
             // 
@@ -5088,7 +5088,7 @@
             this.setGBvalueTB.BackColor = System.Drawing.SystemColors.MenuBar;
             this.setGBvalueTB.Location = new System.Drawing.Point(163, 52);
             this.setGBvalueTB.Name = "setGBvalueTB";
-            this.setGBvalueTB.Size = new System.Drawing.Size(112, 34);
+            this.setGBvalueTB.Size = new System.Drawing.Size(112, 29);
             this.setGBvalueTB.TabIndex = 71;
             this.setGBvalueTB.Text = "0";
             this.setGBvalueTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -5100,7 +5100,7 @@
             this.getGBresultTB.Enabled = false;
             this.getGBresultTB.Location = new System.Drawing.Point(390, 106);
             this.getGBresultTB.Name = "getGBresultTB";
-            this.getGBresultTB.Size = new System.Drawing.Size(112, 34);
+            this.getGBresultTB.Size = new System.Drawing.Size(112, 29);
             this.getGBresultTB.TabIndex = 74;
             this.getGBresultTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -5120,7 +5120,7 @@
             this.setGBnumberTB.BackColor = System.Drawing.SystemColors.MenuBar;
             this.setGBnumberTB.Location = new System.Drawing.Point(25, 52);
             this.setGBnumberTB.Name = "setGBnumberTB";
-            this.setGBnumberTB.Size = new System.Drawing.Size(112, 34);
+            this.setGBnumberTB.Size = new System.Drawing.Size(112, 29);
             this.setGBnumberTB.TabIndex = 70;
             this.setGBnumberTB.Text = "0";
             this.setGBnumberTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -5131,7 +5131,7 @@
             this.getGBnumberTB.BackColor = System.Drawing.SystemColors.MenuBar;
             this.getGBnumberTB.Location = new System.Drawing.Point(25, 106);
             this.getGBnumberTB.Name = "getGBnumberTB";
-            this.getGBnumberTB.Size = new System.Drawing.Size(112, 34);
+            this.getGBnumberTB.Size = new System.Drawing.Size(112, 29);
             this.getGBnumberTB.TabIndex = 68;
             this.getGBnumberTB.Text = "0";
             this.getGBnumberTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -5142,9 +5142,9 @@
             this.movingTB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.movingTB.BackColor = System.Drawing.SystemColors.MenuBar;
             this.movingTB.Enabled = false;
-            this.movingTB.Location = new System.Drawing.Point(442, 367);
+            this.movingTB.Location = new System.Drawing.Point(442, 369);
             this.movingTB.Name = "movingTB";
-            this.movingTB.Size = new System.Drawing.Size(112, 34);
+            this.movingTB.Size = new System.Drawing.Size(112, 29);
             this.movingTB.TabIndex = 67;
             this.movingTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -5154,7 +5154,7 @@
             this.label61.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label61.Location = new System.Drawing.Point(25, 225);
             this.label61.Name = "label61";
-            this.label61.Size = new System.Drawing.Size(134, 30);
+            this.label61.Size = new System.Drawing.Size(110, 23);
             this.label61.TabIndex = 55;
             this.label61.Text = "run In Process";
             // 
@@ -5164,7 +5164,7 @@
             this.label78.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label78.Location = new System.Drawing.Point(25, 279);
             this.label78.Name = "label78";
-            this.label78.Size = new System.Drawing.Size(111, 30);
+            this.label78.Size = new System.Drawing.Size(89, 23);
             this.label78.TabIndex = 66;
             this.label78.Text = "for moving";
             // 
@@ -5174,7 +5174,7 @@
             this.runInProcessTB.Enabled = false;
             this.runInProcessTB.Location = new System.Drawing.Point(163, 222);
             this.runInProcessTB.Name = "runInProcessTB";
-            this.runInProcessTB.Size = new System.Drawing.Size(112, 34);
+            this.runInProcessTB.Size = new System.Drawing.Size(112, 29);
             this.runInProcessTB.TabIndex = 54;
             this.runInProcessTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -5191,10 +5191,10 @@
             this.groupBox6.Controls.Add(this.SGPtestTB);
             this.groupBox6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox6.Location = new System.Drawing.Point(4, 218);
+            this.groupBox6.Location = new System.Drawing.Point(4, 220);
             this.groupBox6.Name = "groupBox6";
             this.setupTLP.SetRowSpan(this.groupBox6, 5);
-            this.groupBox6.Size = new System.Drawing.Size(1178, 528);
+            this.groupBox6.Size = new System.Drawing.Size(1178, 533);
             this.groupBox6.TabIndex = 63;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "for test";
@@ -5214,7 +5214,7 @@
             this.showOverideRB.AutoSize = true;
             this.showOverideRB.Location = new System.Drawing.Point(13, 46);
             this.showOverideRB.Name = "showOverideRB";
-            this.showOverideRB.Size = new System.Drawing.Size(156, 32);
+            this.showOverideRB.Size = new System.Drawing.Size(127, 25);
             this.showOverideRB.TabIndex = 1;
             this.showOverideRB.Text = "show override";
             this.showOverideRB.UseVisualStyleBackColor = true;
@@ -5226,7 +5226,7 @@
             this.normalRunRB.Checked = true;
             this.normalRunRB.Location = new System.Drawing.Point(13, 15);
             this.normalRunRB.Name = "normalRunRB";
-            this.normalRunRB.Size = new System.Drawing.Size(145, 32);
+            this.normalRunRB.Size = new System.Drawing.Size(118, 25);
             this.normalRunRB.TabIndex = 0;
             this.normalRunRB.TabStop = true;
             this.normalRunRB.Text = "Normal RUN";
@@ -5248,7 +5248,7 @@
             this.NoDisposeRB.AutoSize = true;
             this.NoDisposeRB.Location = new System.Drawing.Point(13, 46);
             this.NoDisposeRB.Name = "NoDisposeRB";
-            this.NoDisposeRB.Size = new System.Drawing.Size(132, 32);
+            this.NoDisposeRB.Size = new System.Drawing.Size(106, 25);
             this.NoDisposeRB.TabIndex = 1;
             this.NoDisposeRB.Text = "No dispose";
             this.NoDisposeRB.UseVisualStyleBackColor = true;
@@ -5260,7 +5260,7 @@
             this.disposeBottlesRB.Checked = true;
             this.disposeBottlesRB.Location = new System.Drawing.Point(13, 15);
             this.disposeBottlesRB.Name = "disposeBottlesRB";
-            this.disposeBottlesRB.Size = new System.Drawing.Size(166, 32);
+            this.disposeBottlesRB.Size = new System.Drawing.Size(132, 25);
             this.disposeBottlesRB.TabIndex = 0;
             this.disposeBottlesRB.TabStop = true;
             this.disposeBottlesRB.Text = "dispose bottles";
@@ -5274,7 +5274,7 @@
             this.replyStatusTB.Location = new System.Drawing.Point(217, 79);
             this.replyStatusTB.Name = "replyStatusTB";
             this.replyStatusTB.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.replyStatusTB.Size = new System.Drawing.Size(120, 34);
+            this.replyStatusTB.Size = new System.Drawing.Size(120, 29);
             this.replyStatusTB.TabIndex = 71;
             // 
             // label25
@@ -5283,7 +5283,7 @@
             this.label25.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label25.Location = new System.Drawing.Point(18, 82);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(204, 30);
+            this.label25.Size = new System.Drawing.Size(163, 23);
             this.label25.TabIndex = 70;
             this.label25.Text = "for RUN cmd: STATUS";
             // 
@@ -5294,7 +5294,7 @@
             this.ReplyValueTB.Location = new System.Drawing.Point(217, 47);
             this.ReplyValueTB.Name = "ReplyValueTB";
             this.ReplyValueTB.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.ReplyValueTB.Size = new System.Drawing.Size(120, 34);
+            this.ReplyValueTB.Size = new System.Drawing.Size(120, 29);
             this.ReplyValueTB.TabIndex = 63;
             // 
             // label76
@@ -5303,7 +5303,7 @@
             this.label76.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label76.Location = new System.Drawing.Point(18, 50);
             this.label76.Name = "label76";
-            this.label76.Size = new System.Drawing.Size(184, 30);
+            this.label76.Size = new System.Drawing.Size(148, 23);
             this.label76.TabIndex = 62;
             this.label76.Text = "for RUN cmd: Value";
             // 
@@ -5313,7 +5313,7 @@
             this.label56.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label56.Location = new System.Drawing.Point(19, 20);
             this.label56.Name = "label56";
-            this.label56.Size = new System.Drawing.Size(123, 30);
+            this.label56.Size = new System.Drawing.Size(99, 23);
             this.label56.TabIndex = 55;
             this.label56.Text = "for SGP cmd";
             // 
@@ -5324,17 +5324,17 @@
             this.SGPtestTB.Location = new System.Drawing.Point(217, 16);
             this.SGPtestTB.Name = "SGPtestTB";
             this.SGPtestTB.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.SGPtestTB.Size = new System.Drawing.Size(120, 34);
+            this.SGPtestTB.Size = new System.Drawing.Size(120, 29);
             this.SGPtestTB.TabIndex = 59;
             // 
             // robotTP
             // 
             this.robotTP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.robotTP.Controls.Add(this.debugPnl);
-            this.robotTP.Location = new System.Drawing.Point(4, 30);
+            this.robotTP.Location = new System.Drawing.Point(4, 26);
             this.robotTP.Name = "robotTP";
             this.robotTP.Padding = new System.Windows.Forms.Padding(3);
-            this.robotTP.Size = new System.Drawing.Size(2378, 1083);
+            this.robotTP.Size = new System.Drawing.Size(2378, 1087);
             this.robotTP.TabIndex = 6;
             this.robotTP.Text = "robot";
             this.robotTP.Enter += new System.EventHandler(this.robotTP_Enter);
@@ -5351,7 +5351,7 @@
             this.debugPnl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.debugPnl.Location = new System.Drawing.Point(3, 3);
             this.debugPnl.Name = "debugPnl";
-            this.debugPnl.Size = new System.Drawing.Size(2372, 1077);
+            this.debugPnl.Size = new System.Drawing.Size(2372, 1081);
             this.debugPnl.TabIndex = 65;
             // 
             // panel33
@@ -5424,7 +5424,7 @@
             this.robotSerialTB.Location = new System.Drawing.Point(212, 241);
             this.robotSerialTB.Name = "robotSerialTB";
             this.robotSerialTB.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.robotSerialTB.Size = new System.Drawing.Size(115, 34);
+            this.robotSerialTB.Size = new System.Drawing.Size(115, 29);
             this.robotSerialTB.TabIndex = 73;
             this.robotSerialTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -5434,7 +5434,7 @@
             this.label79.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label79.Location = new System.Drawing.Point(15, 243);
             this.label79.Name = "label79";
-            this.label79.Size = new System.Drawing.Size(172, 30);
+            this.label79.Size = new System.Drawing.Size(138, 23);
             this.label79.TabIndex = 72;
             this.label79.Text = "robot serial (GB 6)";
             // 
@@ -5445,7 +5445,7 @@
             this.PcCodeTB.Location = new System.Drawing.Point(211, 303);
             this.PcCodeTB.Name = "PcCodeTB";
             this.PcCodeTB.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.PcCodeTB.Size = new System.Drawing.Size(116, 34);
+            this.PcCodeTB.Size = new System.Drawing.Size(116, 29);
             this.PcCodeTB.TabIndex = 71;
             this.PcCodeTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -5455,7 +5455,7 @@
             this.label77.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label77.Location = new System.Drawing.Point(16, 303);
             this.label77.Name = "label77";
-            this.label77.Size = new System.Drawing.Size(141, 30);
+            this.label77.Size = new System.Drawing.Size(115, 23);
             this.label77.TabIndex = 70;
             this.label77.Text = "PC SW Version";
             // 
@@ -5466,7 +5466,7 @@
             this.TrinamicCodeTB.Location = new System.Drawing.Point(211, 272);
             this.TrinamicCodeTB.Name = "TrinamicCodeTB";
             this.TrinamicCodeTB.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.TrinamicCodeTB.Size = new System.Drawing.Size(116, 34);
+            this.TrinamicCodeTB.Size = new System.Drawing.Size(116, 29);
             this.TrinamicCodeTB.TabIndex = 69;
             this.TrinamicCodeTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -5476,7 +5476,7 @@
             this.label57.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label57.Location = new System.Drawing.Point(15, 273);
             this.label57.Name = "label57";
-            this.label57.Size = new System.Drawing.Size(194, 30);
+            this.label57.Size = new System.Drawing.Size(156, 23);
             this.label57.TabIndex = 68;
             this.label57.Text = "Robot SW Ver (GB 0)";
             // 
@@ -5485,7 +5485,7 @@
             this.vialsExistTB.BackColor = System.Drawing.SystemColors.MenuBar;
             this.vialsExistTB.Location = new System.Drawing.Point(211, 30);
             this.vialsExistTB.Name = "vialsExistTB";
-            this.vialsExistTB.Size = new System.Drawing.Size(114, 34);
+            this.vialsExistTB.Size = new System.Drawing.Size(114, 29);
             this.vialsExistTB.TabIndex = 56;
             this.vialsExistTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -5495,7 +5495,7 @@
             this.label54.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label54.Location = new System.Drawing.Point(31, 30);
             this.label54.Name = "label54";
-            this.label54.Size = new System.Drawing.Size(96, 30);
+            this.label54.Size = new System.Drawing.Size(78, 23);
             this.label54.TabIndex = 55;
             this.label54.Text = "vials exist";
             // 
@@ -5504,7 +5504,7 @@
             this.hTB.BackColor = System.Drawing.SystemColors.MenuBar;
             this.hTB.Location = new System.Drawing.Point(212, 60);
             this.hTB.Name = "hTB";
-            this.hTB.Size = new System.Drawing.Size(114, 34);
+            this.hTB.Size = new System.Drawing.Size(114, 29);
             this.hTB.TabIndex = 18;
             this.hTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -5514,7 +5514,7 @@
             this.label40.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label40.Location = new System.Drawing.Point(32, 60);
             this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(46, 30);
+            this.label40.Size = new System.Drawing.Size(38, 23);
             this.label40.TabIndex = 9;
             this.label40.Text = "hTB";
             // 
@@ -5523,7 +5523,7 @@
             this.iTB.BackColor = System.Drawing.SystemColors.MenuBar;
             this.iTB.Location = new System.Drawing.Point(212, 90);
             this.iTB.Name = "iTB";
-            this.iTB.Size = new System.Drawing.Size(114, 34);
+            this.iTB.Size = new System.Drawing.Size(114, 29);
             this.iTB.TabIndex = 54;
             this.iTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -5533,7 +5533,7 @@
             this.label55.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label55.Location = new System.Drawing.Point(32, 90);
             this.label55.Name = "label55";
-            this.label55.Size = new System.Drawing.Size(40, 30);
+            this.label55.Size = new System.Drawing.Size(33, 23);
             this.label55.TabIndex = 53;
             this.label55.Text = "iTB";
             // 
@@ -5542,7 +5542,7 @@
             this.lTB.BackColor = System.Drawing.SystemColors.MenuBar;
             this.lTB.Location = new System.Drawing.Point(212, 180);
             this.lTB.Name = "lTB";
-            this.lTB.Size = new System.Drawing.Size(114, 34);
+            this.lTB.Size = new System.Drawing.Size(114, 29);
             this.lTB.TabIndex = 38;
             this.lTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -5552,7 +5552,7 @@
             this.label32.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label32.Location = new System.Drawing.Point(33, 120);
             this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(40, 30);
+            this.label32.Size = new System.Drawing.Size(33, 23);
             this.label32.TabIndex = 27;
             this.label32.Text = "jTB";
             // 
@@ -5561,7 +5561,7 @@
             this.jTB.BackColor = System.Drawing.SystemColors.MenuBar;
             this.jTB.Location = new System.Drawing.Point(211, 120);
             this.jTB.Name = "jTB";
-            this.jTB.Size = new System.Drawing.Size(114, 34);
+            this.jTB.Size = new System.Drawing.Size(114, 29);
             this.jTB.TabIndex = 28;
             this.jTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -5571,7 +5571,7 @@
             this.label33.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label33.Location = new System.Drawing.Point(34, 150);
             this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(45, 30);
+            this.label33.Size = new System.Drawing.Size(37, 23);
             this.label33.TabIndex = 29;
             this.label33.Text = "kTB";
             // 
@@ -5580,7 +5580,7 @@
             this.kTB.BackColor = System.Drawing.SystemColors.MenuBar;
             this.kTB.Location = new System.Drawing.Point(212, 150);
             this.kTB.Name = "kTB";
-            this.kTB.Size = new System.Drawing.Size(114, 34);
+            this.kTB.Size = new System.Drawing.Size(114, 29);
             this.kTB.TabIndex = 30;
             this.kTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -5591,7 +5591,7 @@
             this.label50.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label50.Location = new System.Drawing.Point(34, 180);
             this.label50.Name = "label50";
-            this.label50.Size = new System.Drawing.Size(40, 30);
+            this.label50.Size = new System.Drawing.Size(33, 23);
             this.label50.TabIndex = 37;
             this.label50.Text = "lTB";
             // 
@@ -5600,7 +5600,7 @@
             this.mTB.BackColor = System.Drawing.SystemColors.MenuBar;
             this.mTB.Location = new System.Drawing.Point(212, 210);
             this.mTB.Name = "mTB";
-            this.mTB.Size = new System.Drawing.Size(114, 34);
+            this.mTB.Size = new System.Drawing.Size(114, 29);
             this.mTB.TabIndex = 39;
             this.mTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -5610,7 +5610,7 @@
             this.label49.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label49.Location = new System.Drawing.Point(32, 210);
             this.label49.Name = "label49";
-            this.label49.Size = new System.Drawing.Size(52, 30);
+            this.label49.Size = new System.Drawing.Size(43, 23);
             this.label49.TabIndex = 40;
             this.label49.Text = "mTB";
             // 
@@ -5645,7 +5645,7 @@
             this.Vial6ErrTB.Location = new System.Drawing.Point(211, 184);
             this.Vial6ErrTB.Name = "Vial6ErrTB";
             this.Vial6ErrTB.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.Vial6ErrTB.Size = new System.Drawing.Size(114, 34);
+            this.Vial6ErrTB.Size = new System.Drawing.Size(114, 29);
             this.Vial6ErrTB.TabIndex = 55;
             this.Vial6ErrTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -5655,7 +5655,7 @@
             this.label47.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label47.Location = new System.Drawing.Point(30, 184);
             this.label47.Name = "label47";
-            this.label47.Size = new System.Drawing.Size(131, 30);
+            this.label47.Size = new System.Drawing.Size(107, 23);
             this.label47.TabIndex = 54;
             this.label47.Text = "Vial 6 (GB 42)";
             // 
@@ -5666,7 +5666,7 @@
             this.Vial5ErrTB.Location = new System.Drawing.Point(211, 154);
             this.Vial5ErrTB.Name = "Vial5ErrTB";
             this.Vial5ErrTB.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.Vial5ErrTB.Size = new System.Drawing.Size(114, 34);
+            this.Vial5ErrTB.Size = new System.Drawing.Size(114, 29);
             this.Vial5ErrTB.TabIndex = 53;
             this.Vial5ErrTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -5677,7 +5677,7 @@
             this.Vial4ErrTB.Location = new System.Drawing.Point(211, 124);
             this.Vial4ErrTB.Name = "Vial4ErrTB";
             this.Vial4ErrTB.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.Vial4ErrTB.Size = new System.Drawing.Size(114, 34);
+            this.Vial4ErrTB.Size = new System.Drawing.Size(114, 29);
             this.Vial4ErrTB.TabIndex = 52;
             this.Vial4ErrTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -5687,7 +5687,7 @@
             this.label30.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label30.Location = new System.Drawing.Point(31, 34);
             this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(131, 30);
+            this.label30.Size = new System.Drawing.Size(107, 23);
             this.label30.TabIndex = 41;
             this.label30.Text = "Vial 1 (GB 37)";
             // 
@@ -5697,7 +5697,7 @@
             this.label29.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label29.Location = new System.Drawing.Point(31, 94);
             this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(131, 30);
+            this.label29.Size = new System.Drawing.Size(107, 23);
             this.label29.TabIndex = 42;
             this.label29.Text = "Vial 3 (GB 39)";
             // 
@@ -5708,7 +5708,7 @@
             this.Vial1ErrTB.Location = new System.Drawing.Point(212, 34);
             this.Vial1ErrTB.Name = "Vial1ErrTB";
             this.Vial1ErrTB.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.Vial1ErrTB.Size = new System.Drawing.Size(114, 34);
+            this.Vial1ErrTB.Size = new System.Drawing.Size(114, 29);
             this.Vial1ErrTB.TabIndex = 43;
             this.Vial1ErrTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -5718,7 +5718,7 @@
             this.label48.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label48.Location = new System.Drawing.Point(31, 154);
             this.label48.Name = "label48";
-            this.label48.Size = new System.Drawing.Size(131, 30);
+            this.label48.Size = new System.Drawing.Size(107, 23);
             this.label48.TabIndex = 35;
             this.label48.Text = "Vial 5 (GB 41)";
             // 
@@ -5729,7 +5729,7 @@
             this.Vial3ErrTB.Location = new System.Drawing.Point(211, 94);
             this.Vial3ErrTB.Name = "Vial3ErrTB";
             this.Vial3ErrTB.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.Vial3ErrTB.Size = new System.Drawing.Size(114, 34);
+            this.Vial3ErrTB.Size = new System.Drawing.Size(114, 29);
             this.Vial3ErrTB.TabIndex = 44;
             this.Vial3ErrTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -5739,7 +5739,7 @@
             this.label38.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label38.Location = new System.Drawing.Point(30, 214);
             this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(191, 30);
+            this.label38.Size = new System.Drawing.Size(155, 23);
             this.label38.TabIndex = 7;
             this.label38.Text = "Syringe BAG (GB 28)";
             // 
@@ -5749,7 +5749,7 @@
             this.label51.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label51.Location = new System.Drawing.Point(31, 124);
             this.label51.Name = "label51";
-            this.label51.Size = new System.Drawing.Size(131, 30);
+            this.label51.Size = new System.Drawing.Size(107, 23);
             this.label51.TabIndex = 51;
             this.label51.Text = "Vial 4 (GB 40)";
             // 
@@ -5760,7 +5760,7 @@
             this.Vial2ErrTB.Location = new System.Drawing.Point(212, 64);
             this.Vial2ErrTB.Name = "Vial2ErrTB";
             this.Vial2ErrTB.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.Vial2ErrTB.Size = new System.Drawing.Size(114, 34);
+            this.Vial2ErrTB.Size = new System.Drawing.Size(114, 29);
             this.Vial2ErrTB.TabIndex = 50;
             this.Vial2ErrTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -5770,7 +5770,7 @@
             this.label52.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label52.Location = new System.Drawing.Point(31, 64);
             this.label52.Name = "label52";
-            this.label52.Size = new System.Drawing.Size(131, 30);
+            this.label52.Size = new System.Drawing.Size(107, 23);
             this.label52.TabIndex = 49;
             this.label52.Text = "Vial 2 (GB 38)";
             // 
@@ -5781,7 +5781,7 @@
             this.SyringeBagErrorsTB.Location = new System.Drawing.Point(211, 214);
             this.SyringeBagErrorsTB.Name = "SyringeBagErrorsTB";
             this.SyringeBagErrorsTB.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.SyringeBagErrorsTB.Size = new System.Drawing.Size(114, 34);
+            this.SyringeBagErrorsTB.Size = new System.Drawing.Size(114, 29);
             this.SyringeBagErrorsTB.TabIndex = 20;
             this.SyringeBagErrorsTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -5809,7 +5809,7 @@
             this.label6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label6.Location = new System.Drawing.Point(23, 116);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(184, 30);
+            this.label6.Size = new System.Drawing.Size(148, 23);
             this.label6.TabIndex = 70;
             this.label6.Text = "Cycles Total (GB 12)";
             // 
@@ -5820,7 +5820,7 @@
             this.CyclesTotalTB.Location = new System.Drawing.Point(249, 113);
             this.CyclesTotalTB.Name = "CyclesTotalTB";
             this.CyclesTotalTB.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.CyclesTotalTB.Size = new System.Drawing.Size(88, 34);
+            this.CyclesTotalTB.Size = new System.Drawing.Size(88, 29);
             this.CyclesTotalTB.TabIndex = 71;
             this.CyclesTotalTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -5830,7 +5830,7 @@
             this.label42.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label42.Location = new System.Drawing.Point(24, 55);
             this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(263, 30);
+            this.label42.Size = new System.Drawing.Size(212, 23);
             this.label42.TabIndex = 11;
             this.label42.Text = "command in process (GB 97)";
             // 
@@ -5840,7 +5840,7 @@
             this.CmdInProcTB.Enabled = false;
             this.CmdInProcTB.Location = new System.Drawing.Point(249, 52);
             this.CmdInProcTB.Name = "CmdInProcTB";
-            this.CmdInProcTB.Size = new System.Drawing.Size(88, 34);
+            this.CmdInProcTB.Size = new System.Drawing.Size(88, 29);
             this.CmdInProcTB.TabIndex = 16;
             this.CmdInProcTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -5850,7 +5850,7 @@
             this.label34.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label34.Location = new System.Drawing.Point(24, 25);
             this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(228, 30);
+            this.label34.Size = new System.Drawing.Size(183, 23);
             this.label34.TabIndex = 3;
             this.label34.Text = "motor is moving (GB 16)";
             // 
@@ -5860,7 +5860,7 @@
             this.HomingDoneTB.Enabled = false;
             this.HomingDoneTB.Location = new System.Drawing.Point(249, 82);
             this.HomingDoneTB.Name = "HomingDoneTB";
-            this.HomingDoneTB.Size = new System.Drawing.Size(88, 34);
+            this.HomingDoneTB.Size = new System.Drawing.Size(88, 29);
             this.HomingDoneTB.TabIndex = 17;
             this.HomingDoneTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -5870,7 +5870,7 @@
             this.MotorIsMovingTB.Enabled = false;
             this.MotorIsMovingTB.Location = new System.Drawing.Point(249, 22);
             this.MotorIsMovingTB.Name = "MotorIsMovingTB";
-            this.MotorIsMovingTB.Size = new System.Drawing.Size(88, 34);
+            this.MotorIsMovingTB.Size = new System.Drawing.Size(88, 29);
             this.MotorIsMovingTB.TabIndex = 15;
             this.MotorIsMovingTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -5880,7 +5880,7 @@
             this.label41.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label41.Location = new System.Drawing.Point(24, 85);
             this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(201, 30);
+            this.label41.Size = new System.Drawing.Size(161, 23);
             this.label41.TabIndex = 10;
             this.label41.Text = "homing done (GB 18)";
             // 
@@ -5923,7 +5923,7 @@
             this.FindHomeErrorsTB.Location = new System.Drawing.Point(219, 292);
             this.FindHomeErrorsTB.Name = "FindHomeErrorsTB";
             this.FindHomeErrorsTB.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.FindHomeErrorsTB.Size = new System.Drawing.Size(118, 34);
+            this.FindHomeErrorsTB.Size = new System.Drawing.Size(118, 29);
             this.FindHomeErrorsTB.TabIndex = 34;
             this.FindHomeErrorsTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -5933,7 +5933,7 @@
             this.FindHomeTB.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.FindHomeTB.Location = new System.Drawing.Point(24, 295);
             this.FindHomeTB.Name = "FindHomeTB";
-            this.FindHomeTB.Size = new System.Drawing.Size(179, 30);
+            this.FindHomeTB.Size = new System.Drawing.Size(144, 23);
             this.FindHomeTB.TabIndex = 33;
             this.FindHomeTB.Text = "Find Home (GB 43)";
             // 
@@ -5944,7 +5944,7 @@
             this.WrongPcErrorsTB.Location = new System.Drawing.Point(219, 322);
             this.WrongPcErrorsTB.Name = "WrongPcErrorsTB";
             this.WrongPcErrorsTB.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.WrongPcErrorsTB.Size = new System.Drawing.Size(118, 34);
+            this.WrongPcErrorsTB.Size = new System.Drawing.Size(118, 29);
             this.WrongPcErrorsTB.TabIndex = 32;
             this.WrongPcErrorsTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -5954,7 +5954,7 @@
             this.label53.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label53.Location = new System.Drawing.Point(24, 325);
             this.label53.Name = "label53";
-            this.label53.Size = new System.Drawing.Size(210, 30);
+            this.label53.Size = new System.Drawing.Size(170, 23);
             this.label53.TabIndex = 31;
             this.label53.Text = "wrong PC cmd (GB 44)";
             // 
@@ -5964,7 +5964,7 @@
             this.label46.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label46.Location = new System.Drawing.Point(24, 265);
             this.label46.Name = "label46";
-            this.label46.Size = new System.Drawing.Size(216, 30);
+            this.label46.Size = new System.Drawing.Size(173, 23);
             this.label46.TabIndex = 28;
             this.label46.Text = "6 M CapHolder (GB 36)";
             // 
@@ -5975,7 +5975,7 @@
             this.SpecialErrorsTB.Location = new System.Drawing.Point(219, 352);
             this.SpecialErrorsTB.Name = "SpecialErrorsTB";
             this.SpecialErrorsTB.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.SpecialErrorsTB.Size = new System.Drawing.Size(118, 34);
+            this.SpecialErrorsTB.Size = new System.Drawing.Size(118, 29);
             this.SpecialErrorsTB.TabIndex = 30;
             this.SpecialErrorsTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -5985,7 +5985,7 @@
             this.SpecialErrorLbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.SpecialErrorLbl.Location = new System.Drawing.Point(24, 355);
             this.SpecialErrorLbl.Name = "SpecialErrorLbl";
-            this.SpecialErrorLbl.Size = new System.Drawing.Size(193, 30);
+            this.SpecialErrorLbl.Size = new System.Drawing.Size(156, 23);
             this.SpecialErrorLbl.TabIndex = 27;
             this.SpecialErrorLbl.Text = "Special Error (GB 45)";
             // 
@@ -5996,7 +5996,7 @@
             this.M_CapHolderErrorsTB.Location = new System.Drawing.Point(219, 262);
             this.M_CapHolderErrorsTB.Name = "M_CapHolderErrorsTB";
             this.M_CapHolderErrorsTB.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.M_CapHolderErrorsTB.Size = new System.Drawing.Size(118, 34);
+            this.M_CapHolderErrorsTB.Size = new System.Drawing.Size(118, 29);
             this.M_CapHolderErrorsTB.TabIndex = 29;
             this.M_CapHolderErrorsTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -6008,7 +6008,7 @@
             this.M_VerticalErrorsTB.Location = new System.Drawing.Point(219, 82);
             this.M_VerticalErrorsTB.Name = "M_VerticalErrorsTB";
             this.M_VerticalErrorsTB.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.M_VerticalErrorsTB.Size = new System.Drawing.Size(118, 34);
+            this.M_VerticalErrorsTB.Size = new System.Drawing.Size(118, 29);
             this.M_VerticalErrorsTB.TabIndex = 21;
             this.M_VerticalErrorsTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -6018,7 +6018,7 @@
             this.label35.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label35.Location = new System.Drawing.Point(24, 145);
             this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(156, 30);
+            this.label35.Size = new System.Drawing.Size(127, 23);
             this.label35.TabIndex = 4;
             this.label35.Text = "2 M arm (GB 32)";
             // 
@@ -6028,7 +6028,7 @@
             this.label39.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label39.Location = new System.Drawing.Point(24, 25);
             this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(162, 30);
+            this.label39.Size = new System.Drawing.Size(132, 23);
             this.label39.TabIndex = 8;
             this.label39.Text = "any error (GB 29)";
             // 
@@ -6038,7 +6038,7 @@
             this.label36.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label36.Location = new System.Drawing.Point(24, 115);
             this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(170, 30);
+            this.label36.Size = new System.Drawing.Size(138, 23);
             this.label36.TabIndex = 5;
             this.label36.Text = "1 M linear (GB 31)";
             // 
@@ -6049,7 +6049,7 @@
             this.AnyErrorTB.Location = new System.Drawing.Point(219, 22);
             this.AnyErrorTB.Name = "AnyErrorTB";
             this.AnyErrorTB.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.AnyErrorTB.Size = new System.Drawing.Size(118, 34);
+            this.AnyErrorTB.Size = new System.Drawing.Size(118, 29);
             this.AnyErrorTB.TabIndex = 19;
             this.AnyErrorTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -6059,7 +6059,7 @@
             this.label37.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label37.Location = new System.Drawing.Point(24, 85);
             this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(185, 30);
+            this.label37.Size = new System.Drawing.Size(149, 23);
             this.label37.TabIndex = 6;
             this.label37.Text = "0 M vertical (GB 30)";
             // 
@@ -6069,7 +6069,7 @@
             this.label44.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label44.Location = new System.Drawing.Point(23, 205);
             this.label44.Name = "label44";
-            this.label44.Size = new System.Drawing.Size(227, 30);
+            this.label44.Size = new System.Drawing.Size(182, 23);
             this.label44.TabIndex = 13;
             this.label44.Text = "4 M head Rotate (GB 34)";
             // 
@@ -6080,7 +6080,7 @@
             this.M_DisposeErrorsTB.Location = new System.Drawing.Point(219, 232);
             this.M_DisposeErrorsTB.Name = "M_DisposeErrorsTB";
             this.M_DisposeErrorsTB.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.M_DisposeErrorsTB.Size = new System.Drawing.Size(118, 34);
+            this.M_DisposeErrorsTB.Size = new System.Drawing.Size(118, 29);
             this.M_DisposeErrorsTB.TabIndex = 26;
             this.M_DisposeErrorsTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -6090,7 +6090,7 @@
             this.label45.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label45.Location = new System.Drawing.Point(24, 175);
             this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(177, 30);
+            this.label45.Size = new System.Drawing.Size(142, 23);
             this.label45.TabIndex = 14;
             this.label45.Text = "3 M piston (GB 33)";
             // 
@@ -6100,7 +6100,7 @@
             this.label43.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label43.Location = new System.Drawing.Point(24, 235);
             this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(189, 30);
+            this.label43.Size = new System.Drawing.Size(152, 23);
             this.label43.TabIndex = 12;
             this.label43.Text = "5 M dispose (GB 35)";
             // 
@@ -6111,7 +6111,7 @@
             this.M_LinearErrorsTB.Location = new System.Drawing.Point(219, 112);
             this.M_LinearErrorsTB.Name = "M_LinearErrorsTB";
             this.M_LinearErrorsTB.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.M_LinearErrorsTB.Size = new System.Drawing.Size(118, 34);
+            this.M_LinearErrorsTB.Size = new System.Drawing.Size(118, 29);
             this.M_LinearErrorsTB.TabIndex = 22;
             this.M_LinearErrorsTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -6122,7 +6122,7 @@
             this.M_ArmErrorsTB.Location = new System.Drawing.Point(219, 142);
             this.M_ArmErrorsTB.Name = "M_ArmErrorsTB";
             this.M_ArmErrorsTB.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.M_ArmErrorsTB.Size = new System.Drawing.Size(118, 34);
+            this.M_ArmErrorsTB.Size = new System.Drawing.Size(118, 29);
             this.M_ArmErrorsTB.TabIndex = 23;
             this.M_ArmErrorsTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -6133,7 +6133,7 @@
             this.M_HeadRotateErrorsTB.Location = new System.Drawing.Point(219, 202);
             this.M_HeadRotateErrorsTB.Name = "M_HeadRotateErrorsTB";
             this.M_HeadRotateErrorsTB.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.M_HeadRotateErrorsTB.Size = new System.Drawing.Size(118, 34);
+            this.M_HeadRotateErrorsTB.Size = new System.Drawing.Size(118, 29);
             this.M_HeadRotateErrorsTB.TabIndex = 25;
             this.M_HeadRotateErrorsTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -6144,7 +6144,7 @@
             this.M_PistonErrorsTB.Location = new System.Drawing.Point(219, 172);
             this.M_PistonErrorsTB.Name = "M_PistonErrorsTB";
             this.M_PistonErrorsTB.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.M_PistonErrorsTB.Size = new System.Drawing.Size(118, 34);
+            this.M_PistonErrorsTB.Size = new System.Drawing.Size(118, 29);
             this.M_PistonErrorsTB.TabIndex = 24;
             this.M_PistonErrorsTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -6196,7 +6196,7 @@
             // 
             // CMForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(2386, 1117);
