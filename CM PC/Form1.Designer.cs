@@ -4772,6 +4772,7 @@
             this.button2.Size = new System.Drawing.Size(26, 25);
             this.button2.TabIndex = 87;
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.oopsLD_maxVolTB_Click);
             // 
             // LD_minVolTB
             // 
@@ -4809,6 +4810,8 @@
             this.LD_maxVolTB.TabIndex = 80;
             this.LD_maxVolTB.Text = "0";
             this.LD_maxVolTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.LD_maxVolTB.Leave += new System.EventHandler(this.LD_maxVolTB_Leave);
+            this.LD_maxVolTB.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.LD_maxVolTB_PreviewKeyDown);
             // 
             // LD_minVolBtn
             // 
@@ -4828,6 +4831,7 @@
             this.LD_maxVolBtn.TabIndex = 79;
             this.LD_maxVolBtn.Text = "set max vol\r\nlaser dist";
             this.LD_maxVolBtn.UseVisualStyleBackColor = true;
+            this.LD_maxVolBtn.Click += new System.EventHandler(this.LD_maxVolBtn_Click);
             // 
             // panel36
             // 

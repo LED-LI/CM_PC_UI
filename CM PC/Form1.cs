@@ -20,7 +20,7 @@ namespace SpaceUSB
     {
         //  all the following directories will be under the base directory:
 
-        public string pcCode = "2023-05-07";
+        public string pcCode = "2024-07-16";
 
         public string cmPath = "C:\\cmRUN\\";    // base directory. can be changed by the user
         public string logPath = "logfiles\\";
@@ -62,8 +62,14 @@ namespace SpaceUSB
         public string last_setArmDisposeVials456TB;
         public string last_setArmAtBotomTB;
         public string last_setPistonStartTB;
-        public string last_setHeadRotateStartTB;
+        
+		public string last_LD_minVolTB;
+		public string last_LD_maxVolTB;
+		public string last_setLD_acceptedDevTB;
+		public string last_setLD_definedVolTB;
+		
         public string last_setHeadRotateTopTB;
+        public string last_setHeadRotateStartTB;
         public string last_setHeadAtBottomTB;
         public string last_setDropVials123TB;
         public string elapsedTime;
@@ -132,6 +138,10 @@ namespace SpaceUSB
         public int PistonHomePos;
         public int HeadRotateHomePos;
         public int HeadRotateAtTop;
+        public int LD_minVol;
+        public int LD_maxVol;
+        public int LD_definedVolPos;
+        public int LD_acceptedDev;
         public int Vial4Bottom;
         public int DisposeDropVialPos;
         public int CapHolderHomePos;
@@ -3657,31 +3667,17 @@ namespace SpaceUSB
         }
 
         // _____________Laser distance of piston_______________________________________________
+        // TODO : replace with a reading from LD
+
 
         // _____________LD_minVolBtn_______________________________________________
-        // ORGANIZE IN THE CORRECT ORDER
 
         private void LD_minVolBtn_Click(object sender, EventArgs e)
         {
-            uploadPistonStart();
+            uploadLD_minVol();
             v = Convert.ToDouble(M_PistonLocationTb.Text) * StepsPerMM.M_PistonStepsPerMM;
             LD_minVolTB.Text = Convert.ToString(Convert.ToInt32(v));
             setLD_minVol();
-        }
-
-        private void LD_minVolTB_Leave(object sender, EventArgs e)
-        {
-            uploadPistonStart();
-            setPistonStart();
-        }
-
-        private void LD_minVolTB_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
-        {
-            if (Convert.ToInt32(e.KeyCode) == (char)13)    //  Enter key pressed?
-            {
-                //uploadPistonStart();
-                //setPistonStart();
-            }
         }
 
         private void oopsLD_minVolTB_Click(object sender, EventArgs e)
@@ -3690,23 +3686,87 @@ namespace SpaceUSB
             setLD_minVol();
         }
 
+        private void LD_minVolTB_Leave(object sender, EventArgs e)
+        {
+            uploadLD_minVol();
+            setLD_minVol();
+        }
+
+        private void LD_minVolTB_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
+        {
+            if (Convert.ToInt32(e.KeyCode) == (char)13)    //  Enter key pressed?
+            {
+                //uploadLD_minVol();
+                //setLD_minVol();
+            }
+        }
+
         private void setLD_minVol()
         {
             if (rgMinus.Match(LD_minVolTB.Text).Success)        // did not match, a non number character is there
             {
                 //logAndShow($"A non-number value for the distance {LD_minVolTB.Text}");
-                tResponse = rTMCConn.SetSGPandStore(AddressBank.GetParameterBank, SystemVariables.GB_PistonHomePos, LD_minVolTB.Text);
+                tResponse = rTMCConn.SetSGPandStore(AddressBank.GetParameterBank, SystemVariables.GB_min_vol_laserDist_AVAL, LD_minVolTB.Text);
             }
             refreshParams();
         }
         private void uploadLD_minVol()
         {
-            tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_PistonHomePos); // GB_48
+            tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_min_vol_laserDist_AVAL); // GB_14
             LD_minVol = Convert.ToInt32(tResponse.tmcReply.value);
             last_LD_minVolTB = $"{LD_minVol}";
         }
 
+        // _____________LD_maxVolBtn_______________________________________________
+
+        private void LD_maxVolBtn_Click(object sender, EventArgs e)
+        {
+            uploadLD_maxVol();
+            v = Convert.ToDouble(M_PistonLocationTb.Text) * StepsPerMM.M_PistonStepsPerMM;
+            LD_maxVolTB.Text = Convert.ToString(Convert.ToInt32(v));
+            setLD_maxVol();
+        }
+
+        private void oopsLD_maxVolTB_Click(object sender, EventArgs e)
+        {
+            LD_maxVolTB.Text = last_LD_maxVolTB;
+            setLD_maxVol();
+        }
+
+        private void LD_maxVolTB_Leave(object sender, EventArgs e)
+        {
+            uploadLD_maxVol();
+            setLD_maxVol();
+        }
+
+        private void LD_maxVolTB_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
+        {
+            if (Convert.ToInt32(e.KeyCode) == (char)13)    //  Enter key pressed?
+            {
+                //uploadLD_maxVol();
+                //setLD_maxVol();
+            }
+        }
+
+        private void setLD_maxVol()
+        {
+            if (rgMinus.Match(LD_maxVolTB.Text).Success)        // did not match, a non number character is there
+            {
+                //logAndShow($"A non-number value for the distance {LD_maxVolTB.Text}");
+                tResponse = rTMCConn.SetSGPandStore(AddressBank.GetParameterBank, SystemVariables.GB_max_vol_laserDist_AVAL, LD_maxVolTB.Text);
+            }
+            refreshParams();
+        }
+		
+        private void uploadLD_maxVol()
+        {
+            tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_max_vol_laserDist_AVAL); // GB_14
+            LD_maxVol = Convert.ToInt32(tResponse.tmcReply.value);
+            last_LD_maxVolTB = $"{LD_maxVol}";
+        }
+
         // ________________LD_definedVol_____________
+		
         private void LD_definedVolTB_Leave(object sender, EventArgs e)
         {
             uploadLD_definedVol();
@@ -3723,16 +3783,16 @@ namespace SpaceUSB
         }
         private void setLD_definedVol()
         {
-            if (rgMinus.Match(setPistonStartTB.Text).Success)        // did not match, a non number character is there
+            if (rgMinus.Match(LD_definedVolTB.Text).Success)        // did not match, a non number character is there
             {
-                //logAndShow($"A non-number value for the distance {setLD_definedVolTB.Text}");
-                tResponse = rTMCConn.SetSGPandStore(AddressBank.GetParameterBank, SystemVariables.GB_PistonHomePos, setPistonStartTB.Text);
+                //logAndShow($"A non-number value for the distance {LD_definedVolTB.Text}");
+                tResponse = rTMCConn.SetSGPandStore(AddressBank.GetParameterBank, SystemVariables.GB_piston_defined_vol_uL, LD_definedVolTB.Text);
             }
             refreshParams();
         }
         private void uploadLD_definedVol()
         {
-            tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_PistonHomePos); // GB_48
+            tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_piston_defined_vol_uL); // GB_16
             LD_definedVolPos = Convert.ToInt32(tResponse.tmcReply.value);
             last_setLD_definedVolTB = $"{LD_definedVolPos}";
         }
@@ -3758,15 +3818,15 @@ namespace SpaceUSB
             if (rgMinus.Match(LD_acceptedDevTB.Text).Success)        // did not match, a non number character is there
             {
                 //logAndShow($"A non-number value for the distance {setLD_acceptedDevTB.Text}");
-                tResponse = rTMCConn.SetSGPandStore(AddressBank.GetParameterBank, SystemVariables.GB_PistonHomePos, LD_acceptedDevTB.Text);
+                tResponse = rTMCConn.SetSGPandStore(AddressBank.GetParameterBank, SystemVariables.GB_accepted_diviation_range, LD_acceptedDevTB.Text);
             }
             refreshParams();
         }
         private void uploadLD_acceptedDev()
         {
-            tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_PistonHomePos); // GB_48
+            tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_accepted_diviation_range); // GB_48
             LD_acceptedDev = Convert.ToInt32(tResponse.tmcReply.value);
-            last_setPistonStartTB = $"{LD_acceptedDev}";
+            last_setLD_acceptedDevTB = $"{LD_acceptedDev}";
         }
 
 

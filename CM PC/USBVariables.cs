@@ -109,13 +109,13 @@ namespace SpaceUSB
         public const string GB_needleLength = "10"; 
         public const string GB_needleGauge = "11"; 
         public const string GB_cyclesTotal = "12";
-        public const string GB_setBumpBottom = "13";   
-        public const string GB_14 = "14"; 
-        public const string GB_15 = "15"; 
-        public const string GB_16 = "16";
-        public const string GB_17 = "17"; 
-        public const string GB_18 = "18";
-        public const string GB_19 = "19";
+        public const string GB_setBumpBottom = "13";
+        public const string GB_min_vol_laserDist_AVAL = "14"; 
+        public const string GB_max_vol_laserDist_AVAL = "15"; 
+        public const string GB_piston_defined_vol_uL = "16";
+        public const string GB_accepted_diviation_range = "17"; 
+        public const string GB_messuredAmountOfLiquid = "18";
+        public const string GB_current_diviation = "19";
         public const string GB_showOverride = "20";
         public const string GB_21 = "21";
         public const string GB_disposeYN = "22";
@@ -127,15 +127,15 @@ namespace SpaceUSB
         public const string GB_errors_syringe_bag = "28";
         /*
  // bit errors for parameter 28:
-    BitEr_bagIsMissing        = %00000000001 // bit    1  
-    BitEr_syringePoppedOut    = %00000000010 // bit    2  syringe popped out during cycle
-    BitEr_volumeExceedsBag    = %00000000100 // bit    4  
-    BitEr_SyringeIsIn         = %00000001000 // bit    8  FIND_HOMES error or INIT_DRAW_DOSE, Syringe is in the system
-    BitEr_SyringeMissing      = %00000010000 // bit   16  DRAW_DOSE error, missing the syringe
-    BitEr_machineAborted      = %00000100000 // bit   32
-    BitEr_g7                  = %00001000000 // bit   64
-    BitEr_g8                  = %00010000000 // bit  128
-    BitEr_g9                  = %00100000000 // bit  256
+    BitEr_bagIsMissing         = %00000000001 // bit    1  
+    BitEr_syringePoppedOut     = %00000000010 // bit    2  syringe popped out during cycle
+    BitEr_volumeExceedsBag     = %00000000100 // bit    4  
+    BitEr_SyringeIsIn          = %00000001000 // bit    8  FIND_HOMES error or INIT_DRAW_DOSE, Syringe is in the system
+    BitEr_SyringeMissing       = %00000010000 // bit   16  DRAW_DOSE error, missing the syringe
+    BitEr_machineAborted       = %00000100000 // bit   32
+    BitEr_SyringeNotInBag      = %00001000000 // bit   64
+    BitEr_SyringeVolume_Error  = %00010000000 // bit  128
+    BitEr_SyringeContent_Error = %00100000000 // bit  256
         */
         public const string GB_any_Error = "29";     //1 = will not check for pig removal (GP 28 error)
 
@@ -225,7 +225,7 @@ namespace SpaceUSB
         // ***********************************************************************
         // from here on, GB cannot be stored (STGP) in the EEPROM
         // ***********************************************************************
-        public const string GB_56 = "56";
+        public const string GB_liquidDetected = "56";
         public const string GB_57 = "57";
         public const string GB_58 = "58";
 
@@ -303,7 +303,8 @@ namespace SpaceUSB
         public const string GB_vialSize_microL_6 = "106";
         public const string GB_vialSize_microL_current = "107";
         public const string GB_BagSize_microL = "108";
-
+        public const string GB_109 = "109";
+        public const string GB_110 = "110";
         public const string GB_rotateVialsDown = "111";      // 1600
         public const string GB_vibration4IsNeeded = "112";     
         public const string GB_vibration56IsNeeded = "113";     
@@ -318,7 +319,9 @@ namespace SpaceUSB
         // vibration time for vials [seconds]
         //++++++++++++++++++++++++++++++++++++++++++++++++++++++++
         public const string GB_vibrationTime_4 = "114";              // [sec] input
+        public const string GB_vibrationTime_4_calc = "115";
         public const string GB_vibrationTime_56 = "116";             // [sec] input
+        public const string GB_vibrationTime_56_calc = "117";
         public const string GB_vibrationLocation = "118";
         /*
             Bit_vibrateDown      =  %00000001 // bit   1
@@ -344,6 +347,7 @@ namespace SpaceUSB
         public const string GB_126 = "126";
         public const string GB_vibrationIsNeeded = "127";
         public const string GB_128 = "128";
+        public const string GB_vibrationTime_56_tmp = "129";
 
         // microLtoFill values
 
@@ -423,20 +427,32 @@ namespace SpaceUSB
         public const string GB_230 = "230";
         public const string GB_airToPullBefore = "231";
         public const string GB_232 = "232";
+        public const string GB_233 = "233";
+        public const string GB_234 = "234";
         public const string GB_motorNumForHome = "235";
         public const string GB_236 = "236";
         public const string GB_microLbagToFill = "237";
 
-        public const string GB_InterruptCount = "255";             // temorary variable 5
+        public const string GB_skipCheckVial456 = "250";             // temorary variable 5
+        public const string GB_skipCheckBag = "251";
+        public const string GB_foundCenterOfNeedle = "252";
+        public const string GB_DrawFromVialWaitTime = "253";
+        public const string GB_vialsToDrawFromCounter = "254";
+
+        public const string GB_InterruptCount = "255";
 
                                   
     }
     public static class GeneralFunctions
     {
         public const string FIRST_RUN = "0";                      //Runs on power on
+        public const string Draw_654321 = "2";      // for testing
+        public const string Eyals_dummy_sub = "4";
         public const string INIT_CM = "6";
         public const string DRAW_DOSE = "8";
+        public const string dropVials = "10";
         public const string ABORT = "12";
+        public const string VERIFY_READY_DRAW = "14"; //  checks if the vial' syrine ready to draw
         public const string INIT_MOTORS = "16";
         public const string FIND_HOMES = "18";
         public const string HomeCalibration = "20";
@@ -462,6 +478,7 @@ namespace SpaceUSB
         public const string checkSyringeSensor = "60";
         public const string checkNoSyringe = "62";
         public const string checkSyrPoppedOut = "66";
+        public const string moveAboveVial = "68"; // func_68:   CSUB moveAboveVialFromCenter
         public const string checkDrawVolume = "70";
         public const string startPullAir70 = "72";
         public const string deCap = "74";
@@ -476,6 +493,7 @@ namespace SpaceUSB
         public const string startHomeDisposeMotor = "92";
         public const string insertNeedleIntoVialBelow = "94";
         public const string positionArmMotor = "96";
+        public const string setTestParams = "98";
         public const string drawVialMoreBack = "100";
         public const string homeVerticalMotor = "102";
         public const string homePistonMotor = "104";
@@ -503,6 +521,8 @@ namespace SpaceUSB
         public const string DisposeManual = "158";
         public const string CapHolderManual = "160";
         public const string testCapHolder = "162";
+        public const string draw_321 = "164";
+        public const string checkSyringeContent = "166";
         public const int lastFunction = 174;  
     }
 }
