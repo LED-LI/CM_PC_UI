@@ -20,7 +20,7 @@ namespace SpaceUSB
     {
         //  all the following directories will be under the base directory:
 
-        public string pcCode = "2024-07-17";
+        public string pcCode = "2024-07-21";
 
         public string cmPath = "C:\\cmRUN\\";    // base directory. can be changed by the user
         public string logPath = "logfiles\\";
@@ -65,8 +65,8 @@ namespace SpaceUSB
         
 		public string last_LD_minVolTB;
 		public string last_LD_maxVolTB;
-		public string last_setLD_acceptedDevTB;
-		public string last_setLD_definedVolTB;
+		//public string last_setLD_acceptedDevTB;
+		//public string last_setLD_definedVolTB;
 		
         public string last_setHeadRotateTopTB;
         public string last_setHeadRotateStartTB;
@@ -74,6 +74,7 @@ namespace SpaceUSB
         public string last_setDropVials123TB;
         public string elapsedTime;
         public double v;
+        public double thumbRestDistance;
 
         public bool isAdministrator = false;      // start program with non-administrator
         public bool anyErrorGotTrue = false;
@@ -140,7 +141,7 @@ namespace SpaceUSB
         public int HeadRotateAtTop;
         public int LD_minVol;
         public int LD_maxVol;
-        public int LD_definedVolPos;
+        public int LD_definedVol;
         public int LD_acceptedDev;
         public int Vial4Bottom;
         public int DisposeDropVialPos;
@@ -245,6 +246,17 @@ namespace SpaceUSB
                 tResponse = rTMCConn.GetGAP(MotorsNum.M_Piston, AddressBank.actualPosition);
                 v = Convert.ToDouble(tResponse.tmcReply.value) / StepsPerMM.M_PistonStepsPerMM;
                 this.Invoke((MethodInvoker)delegate { M_PistonLocationTb.Text = $"{v,10:0.00}"; });
+
+
+                if (!RunInProcess && (currentTAB == 3))
+                {
+                    tResponse = rTMCConn.RunCommand(GeneralFunctions.getLaserDistAVAL);
+                    Thread.Sleep(100);   // wait 100 ms for the FUNC to finish
+                    tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_thumbRestDistance);
+                    thumbRestDistance = Convert.ToDouble(tResponse.tmcReply.value);
+                    v = thumbRestDistance * 100 / Values.maxAVAL;
+                    this.Invoke((MethodInvoker)delegate { LD_valTb.Text = $"{v,10:0.00}"; });
+                }
 
                 tResponse = rTMCConn.GetGAP(MotorsNum.M_HeadRotate, AddressBank.actualPosition);
                 v = Convert.ToDouble(tResponse.tmcReply.value) / StepsPerMM.M_RotateStepsPerDeg;
@@ -494,7 +506,7 @@ namespace SpaceUSB
                 // ******  Check bag and vials ******
                 // *********************************************************************************************
 
-                if (!RunInProcess && ((currentTAB == 2 || currentTAB == 5)))
+                if (!RunInProcess && (currentTAB == 2 || currentTAB == 5))
                 {
                     tResponse = rTMCConn.RunCommand(GeneralFunctions.screenAllVials);    // function 36
                     Thread.Sleep(100);   // wait 100 ms for the program to finish to switch and thread sleep
@@ -1777,7 +1789,7 @@ namespace SpaceUSB
             tResponse = rTMCConn.RunCommand(GeneralFunctions.INIT_CM);
             tstringToRUNtest();    // display on "for RUN cmd"
             Thread.Sleep(600);
-            while (!homingDone && !aborted)  // wait for the end of "HOME"
+            while (!homingDone && !aborted)  // wait for the end of "HOME" //                 if (!anyErrorGotTrue && anyError)    // will happen for one cycle after anyError was set
             {
                 //blink button  
                 calibrateHOMEbtn.BackColor = Color.AntiqueWhite;
@@ -3124,18 +3136,36 @@ namespace SpaceUSB
             PistonHomePos = Convert.ToInt32(tResponse.tmcReply.value);
             setPistonStartTB.Text = $"{PistonHomePos}";
             //  this.Invoke((MethodInvoker)delegate { setPistonStartTB.Text = $"{PistonHomePos}"; });
+////////////////////
 
-            //tResponse = rTMCConn.SetSGPandStore(AddressBank.GetParameterBank, SystemVariables.GB_HeadRotateHomePos, setHeadRotateStartTB.Text);
+            tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_min_vol_laserDist_AVAL); // GB_14
+            LD_minVol = Convert.ToInt32(tResponse.tmcReply.value);
+            LD_minVolTB.Text = $"{LD_minVol}";
+            
+            tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_max_vol_laserDist_AVAL); // GB_15
+            LD_maxVol = Convert.ToInt32(tResponse.tmcReply.value);
+            LD_maxVolTB.Text = $"{LD_maxVol}";
+            
+            tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_piston_defined_vol_uL); // GB_16
+            LD_definedVol = Convert.ToInt32(tResponse.tmcReply.value);
+            LD_definedVolTB.Text = $"{LD_definedVol}";
+            
+            tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_accepted_diviation_range); // GB_17
+            LD_acceptedDev = Convert.ToInt32(tResponse.tmcReply.value);
+            LD_acceptedDevTB.Text = $"{LD_acceptedDev}";
+
+ ////////////////////
+           //tResponse = rTMCConn.SetSGPandStore(AddressBank.GetParameterBank, SystemVariables.GB_HeadRotateHomePos, setHeadRotateStartTB.Text);
             tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_HeadRotateHomePos); // GB_49
             HeadRotateHomePos = Convert.ToInt32(tResponse.tmcReply.value);
             setHeadRotateStartTB.Text = $"{HeadRotateHomePos}";
             //  this.Invoke((MethodInvoker)delegate { setHeadRotateStartTB.Text = $"{HeadRotateHomePos}"; });
 
-            //tResponse = rTMCConn.SetSGPandStore(AddressBank.GetParameterBank, SystemVariables.GB_HeadRotateAtTop, setHeadRotateStartTB.Text);
+            //tResponse = rTMCConn.SetSGPandStore(AddressBank.GetParameterBank, SystemVariables.GB_HeadRotateAtTop, setHeadRotateTopTB.Text);
             tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_HeadRotateAtTop); // GB_50
             HeadRotateAtTop = Convert.ToInt32(tResponse.tmcReply.value);
-            setHeadRotateStartTB.Text = $"{HeadRotateAtTop}";
-            //  this.Invoke((MethodInvoker)delegate { setHeadRotateStartTB.Text = $"{HeadRotateAtTop}"; });
+            setHeadRotateTopTB.Text = $"{HeadRotateAtTop}";
+            //  this.Invoke((MethodInvoker)delegate { setHeadRotateTopTB.Text = $"{HeadRotateAtTop}"; });
 
             //tResponse = rTMCConn.SetSGPandStore(AddressBank.GetParameterBank, SystemVariables.GB_Spare51Pos, setDisposeStartTB.Text);
             tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_SetVial4BottomLinear);  // GB_51 
@@ -3670,16 +3700,12 @@ namespace SpaceUSB
         }
 
         // _____________Laser distance of piston_______________________________________________
-        // TODO : replace with a reading from LD
-
-
         // _____________LD_minVolBtn_______________________________________________
 
         private void LD_minVolBtn_Click(object sender, EventArgs e)
         {
             uploadLD_minVol();
-            v = Convert.ToDouble(M_PistonLocationTb.Text) * StepsPerMM.M_PistonStepsPerMM;
-            LD_minVolTB.Text = Convert.ToString(Convert.ToInt32(v));
+            LD_minVolTB.Text = Convert.ToString(Convert.ToInt32(thumbRestDistance));
             setLD_minVol();
         }
 
@@ -3708,7 +3734,6 @@ namespace SpaceUSB
         {
             if (rgMinus.Match(LD_minVolTB.Text).Success)        // did not match, a non number character is there
             {
-                //logAndShow($"A non-number value for the distance {LD_minVolTB.Text}");
                 tResponse = rTMCConn.SetSGPandStore(AddressBank.GetParameterBank, SystemVariables.GB_min_vol_laserDist_AVAL, LD_minVolTB.Text);
             }
             refreshParams();
@@ -3725,8 +3750,7 @@ namespace SpaceUSB
         private void LD_maxVolBtn_Click(object sender, EventArgs e)
         {
             uploadLD_maxVol();
-            v = Convert.ToDouble(M_PistonLocationTb.Text) * StepsPerMM.M_PistonStepsPerMM;
-            LD_maxVolTB.Text = Convert.ToString(Convert.ToInt32(v));
+            LD_maxVolTB.Text = Convert.ToString(Convert.ToInt32(thumbRestDistance));
             setLD_maxVol();
         }
 
@@ -3755,7 +3779,6 @@ namespace SpaceUSB
         {
             if (rgMinus.Match(LD_maxVolTB.Text).Success)        // did not match, a non number character is there
             {
-                //logAndShow($"A non-number value for the distance {LD_maxVolTB.Text}");
                 tResponse = rTMCConn.SetSGPandStore(AddressBank.GetParameterBank, SystemVariables.GB_max_vol_laserDist_AVAL, LD_maxVolTB.Text);
             }
             refreshParams();
@@ -3763,7 +3786,7 @@ namespace SpaceUSB
 		
         private void uploadLD_maxVol()
         {
-            tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_max_vol_laserDist_AVAL); // GB_14
+            tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_max_vol_laserDist_AVAL); // GB_15
             LD_maxVol = Convert.ToInt32(tResponse.tmcReply.value);
             last_LD_maxVolTB = $"{LD_maxVol}";
         }
@@ -3772,7 +3795,7 @@ namespace SpaceUSB
 		
         private void LD_definedVolTB_Leave(object sender, EventArgs e)
         {
-            uploadLD_definedVol();
+            //uploadLD_definedVol();
             setLD_definedVol();
         }
 
@@ -3788,23 +3811,22 @@ namespace SpaceUSB
         {
             if (rgMinus.Match(LD_definedVolTB.Text).Success)        // did not match, a non number character is there
             {
-                //logAndShow($"A non-number value for the distance {LD_definedVolTB.Text}");
                 tResponse = rTMCConn.SetSGPandStore(AddressBank.GetParameterBank, SystemVariables.GB_piston_defined_vol_uL, LD_definedVolTB.Text);
             }
             refreshParams();
         }
-        private void uploadLD_definedVol()
-        {
-            tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_piston_defined_vol_uL); // GB_16
-            LD_definedVolPos = Convert.ToInt32(tResponse.tmcReply.value);
-            last_setLD_definedVolTB = $"{LD_definedVolPos}";
-        }
+        //private void uploadLD_definedVol() // not needed
+        //{
+        //    tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_piston_defined_vol_uL); // GB_16
+        //    LD_definedVol = Convert.ToInt32(tResponse.tmcReply.value);
+        //    last_setLD_definedVolTB = $"{LD_definedVol}";
+        //}
 
 
         // ________________LD_acceptedDev_____________
         private void LD_acceptedDevTB_Leave(object sender, EventArgs e)
         {
-            uploadLD_acceptedDev();
+            //uploadLD_acceptedDev();
             setLD_acceptedDev();
         }
 
@@ -3820,17 +3842,16 @@ namespace SpaceUSB
         {
             if (rgMinus.Match(LD_acceptedDevTB.Text).Success)        // did not match, a non number character is there
             {
-                //logAndShow($"A non-number value for the distance {setLD_acceptedDevTB.Text}");
                 tResponse = rTMCConn.SetSGPandStore(AddressBank.GetParameterBank, SystemVariables.GB_accepted_diviation_range, LD_acceptedDevTB.Text);
             }
             refreshParams();
         }
-        private void uploadLD_acceptedDev()
-        {
-            tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_accepted_diviation_range); // GB_48
-            LD_acceptedDev = Convert.ToInt32(tResponse.tmcReply.value);
-            last_setLD_acceptedDevTB = $"{LD_acceptedDev}";
-        }
+        //private void uploadLD_acceptedDev() // not needed
+        //{
+        //    tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_accepted_diviation_range); // GB_17
+        //    LD_acceptedDev = Convert.ToInt32(tResponse.tmcReply.value);
+        //    last_setLD_acceptedDevTB = $"{LD_acceptedDev}"; // 
+        //}
 
 
         // _____________HeadRotateTop_______________________________________________

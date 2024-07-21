@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 // last modified by : LED
-// last modified at : 2024-07-17
+// last modified at : 2024-07-21
 
 namespace SpaceUSB
 {
@@ -92,6 +92,7 @@ namespace SpaceUSB
     {
         public const string Forward = "1";              // move forward
         public const string Backward = "-1";            // move backward
+        public const int maxAVAL = 4095;            // move backward
     }
     public static class OutputStates                    // OnOff
     {
@@ -253,7 +254,7 @@ namespace SpaceUSB
         public const string GB_74 = "74";
         public const string GB_DrawWaitTime = "75";
         public const string GB_pistonMicroStepPer100microL = "76";
-        public const string GB_77 = "77";
+        public const string GB_thumbRestDistance = "77"; // analog value reading from laser distance sensor
         public const string GB_78 = "78";
         public const string GB_79 = "79";
         public const string GB_80 = "80";
@@ -468,7 +469,7 @@ namespace SpaceUSB
         public const string initInterrups = "32";
         public const string verifyVIAL = "34";
         public const string screenAllVials = "36";
-        public const string PositionHeadRotateMotor = "38";
+        public const string PositionHeadRotateToLeftMotor = "38";
         public const string verticalMotorTOerr = "40";
         public const string homeLinearMotor = "42";
         public const string capHolderMotorTOerr = "44";
@@ -481,9 +482,10 @@ namespace SpaceUSB
         public const string homeHeadRotateMotor = "58";
         public const string checkSyringeSensor = "60";
         public const string checkNoSyringe = "62";
+        public const string PositionHeadRotateToTopMotor = "64";
         public const string checkSyrPoppedOut = "66";
         public const string moveAboveVial = "68"; // func_68:   CSUB moveAboveVialFromCenter
-        public const string checkDrawVolume = "70";
+        public const string PositionHeadRotateToBottomMotor = "70";
         public const string startPullAir70 = "72";
         public const string deCap = "74";
         public const string moveBelowVial = "76";
@@ -511,6 +513,7 @@ namespace SpaceUSB
         public const string homeCapHolderMotor = "122";
         public const string startHomePistonMotor = "124";
         public const string defaultVibrate = "126";
+        public const string getLaserDistAVAL = "128";
         public const string VerticalManual = "136";
         public const string LinearMotorManual = "138";
         public const string armMotorManual = "140";
