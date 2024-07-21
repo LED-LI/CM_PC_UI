@@ -506,6 +506,7 @@ namespace SpaceUSB
         public const string positionPistonMotor = "106";
         public const string ejectSyringeFromTopVial = "108";
         public const string ejectSyringeFromBottomVial = "110";
+        public const string goIntoBag = "112";
         public const string Vibrate = "114";
         public const string checkVialPoppedOut = "116";
         public const string holdCap = "118";

@@ -273,13 +273,8 @@
             this.setBumpPosVertBtn = new System.Windows.Forms.Button();
             this.setBumpPosVertTB = new System.Windows.Forms.TextBox();
             this.panel39 = new System.Windows.Forms.Panel();
-            this.NeedleLengthCBX = new System.Windows.Forms.ComboBox();
-            this.NeedleLengthLbl = new System.Windows.Forms.Label();
             this.panel23 = new System.Windows.Forms.Panel();
             this.panel42 = new System.Windows.Forms.Panel();
-            this.NeedleGaugeCBX = new System.Windows.Forms.ComboBox();
-            this.NeedleGaugeLbl = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
             this.panel9 = new System.Windows.Forms.Panel();
             this.oopsArmVialBtn = new System.Windows.Forms.Button();
             this.GoToArmVialBtn = new System.Windows.Forms.Button();
@@ -523,8 +518,6 @@
             this.panel8.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel30.SuspendLayout();
-            this.panel39.SuspendLayout();
-            this.panel42.SuspendLayout();
             this.panel9.SuspendLayout();
             this.panel45.SuspendLayout();
             this.panel17.SuspendLayout();
@@ -2651,9 +2644,10 @@
             // 
             // label85
             // 
+            this.label85.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label85.AutoSize = true;
             this.label85.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.label85.Location = new System.Drawing.Point(287, 58);
+            this.label85.Location = new System.Drawing.Point(306, 66);
             this.label85.Margin = new System.Windows.Forms.Padding(2);
             this.label85.Name = "label85";
             this.label85.Size = new System.Drawing.Size(28, 25);
@@ -2665,7 +2659,7 @@
             this.LD_valTb.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.LD_valTb.BackColor = System.Drawing.SystemColors.MenuBar;
             this.LD_valTb.Enabled = false;
-            this.LD_valTb.Location = new System.Drawing.Point(217, 58);
+            this.LD_valTb.Location = new System.Drawing.Point(219, 58);
             this.LD_valTb.Name = "LD_valTb";
             this.LD_valTb.Size = new System.Drawing.Size(80, 29);
             this.LD_valTb.TabIndex = 37;
@@ -3911,39 +3905,11 @@
             // 
             // panel39
             // 
-            this.panel39.Controls.Add(this.NeedleLengthCBX);
-            this.panel39.Controls.Add(this.NeedleLengthLbl);
             this.panel39.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel39.Location = new System.Drawing.Point(2094, 946);
             this.panel39.Name = "panel39";
             this.panel39.Size = new System.Drawing.Size(337, 104);
             this.panel39.TabIndex = 68;
-            // 
-            // NeedleLengthCBX
-            // 
-            this.NeedleLengthCBX.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.NeedleLengthCBX.FormattingEnabled = true;
-            this.NeedleLengthCBX.Items.AddRange(new object[] {
-            "40"});
-            this.NeedleLengthCBX.Location = new System.Drawing.Point(29, 33);
-            this.NeedleLengthCBX.Name = "NeedleLengthCBX";
-            this.NeedleLengthCBX.Size = new System.Drawing.Size(143, 36);
-            this.NeedleLengthCBX.TabIndex = 69;
-            this.NeedleLengthCBX.Text = "40";
-            this.NeedleLengthCBX.Leave += new System.EventHandler(this.NeedleLengthCMX_Leave);
-            this.NeedleLengthCBX.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.NeedleLengthCMX_PreviewKeyDown);
-            // 
-            // NeedleLengthLbl
-            // 
-            this.NeedleLengthLbl.AutoSize = true;
-            this.NeedleLengthLbl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.NeedleLengthLbl.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.NeedleLengthLbl.Location = new System.Drawing.Point(3, 3);
-            this.NeedleLengthLbl.Margin = new System.Windows.Forms.Padding(3, 3, 3, 0);
-            this.NeedleLengthLbl.Name = "NeedleLengthLbl";
-            this.NeedleLengthLbl.Size = new System.Drawing.Size(169, 23);
-            this.NeedleLengthLbl.TabIndex = 67;
-            this.NeedleLengthLbl.Text = "Needle Length [mm]";
             // 
             // panel23
             // 
@@ -3955,52 +3921,11 @@
             // 
             // panel42
             // 
-            this.panel42.Controls.Add(this.NeedleGaugeCBX);
-            this.panel42.Controls.Add(this.NeedleGaugeLbl);
-            this.panel42.Controls.Add(this.label22);
             this.panel42.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel42.Location = new System.Drawing.Point(2094, 835);
             this.panel42.Name = "panel42";
             this.panel42.Size = new System.Drawing.Size(337, 104);
             this.panel42.TabIndex = 68;
-            // 
-            // NeedleGaugeCBX
-            // 
-            this.NeedleGaugeCBX.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.NeedleGaugeCBX.FormattingEnabled = true;
-            this.NeedleGaugeCBX.Items.AddRange(new object[] {
-            "16",
-            "18",
-            "21"});
-            this.NeedleGaugeCBX.Location = new System.Drawing.Point(28, 33);
-            this.NeedleGaugeCBX.Name = "NeedleGaugeCBX";
-            this.NeedleGaugeCBX.Size = new System.Drawing.Size(143, 36);
-            this.NeedleGaugeCBX.TabIndex = 68;
-            this.NeedleGaugeCBX.Text = "16";
-            this.NeedleGaugeCBX.Leave += new System.EventHandler(this.NeedleGaugeCBX_Leave);
-            this.NeedleGaugeCBX.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.NeedleGaugeCBX_PreviewKeyDown);
-            // 
-            // NeedleGaugeLbl
-            // 
-            this.NeedleGaugeLbl.AutoSize = true;
-            this.NeedleGaugeLbl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.NeedleGaugeLbl.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.NeedleGaugeLbl.Location = new System.Drawing.Point(4, 6);
-            this.NeedleGaugeLbl.Margin = new System.Windows.Forms.Padding(3, 3, 3, 0);
-            this.NeedleGaugeLbl.Name = "NeedleGaugeLbl";
-            this.NeedleGaugeLbl.Size = new System.Drawing.Size(119, 23);
-            this.NeedleGaugeLbl.TabIndex = 67;
-            this.NeedleGaugeLbl.Text = "Needle Gauge";
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.label22.Location = new System.Drawing.Point(3, 3);
-            this.label22.Margin = new System.Windows.Forms.Padding(3, 3, 3, 0);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(0, 28);
-            this.label22.TabIndex = 67;
             // 
             // panel9
             // 
@@ -6280,10 +6205,6 @@
             this.panel3.PerformLayout();
             this.panel30.ResumeLayout(false);
             this.panel30.PerformLayout();
-            this.panel39.ResumeLayout(false);
-            this.panel39.PerformLayout();
-            this.panel42.ResumeLayout(false);
-            this.panel42.PerformLayout();
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
             this.panel45.ResumeLayout(false);
@@ -6545,20 +6466,17 @@
         private System.Windows.Forms.TextBox Vial6ErrorTB;
         private System.Windows.Forms.TextBox vibrationTime4TB;
         private System.Windows.Forms.Panel panel30;
-        private System.Windows.Forms.Label NeedleGaugeLbl;
         private System.Windows.Forms.Panel panel45;
         private System.Windows.Forms.Label label31;
         private System.Windows.Forms.TextBox setBumpBottomTB;
         private System.Windows.Forms.Panel panel44;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Panel panel42;
-        private System.Windows.Forms.Label label22;
         private System.Windows.Forms.TextBox setBumpPosVertTB;
         private System.Windows.Forms.Panel panel41;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox setArmDisposeVials456TB;
         private System.Windows.Forms.Panel panel39;
-        private System.Windows.Forms.Label NeedleLengthLbl;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox BagSizeMlTB;
         private System.Windows.Forms.TextBox mLinBagTB;
@@ -6736,9 +6654,7 @@
         private System.Windows.Forms.Button GoToCenterOfVial1Btn;
         private System.Windows.Forms.Button GoToCapLoadingBtn;
         private System.Windows.Forms.Panel panel29;
-        private System.Windows.Forms.ComboBox NeedleGaugeCBX;
         private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.ComboBox NeedleLengthCBX;
         private System.Windows.Forms.Button ejectSyingeBottomBtn;
         private System.Windows.Forms.Button ejectSyringeTopBtn;
         private System.Windows.Forms.Button oopsDockHeightBtn;

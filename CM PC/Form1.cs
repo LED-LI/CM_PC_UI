@@ -13,6 +13,7 @@ using System.Runtime.InteropServices;
 //using BCL.easyPDF.Printer;
 using Microsoft.Win32;
 using System.Globalization;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace SpaceUSB
 {
@@ -62,12 +63,12 @@ namespace SpaceUSB
         public string last_setArmDisposeVials456TB;
         public string last_setArmAtBotomTB;
         public string last_setPistonStartTB;
-        
-		public string last_LD_minVolTB;
-		public string last_LD_maxVolTB;
-		//public string last_setLD_acceptedDevTB;
-		//public string last_setLD_definedVolTB;
-		
+
+        public string last_LD_minVolTB;
+        public string last_LD_maxVolTB;
+        //public string last_setLD_acceptedDevTB;
+        //public string last_setLD_definedVolTB;
+
         public string last_setHeadRotateTopTB;
         public string last_setHeadRotateStartTB;
         public string last_setHeadAtBottomTB;
@@ -248,11 +249,13 @@ namespace SpaceUSB
                 this.Invoke((MethodInvoker)delegate { M_PistonLocationTb.Text = $"{v,10:0.00}"; });
 
 
-                if (!RunInProcess && (currentTAB == 3))
+                if (currentTAB == 3)
                 {
-                    tResponse = rTMCConn.RunCommand(GeneralFunctions.getLaserDistAVAL);
+                    //tResponse = rTMCConn.RunCommand(GeneralFunctions.getLaserDistAVAL);
+                    //tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_thumbRestDistance);
+                    tResponse = rTMCConn.SetOutput(SwitchOutputs.Out_Multiplexer, "0");
                     Thread.Sleep(100);   // wait 100 ms for the FUNC to finish
-                    tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_thumbRestDistance);
+                    tResponse = rTMCConn.GetAnalogInput(TrinamicInputs.In_thumbRestDistance);
                     thumbRestDistance = Convert.ToDouble(tResponse.tmcReply.value);
                     v = thumbRestDistance * 100 / Values.maxAVAL;
                     this.Invoke((MethodInvoker)delegate { LD_valTb.Text = $"{v,10:0.00}"; });
@@ -644,230 +647,230 @@ namespace SpaceUSB
         //=============
         private void ErrorsLog()
         {
-                stopOnError = true;  // ok to run cycle *** stop running;
+            stopOnError = true;  // ok to run cycle *** stop running;
 
-                if (errorsSyringeBag > 0)
-                {
-                    if (errorsSyringeBag == 32)
-                    {
-                        logAndShow
-                        (
-                          $"An Error occured in the robot:\r" +
-                          $"==========================\r\r" +
-                          $"\t machine was aborted \r\r" +
-                          $"\t 1- run HOME  \r" +
-                          $"\t 2- click RUN \r"
-                        );
-                    }
-                    else
-                    {
-                        logAndShow
-                        (
-                          $"An Error occured in the robot:\r" +
-                          $"====================\r\r" +
-                          $"Syringe:  {errorsSyringeBag}\r" +
-                          $"\tbag Is Missing =\t       1\r" +
-                          $"\tsyringe Popped Out =\t       2\r" +
-                          $"\tvolume Exceeds Bag size =\t      4\r" +
-                          $"\tsyringe Is In =\t      8\r" +
-                          $"\tsyringe Missing =\t      16\r" +
-                          $"\tmachine Aborted =\t      32\r" +
-                          $"_______________________ \r"
-                        );
-                    }
-                }
-                // *** MOTORS Errors ***
-                if (errorsM_Vertical != 0)
+            if (errorsSyringeBag > 0)
+            {
+                if (errorsSyringeBag == 32)
                 {
                     logAndShow
                     (
-                    $"An Error occured in the robot:\r" +
-                    $"====================\r\r" +
-                        $"Vertical motor:\t{errorsM_Vertical}   TimeOut\r\r" +
-                        $"_______________________ \r"
+                      $"An Error occured in the robot:\r" +
+                      $"==========================\r\r" +
+                      $"\t machine was aborted \r\r" +
+                      $"\t 1- run HOME  \r" +
+                      $"\t 2- click RUN \r"
                     );
                 }
-                if (errorsM_Linear != 0)
+                else
                 {
                     logAndShow
                     (
-                    $"An Error occured in the robot:\r" +
-                    $"====================\r\r" +
-                        $"Linear motor:\t{errorsM_Linear}   TimeOut\r\r" +
-                        $"_______________________ \r"
+                      $"An Error occured in the robot:\r" +
+                      $"====================\r\r" +
+                      $"Syringe:  {errorsSyringeBag}\r" +
+                      $"\tbag Is Missing =\t       1\r" +
+                      $"\tsyringe Popped Out =\t       2\r" +
+                      $"\tvolume Exceeds Bag size =\t      4\r" +
+                      $"\tsyringe Is In =\t      8\r" +
+                      $"\tsyringe Missing =\t      16\r" +
+                      $"\tmachine Aborted =\t      32\r" +
+                      $"_______________________ \r"
                     );
                 }
-                if (errorsM_Arm != 0)
-                {
-                    logAndShow
-                    (
-                    $"An Error occured in the robot:\r" +
-                    $"====================\r\r" +
-                        $"Arm motor:\t{errorsM_Arm}   TimeOut\r\r" +
-                        $"_______________________ \r"
-                    );
-                }
-                if (errorsM_Piston != 0)
-                {
-                    logAndShow
-                    (
-                    $"An Error occured in the robot:\r" +
-                    $"====================\r\r" +
-                        $"Piston motor:\t{errorsM_Piston}   TimeOut\r\r" +
-                        $"_______________________ \r"
-                    );
-                }
-                if (errorsM_HeadRotate != 0)
-                {
-                    logAndShow
-                    (
-                    $"An Error occured in the robot:\r" +
-                    $"====================\r\r" +
-                        $"Head rotating motor:\t{errorsM_HeadRotate}   TimeOut\r\r" +
-                        $"_______________________ \r"
-                    );
-                }
-                if (errorsM_Dispose != 0)
-                {
-                    logAndShow
-                    (
-                    $"An Error occured in the robot:\r" +
-                    $"====================\r\r" +
-                        $"Dispose motor:\t{errorsM_HeadRotate}   TimeOut\r\r" +
-                        $"_______________________ \r"
-                    );
-                }
-                if (errorsM_CapHolder != 0)
-                {
-                    logAndShow
-                    (
-                    $"An Error occured in the robot:\r" +
-                    $"====================\r\r" +
-                        $"Cap Holder motor:\t{errorsM_HeadRotate}   TimeOut\r\r" +
-                        $"_______________________ \r"
-                    );
-                }
-                // *** VIALs errors ***
-                if (errors_Vial_1 != 0)
-                {
-                    logAndShow
-                    (
-                    $"An Error occured in the robot:\r" +
-                    $"====================\r\r" +
-                        $"errors Vial_1:\t{errors_Vial_1} \r\r" +
-                        $"\tVial Too Small =\t 1\r" +
-                        $"\tVial Missing =\t 2\r" +
-                        $"\tVial PoppedOut =\t 4\r" +
-                        $"_______________________ \r"
-                    );
-                }
-                if (errors_Vial_2 != 0)
-                {
-                    logAndShow
-                    (
-                    $"An Error occured in the robot:\r" +
-                    $"====================\r\r" +
-                        $"errors Vial_2:\t{errors_Vial_2} \r\r" +
-                        $"\tVial TooSmall =\t 1\r" +
-                        $"\tVial Missing =\t 2\r" +
-                        $"\tVial PoppedOut =\t 4\r" +
-                        $"_______________________ \r"
-                    );
-                }
-                if (errors_Vial_3 != 0)
-                {
-                    logAndShow
-                    (
-                    $"An Error occured in the robot:\r" +
-                    $"====================\r\r" +
-                        $"errors Vial_3:\t{errors_Vial_3} \r\r" +
-                        $"\tVial Too Small =\t 1\r" +
-                        $"\tVial Missing =\t 2\r" +
-                        $"\tVial Popped Out =\t 4\r" +
-                        $"_______________________ \r"
-                    );
-                }
-                if (errors_Vial_4 != 0)
-                {
-                    logAndShow
-                    (
-                    $"An Error occured in the robot:\r" +
-                    $"====================\r\r" +
-                        $"errors Vial_4:\t{errors_Vial_4} \r\r" +
-                        $"\tVial Too Small =\t 1\r" +
-                        $"\tVial Missing =\t 2\r" +
-                        $"\tVial Popped Out =\t 4\r" +
-                        $"_______________________ \r"
-                    );
-                }
-                if (errors_Vial_5 != 0)
-                {
-                    logAndShow
-                    (
-                    $"An Error occured in the robot:\r" +
-                    $"====================\r\r" +
-                        $"errors Vial_5:\t{errors_Vial_5} \r\r" +
-                        $"\tVial Too Small =\t 1\r" +
-                        $"\tVial Missing =\t 2\r" +
-                        $"\tVial Popped Out =\t 4\r" +
-                        $"_______________________ \r"
-                    );
-                }
-                if (errors_Vial_6 != 0)
-                {
-                    logAndShow
-                    (
-                    $"An Error occured in the robot:\r" +
-                    $"====================\r\r" +
-                        $"errors Vial_6:\t{errors_Vial_6} \r\r" +
-                        $"\tVial Too Small =\t 1\r" +
-                        $"\tVial Missing =\t 2\r" +
-                        $"\tVial Popped Out =\t 4\r" +
-                        $"_______________________ \r"
-                    );
-                }
+            }
+            // *** MOTORS Errors ***
+            if (errorsM_Vertical != 0)
+            {
+                logAndShow
+                (
+                $"An Error occured in the robot:\r" +
+                $"====================\r\r" +
+                    $"Vertical motor:\t{errorsM_Vertical}   TimeOut\r\r" +
+                    $"_______________________ \r"
+                );
+            }
+            if (errorsM_Linear != 0)
+            {
+                logAndShow
+                (
+                $"An Error occured in the robot:\r" +
+                $"====================\r\r" +
+                    $"Linear motor:\t{errorsM_Linear}   TimeOut\r\r" +
+                    $"_______________________ \r"
+                );
+            }
+            if (errorsM_Arm != 0)
+            {
+                logAndShow
+                (
+                $"An Error occured in the robot:\r" +
+                $"====================\r\r" +
+                    $"Arm motor:\t{errorsM_Arm}   TimeOut\r\r" +
+                    $"_______________________ \r"
+                );
+            }
+            if (errorsM_Piston != 0)
+            {
+                logAndShow
+                (
+                $"An Error occured in the robot:\r" +
+                $"====================\r\r" +
+                    $"Piston motor:\t{errorsM_Piston}   TimeOut\r\r" +
+                    $"_______________________ \r"
+                );
+            }
+            if (errorsM_HeadRotate != 0)
+            {
+                logAndShow
+                (
+                $"An Error occured in the robot:\r" +
+                $"====================\r\r" +
+                    $"Head rotating motor:\t{errorsM_HeadRotate}   TimeOut\r\r" +
+                    $"_______________________ \r"
+                );
+            }
+            if (errorsM_Dispose != 0)
+            {
+                logAndShow
+                (
+                $"An Error occured in the robot:\r" +
+                $"====================\r\r" +
+                    $"Dispose motor:\t{errorsM_HeadRotate}   TimeOut\r\r" +
+                    $"_______________________ \r"
+                );
+            }
+            if (errorsM_CapHolder != 0)
+            {
+                logAndShow
+                (
+                $"An Error occured in the robot:\r" +
+                $"====================\r\r" +
+                    $"Cap Holder motor:\t{errorsM_HeadRotate}   TimeOut\r\r" +
+                    $"_______________________ \r"
+                );
+            }
+            // *** VIALs errors ***
+            if (errors_Vial_1 != 0)
+            {
+                logAndShow
+                (
+                $"An Error occured in the robot:\r" +
+                $"====================\r\r" +
+                    $"errors Vial_1:\t{errors_Vial_1} \r\r" +
+                    $"\tVial Too Small =\t 1\r" +
+                    $"\tVial Missing =\t 2\r" +
+                    $"\tVial PoppedOut =\t 4\r" +
+                    $"_______________________ \r"
+                );
+            }
+            if (errors_Vial_2 != 0)
+            {
+                logAndShow
+                (
+                $"An Error occured in the robot:\r" +
+                $"====================\r\r" +
+                    $"errors Vial_2:\t{errors_Vial_2} \r\r" +
+                    $"\tVial TooSmall =\t 1\r" +
+                    $"\tVial Missing =\t 2\r" +
+                    $"\tVial PoppedOut =\t 4\r" +
+                    $"_______________________ \r"
+                );
+            }
+            if (errors_Vial_3 != 0)
+            {
+                logAndShow
+                (
+                $"An Error occured in the robot:\r" +
+                $"====================\r\r" +
+                    $"errors Vial_3:\t{errors_Vial_3} \r\r" +
+                    $"\tVial Too Small =\t 1\r" +
+                    $"\tVial Missing =\t 2\r" +
+                    $"\tVial Popped Out =\t 4\r" +
+                    $"_______________________ \r"
+                );
+            }
+            if (errors_Vial_4 != 0)
+            {
+                logAndShow
+                (
+                $"An Error occured in the robot:\r" +
+                $"====================\r\r" +
+                    $"errors Vial_4:\t{errors_Vial_4} \r\r" +
+                    $"\tVial Too Small =\t 1\r" +
+                    $"\tVial Missing =\t 2\r" +
+                    $"\tVial Popped Out =\t 4\r" +
+                    $"_______________________ \r"
+                );
+            }
+            if (errors_Vial_5 != 0)
+            {
+                logAndShow
+                (
+                $"An Error occured in the robot:\r" +
+                $"====================\r\r" +
+                    $"errors Vial_5:\t{errors_Vial_5} \r\r" +
+                    $"\tVial Too Small =\t 1\r" +
+                    $"\tVial Missing =\t 2\r" +
+                    $"\tVial Popped Out =\t 4\r" +
+                    $"_______________________ \r"
+                );
+            }
+            if (errors_Vial_6 != 0)
+            {
+                logAndShow
+                (
+                $"An Error occured in the robot:\r" +
+                $"====================\r\r" +
+                    $"errors Vial_6:\t{errors_Vial_6} \r\r" +
+                    $"\tVial Too Small =\t 1\r" +
+                    $"\tVial Missing =\t 2\r" +
+                    $"\tVial Popped Out =\t 4\r" +
+                    $"_______________________ \r"
+                );
+            }
 
-                // *** FIND HOME Errors ***
-                if (errors_findHome != 0)
-                {
-                    logAndShow
-                    (
-                    $"An Error occured in the robot:\r" +
-                    $"====================\r\r" +
-                        $"wrong PC cmd:\t{errors_findHome}\r\r" +
-                        $"\tsyringe Is In while Find Home =\t 1\r" +
-                        $"\texpecting WAITING_DISPENSE =\t 4\r" +
-                        $"_______________________ \r"
-                    );
-                }
-                if (errorsWrongPCcmd != 0)
-                {
-                    logAndShow
-                    (
-                    $"An Error occured in the robot:\r" +
-                    $"====================\r\r" +
-                        $"wrong PC cmd:\t{errorsWrongPCcmd}\r\r" +
-                        $"\texpecting GP58_10_OR_30 =\t 1\r" +
-                        $"\texpecting WAITING_DISPENSE =\t 2\r" +
-                        $"\tvibrate Paremeter Error =\t 8\r" +
-                        $"_______________________ \r"
-                    );
-                }
-                if (special_Error != 0)
-                {
-                    logAndShow
-                    (
-                    $"An Error occured in the robot:\r" +
-                    $"====================\r\r" +
-                        $"wrong PC cmd:\t{special_Error}\r\r" +
-                        $"\tSliding Door Is Open =\t 1\r" +
-                        $"\tDrawer Overflow =\t 2\r" +
-                        $"\tNo vials =\t\t 4\r" +
-                        $"\tdrawer Is Open =\t\t 8\r" +
-                        $"\tvial Not Defined =\t\t16\r" +
-                        $"_______________________ \r"
-                    );
-                }
+            // *** FIND HOME Errors ***
+            if (errors_findHome != 0)
+            {
+                logAndShow
+                (
+                $"An Error occured in the robot:\r" +
+                $"====================\r\r" +
+                    $"wrong PC cmd:\t{errors_findHome}\r\r" +
+                    $"\tsyringe Is In while Find Home =\t 1\r" +
+                    $"\texpecting WAITING_DISPENSE =\t 4\r" +
+                    $"_______________________ \r"
+                );
+            }
+            if (errorsWrongPCcmd != 0)
+            {
+                logAndShow
+                (
+                $"An Error occured in the robot:\r" +
+                $"====================\r\r" +
+                    $"wrong PC cmd:\t{errorsWrongPCcmd}\r\r" +
+                    $"\texpecting GP58_10_OR_30 =\t 1\r" +
+                    $"\texpecting WAITING_DISPENSE =\t 2\r" +
+                    $"\tvibrate Paremeter Error =\t 8\r" +
+                    $"_______________________ \r"
+                );
+            }
+            if (special_Error != 0)
+            {
+                logAndShow
+                (
+                $"An Error occured in the robot:\r" +
+                $"====================\r\r" +
+                    $"wrong PC cmd:\t{special_Error}\r\r" +
+                    $"\tSliding Door Is Open =\t 1\r" +
+                    $"\tDrawer Overflow =\t 2\r" +
+                    $"\tNo vials =\t\t 4\r" +
+                    $"\tdrawer Is Open =\t\t 8\r" +
+                    $"\tvial Not Defined =\t\t16\r" +
+                    $"_______________________ \r"
+                );
+            }
         }
         //======================
         // write R U N results
@@ -1354,19 +1357,19 @@ namespace SpaceUSB
             Control ee = new Control();
 
             if (aborted) return;
-/*
-            if (!bagWasReplaced)
-            {
-                logAndShow("Please replace a new bag");
-                goto exit;  // exit
-            }
+            /*
+                        if (!bagWasReplaced)
+                        {
+                            logAndShow("Please replace a new bag");
+                            goto exit;  // exit
+                        }
 
-            if (!syringeWasReplaced)
-            {
-                logAndShow("Please replace a new syring");
-                goto exit;  // exit
-            }
-*/
+                        if (!syringeWasReplaced)
+                        {
+                            logAndShow("Please replace a new syring");
+                            goto exit;  // exit
+                        }
+            */
             RunInProcess = true;                                  // eliminate re-entrance
 
             this.Invoke((MethodInvoker)delegate { RunParametersTLP.Enabled = false; });
@@ -1807,9 +1810,9 @@ namespace SpaceUSB
             {
                 logAndShow("Go home done.");
             }
- 
-               this.Invoke((MethodInvoker)delegate { RunParametersTLP.Enabled = true; });
-                RunInProcess = false;
+
+            this.Invoke((MethodInvoker)delegate { RunParametersTLP.Enabled = true; });
+            RunInProcess = false;
         }
         // ===========================================================================================
 
@@ -2787,50 +2790,9 @@ namespace SpaceUSB
             tResponse = rTMCConn.RunCommand(GeneralFunctions.homeCapHolderMotor);
             tstringToRUNtest();
         }
-        // **************************
-        // *** Neddle and  Home setup
-        // **************************
-
-
-        private void NeedleGaugeCBX_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
-        {
-            needleGaugeCBXSet();
-        }
-
-        private void NeedleGaugeCBX_Leave(object sender, EventArgs e)
-        {
-            needleGaugeCBXSet();
-        }
-        // ** Needle Gauge ***
-        private void needleGaugeCBXSet()
-        {
-            if (rgNumber.Match(NeedleGaugeCBX.Text).Success)        // did not match, a non number character is there
-            {
-                //logAndShow($"A non-number value for the distance {NeedleGaugeCBX.Text}");
-                tResponse = rTMCConn.SetSGPandStore(AddressBank.GetParameterBank, SystemVariables.GB_needleGauge, NeedleGaugeCBX.Text);
-            }
-            refreshParams();
-        }
-
-        // ** Needle Length ***
-
-        private void NeedleLengthCMX_Leave(object sender, EventArgs e)
-        {
-            NeedleLengthCBXSet();
-        }
-        private void NeedleLengthCMX_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
-        {
-            NeedleLengthCBXSet();
-        }
-        private void NeedleLengthCBXSet()
-        {
-            if (rgNumber.Match(NeedleLengthCBX.Text).Success)        // did not match, a non number character is there
-            {
-                //logAndShow($"A non-number value for the distance {NeedleLengthCBX.Text}");
-                tResponse = rTMCConn.SetSGPandStore(AddressBank.GetParameterBank, SystemVariables.GB_needleLength, NeedleLengthCBX.Text);
-            }
-            refreshParams();
-        }
+        // ******************
+        // *** Home setup ***
+        // ******************
 
         // ***********************************
         // *** GET / SET global parameters ***
@@ -3136,26 +3098,26 @@ namespace SpaceUSB
             PistonHomePos = Convert.ToInt32(tResponse.tmcReply.value);
             setPistonStartTB.Text = $"{PistonHomePos}";
             //  this.Invoke((MethodInvoker)delegate { setPistonStartTB.Text = $"{PistonHomePos}"; });
-////////////////////
+            ////////////////////
 
             tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_min_vol_laserDist_AVAL); // GB_14
             LD_minVol = Convert.ToInt32(tResponse.tmcReply.value);
             LD_minVolTB.Text = $"{LD_minVol}";
-            
+
             tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_max_vol_laserDist_AVAL); // GB_15
             LD_maxVol = Convert.ToInt32(tResponse.tmcReply.value);
             LD_maxVolTB.Text = $"{LD_maxVol}";
-            
+
             tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_piston_defined_vol_uL); // GB_16
             LD_definedVol = Convert.ToInt32(tResponse.tmcReply.value);
             LD_definedVolTB.Text = $"{LD_definedVol}";
-            
+
             tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_accepted_diviation_range); // GB_17
             LD_acceptedDev = Convert.ToInt32(tResponse.tmcReply.value);
             LD_acceptedDevTB.Text = $"{LD_acceptedDev}";
 
- ////////////////////
-           //tResponse = rTMCConn.SetSGPandStore(AddressBank.GetParameterBank, SystemVariables.GB_HeadRotateHomePos, setHeadRotateStartTB.Text);
+            ////////////////////
+            //tResponse = rTMCConn.SetSGPandStore(AddressBank.GetParameterBank, SystemVariables.GB_HeadRotateHomePos, setHeadRotateStartTB.Text);
             tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_HeadRotateHomePos); // GB_49
             HeadRotateHomePos = Convert.ToInt32(tResponse.tmcReply.value);
             setHeadRotateStartTB.Text = $"{HeadRotateHomePos}";
@@ -3178,18 +3140,6 @@ namespace SpaceUSB
             DisposeDropVialPos = Convert.ToInt32(tResponse.tmcReply.value);
             setDropVials123TB.Text = $"{DisposeDropVialPos}";
             //  this.Invoke((MethodInvoker)delegate { setDropVials123TB.Text = $"{DisposeDropVialPos}"; });
-
-            //tResponse = rTMCConn.SetSGPandStore(AddressBank.GetParameterBank, SystemVariables.GB_needleLength, NeedleLengthTB.Text);
-            tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_needleLength);
-            NeedleLength = Convert.ToInt32(tResponse.tmcReply.value);
-            NeedleLengthCBX.Text = $"{NeedleLength}";
-            //  this.Invoke((MethodInvoker)delegate { NeedleLengthCBX.Text = $"{NeedleLength}"; });
-
-            //tResponse = rTMCConn.SetSGPandStore(AddressBank.GetParameterBank, SystemVariables.GB_needleGauge, NeedleGaugeTB.Text);
-            tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_needleGauge);
-            NeedleGauge = Convert.ToInt32(tResponse.tmcReply.value);
-            NeedleGaugeCBX.Text = $"{NeedleGauge}";
-            // this.Invoke((MethodInvoker)delegate { NeedleGaugeCBX.Text = $"{NeedleGauge}"; });
 
             //tResponse = rTMCConn.SetSGPandStore(AddressBank.GetParameterBank, SystemVariables.GB_UnitsToMoveManual, goDistance_um.Text);
             tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_UnitsToMoveManual);
@@ -3783,7 +3733,7 @@ namespace SpaceUSB
             }
             refreshParams();
         }
-		
+
         private void uploadLD_maxVol()
         {
             tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_max_vol_laserDist_AVAL); // GB_15
@@ -3792,7 +3742,7 @@ namespace SpaceUSB
         }
 
         // ________________LD_definedVol_____________
-		
+
         private void LD_definedVolTB_Leave(object sender, EventArgs e)
         {
             //uploadLD_definedVol();
