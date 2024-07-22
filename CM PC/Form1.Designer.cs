@@ -166,6 +166,8 @@
             this.calibrateTLP = new System.Windows.Forms.TableLayoutPanel();
             this.panel44 = new System.Windows.Forms.Panel();
             this.label24 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.messuredAmountOfLiquidTB = new System.Windows.Forms.TextBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.M_ArmLocationTb = new System.Windows.Forms.TextBox();
@@ -386,6 +388,8 @@
             this.label25 = new System.Windows.Forms.Label();
             this.ReplyValueTB = new System.Windows.Forms.TextBox();
             this.label76 = new System.Windows.Forms.Label();
+            this.label86 = new System.Windows.Forms.Label();
+            this.thumbRestDistanceFilterSizeTB = new System.Windows.Forms.TextBox();
             this.label56 = new System.Windows.Forms.Label();
             this.SGPtestTB = new System.Windows.Forms.TextBox();
             this.robotTP = new System.Windows.Forms.TabPage();
@@ -2436,6 +2440,8 @@
             // panel44
             // 
             this.panel44.Controls.Add(this.label24);
+            this.panel44.Controls.Add(this.label22);
+            this.panel44.Controls.Add(this.messuredAmountOfLiquidTB);
             this.panel44.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel44.Location = new System.Drawing.Point(1750, 946);
             this.panel44.Name = "panel44";
@@ -2451,6 +2457,31 @@
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(0, 28);
             this.label24.TabIndex = 67;
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Enabled = false;
+            this.label22.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.label22.Location = new System.Drawing.Point(3, 3);
+            this.label22.Margin = new System.Windows.Forms.Padding(2);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(215, 50);
+            this.label22.TabIndex = 82;
+            this.label22.Text = "latest measured amount\r\nin syringe [uL]";
+            // 
+            // messuredAmountOfLiquidTB
+            // 
+            this.messuredAmountOfLiquidTB.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.messuredAmountOfLiquidTB.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.messuredAmountOfLiquidTB.Enabled = false;
+            this.messuredAmountOfLiquidTB.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.messuredAmountOfLiquidTB.Location = new System.Drawing.Point(229, 67);
+            this.messuredAmountOfLiquidTB.Name = "messuredAmountOfLiquidTB";
+            this.messuredAmountOfLiquidTB.Size = new System.Drawing.Size(105, 34);
+            this.messuredAmountOfLiquidTB.TabIndex = 81;
+            this.messuredAmountOfLiquidTB.Text = "0";
+            this.messuredAmountOfLiquidTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // panel5
             // 
@@ -4778,6 +4809,7 @@
             // 
             this.label75.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label75.AutoSize = true;
+            this.label75.Enabled = false;
             this.label75.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.label75.Location = new System.Drawing.Point(223, 3);
             this.label75.Margin = new System.Windows.Forms.Padding(2);
@@ -4789,6 +4821,7 @@
             // label71
             // 
             this.label71.AutoSize = true;
+            this.label71.Enabled = false;
             this.label71.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.label71.Location = new System.Drawing.Point(3, 3);
             this.label71.Margin = new System.Windows.Forms.Padding(2);
@@ -5118,6 +5151,8 @@
             this.groupBox6.Controls.Add(this.label25);
             this.groupBox6.Controls.Add(this.ReplyValueTB);
             this.groupBox6.Controls.Add(this.label76);
+            this.groupBox6.Controls.Add(this.label86);
+            this.groupBox6.Controls.Add(this.thumbRestDistanceFilterSizeTB);
             this.groupBox6.Controls.Add(this.label56);
             this.groupBox6.Controls.Add(this.SGPtestTB);
             this.groupBox6.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -5237,6 +5272,26 @@
             this.label76.Size = new System.Drawing.Size(184, 30);
             this.label76.TabIndex = 62;
             this.label76.Text = "for RUN cmd: Value";
+            // 
+            // label86
+            // 
+            this.label86.AutoSize = true;
+            this.label86.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label86.Location = new System.Drawing.Point(802, 51);
+            this.label86.Name = "label86";
+            this.label86.Size = new System.Drawing.Size(270, 30);
+            this.label86.TabIndex = 55;
+            this.label86.Text = "ThumbRest distance filter size";
+            // 
+            // thumbRestDistanceFilterSizeTB
+            // 
+            this.thumbRestDistanceFilterSizeTB.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.thumbRestDistanceFilterSizeTB.Location = new System.Drawing.Point(1078, 47);
+            this.thumbRestDistanceFilterSizeTB.Name = "thumbRestDistanceFilterSizeTB";
+            this.thumbRestDistanceFilterSizeTB.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.thumbRestDistanceFilterSizeTB.Size = new System.Drawing.Size(120, 34);
+            this.thumbRestDistanceFilterSizeTB.TabIndex = 59;
+            this.thumbRestDistanceFilterSizeTB.TextChanged += new System.EventHandler(this.thumbRestDistanceFilterSizeTB_TextChanged);
             // 
             // label56
             // 
@@ -6468,8 +6523,6 @@
         private System.Windows.Forms.Panel panel45;
         private System.Windows.Forms.Label label31;
         private System.Windows.Forms.TextBox setBumpBottomTB;
-        private System.Windows.Forms.Panel panel44;
-        private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Panel panel42;
         private System.Windows.Forms.TextBox setBumpPosVertTB;
         private System.Windows.Forms.Panel panel41;
@@ -6698,6 +6751,12 @@
         private System.Windows.Forms.Label label84;
         private System.Windows.Forms.Label label85;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Panel panel44;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.TextBox messuredAmountOfLiquidTB;
+        private System.Windows.Forms.Label label86;
+        private System.Windows.Forms.TextBox thumbRestDistanceFilterSizeTB;
     }
 }
 

@@ -76,6 +76,10 @@ namespace SpaceUSB
         public string elapsedTime;
         public double v;
         public double thumbRestDistance;
+        public double thumbRestDistanceAvg = 0;
+        public double thumbRestDistanceSum = 0;
+        public int thumbRestDistanceFilterSize = 10;
+        public int thumbRestDistanceCount = 1;
 
         public bool isAdministrator = false;      // start program with non-administrator
         public bool anyErrorGotTrue = false;
@@ -144,6 +148,7 @@ namespace SpaceUSB
         public int LD_maxVol;
         public int LD_definedVol;
         public int LD_acceptedDev;
+        public int messuredAmountOfLiquid;
         public int Vial4Bottom;
         public int DisposeDropVialPos;
         public int CapHolderHomePos;
@@ -195,8 +200,8 @@ namespace SpaceUSB
             readParamsFile();
             setRegeditNotepadTextsize80();
             // following lines for testing, without pw
-            //isAdministrator = true;
-            //visibleMaster();
+            isAdministrator = true;
+            visibleMaster();
 
             if (!File.Exists(cmPath + pwPath + pwFileName))     // password file exists?
             {
@@ -257,8 +262,21 @@ namespace SpaceUSB
                     Thread.Sleep(100);   // wait 100 ms for the FUNC to finish
                     tResponse = rTMCConn.GetAnalogInput(TrinamicInputs.In_thumbRestDistance);
                     thumbRestDistance = Convert.ToDouble(tResponse.tmcReply.value);
-                    v = thumbRestDistance * 100 / Values.maxAVAL;
+
+                    thumbRestDistanceSum += thumbRestDistance;                                  // sum input readings
+                    thumbRestDistanceAvg = thumbRestDistanceSum / thumbRestDistanceCount;       // avarage the sum by the amount of time the input was read and summed 
+
+                    v = thumbRestDistanceAvg * 100 / Values.maxAVAL;                            // convert averaged value to display as percentage
                     this.Invoke((MethodInvoker)delegate { LD_valTb.Text = $"{v,10:0.00}"; });
+
+                    if (thumbRestDistanceCount < thumbRestDistanceFilterSize)                   // limit the summing by the amount of times dictated nt thumbRestDistanceFilterSize
+                    {
+                        thumbRestDistanceCount++;
+                    }
+                    else
+                    {
+                        thumbRestDistanceSum *= Convert.ToDouble(thumbRestDistanceFilterSize - 1) / thumbRestDistanceFilterSize;
+                    }
                 }
 
                 tResponse = rTMCConn.GetGAP(MotorsNum.M_HeadRotate, AddressBank.actualPosition);
@@ -485,6 +503,7 @@ namespace SpaceUSB
                     this.Invoke((MethodInvoker)delegate { isVibrating56TB.Text = $"NO"; });
                 }
 
+                this.Invoke((MethodInvoker)delegate { thumbRestDistanceFilterSizeTB.Text = $"{thumbRestDistanceFilterSize}"; });
                 this.Invoke((MethodInvoker)delegate { runInProcessTB.Text = $"{RunInProcess}"; });
                 this.Invoke((MethodInvoker)delegate { DateTimeNowTxt.Text = DateTime.Now.ToString("  dd-MM-yyyy   HH:mm:ss"); });
                 //                this.Invoke((MethodInvoker)delegate { PcCodeTB.Text = pcCode; });
@@ -3098,6 +3117,7 @@ namespace SpaceUSB
             PistonHomePos = Convert.ToInt32(tResponse.tmcReply.value);
             setPistonStartTB.Text = $"{PistonHomePos}";
             //  this.Invoke((MethodInvoker)delegate { setPistonStartTB.Text = $"{PistonHomePos}"; });
+
             ////////////////////
 
             tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_min_vol_laserDist_AVAL); // GB_14
@@ -3116,7 +3136,19 @@ namespace SpaceUSB
             LD_acceptedDev = Convert.ToInt32(tResponse.tmcReply.value);
             LD_acceptedDevTB.Text = $"{LD_acceptedDev}";
 
+            if ((LD_minVol != 0) && (LD_maxVol != 0) && (LD_definedVol != 0))
+            {
+                tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_messuredAmountOfLiquid); // GB_18
+                messuredAmountOfLiquid = Convert.ToInt32(tResponse.tmcReply.value);
+                messuredAmountOfLiquidTB.Text = $"{messuredAmountOfLiquid}";
+            }
+            else
+            {
+                messuredAmountOfLiquidTB.Text = "syringe data missing";
+            }
+
             ////////////////////
+
             //tResponse = rTMCConn.SetSGPandStore(AddressBank.GetParameterBank, SystemVariables.GB_HeadRotateHomePos, setHeadRotateStartTB.Text);
             tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_HeadRotateHomePos); // GB_49
             HeadRotateHomePos = Convert.ToInt32(tResponse.tmcReply.value);
@@ -3803,6 +3835,23 @@ namespace SpaceUSB
         //    last_setLD_acceptedDevTB = $"{LD_acceptedDev}"; // 
         //}
 
+        // _____________ thumbRestDistanceFilter _______________________________________________
+
+        private void thumbRestDistanceFilterSizeTB_TextChanged(object sender, EventArgs e)
+        {
+            if (rgNumber.Match(thumbRestDistanceFilterSizeTB.Text).Success)        // did not match, a non number character is there or a negative 
+            {
+                thumbRestDistanceFilterSize = Convert.ToInt32(thumbRestDistanceFilterSizeTB.Text);
+                if (thumbRestDistanceFilterSize > 1)
+                    thumbRestDistanceFilterSize = 1;
+
+                // after the filter size has been changed - the filtering variables needs to be reset
+                thumbRestDistanceAvg = 0;
+                thumbRestDistanceSum = 0;
+                thumbRestDistanceCount = 1;
+            }
+            refreshParams();
+        }
 
         // _____________HeadRotateTop_______________________________________________
         private void setHeadRotateTopBtn_Click(object sender, EventArgs e)
@@ -4077,6 +4126,7 @@ namespace SpaceUSB
             tResponse = rTMCConn.RunCommand(GeneralFunctions.ejectSyringeFromBottomVial);
             tstringToRUNtest();
         }
+
 
         // *****************************************************************************
 

@@ -58,10 +58,11 @@
               "RelativeDocumentMoniker": "USBVariables.cs",
               "ToolTip": "C:\\Users\\LED\\OneDrive - Light Instruments Ltd\\Documents\\GitHub\\CM_PC_UI\\CM PC\\USBVariables.cs",
               "RelativeToolTip": "USBVariables.cs",
-              "ViewState": "AQIAAOEBAAAAAAAAAAAAAPwBAAAlAAAA",
+              "ViewState": "AQIAAN4BAAAAAAAAAIBJwPwBAAAlAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-15T20:26:09.564Z",
-              "IsPinned": true
+              "IsPinned": true,
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -71,7 +72,7 @@
               "RelativeDocumentMoniker": "Form1.cs",
               "ToolTip": "C:\\Users\\LED\\OneDrive - Light Instruments Ltd\\Documents\\GitHub\\CM_PC_UI\\CM PC\\Form1.cs",
               "RelativeToolTip": "Form1.cs",
-              "ViewState": "AQIAAP8LAAAAAAAAAAAWwPAPAAAIAAAA",
+              "ViewState": "AQIAAPkAAAAAAAAAAAAiwA0BAAAUAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-15T09:44:13.535Z",
               "IsPinned": true,
@@ -104,7 +105,8 @@
               "RelativeToolTip": "usbClass.cs",
               "ViewState": "AQIAAGsBAAAAAAAAAAAewH4BAAAeAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-17T21:20:07.805Z"
+              "WhenOpened": "2024-07-17T21:20:07.805Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -114,7 +116,7 @@
               "RelativeDocumentMoniker": "Form1.Designer.cs",
               "ToolTip": "C:\\Users\\LED\\OneDrive - Light Instruments Ltd\\Documents\\GitHub\\CM_PC_UI\\CM PC\\Form1.Designer.cs",
               "RelativeToolTip": "Form1.Designer.cs",
-              "ViewState": "AQIAAFcZAAAAAAAAAAApwGYZAAAtAAAA",
+              "ViewState": "AQIAAJkUAAAAAAAAAAAiwKoUAAAuAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-17T22:24:06.832Z",
               "EditorCaption": ""
