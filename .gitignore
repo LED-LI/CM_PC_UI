@@ -1,8 +1,8 @@
-
-/CM PC/obj
-/CM installer/Debug
-/CM PC/bin
-
 *.vsidx
 *.json
-/CM PC/.vs
+*.suo
+*.vs
+*.resx
+
+/CM PC/obj
+/CM PC/bin

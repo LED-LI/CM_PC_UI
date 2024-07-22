@@ -2644,10 +2644,10 @@
             // 
             // label85
             // 
-            this.label85.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label85.AutoSize = true;
+            this.label85.Enabled = false;
             this.label85.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.label85.Location = new System.Drawing.Point(306, 66);
+            this.label85.Location = new System.Drawing.Point(304, 61);
             this.label85.Margin = new System.Windows.Forms.Padding(2);
             this.label85.Name = "label85";
             this.label85.Size = new System.Drawing.Size(28, 25);
@@ -2656,10 +2656,9 @@
             // 
             // LD_valTb
             // 
-            this.LD_valTb.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.LD_valTb.BackColor = System.Drawing.SystemColors.MenuBar;
             this.LD_valTb.Enabled = false;
-            this.LD_valTb.Location = new System.Drawing.Point(219, 58);
+            this.LD_valTb.Location = new System.Drawing.Point(219, 59);
             this.LD_valTb.Name = "LD_valTb";
             this.LD_valTb.Size = new System.Drawing.Size(80, 29);
             this.LD_valTb.TabIndex = 37;
@@ -4780,18 +4779,18 @@
             this.label75.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label75.AutoSize = true;
             this.label75.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.label75.Location = new System.Drawing.Point(259, 2);
+            this.label75.Location = new System.Drawing.Point(223, 3);
             this.label75.Margin = new System.Windows.Forms.Padding(2);
             this.label75.Name = "label75";
-            this.label75.Size = new System.Drawing.Size(76, 50);
+            this.label75.Size = new System.Drawing.Size(111, 50);
             this.label75.TabIndex = 83;
-            this.label75.Text = "defined\r\nvolume";
+            this.label75.Text = "defined\r\nvolume [uL]";
             // 
             // label71
             // 
             this.label71.AutoSize = true;
             this.label71.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.label71.Location = new System.Drawing.Point(2, 2);
+            this.label71.Location = new System.Drawing.Point(3, 3);
             this.label71.Margin = new System.Windows.Forms.Padding(2);
             this.label71.Name = "label71";
             this.label71.Size = new System.Drawing.Size(123, 50);
@@ -4803,7 +4802,7 @@
             this.LD_acceptedDevTB.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.LD_acceptedDevTB.BackColor = System.Drawing.SystemColors.MenuBar;
             this.LD_acceptedDevTB.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.LD_acceptedDevTB.Location = new System.Drawing.Point(3, 69);
+            this.LD_acceptedDevTB.Location = new System.Drawing.Point(4, 67);
             this.LD_acceptedDevTB.Name = "LD_acceptedDevTB";
             this.LD_acceptedDevTB.Size = new System.Drawing.Size(105, 34);
             this.LD_acceptedDevTB.TabIndex = 81;
@@ -4817,7 +4816,7 @@
             this.LD_definedVolTB.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.LD_definedVolTB.BackColor = System.Drawing.SystemColors.MenuBar;
             this.LD_definedVolTB.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.LD_definedVolTB.Location = new System.Drawing.Point(229, 74);
+            this.LD_definedVolTB.Location = new System.Drawing.Point(228, 66);
             this.LD_definedVolTB.Name = "LD_definedVolTB";
             this.LD_definedVolTB.Size = new System.Drawing.Size(105, 34);
             this.LD_definedVolTB.TabIndex = 80;
