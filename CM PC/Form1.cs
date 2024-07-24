@@ -3842,7 +3842,7 @@ namespace SpaceUSB
             if (rgNumber.Match(thumbRestDistanceFilterSizeTB.Text).Success)        // did not match, a non number character is there or a negative 
             {
                 thumbRestDistanceFilterSize = Convert.ToInt32(thumbRestDistanceFilterSizeTB.Text);
-                if (thumbRestDistanceFilterSize > 1)
+                if (thumbRestDistanceFilterSize < 1)
                     thumbRestDistanceFilterSize = 1;
 
                 // after the filter size has been changed - the filtering variables needs to be reset
