@@ -21,7 +21,7 @@ namespace SpaceUSB
     {
         //  all the following directories will be under the base directory:
 
-        public string pcCode = "2024-07-21";
+        public string pcCode = "2024-07-24";
 
         public string cmPath = "C:\\cmRUN\\";    // base directory. can be changed by the user
         public string logPath = "logfiles\\";
@@ -100,6 +100,7 @@ namespace SpaceUSB
         public bool bagWasRemoved = false;
         public bool syringeWasReplaced = true;
         public bool syringeWasRemoved = false;
+        public bool inLDcalibLocation = false;
         public bool b;
 
         // *** E R R O R S ***
@@ -1392,6 +1393,7 @@ namespace SpaceUSB
             RunInProcess = true;                                  // eliminate re-entrance
 
             this.Invoke((MethodInvoker)delegate { RunParametersTLP.Enabled = false; });
+            this.Invoke((MethodInvoker)delegate { calibrateTLP.Enabled = false; });
 
             if (!readyForNewCommand)
             {
@@ -1439,6 +1441,7 @@ namespace SpaceUSB
             syringeWasReplaced = false;
             syringeWasRemoved = false;
             this.Invoke((MethodInvoker)delegate { RunParametersTLP.Enabled = true; });
+            this.Invoke((MethodInvoker)delegate { calibrateTLP.Enabled = true; });
             RunInProcess = false;
         }
         // =============================================================================
@@ -1811,7 +1814,7 @@ namespace SpaceUSB
             tResponse = rTMCConn.RunCommand(GeneralFunctions.INIT_CM);
             tstringToRUNtest();    // display on "for RUN cmd"
             Thread.Sleep(600);
-            while (!homingDone && !aborted)  // wait for the end of "HOME" //                 if (!anyErrorGotTrue && anyError)    // will happen for one cycle after anyError was set
+            while (!homingDone && !aborted && !anyError)  // wait for the end of "HOME" //                 if (!anyErrorGotTrue && anyError)    // will happen for one cycle after anyError was set
             {
                 //blink button  
                 calibrateHOMEbtn.BackColor = Color.AntiqueWhite;
@@ -1825,12 +1828,13 @@ namespace SpaceUSB
             RunHomeBtn.BackColor = Color.Chocolate;
             Thread.Sleep(300);           // wait before polling the "ready for new command
             setManualDistance();
-            if (!aborted)
+            if (!aborted && !anyError)
             {
                 logAndShow("Go home done.");
             }
 
             this.Invoke((MethodInvoker)delegate { RunParametersTLP.Enabled = true; });
+            this.Invoke((MethodInvoker)delegate { calibrateTLP.Enabled = true; });
             RunInProcess = false;
         }
         // ===========================================================================================
@@ -1908,6 +1912,8 @@ namespace SpaceUSB
         {
             Boolean showOverrride;
             Boolean disposeYN;
+            Boolean skipVial456;
+            Boolean skipBag;
 
             if (rTMCConn == null || !rTMCConn.TrinamicOK)
             {
@@ -1935,6 +1941,28 @@ namespace SpaceUSB
             {
                 NoDisposeRB.Checked = true;
             }
+
+            tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_skipCheckVial456);
+            skipVial456 = Convert.ToBoolean(tResponse.tmcReply.value);
+            if (skipVial456)
+            {
+                dontskipvial456RB.Checked = true;
+            }
+            else
+            {
+                skipvial456RB.Checked = true;
+            }
+            tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_skipCheckBag);
+            skipBag = Convert.ToBoolean(tResponse.tmcReply.value);
+            if (skipBag)
+            {
+                dontskipbagRB.Checked = true;
+            }
+            else
+            {
+                skipbagRB.Checked = true;
+            }
+
         }
 
         private void robotTP_Enter(object sender, EventArgs e)
@@ -1967,6 +1995,25 @@ namespace SpaceUSB
             tResponse = rTMCConn.SetSGPandStore(AddressBank.GetParameterBank, SystemVariables.GB_disposeYN, "0");
         }
 
+        private void dontskipvial456RB_CheckedChanged(object sender, EventArgs e)
+        {
+            tResponse = rTMCConn.SetSGPandStore(AddressBank.GetParameterBank, SystemVariables.GB_skipCheckVial456, "0");
+        }
+
+        private void skipvial456RB_CheckedChanged(object sender, EventArgs e)
+        {
+            tResponse = rTMCConn.SetSGPandStore(AddressBank.GetParameterBank, SystemVariables.GB_skipCheckVial456, "1");
+        }
+
+        private void dontskipbagRB_CheckedChanged(object sender, EventArgs e)
+        {
+            tResponse = rTMCConn.SetSGPandStore(AddressBank.GetParameterBank, SystemVariables.GB_skipCheckBag, "0");
+        }
+
+        private void skipbagRB_CheckedChanged(object sender, EventArgs e)
+        {
+            tResponse = rTMCConn.SetSGPandStore(AddressBank.GetParameterBank, SystemVariables.GB_skipCheckBag, "1");
+        }
         // ==============
         //    BackUp
         // ==============
@@ -3853,6 +3900,74 @@ namespace SpaceUSB
             refreshParams();
         }
 
+        // _____________ positioning to Laser distance calicration location _______________________________________________
+
+        private void moveToLDcalibLocationBtn_Click(object sender, EventArgs e)
+        {
+            run_moveToLDcalibLocation();
+        }
+
+        private void run_moveToLDcalibLocation()
+        {
+            // make sure that this can run only right after a HOME (init)
+            if (rTMCConn == null || !rTMCConn.TrinamicOK)
+            {
+                logAndShow("The robot is busy or no connected.");
+                return;
+            }
+            if (RunInProcess)
+            {
+                logAndShow("The PC did not finish the RUN");
+                return;
+            }
+
+            RunInProcess = true;                                  // eliminate re-entrance
+
+            this.Invoke((MethodInvoker)delegate { RunParametersTLP.Enabled = false; });
+            this.Invoke((MethodInvoker)delegate { calibrateTLP.Enabled = false; });
+
+            if (!readyForNewCommand)
+            {
+                logAndShow("The Robot is busy, wait and try again");
+                goto exit;  // exit
+            }
+            if (rTMCConn.TrinamicAborted())
+            {
+                logAndShow(" Robot aborted, please intitiate HOME");
+                goto exit;  // exit
+            }
+
+            tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_CurrentState);
+            // GB_CurrentState must be = WAITING_DISPENSE ( = 30)
+            if (Convert.ToInt32(tResponse.tmcReply.value) != 30)
+            {
+                logAndShow("please intitiate HOME before using this function");
+                goto exit;  // exit
+            }
+            else
+            {
+                tResponse = rTMCConn.RunCommand(GeneralFunctions.moveToLDcalibLocation);
+            }
+        //RunInProcess = false;
+        exit:
+            this.Invoke((MethodInvoker)delegate { RunParametersTLP.Enabled = true; });
+            this.Invoke((MethodInvoker)delegate { calibrateTLP.Enabled = true; });
+            RunInProcess = false;
+        }
+
+
+        private void moveFromLDcalibLocationBtn_Click(object sender, EventArgs e)
+        {
+            run_moveFromLDcalibLocation();
+            inLDcalibLocation = true;
+        }
+
+        private void run_moveFromLDcalibLocation()
+        {
+            tResponse = rTMCConn.RunCommand(GeneralFunctions.moveFromLDcalibLocation);
+            inLDcalibLocation = false;
+        }
+
         // _____________HeadRotateTop_______________________________________________
         private void setHeadRotateTopBtn_Click(object sender, EventArgs e)
         {
@@ -4117,16 +4232,23 @@ namespace SpaceUSB
 
         private void ejectSyringeTopBtn_Click(object sender, EventArgs e)
         {
-            tResponse = rTMCConn.RunCommand(GeneralFunctions.ejectSyringeFromTopVial);
-            tstringToRUNtest();
+            goDistanceTB.Text = "70";
+            setManualDistance();
+            VerticalGoDown();
+
+            //tResponse = rTMCConn.RunCommand(GeneralFunctions.ejectSyringeFromTopVial);
+            //tstringToRUNtest();
         }
 
         private void ejectSyingeBottomBtn_Click(object sender, EventArgs e)
         {
-            tResponse = rTMCConn.RunCommand(GeneralFunctions.ejectSyringeFromBottomVial);
-            tstringToRUNtest();
-        }
+            goDistanceTB.Text = "70";
+            setManualDistance();
+            VerticalGoUp();
 
+            //tResponse = rTMCConn.RunCommand(GeneralFunctions.ejectSyringeFromBottomVial);
+            //tstringToRUNtest();
+        }
 
         // *****************************************************************************
 

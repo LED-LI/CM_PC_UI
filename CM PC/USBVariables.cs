@@ -515,6 +515,8 @@ namespace SpaceUSB
         public const string startHomePistonMotor = "124";
         public const string defaultVibrate = "126";
         public const string getLaserDistAVAL = "128";
+        public const string moveToLDcalibLocation = "130";
+        public const string moveFromLDcalibLocation = "132";
         public const string VerticalManual = "136";
         public const string LinearMotorManual = "138";
         public const string armMotorManual = "140";

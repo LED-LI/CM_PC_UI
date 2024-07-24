@@ -275,6 +275,8 @@
             this.setBumpPosVertBtn = new System.Windows.Forms.Button();
             this.setBumpPosVertTB = new System.Windows.Forms.TextBox();
             this.panel39 = new System.Windows.Forms.Panel();
+            this.moveFromLDcalibLocationBtn = new System.Windows.Forms.Button();
+            this.moveToLDcalibLocationBtn = new System.Windows.Forms.Button();
             this.panel23 = new System.Windows.Forms.Panel();
             this.panel42 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
@@ -378,6 +380,12 @@
             this.label78 = new System.Windows.Forms.Label();
             this.runInProcessTB = new System.Windows.Forms.TextBox();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.panel38 = new System.Windows.Forms.Panel();
+            this.skipbagRB = new System.Windows.Forms.RadioButton();
+            this.dontskipbagRB = new System.Windows.Forms.RadioButton();
+            this.panel37 = new System.Windows.Forms.Panel();
+            this.skipvial456RB = new System.Windows.Forms.RadioButton();
+            this.dontskipvial456RB = new System.Windows.Forms.RadioButton();
             this.panel32 = new System.Windows.Forms.Panel();
             this.showOverideRB = new System.Windows.Forms.RadioButton();
             this.normalRunRB = new System.Windows.Forms.RadioButton();
@@ -522,6 +530,7 @@
             this.panel8.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel30.SuspendLayout();
+            this.panel39.SuspendLayout();
             this.panel9.SuspendLayout();
             this.panel45.SuspendLayout();
             this.panel17.SuspendLayout();
@@ -541,6 +550,8 @@
             this.setupTLP.SuspendLayout();
             this.GBpanelPNL.SuspendLayout();
             this.groupBox6.SuspendLayout();
+            this.panel38.SuspendLayout();
+            this.panel37.SuspendLayout();
             this.panel32.SuspendLayout();
             this.panel31.SuspendLayout();
             this.robotTP.SuspendLayout();
@@ -3935,11 +3946,37 @@
             // 
             // panel39
             // 
+            this.panel39.Controls.Add(this.moveFromLDcalibLocationBtn);
+            this.panel39.Controls.Add(this.moveToLDcalibLocationBtn);
             this.panel39.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel39.Location = new System.Drawing.Point(2094, 946);
             this.panel39.Name = "panel39";
             this.panel39.Size = new System.Drawing.Size(337, 104);
             this.panel39.TabIndex = 68;
+            // 
+            // moveFromLDcalibLocationBtn
+            // 
+            this.moveFromLDcalibLocationBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.moveFromLDcalibLocationBtn.Dock = System.Windows.Forms.DockStyle.Right;
+            this.moveFromLDcalibLocationBtn.Location = new System.Drawing.Point(172, 0);
+            this.moveFromLDcalibLocationBtn.Name = "moveFromLDcalibLocationBtn";
+            this.moveFromLDcalibLocationBtn.Size = new System.Drawing.Size(165, 104);
+            this.moveFromLDcalibLocationBtn.TabIndex = 84;
+            this.moveFromLDcalibLocationBtn.Text = "move syringe from Laser Dist calib location back to loading position";
+            this.moveFromLDcalibLocationBtn.UseVisualStyleBackColor = false;
+            this.moveFromLDcalibLocationBtn.Click += new System.EventHandler(this.moveFromLDcalibLocationBtn_Click);
+            // 
+            // moveToLDcalibLocationBtn
+            // 
+            this.moveToLDcalibLocationBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.moveToLDcalibLocationBtn.Dock = System.Windows.Forms.DockStyle.Left;
+            this.moveToLDcalibLocationBtn.Location = new System.Drawing.Point(0, 0);
+            this.moveToLDcalibLocationBtn.Name = "moveToLDcalibLocationBtn";
+            this.moveToLDcalibLocationBtn.Size = new System.Drawing.Size(165, 104);
+            this.moveToLDcalibLocationBtn.TabIndex = 84;
+            this.moveToLDcalibLocationBtn.Text = "move syringe to Laser Dist calib location";
+            this.moveToLDcalibLocationBtn.UseVisualStyleBackColor = false;
+            this.moveToLDcalibLocationBtn.Click += new System.EventHandler(this.moveToLDcalibLocationBtn_Click);
             // 
             // panel23
             // 
@@ -5145,6 +5182,8 @@
             // groupBox6
             // 
             this.setupTLP.SetColumnSpan(this.groupBox6, 3);
+            this.groupBox6.Controls.Add(this.panel38);
+            this.groupBox6.Controls.Add(this.panel37);
             this.groupBox6.Controls.Add(this.panel32);
             this.groupBox6.Controls.Add(this.panel31);
             this.groupBox6.Controls.Add(this.replyStatusTB);
@@ -5165,6 +5204,74 @@
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "for test";
             // 
+            // panel38
+            // 
+            this.panel38.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.panel38.Controls.Add(this.skipbagRB);
+            this.panel38.Controls.Add(this.dontskipbagRB);
+            this.panel38.Location = new System.Drawing.Point(438, 321);
+            this.panel38.Name = "panel38";
+            this.panel38.Size = new System.Drawing.Size(303, 79);
+            this.panel38.TabIndex = 87;
+            // 
+            // skipbagRB
+            // 
+            this.skipbagRB.AutoSize = true;
+            this.skipbagRB.Location = new System.Drawing.Point(13, 46);
+            this.skipbagRB.Name = "skipbagRB";
+            this.skipbagRB.Size = new System.Drawing.Size(212, 32);
+            this.skipbagRB.TabIndex = 1;
+            this.skipbagRB.Text = "skip checking of bag";
+            this.skipbagRB.UseVisualStyleBackColor = true;
+            this.skipbagRB.CheckedChanged += new System.EventHandler(this.skipbagRB_CheckedChanged);
+            // 
+            // dontskipbagRB
+            // 
+            this.dontskipbagRB.AutoSize = true;
+            this.dontskipbagRB.Checked = true;
+            this.dontskipbagRB.Location = new System.Drawing.Point(13, 15);
+            this.dontskipbagRB.Name = "dontskipbagRB";
+            this.dontskipbagRB.Size = new System.Drawing.Size(236, 32);
+            this.dontskipbagRB.TabIndex = 0;
+            this.dontskipbagRB.TabStop = true;
+            this.dontskipbagRB.Text = "don\'t skip check of bag";
+            this.dontskipbagRB.UseVisualStyleBackColor = true;
+            this.dontskipbagRB.CheckedChanged += new System.EventHandler(this.dontskipbagRB_CheckedChanged);
+            // 
+            // panel37
+            // 
+            this.panel37.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.panel37.Controls.Add(this.skipvial456RB);
+            this.panel37.Controls.Add(this.dontskipvial456RB);
+            this.panel37.Location = new System.Drawing.Point(438, 222);
+            this.panel37.Name = "panel37";
+            this.panel37.Size = new System.Drawing.Size(303, 79);
+            this.panel37.TabIndex = 87;
+            // 
+            // skipvial456RB
+            // 
+            this.skipvial456RB.AutoSize = true;
+            this.skipvial456RB.Location = new System.Drawing.Point(13, 46);
+            this.skipvial456RB.Name = "skipvial456RB";
+            this.skipvial456RB.Size = new System.Drawing.Size(262, 32);
+            this.skipvial456RB.TabIndex = 1;
+            this.skipvial456RB.Text = "skip checking of vials 4,5,6";
+            this.skipvial456RB.UseVisualStyleBackColor = true;
+            this.skipvial456RB.CheckedChanged += new System.EventHandler(this.skipvial456RB_CheckedChanged);
+            // 
+            // dontskipvial456RB
+            // 
+            this.dontskipvial456RB.AutoSize = true;
+            this.dontskipvial456RB.Checked = true;
+            this.dontskipvial456RB.Location = new System.Drawing.Point(13, 15);
+            this.dontskipvial456RB.Name = "dontskipvial456RB";
+            this.dontskipvial456RB.Size = new System.Drawing.Size(240, 32);
+            this.dontskipvial456RB.TabIndex = 0;
+            this.dontskipvial456RB.TabStop = true;
+            this.dontskipvial456RB.Text = "don\'t skip check of vials";
+            this.dontskipvial456RB.UseVisualStyleBackColor = true;
+            this.dontskipvial456RB.CheckedChanged += new System.EventHandler(this.dontskipvial456RB_CheckedChanged);
+            // 
             // panel32
             // 
             this.panel32.BackColor = System.Drawing.Color.AntiqueWhite;
@@ -5172,7 +5279,7 @@
             this.panel32.Controls.Add(this.normalRunRB);
             this.panel32.Location = new System.Drawing.Point(438, 121);
             this.panel32.Name = "panel32";
-            this.panel32.Size = new System.Drawing.Size(148, 79);
+            this.panel32.Size = new System.Drawing.Size(303, 79);
             this.panel32.TabIndex = 86;
             // 
             // showOverideRB
@@ -5206,7 +5313,7 @@
             this.panel31.Controls.Add(this.disposeBottlesRB);
             this.panel31.Location = new System.Drawing.Point(438, 26);
             this.panel31.Name = "panel31";
-            this.panel31.Size = new System.Drawing.Size(148, 79);
+            this.panel31.Size = new System.Drawing.Size(303, 79);
             this.panel31.TabIndex = 85;
             // 
             // NoDisposeRB
@@ -6259,6 +6366,7 @@
             this.panel3.PerformLayout();
             this.panel30.ResumeLayout(false);
             this.panel30.PerformLayout();
+            this.panel39.ResumeLayout(false);
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
             this.panel45.ResumeLayout(false);
@@ -6295,6 +6403,10 @@
             this.GBpanelPNL.PerformLayout();
             this.groupBox6.ResumeLayout(false);
             this.groupBox6.PerformLayout();
+            this.panel38.ResumeLayout(false);
+            this.panel38.PerformLayout();
+            this.panel37.ResumeLayout(false);
+            this.panel37.PerformLayout();
             this.panel32.ResumeLayout(false);
             this.panel32.PerformLayout();
             this.panel31.ResumeLayout(false);
@@ -6528,7 +6640,6 @@
         private System.Windows.Forms.Panel panel41;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox setArmDisposeVials456TB;
-        private System.Windows.Forms.Panel panel39;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox BagSizeMlTB;
         private System.Windows.Forms.TextBox mLinBagTB;
@@ -6757,6 +6868,15 @@
         private System.Windows.Forms.TextBox messuredAmountOfLiquidTB;
         private System.Windows.Forms.Label label86;
         private System.Windows.Forms.TextBox thumbRestDistanceFilterSizeTB;
+        private System.Windows.Forms.Panel panel38;
+        private System.Windows.Forms.RadioButton skipbagRB;
+        private System.Windows.Forms.RadioButton dontskipbagRB;
+        private System.Windows.Forms.Panel panel37;
+        private System.Windows.Forms.RadioButton skipvial456RB;
+        private System.Windows.Forms.RadioButton dontskipvial456RB;
+        private System.Windows.Forms.Button moveToLDcalibLocationBtn;
+        private System.Windows.Forms.Button moveFromLDcalibLocationBtn;
+        private System.Windows.Forms.Panel panel39;
     }
 }
 
