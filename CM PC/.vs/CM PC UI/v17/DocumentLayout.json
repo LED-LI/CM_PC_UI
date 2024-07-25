@@ -61,8 +61,7 @@
               "ViewState": "AQIAAPMBAAAAAAAAAAAhwAUCAAAxAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-15T20:26:09.564Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -72,7 +71,7 @@
               "RelativeDocumentMoniker": "Form1.cs",
               "ToolTip": "C:\\Users\\LED\\OneDrive - Light Instruments Ltd\\Documents\\GitHub\\CM_PC_UI\\CM PC\\Form1.cs",
               "RelativeToolTip": "Form1.cs",
-              "ViewState": "AQIAAG8PAAAAAAAAAAAhwH8PAAAlAAAA",
+              "ViewState": "AQIAAOMAAAAAAAAAAAAQwOcAAAAlAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-24T10:59:00.291Z",
               "IsPinned": true,
@@ -88,12 +87,7 @@
               "RelativeToolTip": "Form1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-17T21:40:44.732Z",
-              "IsPinned": true,
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -105,8 +99,7 @@
               "RelativeToolTip": "usbClass.cs",
               "ViewState": "AQIAADgAAAAAAAAAAAAMwFwAAAAuAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-17T21:20:07.805Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-17T21:20:07.805Z"
             },
             {
               "$type": "Document",
@@ -118,8 +111,7 @@
               "RelativeToolTip": "Form1.Designer.cs",
               "ViewState": "AQIAANEFAAAAAAAAAAAjwNYFAAAfAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-17T22:24:06.832Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-17T22:24:06.832Z"
             }
           ]
         }
