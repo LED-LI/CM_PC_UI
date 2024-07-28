@@ -122,7 +122,7 @@ namespace SpaceUSB
         public const string GB_messuredAmountOfLiquid = "18";
         public const string GB_current_diviation = "19";
         public const string GB_showOverride = "20";
-        public const string GB_21 = "21";
+        public const string GB_linearSpaceBetweenVialsuM = "21";
         public const string GB_disposeYN = "22";
         public const string GB_DisposeDropVialsPos = "23";
         public const string GB_DisposeDropVials456Pos = "24";

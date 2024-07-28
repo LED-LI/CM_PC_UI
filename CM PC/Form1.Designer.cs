@@ -488,6 +488,8 @@
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.label87 = new System.Windows.Forms.Label();
+            this.linearSpaceBetweenVialsuMTB = new System.Windows.Forms.TextBox();
             cmTC = new System.Windows.Forms.TabControl();
             cmTC.SuspendLayout();
             this.adminTP.SuspendLayout();
@@ -5278,6 +5280,8 @@
             // groupBox6
             // 
             this.setupTLP.SetColumnSpan(this.groupBox6, 3);
+            this.groupBox6.Controls.Add(this.label87);
+            this.groupBox6.Controls.Add(this.linearSpaceBetweenVialsuMTB);
             this.groupBox6.Controls.Add(this.panel38);
             this.groupBox6.Controls.Add(this.panel37);
             this.groupBox6.Controls.Add(this.panel32);
@@ -5480,7 +5484,7 @@
             // 
             this.label86.AutoSize = true;
             this.label86.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label86.Location = new System.Drawing.Point(802, 51);
+            this.label86.Location = new System.Drawing.Point(802, 19);
             this.label86.Name = "label86";
             this.label86.Size = new System.Drawing.Size(270, 30);
             this.label86.TabIndex = 55;
@@ -5489,11 +5493,12 @@
             // thumbRestDistanceFilterSizeTB
             // 
             this.thumbRestDistanceFilterSizeTB.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.thumbRestDistanceFilterSizeTB.Location = new System.Drawing.Point(1078, 47);
+            this.thumbRestDistanceFilterSizeTB.Location = new System.Drawing.Point(1096, 15);
             this.thumbRestDistanceFilterSizeTB.Name = "thumbRestDistanceFilterSizeTB";
             this.thumbRestDistanceFilterSizeTB.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.thumbRestDistanceFilterSizeTB.Size = new System.Drawing.Size(120, 34);
             this.thumbRestDistanceFilterSizeTB.TabIndex = 59;
+            this.thumbRestDistanceFilterSizeTB.Text = " ";
             this.thumbRestDistanceFilterSizeTB.TextChanged += new System.EventHandler(this.thumbRestDistanceFilterSizeTB_TextChanged);
             // 
             // label56
@@ -6383,6 +6388,26 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
+            // label87
+            // 
+            this.label87.AutoSize = true;
+            this.label87.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label87.Location = new System.Drawing.Point(802, 121);
+            this.label87.Name = "label87";
+            this.label87.Size = new System.Drawing.Size(288, 30);
+            this.label87.TabIndex = 88;
+            this.label87.Text = "linear Space Between Vials [uM]";
+            // 
+            // linearSpaceBetweenVialsuMTB
+            // 
+            this.linearSpaceBetweenVialsuMTB.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.linearSpaceBetweenVialsuMTB.Location = new System.Drawing.Point(1096, 117);
+            this.linearSpaceBetweenVialsuMTB.Name = "linearSpaceBetweenVialsuMTB";
+            this.linearSpaceBetweenVialsuMTB.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.linearSpaceBetweenVialsuMTB.Size = new System.Drawing.Size(120, 34);
+            this.linearSpaceBetweenVialsuMTB.TabIndex = 89;
+            this.linearSpaceBetweenVialsuMTB.TextChanged += new System.EventHandler(this.linearSpaceBetweenVialsuMTB_TextChanged);
+            // 
             // CMForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
@@ -6984,6 +7009,8 @@
         private System.Windows.Forms.Button GoToVial4BottomBtn;
         private System.Windows.Forms.TextBox setVial4BottomTB;
         private System.Windows.Forms.Button setVial4BottomBtn;
+        private System.Windows.Forms.Label label87;
+        private System.Windows.Forms.TextBox linearSpaceBetweenVialsuMTB;
     }
 }
 

@@ -82,6 +82,8 @@ namespace SpaceUSB
         public int thumbRestDistanceFilterSize = 10;
         public int thumbRestDistanceCount = 1;
 
+        public int linearSpaceBetweenVialsuM;
+
         public bool isAdministrator = false;      // start program with non-administrator
         public bool anyErrorGotTrue = false;
         public bool readyForNewCommand;
@@ -174,7 +176,7 @@ namespace SpaceUSB
         public int vialsExist;
         public bool okPolling = true;
         // *** vials exist bits ***
-        public int Bit_bag   = 0b00000000; // bit  0 // not sure about it 
+        public int Bit_bag = 0b00000000; // bit  0 // not sure about it 
         public int Bit_vial1 = 0b00000001; // bit   1
         public int Bit_vial2 = 0b10000000; // bit   2 // temp untill fix of dist board design
         //public int Bit_vial2 = 0b00000010; // bit   2
@@ -284,6 +286,11 @@ namespace SpaceUSB
                     {
                         thumbRestDistanceSum *= Convert.ToDouble(thumbRestDistanceFilterSize - 1) / thumbRestDistanceFilterSize;
                     }
+
+                    tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_linearSpaceBetweenVialsuM);
+                    linearSpaceBetweenVialsuM = Convert.ToInt32(tResponse.tmcReply.value);
+                    this.Invoke((MethodInvoker)delegate { linearSpaceBetweenVialsuMTB.Text = Convert.ToString(linearSpaceBetweenVialsuM, 10); });
+
                 }
 
                 tResponse = rTMCConn.GetGAP(MotorsNum.M_HeadRotate, AddressBank.actualPosition);
@@ -510,11 +517,20 @@ namespace SpaceUSB
                     this.Invoke((MethodInvoker)delegate { isVibrating56TB.Text = $"NO"; });
                 }
 
+                // arrange locations of invoking according to tabs - this goes to tab 3
                 this.Invoke((MethodInvoker)delegate { thumbRestDistanceFilterSizeTB.Text = $"{thumbRestDistanceFilterSize}"; });
                 this.Invoke((MethodInvoker)delegate { runInProcessTB.Text = $"{RunInProcess}"; });
+                ///////////////////////////////////////////////////////////////////////
+
+                // arrange locations of invoking according to tabs - this goes to tab 2
                 this.Invoke((MethodInvoker)delegate { DateTimeNowTxt.Text = DateTime.Now.ToString("  dd-MM-yyyy   HH:mm:ss"); });
+                ///////////////////////////////////////////////////////////////////////
+
                 //                this.Invoke((MethodInvoker)delegate { PcCodeTB.Text = pcCode; });
+
+                // arrange locations of invoking according to tabs - this goes to tab 1
                 this.Invoke((MethodInvoker)delegate { runUserNameTB.Text = $" user: {username}"; });
+                ///////////////////////////////////////////////////////////////////////
 
                 readyForNewCommand = !cmdInProcess && !motorIsMoving && !anyError; ;
 
@@ -3969,6 +3985,21 @@ namespace SpaceUSB
             }
             refreshParams();
         }
+
+        // _____________ linearSpaceBetweenVialsuM _______________________________________________
+
+        private void linearSpaceBetweenVialsuMTB_TextChanged(object sender, EventArgs e)
+        {
+            if (rgNumber.Match(linearSpaceBetweenVialsuMTB.Text).Success)        // did not match, a non number character is there or a negative 
+            {
+                tResponse = rTMCConn.SetSGPandStore(AddressBank.GetParameterBank, SystemVariables.GB_linearSpaceBetweenVialsuM, linearSpaceBetweenVialsuMTB.Text);
+
+                //linearSpaceBetweenVialsuM = Convert.ToInt32(linearSpaceBetweenVialsuMTB.Text);
+
+            }
+        }
+
+
 
         // _____________ positioning to Laser distance calicration location _______________________________________________
 
