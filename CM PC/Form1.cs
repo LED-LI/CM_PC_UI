@@ -59,6 +59,7 @@ namespace SpaceUSB
         public string last_setCenterOfVial1TB;
         public string last_setCapLoadingTB;
         public string last_setVial4BottomTB;
+        public string last_setVial4TopTB;
         public string last_setArmVialTB;
         public string last_setArmDisposeVials456TB;
         public string last_setArmAtBotomTB;
@@ -96,10 +97,10 @@ namespace SpaceUSB
         public bool aborted = false;
         public int microLdispensedSoFar;
         public bool askOverWrite;
-        public bool bagWasReplaced = true;
-        public bool bagWasRemoved = false;
-        public bool syringeWasReplaced = true;
-        public bool syringeWasRemoved = false;
+        //public bool bagWasReplaced = true;
+        //public bool bagWasRemoved = false;
+        //public bool syringeWasReplaced = true;
+        //public bool syringeWasRemoved = false;
         public bool inLDcalibLocation = false;
         public bool b;
 
@@ -136,6 +137,8 @@ namespace SpaceUSB
         public int LoadingHight;
         public int linearHomePos;
         public int setCenterOfVial1;
+        public int setVial4BottomLocation;
+        public int setVial4TopLocation;
         public int setCapLoading;
         public int ArmHomePosition;
         public int ArmDisposePosition;
@@ -151,6 +154,7 @@ namespace SpaceUSB
         public int LD_acceptedDev;
         public int messuredAmountOfLiquid;
         public int Vial4Bottom;
+        public int Vial4Top;
         public int DisposeDropVialPos;
         public int CapHolderHomePos;
         public int microLinBAG;
@@ -170,13 +174,15 @@ namespace SpaceUSB
         public int vialsExist;
         public bool okPolling = true;
         // *** vials exist bits ***
+        public int Bit_bag   = 0b00000000; // bit  0 // not sure about it 
         public int Bit_vial1 = 0b00000001; // bit   1
-        public int Bit_vial2 = 0b00000010; // bit   2
+        public int Bit_vial2 = 0b10000000; // bit   2 // temp untill fix of dist board design
+        //public int Bit_vial2 = 0b00000010; // bit   2
         public int Bit_vial3 = 0b00000100; // bit   4
         public int Bit_vial4 = 0b00001000; // bit   8
         public int Bit_vial5 = 0b00010000; // bit  16
         public int Bit_vial6 = 0b00100000; // bit  32
-        public int Bit_bag = 0b01000000; // bit  64
+        //public int Bit_bag = 0b01000000; // bit  64 
 
         public int maxPWtrials = 4;
         public int maxPWmonths = 5;
@@ -534,20 +540,20 @@ namespace SpaceUSB
                     tResponse = rTMCConn.RunCommand(GeneralFunctions.screenAllVials);    // function 36
                     Thread.Sleep(100);   // wait 100 ms for the program to finish to switch and thread sleep
 
-                    // calculate if syrige was replaced
-                    if (syringeInPlaceTB.Text == $"SYRINGE IN")                // syringe is in?
-                    {
-                        if (syringeWasRemoved == true)
-                        {
-                            syringeWasReplaced = true;
-                            syringeWasRemoved = false;
-                        }
-                    }
-                    else   // no syringe
-                    {
-                        syringeWasReplaced = false;
-                        syringeWasRemoved = true;
-                    }
+                    //// calculate if syrige was replaced
+                    //if (syringeInPlaceTB.Text == $"SYRINGE IN")                // syringe is in?
+                    //{
+                    //    if (syringeWasRemoved == true)
+                    //    {
+                    //        syringeWasReplaced = true;
+                    //        syringeWasRemoved = false;
+                    //    }
+                    //}
+                    //else   // no syringe
+                    //{
+                    //    syringeWasReplaced = false;
+                    //    syringeWasRemoved = true;
+                    //}
 
                     // display when no RUN the vials and bag in place
                     tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_vialsExist);  //GB_218
@@ -557,17 +563,17 @@ namespace SpaceUSB
                     if ((vialsExist & Bit_bag) == Bit_bag)  // bag is in?
                     {
                         this.Invoke((MethodInvoker)delegate { BagInPlaceTB.Text = "In Place"; });
-                        if (bagWasRemoved == true)
-                        {
-                            bagWasReplaced = true;
-                            bagWasRemoved = false;
-                        }
+                        //if (bagWasRemoved == true)
+                        //{
+                        //    bagWasReplaced = true;
+                        //    bagWasRemoved = false;
+                        //}
                     }
                     else   // no bag
                     {
                         this.Invoke((MethodInvoker)delegate { BagInPlaceTB.Text = "No BAG"; });
-                        bagWasReplaced = false;
-                        bagWasRemoved = true;
+                        //bagWasReplaced = false;
+                        //bagWasRemoved = true;
                     }
                     if ((vialsExist & Bit_vial1) == Bit_vial1)
                     {
@@ -1436,10 +1442,10 @@ namespace SpaceUSB
                 "         process time: " + elapsedTime);
         exit:
             RunBtn.BackColor = Color.LawnGreen;
-            bagWasReplaced = false;
-            bagWasRemoved = false;
-            syringeWasReplaced = false;
-            syringeWasRemoved = false;
+            //bagWasReplaced = false;
+            //bagWasRemoved = false;
+            //syringeWasReplaced = false;
+            //syringeWasRemoved = false;
             this.Invoke((MethodInvoker)delegate { RunParametersTLP.Enabled = true; });
             this.Invoke((MethodInvoker)delegate { calibrateTLP.Enabled = true; });
             RunInProcess = false;
@@ -3122,7 +3128,21 @@ namespace SpaceUSB
             setCenterOfVial1 = Convert.ToInt32(tResponse.tmcReply.value);
             setCenterOfVial1TB.Text = $"{setCenterOfVial1}";
             // this.Invoke((MethodInvoker)delegate { setCenterOfVial1TB.Text = $"{setCenterOfVial1}"; });
+            //////////////
+            ///
+            //tResponse = rTMCConn.SetSGPandStore(AddressBank.GetParameterBank, SystemVariables.GB_linearCenterOfVial4AtBottom, setVial4BottomTB.Text);
+            tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_linearCenterOfVial4AtBottom); //GB_51
+            setVial4BottomLocation = Convert.ToInt32(tResponse.tmcReply.value);
+            setVial4BottomTB.Text = $"{setVial4BottomLocation}";
+            // this.Invoke((MethodInvoker)delegate { setVial4BottomTB.Text = $"{setVial4BottomLocation}"; });
 
+            //tResponse = rTMCConn.SetSGPandStore(AddressBank.GetParameterBank, SystemVariables.GB_linearCenterOfVial4AtTop, setVial4BottomLocation.Text);
+            tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_linearCenterOfVial4AtTop); //GB_46
+            setVial4BottomLocation = Convert.ToInt32(tResponse.tmcReply.value);
+            setVial4TopTB.Text = $"{setVial4BottomLocation}";
+            // this.Invoke((MethodInvoker)delegate { setVial4TopTB.Text = $"{setVial4BottomLocation}"; });
+            //////////////
+            ///
             //tResponse = rTMCConn.SetSGPandStore(AddressBank.GetParameterBank, SystemVariables.GB_LinearLoading, setCapLoadingTB.Text);
             tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_LinearLoading); //GB_54
             setCapLoading = Convert.ToInt32(tResponse.tmcReply.value);
@@ -3209,7 +3229,7 @@ namespace SpaceUSB
             //  this.Invoke((MethodInvoker)delegate { setHeadRotateTopTB.Text = $"{HeadRotateAtTop}"; });
 
             //tResponse = rTMCConn.SetSGPandStore(AddressBank.GetParameterBank, SystemVariables.GB_Spare51Pos, setDisposeStartTB.Text);
-            tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_SetVial4BottomLinear);  // GB_51 
+            tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_linearCenterOfVial4AtBottom);  // GB_51 
             Vial4Bottom = Convert.ToInt32(tResponse.tmcReply.value);
             setVial4BottomTB.Text = $"{Vial4Bottom}";
             //  this.Invoke((MethodInvoker)delegate { setVial4BottomTB.Text = $"{Vial4Bottom}"; });
@@ -3504,28 +3524,78 @@ namespace SpaceUSB
             uploadVial4Bottom();
             setVial4Bottom();
         }
-        private void setVial4BottomTB_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
-        {
-            if (Convert.ToInt32(e.KeyCode) == (char)13)    //  Enter key pressed?
-            {
-                //uploadVial4Bottom();
-                //setVial4Bottom();
-            }
-        }
+        //private void setVial4BottomTB_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
+        //{
+        //    if (Convert.ToInt32(e.KeyCode) == (char)13)    //  Enter key pressed?
+        //    {
+        //        //uploadVial4Bottom();
+        //        //setVial4Bottom();
+        //    }
+        //}
         private void setVial4Bottom()
         {
             if (rgMinus.Match(setVial4BottomTB.Text).Success)        // did not match, a non number character is there
             {
                 //logAndShow($"A non-number value for the distance {setArmVialTB.Text}");
-                tResponse = rTMCConn.SetSGPandStore(AddressBank.GetParameterBank, SystemVariables.GB_SetVial4BottomLinear, setVial4BottomTB.Text);
+                tResponse = rTMCConn.SetSGPandStore(AddressBank.GetParameterBank, SystemVariables.GB_linearCenterOfVial4AtBottom, setVial4BottomTB.Text);
             }
             refreshParams();
         }
         private void uploadVial4Bottom()
         {
-            tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_SetVial4BottomLinear);  // GB_51 
+            tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_linearCenterOfVial4AtBottom);  // GB_51 
             Vial4Bottom = Convert.ToInt32(tResponse.tmcReply.value);
             last_setVial4BottomTB = $"{Vial4Bottom}";
+        }
+
+        // __________________setVial4Top_____________________________________________
+        private void setVial4TopBtn_Click(object sender, EventArgs e)
+        {
+            uploadVial4Top();
+            v = Convert.ToDouble(M_LinearLocationTb.Text) * StepsPerMM.M_LinearStepsPerMM;
+            setVial4TopTB.Text = Convert.ToString(Convert.ToInt32(v));
+            setVial4Top();
+        }
+        private void GoToVial4TopBtn_Click(object sender, EventArgs e)
+        {
+            tResponse = rTMCConn.SetSGP(AddressBank.GetParameterBank, SystemVariables.GB_GoToAbsoluteInSteps, setVial4TopTB.Text);
+            tstringToSGPtest();   // display on "for SGP cmd"
+            Thread.Sleep(300);  // wait before moving
+            tResponse = rTMCConn.RunCommand(GeneralFunctions.LinearMotorManualAbsolute);
+            tstringToRUNtest();    // display on "for RUN cmd"
+        }
+        private void oopsVial4TopBtn_Click(object sender, EventArgs e)
+        {
+            setVial4TopTB.Text = last_setVial4TopTB;
+            setVial4Top();
+        }
+        private void setVial4TopTB_Leave(object sender, EventArgs e)
+        {
+            uploadVial4Top();
+            setVial4Top();
+        }
+        //private void setVial4TopTB_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
+        //{
+        //    if (Convert.ToInt32(e.KeyCode) == (char)13)    //  Enter key pressed?
+        //    {
+        //        //uploadVial4Top();
+        //        //setVial4Top();
+        //    }
+        //}
+        private void setVial4Top()
+        {
+            if (rgMinus.Match(setVial4TopTB.Text).Success)        // did not match, a non number character is there
+            {
+                //logAndShow($"A non-number value for the distance {setArmVialTB.Text}");
+                tResponse = rTMCConn.SetSGPandStore(AddressBank.GetParameterBank, SystemVariables.GB_linearCenterOfVial4AtTop, setVial4TopTB.Text);
+            }
+            refreshParams();
+        }
+        private void uploadVial4Top()
+        {
+            tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_linearCenterOfVial4AtTop);  // GB_51 
+            Vial4Top = Convert.ToInt32(tResponse.tmcReply.value);
+            last_setVial4TopTB = $"{Vial4Top}";
         }
 
         // ______________setArmVial__________________________________________________

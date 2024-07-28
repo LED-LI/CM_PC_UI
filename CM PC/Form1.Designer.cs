@@ -291,6 +291,13 @@
             this.label31 = new System.Windows.Forms.Label();
             this.setBumpBottomTB = new System.Windows.Forms.TextBox();
             this.panel17 = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.panel46 = new System.Windows.Forms.Panel();
+            this.oopsVial4TopBtn = new System.Windows.Forms.Button();
+            this.GoToVial4TopBtn = new System.Windows.Forms.Button();
+            this.setVial4TopTB = new System.Windows.Forms.TextBox();
+            this.setVial4TopBtn = new System.Windows.Forms.Button();
+            this.panel43 = new System.Windows.Forms.Panel();
             this.oopsVial4BottomBtn = new System.Windows.Forms.Button();
             this.GoToVial4BottomBtn = new System.Windows.Forms.Button();
             this.setVial4BottomTB = new System.Windows.Forms.TextBox();
@@ -534,6 +541,9 @@
             this.panel9.SuspendLayout();
             this.panel45.SuspendLayout();
             this.panel17.SuspendLayout();
+            this.tableLayoutPanel2.SuspendLayout();
+            this.panel46.SuspendLayout();
+            this.panel43.SuspendLayout();
             this.panel27.SuspendLayout();
             this.panel11.SuspendLayout();
             this.panel25.SuspendLayout();
@@ -4125,24 +4135,111 @@
             // 
             // panel17
             // 
-            this.panel17.Controls.Add(this.oopsVial4BottomBtn);
-            this.panel17.Controls.Add(this.GoToVial4BottomBtn);
-            this.panel17.Controls.Add(this.setVial4BottomTB);
-            this.panel17.Controls.Add(this.setVial4BottomBtn);
+            this.panel17.Controls.Add(this.tableLayoutPanel2);
             this.panel17.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel17.Location = new System.Drawing.Point(374, 946);
             this.panel17.Name = "panel17";
             this.panel17.Size = new System.Drawing.Size(337, 104);
             this.panel17.TabIndex = 84;
             // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.tableLayoutPanel2.ColumnCount = 2;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel2.Controls.Add(this.panel46, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.panel43, 0, 0);
+            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 1;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(337, 104);
+            this.tableLayoutPanel2.TabIndex = 96;
+            // 
+            // panel46
+            // 
+            this.panel46.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panel46.Controls.Add(this.oopsVial4TopBtn);
+            this.panel46.Controls.Add(this.GoToVial4TopBtn);
+            this.panel46.Controls.Add(this.setVial4TopTB);
+            this.panel46.Controls.Add(this.setVial4TopBtn);
+            this.panel46.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel46.Location = new System.Drawing.Point(171, 3);
+            this.panel46.Name = "panel46";
+            this.panel46.Size = new System.Drawing.Size(163, 98);
+            this.panel46.TabIndex = 3;
+            // 
+            // oopsVial4TopBtn
+            // 
+            this.oopsVial4TopBtn.BackgroundImage = global::CMNameSpace.Properties.Resources.arrow_CCW;
+            this.oopsVial4TopBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.oopsVial4TopBtn.Location = new System.Drawing.Point(134, 3);
+            this.oopsVial4TopBtn.Name = "oopsVial4TopBtn";
+            this.oopsVial4TopBtn.Size = new System.Drawing.Size(26, 25);
+            this.oopsVial4TopBtn.TabIndex = 90;
+            this.oopsVial4TopBtn.UseVisualStyleBackColor = true;
+            this.oopsVial4TopBtn.Click += new System.EventHandler(this.oopsVial4TopBtn_Click);
+            // 
+            // GoToVial4TopBtn
+            // 
+            this.GoToVial4TopBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.GoToVial4TopBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.GoToVial4TopBtn.Location = new System.Drawing.Point(3, 65);
+            this.GoToVial4TopBtn.Name = "GoToVial4TopBtn";
+            this.GoToVial4TopBtn.Size = new System.Drawing.Size(58, 30);
+            this.GoToVial4TopBtn.TabIndex = 89;
+            this.GoToVial4TopBtn.Text = "GOTO";
+            this.GoToVial4TopBtn.UseVisualStyleBackColor = false;
+            this.GoToVial4TopBtn.Click += new System.EventHandler(this.GoToVial4TopBtn_Click);
+            // 
+            // setVial4TopTB
+            // 
+            this.setVial4TopTB.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.setVial4TopTB.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.setVial4TopTB.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.setVial4TopTB.Location = new System.Drawing.Point(61, 61);
+            this.setVial4TopTB.Name = "setVial4TopTB";
+            this.setVial4TopTB.Size = new System.Drawing.Size(99, 34);
+            this.setVial4TopTB.TabIndex = 88;
+            this.setVial4TopTB.Text = "0";
+            this.setVial4TopTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.setVial4TopTB.Leave += new System.EventHandler(this.setVial4TopTB_Leave);
+            // 
+            // setVial4TopBtn
+            // 
+            this.setVial4TopBtn.Location = new System.Drawing.Point(3, 3);
+            this.setVial4TopBtn.Name = "setVial4TopBtn";
+            this.setVial4TopBtn.Size = new System.Drawing.Size(134, 56);
+            this.setVial4TopBtn.TabIndex = 87;
+            this.setVial4TopBtn.Text = "set center of\r\nVial 4 Top";
+            this.setVial4TopBtn.UseVisualStyleBackColor = true;
+            this.setVial4TopBtn.Click += new System.EventHandler(this.setVial4TopBtn_Click);
+            // 
+            // panel43
+            // 
+            this.panel43.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panel43.Controls.Add(this.oopsVial4BottomBtn);
+            this.panel43.Controls.Add(this.GoToVial4BottomBtn);
+            this.panel43.Controls.Add(this.setVial4BottomTB);
+            this.panel43.Controls.Add(this.setVial4BottomBtn);
+            this.panel43.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel43.Location = new System.Drawing.Point(3, 3);
+            this.panel43.Name = "panel43";
+            this.panel43.Size = new System.Drawing.Size(162, 98);
+            this.panel43.TabIndex = 2;
+            // 
             // oopsVial4BottomBtn
             // 
+            this.oopsVial4BottomBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.oopsVial4BottomBtn.BackgroundImage = global::CMNameSpace.Properties.Resources.arrow_CCW;
             this.oopsVial4BottomBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.oopsVial4BottomBtn.Location = new System.Drawing.Point(137, 3);
+            this.oopsVial4BottomBtn.Location = new System.Drawing.Point(133, 4);
             this.oopsVial4BottomBtn.Name = "oopsVial4BottomBtn";
             this.oopsVial4BottomBtn.Size = new System.Drawing.Size(26, 25);
-            this.oopsVial4BottomBtn.TabIndex = 86;
+            this.oopsVial4BottomBtn.TabIndex = 90;
             this.oopsVial4BottomBtn.UseVisualStyleBackColor = true;
             this.oopsVial4BottomBtn.Click += new System.EventHandler(this.oopsVial4BottomBtn_Click);
             // 
@@ -4150,10 +4247,10 @@
             // 
             this.GoToVial4BottomBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.GoToVial4BottomBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.GoToVial4BottomBtn.Location = new System.Drawing.Point(3, 76);
+            this.GoToVial4BottomBtn.Location = new System.Drawing.Point(3, 65);
             this.GoToVial4BottomBtn.Name = "GoToVial4BottomBtn";
             this.GoToVial4BottomBtn.Size = new System.Drawing.Size(58, 30);
-            this.GoToVial4BottomBtn.TabIndex = 84;
+            this.GoToVial4BottomBtn.TabIndex = 89;
             this.GoToVial4BottomBtn.Text = "GOTO";
             this.GoToVial4BottomBtn.UseVisualStyleBackColor = false;
             this.GoToVial4BottomBtn.Click += new System.EventHandler(this.GoToVial4BottomBtn_Click);
@@ -4163,21 +4260,20 @@
             this.setVial4BottomTB.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.setVial4BottomTB.BackColor = System.Drawing.SystemColors.MenuBar;
             this.setVial4BottomTB.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.setVial4BottomTB.Location = new System.Drawing.Point(229, 76);
+            this.setVial4BottomTB.Location = new System.Drawing.Point(61, 61);
             this.setVial4BottomTB.Name = "setVial4BottomTB";
-            this.setVial4BottomTB.Size = new System.Drawing.Size(105, 34);
-            this.setVial4BottomTB.TabIndex = 82;
+            this.setVial4BottomTB.Size = new System.Drawing.Size(98, 34);
+            this.setVial4BottomTB.TabIndex = 88;
             this.setVial4BottomTB.Text = "0";
             this.setVial4BottomTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.setVial4BottomTB.Leave += new System.EventHandler(this.setVial4BottomTB_Leave);
-            this.setVial4BottomTB.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.setVial4BottomTB_PreviewKeyDown);
             // 
             // setVial4BottomBtn
             // 
-            this.setVial4BottomBtn.Location = new System.Drawing.Point(3, -2);
+            this.setVial4BottomBtn.Location = new System.Drawing.Point(1, 3);
             this.setVial4BottomBtn.Name = "setVial4BottomBtn";
-            this.setVial4BottomBtn.Size = new System.Drawing.Size(134, 42);
-            this.setVial4BottomBtn.TabIndex = 81;
+            this.setVial4BottomBtn.Size = new System.Drawing.Size(134, 56);
+            this.setVial4BottomBtn.TabIndex = 87;
             this.setVial4BottomBtn.Text = "set center of\r\nVial 4 Bottom";
             this.setVial4BottomBtn.UseVisualStyleBackColor = true;
             this.setVial4BottomBtn.Click += new System.EventHandler(this.setVial4BottomBtn_Click);
@@ -6372,7 +6468,11 @@
             this.panel45.ResumeLayout(false);
             this.panel45.PerformLayout();
             this.panel17.ResumeLayout(false);
-            this.panel17.PerformLayout();
+            this.tableLayoutPanel2.ResumeLayout(false);
+            this.panel46.ResumeLayout(false);
+            this.panel46.PerformLayout();
+            this.panel43.ResumeLayout(false);
+            this.panel43.PerformLayout();
             this.panel27.ResumeLayout(false);
             this.panel27.PerformLayout();
             this.panel11.ResumeLayout(false);
@@ -6674,8 +6774,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel23;
         private System.Windows.Forms.Panel panel17;
-        private System.Windows.Forms.TextBox setVial4BottomTB;
-        private System.Windows.Forms.Button setVial4BottomBtn;
         private System.Windows.Forms.Panel panel16;
         private System.Windows.Forms.TextBox setHeadRotateStartTB;
         private System.Windows.Forms.Button setHeadRotateStartBtn;
@@ -6808,7 +6906,6 @@
         private System.Windows.Forms.Button GoToBumpPosVertBtn;
         private System.Windows.Forms.Button GoToArmVialBtn;
         private System.Windows.Forms.Button GoToBumpBottomBtn;
-        private System.Windows.Forms.Button GoToVial4BottomBtn;
         private System.Windows.Forms.Button GoToArmAtBottomBtn;
         private System.Windows.Forms.Button GoToPistonStartBtn;
         private System.Windows.Forms.Button GoToHeadAtBottomBtn;
@@ -6824,7 +6921,6 @@
         private System.Windows.Forms.Button oopsBumpPosVertBtn;
         private System.Windows.Forms.Button oopsArmVialBtn;
         private System.Windows.Forms.Button oopsBumpBottomBtn;
-        private System.Windows.Forms.Button oopsVial4BottomBtn;
         private System.Windows.Forms.Button oopsArmAtBotomBtn;
         private System.Windows.Forms.Button oopsPistonStartBtn;
         private System.Windows.Forms.Button oopsDropVials123Btn;
@@ -6877,6 +6973,17 @@
         private System.Windows.Forms.Button moveToLDcalibLocationBtn;
         private System.Windows.Forms.Button moveFromLDcalibLocationBtn;
         private System.Windows.Forms.Panel panel39;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private System.Windows.Forms.Panel panel46;
+        private System.Windows.Forms.Button oopsVial4TopBtn;
+        private System.Windows.Forms.Button GoToVial4TopBtn;
+        private System.Windows.Forms.TextBox setVial4TopTB;
+        private System.Windows.Forms.Button setVial4TopBtn;
+        private System.Windows.Forms.Panel panel43;
+        private System.Windows.Forms.Button oopsVial4BottomBtn;
+        private System.Windows.Forms.Button GoToVial4BottomBtn;
+        private System.Windows.Forms.TextBox setVial4BottomTB;
+        private System.Windows.Forms.Button setVial4BottomBtn;
     }
 }
 

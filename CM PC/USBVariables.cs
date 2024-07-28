@@ -216,12 +216,12 @@ namespace SpaceUSB
     BitEr_s7                  =  %10000000 // bit 128
         */
 
-        public const string GB_RecapPositionlinear = "46";
+        public const string GB_linearCenterOfVial4AtTop = "46";
         public const string GB_ArmVialPosition = "47";
         public const string GB_PistonHomePos = "48";
         public const string GB_HeadRotateHomePos = "49";
         public const string GB_HeadRotateAtTop = "50";
-        public const string GB_SetVial4BottomLinear = "51";
+        public const string GB_linearCenterOfVial4AtBottom = "51";
         public const string GB_headAtBottom = "52";
         public const string GB_linearCenterOfVial1 = "53";
         public const string GB_LinearLoading = "54";
@@ -504,8 +504,10 @@ namespace SpaceUSB
         public const string homeVerticalMotor = "102";
         public const string homePistonMotor = "104";
         public const string positionPistonMotor = "106";
-        public const string ejectSyringeFromTopVial = "108";
-        public const string ejectSyringeFromBottomVial = "110";
+        public const string func_108 = "108";
+        //public const string ejectSyringeFromTopVial = "108";
+        public const string func_110 = "110";
+        //public const string ejectSyringeFromBottomVial = "110";
         public const string goIntoBag = "112";
         public const string Vibrate = "114";
         public const string checkVialPoppedOut = "116";
@@ -517,6 +519,7 @@ namespace SpaceUSB
         public const string getLaserDistAVAL = "128";
         public const string moveToLDcalibLocation = "130";
         public const string moveFromLDcalibLocation = "132";
+        public const string func_134 = "134";
         public const string VerticalManual = "136";
         public const string LinearMotorManual = "138";
         public const string armMotorManual = "140";
@@ -533,6 +536,9 @@ namespace SpaceUSB
         public const string testCapHolder = "162";
         public const string draw_321 = "164";
         public const string checkSyringeContent = "166";
+        public const string func_168 = "168";
+        public const string func_170 = "170";
+        public const string func_172 = "172";
         public const int lastFunction = 174;  
     }
 }
