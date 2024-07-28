@@ -92,7 +92,7 @@ namespace SpaceUSB
         public bool cmdInProcess;
         public bool motorIsMoving;
         public bool homingDone;
-        public bool anyError;
+        public bool anyError = false;
         public bool stopOnError = false;
         public bool nextTipInProcess;
         public bool movingToBottle;
@@ -125,7 +125,7 @@ namespace SpaceUSB
 
         public int errors_findHome;
         public int errors_wrong_PC_command;
-        public int special_Error;
+        public int special_Error = 0;
         public int NeedleGauge;
         public int NeedleLength;
         public int errorsWrongPCcmd;
@@ -341,78 +341,78 @@ namespace SpaceUSB
 
                 tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_errors_syringe_bag);
                 errorsSyringeBag = Convert.ToInt32(tResponse.tmcReply.value);
-                this.Invoke((MethodInvoker)delegate { SyringeBagErrorsTB.Text = Convert.ToString(errorsSyringeBag, 2); });
-                this.Invoke((MethodInvoker)delegate { BagErrorTB.Text = Convert.ToString(errorsSyringeBag, 2); });
+                this.Invoke((MethodInvoker)delegate { SyringeBagErrorsTB.Text = Convert.ToString(errorsSyringeBag, 10); });
+                this.Invoke((MethodInvoker)delegate { BagErrorTB.Text = Convert.ToString(errorsSyringeBag, 10); });
 
                 tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_errors_M_verticalMotor);
                 errorsM_Vertical = Convert.ToInt32(tResponse.tmcReply.value);
-                this.Invoke((MethodInvoker)delegate { M_VerticalErrorsTB.Text = Convert.ToString(errorsM_Vertical, 2); });
+                this.Invoke((MethodInvoker)delegate { M_VerticalErrorsTB.Text = Convert.ToString(errorsM_Vertical, 10); });
 
                 tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_errors_M_linearMotor);
                 errorsM_Linear = Convert.ToInt32(tResponse.tmcReply.value);
-                this.Invoke((MethodInvoker)delegate { M_LinearErrorsTB.Text = Convert.ToString(errorsM_Linear, 2); });
+                this.Invoke((MethodInvoker)delegate { M_LinearErrorsTB.Text = Convert.ToString(errorsM_Linear, 10); });
 
                 tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_errors_M_armMotor);
                 errorsM_Arm = Convert.ToInt32(tResponse.tmcReply.value);
-                this.Invoke((MethodInvoker)delegate { M_ArmErrorsTB.Text = Convert.ToString(errorsM_Arm, 2); });
+                this.Invoke((MethodInvoker)delegate { M_ArmErrorsTB.Text = Convert.ToString(errorsM_Arm, 10); });
 
                 tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_errors_M_pistonMotor);
                 errorsM_Piston = Convert.ToInt32(tResponse.tmcReply.value);
-                this.Invoke((MethodInvoker)delegate { M_PistonErrorsTB.Text = Convert.ToString(errorsM_Piston, 2); });
+                this.Invoke((MethodInvoker)delegate { M_PistonErrorsTB.Text = Convert.ToString(errorsM_Piston, 10); });
 
                 tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_errors_M_headRotateMotor);
                 errorsM_HeadRotate = Convert.ToInt32(tResponse.tmcReply.value);
-                this.Invoke((MethodInvoker)delegate { M_HeadRotateErrorsTB.Text = Convert.ToString(errorsM_HeadRotate, 2); });
+                this.Invoke((MethodInvoker)delegate { M_HeadRotateErrorsTB.Text = Convert.ToString(errorsM_HeadRotate, 10); });
 
                 tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_errors_M_disposeMotor);
                 errorsM_Dispose = Convert.ToInt32(tResponse.tmcReply.value);
-                this.Invoke((MethodInvoker)delegate { M_DisposeErrorsTB.Text = Convert.ToString(errorsM_Dispose, 2); });
+                this.Invoke((MethodInvoker)delegate { M_DisposeErrorsTB.Text = Convert.ToString(errorsM_Dispose, 10); });
 
                 tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_errors_M_capHolderMotor);
                 errorsM_CapHolder = Convert.ToInt32(tResponse.tmcReply.value);
-                this.Invoke((MethodInvoker)delegate { M_CapHolderErrorsTB.Text = Convert.ToString(errorsM_CapHolder, 2); });
+                this.Invoke((MethodInvoker)delegate { M_CapHolderErrorsTB.Text = Convert.ToString(errorsM_CapHolder, 10); });
 
                 tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_errors_wrong_PC_command);
                 errorsWrongPCcmd = Convert.ToInt32(tResponse.tmcReply.value);
-                this.Invoke((MethodInvoker)delegate { WrongPcErrorsTB.Text = Convert.ToString(errorsWrongPCcmd, 2); });
+                this.Invoke((MethodInvoker)delegate { WrongPcErrorsTB.Text = Convert.ToString(errorsWrongPCcmd, 10); });
 
                 tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_errors_findHome);
                 errors_findHome = Convert.ToInt32(tResponse.tmcReply.value);
-                this.Invoke((MethodInvoker)delegate { FindHomeErrorsTB.Text = Convert.ToString(errors_findHome, 2); });
+                this.Invoke((MethodInvoker)delegate { FindHomeErrorsTB.Text = Convert.ToString(errors_findHome, 10); });
 
                 tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_special_Error);
                 special_Error = Convert.ToInt32(tResponse.tmcReply.value);
-                this.Invoke((MethodInvoker)delegate { SpecialErrorsTB.Text = Convert.ToString(special_Error, 2); });
+                this.Invoke((MethodInvoker)delegate { SpecialErrorsTB.Text = Convert.ToString(special_Error, 10); });
 
                 tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_errors_Vial_1);
                 errors_Vial_1 = Convert.ToInt32(tResponse.tmcReply.value);
-                this.Invoke((MethodInvoker)delegate { Vial1ErrTB.Text = Convert.ToString(errors_Vial_1, 2); });
-                this.Invoke((MethodInvoker)delegate { Vial1ErrorTB.Text = Convert.ToString(errors_Vial_1, 2); });
+                this.Invoke((MethodInvoker)delegate { Vial1ErrTB.Text = Convert.ToString(errors_Vial_1, 10); });
+                this.Invoke((MethodInvoker)delegate { Vial1ErrorTB.Text = Convert.ToString(errors_Vial_1, 10); });
 
                 tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_errors_Vial_2);
                 errors_Vial_2 = Convert.ToInt32(tResponse.tmcReply.value);
-                this.Invoke((MethodInvoker)delegate { Vial2ErrTB.Text = Convert.ToString(errors_Vial_2, 2); });
-                this.Invoke((MethodInvoker)delegate { Vial2ErrorTB.Text = Convert.ToString(errors_Vial_2, 2); });
+                this.Invoke((MethodInvoker)delegate { Vial2ErrTB.Text = Convert.ToString(errors_Vial_2, 10); });
+                this.Invoke((MethodInvoker)delegate { Vial2ErrorTB.Text = Convert.ToString(errors_Vial_2, 10); });
 
                 tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_errors_Vial_3);
                 errors_Vial_3 = Convert.ToInt32(tResponse.tmcReply.value);
-                this.Invoke((MethodInvoker)delegate { Vial3ErrTB.Text = Convert.ToString(errors_Vial_3, 2); });
-                this.Invoke((MethodInvoker)delegate { Vial3ErrorTB.Text = Convert.ToString(errors_Vial_3, 2); });
+                this.Invoke((MethodInvoker)delegate { Vial3ErrTB.Text = Convert.ToString(errors_Vial_3, 10); });
+                this.Invoke((MethodInvoker)delegate { Vial3ErrorTB.Text = Convert.ToString(errors_Vial_3, 10); });
 
                 tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_errors_Vial_4);
                 errors_Vial_4 = Convert.ToInt32(tResponse.tmcReply.value);
-                this.Invoke((MethodInvoker)delegate { Vial4ErrTB.Text = Convert.ToString(errors_Vial_4, 2); });
-                this.Invoke((MethodInvoker)delegate { Vial4ErrorTB.Text = Convert.ToString(errors_Vial_4, 2); });
+                this.Invoke((MethodInvoker)delegate { Vial4ErrTB.Text = Convert.ToString(errors_Vial_4, 10); });
+                this.Invoke((MethodInvoker)delegate { Vial4ErrorTB.Text = Convert.ToString(errors_Vial_4, 10); });
 
                 tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_errors_Vial_5);
                 errors_Vial_5 = Convert.ToInt32(tResponse.tmcReply.value);
-                this.Invoke((MethodInvoker)delegate { Vial5ErrTB.Text = Convert.ToString(errors_Vial_5, 2); });
-                this.Invoke((MethodInvoker)delegate { Vial5ErrorTB.Text = Convert.ToString(errors_Vial_5, 2); });
+                this.Invoke((MethodInvoker)delegate { Vial5ErrTB.Text = Convert.ToString(errors_Vial_5, 10); });
+                this.Invoke((MethodInvoker)delegate { Vial5ErrorTB.Text = Convert.ToString(errors_Vial_5, 10); });
 
                 tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_errors_Vial_6);
                 errors_Vial_6 = Convert.ToInt32(tResponse.tmcReply.value);
-                this.Invoke((MethodInvoker)delegate { Vial6ErrTB.Text = Convert.ToString(errors_Vial_6, 2); });
-                this.Invoke((MethodInvoker)delegate { Vial6ErrorTB.Text = Convert.ToString(errors_Vial_6, 2); });
+                this.Invoke((MethodInvoker)delegate { Vial6ErrTB.Text = Convert.ToString(errors_Vial_6, 10); });
+                this.Invoke((MethodInvoker)delegate { Vial6ErrorTB.Text = Convert.ToString(errors_Vial_6, 10); });
 
                 tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_currentVersion);
                 TrinamicCode = Convert.ToInt32(tResponse.tmcReply.value);
@@ -534,9 +534,9 @@ namespace SpaceUSB
 
                 readyForNewCommand = !cmdInProcess && !motorIsMoving && !anyError; ;
 
-                //if (!anyError)
+                //if (anyError)
                 //{
-                //    anyErrorGotTrue = false;   // reset the next message
+                    
                 //}
                 if (!anyErrorGotTrue && anyError)    // will happen for one cycle after anyError was set
                 {
@@ -904,7 +904,7 @@ namespace SpaceUSB
                 (
                 $"An Error occured in the robot:\r" +
                 $"====================\r\r" +
-                    $"wrong PC cmd:\t{special_Error}\r\r" +
+                    $"special Error:\t{special_Error}\r\r" +
                     $"\tSliding Door Is Open =\t 1\r" +
                     $"\tDrawer Overflow =\t 2\r" +
                     $"\tNo vials =\t\t 4\r" +
@@ -1714,7 +1714,7 @@ namespace SpaceUSB
             {
                 tResponse = rTMCConn.RunCommand(GeneralFunctions.homeCapHolderMotor);
                 tstringToRUNtest();    // display on "for RUN cmd"
-                setManualDistance();
+                //setManualDistance();
             }
         }
 

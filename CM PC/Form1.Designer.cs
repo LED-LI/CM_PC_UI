@@ -387,6 +387,8 @@
             this.label78 = new System.Windows.Forms.Label();
             this.runInProcessTB = new System.Windows.Forms.TextBox();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.label87 = new System.Windows.Forms.Label();
+            this.linearSpaceBetweenVialsuMTB = new System.Windows.Forms.TextBox();
             this.panel38 = new System.Windows.Forms.Panel();
             this.skipbagRB = new System.Windows.Forms.RadioButton();
             this.dontskipbagRB = new System.Windows.Forms.RadioButton();
@@ -488,8 +490,6 @@
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.label87 = new System.Windows.Forms.Label();
-            this.linearSpaceBetweenVialsuMTB = new System.Windows.Forms.TextBox();
             cmTC = new System.Windows.Forms.TabControl();
             cmTC.SuspendLayout();
             this.adminTP.SuspendLayout();
@@ -2499,9 +2499,9 @@
             this.messuredAmountOfLiquidTB.BackColor = System.Drawing.SystemColors.MenuBar;
             this.messuredAmountOfLiquidTB.Enabled = false;
             this.messuredAmountOfLiquidTB.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.messuredAmountOfLiquidTB.Location = new System.Drawing.Point(229, 67);
+            this.messuredAmountOfLiquidTB.Location = new System.Drawing.Point(236, 67);
             this.messuredAmountOfLiquidTB.Name = "messuredAmountOfLiquidTB";
-            this.messuredAmountOfLiquidTB.Size = new System.Drawing.Size(105, 34);
+            this.messuredAmountOfLiquidTB.Size = new System.Drawing.Size(98, 34);
             this.messuredAmountOfLiquidTB.TabIndex = 81;
             this.messuredAmountOfLiquidTB.Text = "0";
             this.messuredAmountOfLiquidTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -3854,7 +3854,7 @@
             // 
             this.oopsDockHeightBtn.BackgroundImage = global::CMNameSpace.Properties.Resources.arrow_CCW;
             this.oopsDockHeightBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.oopsDockHeightBtn.Location = new System.Drawing.Point(139, 4);
+            this.oopsDockHeightBtn.Location = new System.Drawing.Point(213, 4);
             this.oopsDockHeightBtn.Name = "oopsDockHeightBtn";
             this.oopsDockHeightBtn.Size = new System.Drawing.Size(26, 25);
             this.oopsDockHeightBtn.TabIndex = 86;
@@ -3865,7 +3865,7 @@
             // 
             this.GoToDockHightBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.GoToDockHightBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.GoToDockHightBtn.Location = new System.Drawing.Point(3, 74);
+            this.GoToDockHightBtn.Location = new System.Drawing.Point(3, 71);
             this.GoToDockHightBtn.Name = "GoToDockHightBtn";
             this.GoToDockHightBtn.Size = new System.Drawing.Size(58, 30);
             this.GoToDockHightBtn.TabIndex = 84;
@@ -3878,9 +3878,9 @@
             this.setDockHeightTB.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.setDockHeightTB.BackColor = System.Drawing.SystemColors.MenuBar;
             this.setDockHeightTB.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.setDockHeightTB.Location = new System.Drawing.Point(229, 75);
+            this.setDockHeightTB.Location = new System.Drawing.Point(236, 67);
             this.setDockHeightTB.Name = "setDockHeightTB";
-            this.setDockHeightTB.Size = new System.Drawing.Size(105, 34);
+            this.setDockHeightTB.Size = new System.Drawing.Size(98, 34);
             this.setDockHeightTB.TabIndex = 2;
             this.setDockHeightTB.Text = "0";
             this.setDockHeightTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -3891,9 +3891,9 @@
             // 
             this.setDockHeightBtn.Location = new System.Drawing.Point(3, 3);
             this.setDockHeightBtn.Name = "setDockHeightBtn";
-            this.setDockHeightBtn.Size = new System.Drawing.Size(136, 26);
+            this.setDockHeightBtn.Size = new System.Drawing.Size(204, 56);
             this.setDockHeightBtn.TabIndex = 77;
-            this.setDockHeightBtn.Text = "set Dock Height (srng Cap)";
+            this.setDockHeightBtn.Text = "set Syringe Loading\r\nDock Vertical Location";
             this.setDockHeightBtn.UseVisualStyleBackColor = true;
             this.setDockHeightBtn.Click += new System.EventHandler(this.setDockHeightBtn_Click);
             // 
@@ -3913,7 +3913,7 @@
             // 
             this.oopsBumpPosVertBtn.BackgroundImage = global::CMNameSpace.Properties.Resources.arrow_CCW;
             this.oopsBumpPosVertBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.oopsBumpPosVertBtn.Location = new System.Drawing.Point(139, 3);
+            this.oopsBumpPosVertBtn.Location = new System.Drawing.Point(213, 4);
             this.oopsBumpPosVertBtn.Name = "oopsBumpPosVertBtn";
             this.oopsBumpPosVertBtn.Size = new System.Drawing.Size(26, 25);
             this.oopsBumpPosVertBtn.TabIndex = 86;
@@ -3936,9 +3936,9 @@
             // 
             this.setBumpPosVertBtn.Location = new System.Drawing.Point(3, 3);
             this.setBumpPosVertBtn.Name = "setBumpPosVertBtn";
-            this.setBumpPosVertBtn.Size = new System.Drawing.Size(136, 25);
+            this.setBumpPosVertBtn.Size = new System.Drawing.Size(204, 56);
             this.setBumpPosVertBtn.TabIndex = 79;
-            this.setBumpPosVertBtn.Text = "set Bump of vial 1";
+            this.setBumpPosVertBtn.Text = "set Needle Bump Vial 1 at Top";
             this.setBumpPosVertBtn.UseVisualStyleBackColor = true;
             this.setBumpPosVertBtn.Click += new System.EventHandler(this.setBumpPosVertBtn_Click);
             // 
@@ -3947,9 +3947,9 @@
             this.setBumpPosVertTB.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.setBumpPosVertTB.BackColor = System.Drawing.SystemColors.MenuBar;
             this.setBumpPosVertTB.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.setBumpPosVertTB.Location = new System.Drawing.Point(229, 72);
+            this.setBumpPosVertTB.Location = new System.Drawing.Point(236, 67);
             this.setBumpPosVertTB.Name = "setBumpPosVertTB";
-            this.setBumpPosVertTB.Size = new System.Drawing.Size(105, 34);
+            this.setBumpPosVertTB.Size = new System.Drawing.Size(98, 34);
             this.setBumpPosVertTB.TabIndex = 66;
             this.setBumpPosVertTB.Text = "0";
             this.setBumpPosVertTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -4022,7 +4022,7 @@
             // 
             this.oopsArmVialBtn.BackgroundImage = global::CMNameSpace.Properties.Resources.arrow_CCW;
             this.oopsArmVialBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.oopsArmVialBtn.Location = new System.Drawing.Point(140, 3);
+            this.oopsArmVialBtn.Location = new System.Drawing.Point(213, 4);
             this.oopsArmVialBtn.Name = "oopsArmVialBtn";
             this.oopsArmVialBtn.Size = new System.Drawing.Size(26, 25);
             this.oopsArmVialBtn.TabIndex = 86;
@@ -4033,7 +4033,7 @@
             // 
             this.GoToArmVialBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.GoToArmVialBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.GoToArmVialBtn.Location = new System.Drawing.Point(3, 73);
+            this.GoToArmVialBtn.Location = new System.Drawing.Point(3, 71);
             this.GoToArmVialBtn.Name = "GoToArmVialBtn";
             this.GoToArmVialBtn.Size = new System.Drawing.Size(58, 30);
             this.GoToArmVialBtn.TabIndex = 84;
@@ -4046,9 +4046,9 @@
             this.setArmVialTB.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.setArmVialTB.BackColor = System.Drawing.SystemColors.MenuBar;
             this.setArmVialTB.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.setArmVialTB.Location = new System.Drawing.Point(229, 74);
+            this.setArmVialTB.Location = new System.Drawing.Point(236, 67);
             this.setArmVialTB.Name = "setArmVialTB";
-            this.setArmVialTB.Size = new System.Drawing.Size(105, 34);
+            this.setArmVialTB.Size = new System.Drawing.Size(98, 34);
             this.setArmVialTB.TabIndex = 79;
             this.setArmVialTB.Text = "0";
             this.setArmVialTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -4059,9 +4059,9 @@
             // 
             this.setArmVialBtn.Location = new System.Drawing.Point(3, 3);
             this.setArmVialBtn.Name = "setArmVialBtn";
-            this.setArmVialBtn.Size = new System.Drawing.Size(137, 25);
+            this.setArmVialBtn.Size = new System.Drawing.Size(204, 56);
             this.setArmVialBtn.TabIndex = 78;
-            this.setArmVialBtn.Text = "set Arm Under Vial";
+            this.setArmVialBtn.Text = "set Arm at Top";
             this.setArmVialBtn.UseVisualStyleBackColor = true;
             this.setArmVialBtn.Click += new System.EventHandler(this.setArmVialBtn_Click);
             // 
@@ -4082,7 +4082,7 @@
             // 
             this.oopsBumpBottomBtn.BackgroundImage = global::CMNameSpace.Properties.Resources.arrow_CCW;
             this.oopsBumpBottomBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.oopsBumpBottomBtn.Location = new System.Drawing.Point(139, 5);
+            this.oopsBumpBottomBtn.Location = new System.Drawing.Point(213, 4);
             this.oopsBumpBottomBtn.Name = "oopsBumpBottomBtn";
             this.oopsBumpBottomBtn.Size = new System.Drawing.Size(26, 25);
             this.oopsBumpBottomBtn.TabIndex = 86;
@@ -4093,7 +4093,7 @@
             // 
             this.GoToBumpBottomBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.GoToBumpBottomBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.GoToBumpBottomBtn.Location = new System.Drawing.Point(3, 73);
+            this.GoToBumpBottomBtn.Location = new System.Drawing.Point(3, 71);
             this.GoToBumpBottomBtn.Name = "GoToBumpBottomBtn";
             this.GoToBumpBottomBtn.Size = new System.Drawing.Size(58, 30);
             this.GoToBumpBottomBtn.TabIndex = 84;
@@ -4105,9 +4105,9 @@
             // 
             this.setBumpBottomBtn.Location = new System.Drawing.Point(3, 3);
             this.setBumpBottomBtn.Name = "setBumpBottomBtn";
-            this.setBumpBottomBtn.Size = new System.Drawing.Size(136, 28);
+            this.setBumpBottomBtn.Size = new System.Drawing.Size(204, 56);
             this.setBumpBottomBtn.TabIndex = 68;
-            this.setBumpBottomBtn.Text = "set Bump Bottom";
+            this.setBumpBottomBtn.Text = "set Needle Bump Vial 4 at Bottom";
             this.setBumpBottomBtn.UseVisualStyleBackColor = true;
             this.setBumpBottomBtn.Click += new System.EventHandler(this.setBumpBottomBtn_Click);
             // 
@@ -4126,9 +4126,9 @@
             this.setBumpBottomTB.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.setBumpBottomTB.BackColor = System.Drawing.SystemColors.MenuBar;
             this.setBumpBottomTB.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.setBumpBottomTB.Location = new System.Drawing.Point(229, 73);
+            this.setBumpBottomTB.Location = new System.Drawing.Point(236, 67);
             this.setBumpBottomTB.Name = "setBumpBottomTB";
-            this.setBumpBottomTB.Size = new System.Drawing.Size(105, 34);
+            this.setBumpBottomTB.Size = new System.Drawing.Size(98, 34);
             this.setBumpBottomTB.TabIndex = 66;
             this.setBumpBottomTB.Text = "0";
             this.setBumpBottomTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -4202,9 +4202,9 @@
             this.setVial4TopTB.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.setVial4TopTB.BackColor = System.Drawing.SystemColors.MenuBar;
             this.setVial4TopTB.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.setVial4TopTB.Location = new System.Drawing.Point(61, 61);
+            this.setVial4TopTB.Location = new System.Drawing.Point(60, 61);
             this.setVial4TopTB.Name = "setVial4TopTB";
-            this.setVial4TopTB.Size = new System.Drawing.Size(99, 34);
+            this.setVial4TopTB.Size = new System.Drawing.Size(98, 34);
             this.setVial4TopTB.TabIndex = 88;
             this.setVial4TopTB.Text = "0";
             this.setVial4TopTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -4296,7 +4296,7 @@
             // 
             this.oopsArmAtBotomBtn.BackgroundImage = global::CMNameSpace.Properties.Resources.arrow_CCW;
             this.oopsArmAtBotomBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.oopsArmAtBotomBtn.Location = new System.Drawing.Point(140, 3);
+            this.oopsArmAtBotomBtn.Location = new System.Drawing.Point(213, 4);
             this.oopsArmAtBotomBtn.Name = "oopsArmAtBotomBtn";
             this.oopsArmAtBotomBtn.Size = new System.Drawing.Size(26, 25);
             this.oopsArmAtBotomBtn.TabIndex = 86;
@@ -4307,7 +4307,7 @@
             // 
             this.GoToArmAtBottomBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.GoToArmAtBottomBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.GoToArmAtBottomBtn.Location = new System.Drawing.Point(3, 74);
+            this.GoToArmAtBottomBtn.Location = new System.Drawing.Point(3, 71);
             this.GoToArmAtBottomBtn.Name = "GoToArmAtBottomBtn";
             this.GoToArmAtBottomBtn.Size = new System.Drawing.Size(58, 30);
             this.GoToArmAtBottomBtn.TabIndex = 84;
@@ -4320,9 +4320,9 @@
             this.setArmAtBotomTB.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.setArmAtBotomTB.BackColor = System.Drawing.SystemColors.MenuBar;
             this.setArmAtBotomTB.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.setArmAtBotomTB.Location = new System.Drawing.Point(229, 74);
+            this.setArmAtBotomTB.Location = new System.Drawing.Point(236, 67);
             this.setArmAtBotomTB.Name = "setArmAtBotomTB";
-            this.setArmAtBotomTB.Size = new System.Drawing.Size(105, 34);
+            this.setArmAtBotomTB.Size = new System.Drawing.Size(98, 34);
             this.setArmAtBotomTB.TabIndex = 79;
             this.setArmAtBotomTB.Text = "0";
             this.setArmAtBotomTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -4333,7 +4333,7 @@
             // 
             this.setArmAtBotomBtn.Location = new System.Drawing.Point(3, 3);
             this.setArmAtBotomBtn.Name = "setArmAtBotomBtn";
-            this.setArmAtBotomBtn.Size = new System.Drawing.Size(137, 25);
+            this.setArmAtBotomBtn.Size = new System.Drawing.Size(204, 56);
             this.setArmAtBotomBtn.TabIndex = 78;
             this.setArmAtBotomBtn.Text = "set Arm At Bottom";
             this.setArmAtBotomBtn.UseVisualStyleBackColor = true;
@@ -4355,7 +4355,7 @@
             // 
             this.oopsPistonStartBtn.BackgroundImage = global::CMNameSpace.Properties.Resources.arrow_CCW;
             this.oopsPistonStartBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.oopsPistonStartBtn.Location = new System.Drawing.Point(139, 3);
+            this.oopsPistonStartBtn.Location = new System.Drawing.Point(213, 4);
             this.oopsPistonStartBtn.Name = "oopsPistonStartBtn";
             this.oopsPistonStartBtn.Size = new System.Drawing.Size(26, 25);
             this.oopsPistonStartBtn.TabIndex = 85;
@@ -4366,7 +4366,7 @@
             // 
             this.GoToPistonStartBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.GoToPistonStartBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.GoToPistonStartBtn.Location = new System.Drawing.Point(3, 72);
+            this.GoToPistonStartBtn.Location = new System.Drawing.Point(3, 71);
             this.GoToPistonStartBtn.Name = "GoToPistonStartBtn";
             this.GoToPistonStartBtn.Size = new System.Drawing.Size(58, 30);
             this.GoToPistonStartBtn.TabIndex = 84;
@@ -4379,9 +4379,9 @@
             this.setPistonStartTB.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.setPistonStartTB.BackColor = System.Drawing.SystemColors.MenuBar;
             this.setPistonStartTB.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.setPistonStartTB.Location = new System.Drawing.Point(229, 69);
+            this.setPistonStartTB.Location = new System.Drawing.Point(236, 67);
             this.setPistonStartTB.Name = "setPistonStartTB";
-            this.setPistonStartTB.Size = new System.Drawing.Size(105, 34);
+            this.setPistonStartTB.Size = new System.Drawing.Size(98, 34);
             this.setPistonStartTB.TabIndex = 80;
             this.setPistonStartTB.Text = "0";
             this.setPistonStartTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -4392,9 +4392,9 @@
             // 
             this.setPistonStartBtn.Location = new System.Drawing.Point(3, 3);
             this.setPistonStartBtn.Name = "setPistonStartBtn";
-            this.setPistonStartBtn.Size = new System.Drawing.Size(135, 26);
+            this.setPistonStartBtn.Size = new System.Drawing.Size(204, 56);
             this.setPistonStartBtn.TabIndex = 79;
-            this.setPistonStartBtn.Text = "set Piston Start";
+            this.setPistonStartBtn.Text = "set Piston at 0ml";
             this.setPistonStartBtn.UseVisualStyleBackColor = true;
             this.setPistonStartBtn.Click += new System.EventHandler(this.setPistonBtn_Click);
             // 
@@ -4425,7 +4425,7 @@
             // 
             this.GoToDropVials123Btn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.GoToDropVials123Btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.GoToDropVials123Btn.Location = new System.Drawing.Point(3, 74);
+            this.GoToDropVials123Btn.Location = new System.Drawing.Point(3, 71);
             this.GoToDropVials123Btn.Name = "GoToDropVials123Btn";
             this.GoToDropVials123Btn.Size = new System.Drawing.Size(58, 30);
             this.GoToDropVials123Btn.TabIndex = 83;
@@ -4438,9 +4438,9 @@
             this.setDropVials123TB.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.setDropVials123TB.BackColor = System.Drawing.SystemColors.MenuBar;
             this.setDropVials123TB.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.setDropVials123TB.Location = new System.Drawing.Point(229, 74);
+            this.setDropVials123TB.Location = new System.Drawing.Point(236, 67);
             this.setDropVials123TB.Name = "setDropVials123TB";
-            this.setDropVials123TB.Size = new System.Drawing.Size(105, 34);
+            this.setDropVials123TB.Size = new System.Drawing.Size(98, 34);
             this.setDropVials123TB.TabIndex = 82;
             this.setDropVials123TB.Text = "0";
             this.setDropVials123TB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -4451,9 +4451,9 @@
             // 
             this.setDropVials123Btn.Location = new System.Drawing.Point(3, 4);
             this.setDropVials123Btn.Name = "setDropVials123Btn";
-            this.setDropVials123Btn.Size = new System.Drawing.Size(135, 24);
+            this.setDropVials123Btn.Size = new System.Drawing.Size(134, 56);
             this.setDropVials123Btn.TabIndex = 81;
-            this.setDropVials123Btn.Text = "set Drop Vials 123";
+            this.setDropVials123Btn.Text = "set Dispose at Drop\r\nVials 123 Position";
             this.setDropVials123Btn.UseVisualStyleBackColor = true;
             this.setDropVials123Btn.Click += new System.EventHandler(this.setDropVials123Btn_Click);
             // 
@@ -4473,7 +4473,7 @@
             // 
             this.oopsHeadAtBottomBtn.BackgroundImage = global::CMNameSpace.Properties.Resources.arrow_CCW;
             this.oopsHeadAtBottomBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.oopsHeadAtBottomBtn.Location = new System.Drawing.Point(138, 4);
+            this.oopsHeadAtBottomBtn.Location = new System.Drawing.Point(213, 4);
             this.oopsHeadAtBottomBtn.Name = "oopsHeadAtBottomBtn";
             this.oopsHeadAtBottomBtn.Size = new System.Drawing.Size(26, 25);
             this.oopsHeadAtBottomBtn.TabIndex = 86;
@@ -4484,7 +4484,7 @@
             // 
             this.GoToHeadAtBottomBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.GoToHeadAtBottomBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.GoToHeadAtBottomBtn.Location = new System.Drawing.Point(3, 74);
+            this.GoToHeadAtBottomBtn.Location = new System.Drawing.Point(3, 71);
             this.GoToHeadAtBottomBtn.Name = "GoToHeadAtBottomBtn";
             this.GoToHeadAtBottomBtn.Size = new System.Drawing.Size(58, 30);
             this.GoToHeadAtBottomBtn.TabIndex = 84;
@@ -4497,9 +4497,9 @@
             this.setHeadAtBottomTB.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.setHeadAtBottomTB.BackColor = System.Drawing.SystemColors.MenuBar;
             this.setHeadAtBottomTB.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.setHeadAtBottomTB.Location = new System.Drawing.Point(249, 74);
+            this.setHeadAtBottomTB.Location = new System.Drawing.Point(236, 67);
             this.setHeadAtBottomTB.Name = "setHeadAtBottomTB";
-            this.setHeadAtBottomTB.Size = new System.Drawing.Size(86, 34);
+            this.setHeadAtBottomTB.Size = new System.Drawing.Size(98, 34);
             this.setHeadAtBottomTB.TabIndex = 78;
             this.setHeadAtBottomTB.Text = "0";
             this.setHeadAtBottomTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -4510,9 +4510,9 @@
             // 
             this.setHeadAtBottomBtn.Location = new System.Drawing.Point(3, 3);
             this.setHeadAtBottomBtn.Name = "setHeadAtBottomBtn";
-            this.setHeadAtBottomBtn.Size = new System.Drawing.Size(134, 26);
+            this.setHeadAtBottomBtn.Size = new System.Drawing.Size(204, 56);
             this.setHeadAtBottomBtn.TabIndex = 76;
-            this.setHeadAtBottomBtn.Text = "set head Bottom";
+            this.setHeadAtBottomBtn.Text = "set Head at Bottom";
             this.setHeadAtBottomBtn.UseVisualStyleBackColor = true;
             this.setHeadAtBottomBtn.Click += new System.EventHandler(this.setHeadAtBottomBtn_Click);
             // 
@@ -4533,7 +4533,7 @@
             // 
             this.oopsArmDisposeVials456Btn.BackgroundImage = global::CMNameSpace.Properties.Resources.arrow_CCW;
             this.oopsArmDisposeVials456Btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.oopsArmDisposeVials456Btn.Location = new System.Drawing.Point(139, 2);
+            this.oopsArmDisposeVials456Btn.Location = new System.Drawing.Point(213, 4);
             this.oopsArmDisposeVials456Btn.Name = "oopsArmDisposeVials456Btn";
             this.oopsArmDisposeVials456Btn.Size = new System.Drawing.Size(26, 25);
             this.oopsArmDisposeVials456Btn.TabIndex = 86;
@@ -4544,7 +4544,7 @@
             // 
             this.GoToDropVials456Btn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.GoToDropVials456Btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.GoToDropVials456Btn.Location = new System.Drawing.Point(3, 74);
+            this.GoToDropVials456Btn.Location = new System.Drawing.Point(3, 71);
             this.GoToDropVials456Btn.Name = "GoToDropVials456Btn";
             this.GoToDropVials456Btn.Size = new System.Drawing.Size(58, 30);
             this.GoToDropVials456Btn.TabIndex = 84;
@@ -4556,9 +4556,9 @@
             // 
             this.setArmDisposeVials456Btn.Location = new System.Drawing.Point(2, 2);
             this.setArmDisposeVials456Btn.Name = "setArmDisposeVials456Btn";
-            this.setArmDisposeVials456Btn.Size = new System.Drawing.Size(137, 25);
+            this.setArmDisposeVials456Btn.Size = new System.Drawing.Size(204, 56);
             this.setArmDisposeVials456Btn.TabIndex = 79;
-            this.setArmDisposeVials456Btn.Text = "set Drop Vials 456";
+            this.setArmDisposeVials456Btn.Text = "set Arm at Drop\r\nVials 456 Position";
             this.setArmDisposeVials456Btn.UseVisualStyleBackColor = true;
             this.setArmDisposeVials456Btn.Click += new System.EventHandler(this.setArmDisposeVials456Btn_Click);
             // 
@@ -4577,9 +4577,9 @@
             this.setArmDisposeVials456TB.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.setArmDisposeVials456TB.BackColor = System.Drawing.SystemColors.MenuBar;
             this.setArmDisposeVials456TB.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.setArmDisposeVials456TB.Location = new System.Drawing.Point(229, 74);
+            this.setArmDisposeVials456TB.Location = new System.Drawing.Point(236, 67);
             this.setArmDisposeVials456TB.Name = "setArmDisposeVials456TB";
-            this.setArmDisposeVials456TB.Size = new System.Drawing.Size(105, 34);
+            this.setArmDisposeVials456TB.Size = new System.Drawing.Size(98, 34);
             this.setArmDisposeVials456TB.TabIndex = 66;
             this.setArmDisposeVials456TB.Text = "0";
             this.setArmDisposeVials456TB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -4602,7 +4602,7 @@
             // 
             this.oopsCenterOfVial1Btn.BackgroundImage = global::CMNameSpace.Properties.Resources.arrow_CCW;
             this.oopsCenterOfVial1Btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.oopsCenterOfVial1Btn.Location = new System.Drawing.Point(137, 3);
+            this.oopsCenterOfVial1Btn.Location = new System.Drawing.Point(213, 4);
             this.oopsCenterOfVial1Btn.Name = "oopsCenterOfVial1Btn";
             this.oopsCenterOfVial1Btn.Size = new System.Drawing.Size(26, 25);
             this.oopsCenterOfVial1Btn.TabIndex = 87;
@@ -4626,9 +4626,9 @@
             this.setCenterOfVial1TB.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.setCenterOfVial1TB.BackColor = System.Drawing.SystemColors.MenuBar;
             this.setCenterOfVial1TB.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.setCenterOfVial1TB.Location = new System.Drawing.Point(229, 72);
+            this.setCenterOfVial1TB.Location = new System.Drawing.Point(236, 67);
             this.setCenterOfVial1TB.Name = "setCenterOfVial1TB";
-            this.setCenterOfVial1TB.Size = new System.Drawing.Size(105, 34);
+            this.setCenterOfVial1TB.Size = new System.Drawing.Size(98, 34);
             this.setCenterOfVial1TB.TabIndex = 80;
             this.setCenterOfVial1TB.Text = "0";
             this.setCenterOfVial1TB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -4639,9 +4639,9 @@
             // 
             this.setCenterOfVial1Btn.Location = new System.Drawing.Point(3, 3);
             this.setCenterOfVial1Btn.Name = "setCenterOfVial1Btn";
-            this.setCenterOfVial1Btn.Size = new System.Drawing.Size(134, 25);
+            this.setCenterOfVial1Btn.Size = new System.Drawing.Size(204, 56);
             this.setCenterOfVial1Btn.TabIndex = 79;
-            this.setCenterOfVial1Btn.Text = "set center of vial 1";
+            this.setCenterOfVial1Btn.Text = "set Center of Vial 1\r\nLinear Location";
             this.setCenterOfVial1Btn.UseVisualStyleBackColor = true;
             this.setCenterOfVial1Btn.Click += new System.EventHandler(this.setCenterOfVial1Btn_Click);
             // 
@@ -4661,7 +4661,7 @@
             // 
             this.oopsCapLoadingBtn.BackgroundImage = global::CMNameSpace.Properties.Resources.arrow_CCW;
             this.oopsCapLoadingBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.oopsCapLoadingBtn.Location = new System.Drawing.Point(137, 3);
+            this.oopsCapLoadingBtn.Location = new System.Drawing.Point(213, 4);
             this.oopsCapLoadingBtn.Name = "oopsCapLoadingBtn";
             this.oopsCapLoadingBtn.Size = new System.Drawing.Size(26, 25);
             this.oopsCapLoadingBtn.TabIndex = 86;
@@ -4672,7 +4672,7 @@
             // 
             this.GoToCapLoadingBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.GoToCapLoadingBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.GoToCapLoadingBtn.Location = new System.Drawing.Point(3, 72);
+            this.GoToCapLoadingBtn.Location = new System.Drawing.Point(3, 71);
             this.GoToCapLoadingBtn.Name = "GoToCapLoadingBtn";
             this.GoToCapLoadingBtn.Size = new System.Drawing.Size(58, 30);
             this.GoToCapLoadingBtn.TabIndex = 84;
@@ -4685,9 +4685,9 @@
             this.setCapLoadingTB.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.setCapLoadingTB.BackColor = System.Drawing.SystemColors.MenuBar;
             this.setCapLoadingTB.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.setCapLoadingTB.Location = new System.Drawing.Point(229, 74);
+            this.setCapLoadingTB.Location = new System.Drawing.Point(236, 67);
             this.setCapLoadingTB.Name = "setCapLoadingTB";
-            this.setCapLoadingTB.Size = new System.Drawing.Size(105, 34);
+            this.setCapLoadingTB.Size = new System.Drawing.Size(98, 34);
             this.setCapLoadingTB.TabIndex = 80;
             this.setCapLoadingTB.Text = "0";
             this.setCapLoadingTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -4698,9 +4698,9 @@
             // 
             this.setCapLoadingBtn.Location = new System.Drawing.Point(3, 3);
             this.setCapLoadingBtn.Name = "setCapLoadingBtn";
-            this.setCapLoadingBtn.Size = new System.Drawing.Size(134, 25);
+            this.setCapLoadingBtn.Size = new System.Drawing.Size(204, 56);
             this.setCapLoadingBtn.TabIndex = 79;
-            this.setCapLoadingBtn.Text = "Set cap Loading";
+            this.setCapLoadingBtn.Text = "Set syringe Loading\r\nDock Linear Location";
             this.setCapLoadingBtn.UseVisualStyleBackColor = true;
             this.setCapLoadingBtn.Click += new System.EventHandler(this.setCapLoadingBtn_Click);
             // 
@@ -4739,7 +4739,7 @@
             // 
             this.oopsHeadRotateTopBtn.BackgroundImage = global::CMNameSpace.Properties.Resources.arrow_CCW;
             this.oopsHeadRotateTopBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.oopsHeadRotateTopBtn.Location = new System.Drawing.Point(162, 4);
+            this.oopsHeadRotateTopBtn.Location = new System.Drawing.Point(213, 4);
             this.oopsHeadRotateTopBtn.Name = "oopsHeadRotateTopBtn";
             this.oopsHeadRotateTopBtn.Size = new System.Drawing.Size(26, 25);
             this.oopsHeadRotateTopBtn.TabIndex = 86;
@@ -4750,7 +4750,7 @@
             // 
             this.GoToHeadRotateTopBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.GoToHeadRotateTopBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.GoToHeadRotateTopBtn.Location = new System.Drawing.Point(3, 73);
+            this.GoToHeadRotateTopBtn.Location = new System.Drawing.Point(3, 71);
             this.GoToHeadRotateTopBtn.Name = "GoToHeadRotateTopBtn";
             this.GoToHeadRotateTopBtn.Size = new System.Drawing.Size(58, 30);
             this.GoToHeadRotateTopBtn.TabIndex = 84;
@@ -4763,9 +4763,9 @@
             this.setHeadRotateTopTB.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.setHeadRotateTopTB.BackColor = System.Drawing.SystemColors.MenuBar;
             this.setHeadRotateTopTB.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.setHeadRotateTopTB.Location = new System.Drawing.Point(227, 74);
+            this.setHeadRotateTopTB.Location = new System.Drawing.Point(236, 67);
             this.setHeadRotateTopTB.Name = "setHeadRotateTopTB";
-            this.setHeadRotateTopTB.Size = new System.Drawing.Size(107, 34);
+            this.setHeadRotateTopTB.Size = new System.Drawing.Size(98, 34);
             this.setHeadRotateTopTB.TabIndex = 81;
             this.setHeadRotateTopTB.Text = "0";
             this.setHeadRotateTopTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -4776,9 +4776,9 @@
             // 
             this.setHeadRotateTopBtn.Location = new System.Drawing.Point(3, 3);
             this.setHeadRotateTopBtn.Name = "setHeadRotateTopBtn";
-            this.setHeadRotateTopBtn.Size = new System.Drawing.Size(162, 25);
+            this.setHeadRotateTopBtn.Size = new System.Drawing.Size(204, 56);
             this.setHeadRotateTopBtn.TabIndex = 80;
-            this.setHeadRotateTopBtn.Text = "set Head At Top";
+            this.setHeadRotateTopBtn.Text = "set Head at Top";
             this.setHeadRotateTopBtn.UseVisualStyleBackColor = true;
             this.setHeadRotateTopBtn.Click += new System.EventHandler(this.setHeadRotateTopBtn_Click);
             // 
@@ -4798,7 +4798,7 @@
             // 
             this.oopsHeadRotateStartBtn.BackgroundImage = global::CMNameSpace.Properties.Resources.arrow_CCW;
             this.oopsHeadRotateStartBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.oopsHeadRotateStartBtn.Location = new System.Drawing.Point(138, 3);
+            this.oopsHeadRotateStartBtn.Location = new System.Drawing.Point(213, 4);
             this.oopsHeadRotateStartBtn.Name = "oopsHeadRotateStartBtn";
             this.oopsHeadRotateStartBtn.Size = new System.Drawing.Size(26, 25);
             this.oopsHeadRotateStartBtn.TabIndex = 86;
@@ -4809,7 +4809,7 @@
             // 
             this.GoToHeadRotateStartBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.GoToHeadRotateStartBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.GoToHeadRotateStartBtn.Location = new System.Drawing.Point(3, 73);
+            this.GoToHeadRotateStartBtn.Location = new System.Drawing.Point(3, 71);
             this.GoToHeadRotateStartBtn.Name = "GoToHeadRotateStartBtn";
             this.GoToHeadRotateStartBtn.Size = new System.Drawing.Size(58, 30);
             this.GoToHeadRotateStartBtn.TabIndex = 84;
@@ -4822,9 +4822,9 @@
             this.setHeadRotateStartTB.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.setHeadRotateStartTB.BackColor = System.Drawing.SystemColors.MenuBar;
             this.setHeadRotateStartTB.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.setHeadRotateStartTB.Location = new System.Drawing.Point(227, 74);
+            this.setHeadRotateStartTB.Location = new System.Drawing.Point(236, 67);
             this.setHeadRotateStartTB.Name = "setHeadRotateStartTB";
-            this.setHeadRotateStartTB.Size = new System.Drawing.Size(107, 34);
+            this.setHeadRotateStartTB.Size = new System.Drawing.Size(98, 34);
             this.setHeadRotateStartTB.TabIndex = 81;
             this.setHeadRotateStartTB.Text = "0";
             this.setHeadRotateStartTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -4835,9 +4835,9 @@
             // 
             this.setHeadRotateStartBtn.Location = new System.Drawing.Point(3, 3);
             this.setHeadRotateStartBtn.Name = "setHeadRotateStartBtn";
-            this.setHeadRotateStartBtn.Size = new System.Drawing.Size(134, 25);
+            this.setHeadRotateStartBtn.Size = new System.Drawing.Size(204, 56);
             this.setHeadRotateStartBtn.TabIndex = 80;
-            this.setHeadRotateStartBtn.Text = "set Head Start";
+            this.setHeadRotateStartBtn.Text = "set Head at Left";
             this.setHeadRotateStartBtn.UseVisualStyleBackColor = true;
             this.setHeadRotateStartBtn.Click += new System.EventHandler(this.setHeadRotateStartBtn_Click);
             // 
@@ -4872,9 +4872,9 @@
             this.LD_minVolTB.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.LD_minVolTB.BackColor = System.Drawing.SystemColors.MenuBar;
             this.LD_minVolTB.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.LD_minVolTB.Location = new System.Drawing.Point(9, 67);
+            this.LD_minVolTB.Location = new System.Drawing.Point(3, 67);
             this.LD_minVolTB.Name = "LD_minVolTB";
-            this.LD_minVolTB.Size = new System.Drawing.Size(105, 34);
+            this.LD_minVolTB.Size = new System.Drawing.Size(98, 34);
             this.LD_minVolTB.TabIndex = 86;
             this.LD_minVolTB.Text = "0";
             this.LD_minVolTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -4898,9 +4898,9 @@
             this.LD_maxVolTB.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.LD_maxVolTB.BackColor = System.Drawing.SystemColors.MenuBar;
             this.LD_maxVolTB.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.LD_maxVolTB.Location = new System.Drawing.Point(219, 67);
+            this.LD_maxVolTB.Location = new System.Drawing.Point(236, 67);
             this.LD_maxVolTB.Name = "LD_maxVolTB";
-            this.LD_maxVolTB.Size = new System.Drawing.Size(105, 34);
+            this.LD_maxVolTB.Size = new System.Drawing.Size(98, 34);
             this.LD_maxVolTB.TabIndex = 80;
             this.LD_maxVolTB.Text = "0";
             this.LD_maxVolTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -4911,7 +4911,7 @@
             // 
             this.LD_minVolBtn.Location = new System.Drawing.Point(3, 3);
             this.LD_minVolBtn.Name = "LD_minVolBtn";
-            this.LD_minVolBtn.Size = new System.Drawing.Size(122, 58);
+            this.LD_minVolBtn.Size = new System.Drawing.Size(134, 56);
             this.LD_minVolBtn.TabIndex = 79;
             this.LD_minVolBtn.Text = "set min vol \r\nlaser dist";
             this.LD_minVolBtn.UseVisualStyleBackColor = true;
@@ -4922,7 +4922,7 @@
             this.LD_maxVolBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.LD_maxVolBtn.Location = new System.Drawing.Point(208, 4);
             this.LD_maxVolBtn.Name = "LD_maxVolBtn";
-            this.LD_maxVolBtn.Size = new System.Drawing.Size(129, 57);
+            this.LD_maxVolBtn.Size = new System.Drawing.Size(134, 56);
             this.LD_maxVolBtn.TabIndex = 79;
             this.LD_maxVolBtn.Text = "set max vol\r\nlaser dist";
             this.LD_maxVolBtn.UseVisualStyleBackColor = true;
@@ -4970,9 +4970,9 @@
             this.LD_acceptedDevTB.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.LD_acceptedDevTB.BackColor = System.Drawing.SystemColors.MenuBar;
             this.LD_acceptedDevTB.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.LD_acceptedDevTB.Location = new System.Drawing.Point(4, 67);
+            this.LD_acceptedDevTB.Location = new System.Drawing.Point(3, 67);
             this.LD_acceptedDevTB.Name = "LD_acceptedDevTB";
-            this.LD_acceptedDevTB.Size = new System.Drawing.Size(105, 34);
+            this.LD_acceptedDevTB.Size = new System.Drawing.Size(98, 34);
             this.LD_acceptedDevTB.TabIndex = 81;
             this.LD_acceptedDevTB.Text = "0";
             this.LD_acceptedDevTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -4984,9 +4984,9 @@
             this.LD_definedVolTB.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.LD_definedVolTB.BackColor = System.Drawing.SystemColors.MenuBar;
             this.LD_definedVolTB.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.LD_definedVolTB.Location = new System.Drawing.Point(228, 66);
+            this.LD_definedVolTB.Location = new System.Drawing.Point(236, 67);
             this.LD_definedVolTB.Name = "LD_definedVolTB";
-            this.LD_definedVolTB.Size = new System.Drawing.Size(105, 34);
+            this.LD_definedVolTB.Size = new System.Drawing.Size(98, 34);
             this.LD_definedVolTB.TabIndex = 80;
             this.LD_definedVolTB.Text = "0";
             this.LD_definedVolTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -5303,6 +5303,26 @@
             this.groupBox6.TabIndex = 63;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "for test";
+            // 
+            // label87
+            // 
+            this.label87.AutoSize = true;
+            this.label87.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label87.Location = new System.Drawing.Point(802, 121);
+            this.label87.Name = "label87";
+            this.label87.Size = new System.Drawing.Size(288, 30);
+            this.label87.TabIndex = 88;
+            this.label87.Text = "linear Space Between Vials [uM]";
+            // 
+            // linearSpaceBetweenVialsuMTB
+            // 
+            this.linearSpaceBetweenVialsuMTB.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.linearSpaceBetweenVialsuMTB.Location = new System.Drawing.Point(1096, 117);
+            this.linearSpaceBetweenVialsuMTB.Name = "linearSpaceBetweenVialsuMTB";
+            this.linearSpaceBetweenVialsuMTB.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.linearSpaceBetweenVialsuMTB.Size = new System.Drawing.Size(120, 34);
+            this.linearSpaceBetweenVialsuMTB.TabIndex = 89;
+            this.linearSpaceBetweenVialsuMTB.TextChanged += new System.EventHandler(this.linearSpaceBetweenVialsuMTB_TextChanged);
             // 
             // panel38
             // 
@@ -6387,26 +6407,6 @@
             this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
-            // 
-            // label87
-            // 
-            this.label87.AutoSize = true;
-            this.label87.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label87.Location = new System.Drawing.Point(802, 121);
-            this.label87.Name = "label87";
-            this.label87.Size = new System.Drawing.Size(288, 30);
-            this.label87.TabIndex = 88;
-            this.label87.Text = "linear Space Between Vials [uM]";
-            // 
-            // linearSpaceBetweenVialsuMTB
-            // 
-            this.linearSpaceBetweenVialsuMTB.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.linearSpaceBetweenVialsuMTB.Location = new System.Drawing.Point(1096, 117);
-            this.linearSpaceBetweenVialsuMTB.Name = "linearSpaceBetweenVialsuMTB";
-            this.linearSpaceBetweenVialsuMTB.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.linearSpaceBetweenVialsuMTB.Size = new System.Drawing.Size(120, 34);
-            this.linearSpaceBetweenVialsuMTB.TabIndex = 89;
-            this.linearSpaceBetweenVialsuMTB.TextChanged += new System.EventHandler(this.linearSpaceBetweenVialsuMTB_TextChanged);
             // 
             // CMForm
             // 
