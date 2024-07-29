@@ -1609,12 +1609,14 @@
             // 
             this.BagSizeMlTB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.BagSizeMlTB.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.BagSizeMlTB.Enabled = false;
             this.BagSizeMlTB.Location = new System.Drawing.Point(447, 16);
             this.BagSizeMlTB.Name = "BagSizeMlTB";
             this.BagSizeMlTB.Size = new System.Drawing.Size(125, 34);
             this.BagSizeMlTB.TabIndex = 1;
             this.BagSizeMlTB.Text = "0";
             this.BagSizeMlTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.BagSizeMlTB.Visible = false;
             // 
             // mLinVial1TB
             // 
@@ -1626,6 +1628,7 @@
             this.mLinVial1TB.Size = new System.Drawing.Size(125, 34);
             this.mLinVial1TB.TabIndex = 44;
             this.mLinVial1TB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.mLinVial1TB.Visible = false;
             // 
             // Vial3ErrorTB
             // 
@@ -1747,6 +1750,7 @@
             this.mLinVial3TB.Size = new System.Drawing.Size(125, 34);
             this.mLinVial3TB.TabIndex = 67;
             this.mLinVial3TB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.mLinVial3TB.Visible = false;
             // 
             // mLinVial2TB
             // 
@@ -1758,33 +1762,39 @@
             this.mLinVial2TB.Size = new System.Drawing.Size(125, 34);
             this.mLinVial2TB.TabIndex = 56;
             this.mLinVial2TB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.mLinVial2TB.Visible = false;
             // 
             // Vial3SizeMlTB
             // 
             this.Vial3SizeMlTB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Vial3SizeMlTB.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.Vial3SizeMlTB.Enabled = false;
             this.Vial3SizeMlTB.Location = new System.Drawing.Point(1227, 16);
             this.Vial3SizeMlTB.Name = "Vial3SizeMlTB";
             this.Vial3SizeMlTB.Size = new System.Drawing.Size(125, 34);
             this.Vial3SizeMlTB.TabIndex = 4;
             this.Vial3SizeMlTB.Text = "0";
             this.Vial3SizeMlTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Vial3SizeMlTB.Visible = false;
             // 
             // Vial2SizeMlTB
             // 
             this.Vial2SizeMlTB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Vial2SizeMlTB.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.Vial2SizeMlTB.Enabled = false;
             this.Vial2SizeMlTB.Location = new System.Drawing.Point(967, 16);
             this.Vial2SizeMlTB.Name = "Vial2SizeMlTB";
             this.Vial2SizeMlTB.Size = new System.Drawing.Size(125, 34);
             this.Vial2SizeMlTB.TabIndex = 3;
             this.Vial2SizeMlTB.Text = "0";
             this.Vial2SizeMlTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Vial2SizeMlTB.Visible = false;
             // 
             // num01Lbl
             // 
             this.num01Lbl.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.num01Lbl.AutoSize = true;
+            this.num01Lbl.Enabled = false;
             this.num01Lbl.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.num01Lbl.Location = new System.Drawing.Point(144, 19);
             this.num01Lbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -1792,11 +1802,13 @@
             this.num01Lbl.Size = new System.Drawing.Size(91, 28);
             this.num01Lbl.TabIndex = 0;
             this.num01Lbl.Text = "Size [ml]";
+            this.num01Lbl.Visible = false;
             // 
             // num02Lbl
             // 
             this.num02Lbl.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.num02Lbl.AutoSize = true;
+            this.num02Lbl.Enabled = false;
             this.num02Lbl.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.num02Lbl.Location = new System.Drawing.Point(91, 84);
             this.num02Lbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -1804,6 +1816,7 @@
             this.num02Lbl.Size = new System.Drawing.Size(197, 28);
             this.num02Lbl.TabIndex = 2;
             this.num02Lbl.Text = "Current volume [ml]";
+            this.num02Lbl.Visible = false;
             // 
             // label13
             // 
@@ -1857,12 +1870,14 @@
             // 
             this.Vial4SizeMlTB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Vial4SizeMlTB.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.Vial4SizeMlTB.Enabled = false;
             this.Vial4SizeMlTB.Location = new System.Drawing.Point(1487, 16);
             this.Vial4SizeMlTB.Name = "Vial4SizeMlTB";
             this.Vial4SizeMlTB.Size = new System.Drawing.Size(125, 34);
             this.Vial4SizeMlTB.TabIndex = 5;
             this.Vial4SizeMlTB.Text = "0";
             this.Vial4SizeMlTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Vial4SizeMlTB.Visible = false;
             // 
             // mLinVial4TB
             // 
@@ -1874,6 +1889,7 @@
             this.mLinVial4TB.Size = new System.Drawing.Size(125, 34);
             this.mLinVial4TB.TabIndex = 51;
             this.mLinVial4TB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.mLinVial4TB.Visible = false;
             // 
             // Vial4InPlaceTB
             // 
@@ -1940,12 +1956,14 @@
             // 
             this.Vial5SizeMlTB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Vial5SizeMlTB.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.Vial5SizeMlTB.Enabled = false;
             this.Vial5SizeMlTB.Location = new System.Drawing.Point(1747, 16);
             this.Vial5SizeMlTB.Name = "Vial5SizeMlTB";
             this.Vial5SizeMlTB.Size = new System.Drawing.Size(125, 34);
             this.Vial5SizeMlTB.TabIndex = 6;
             this.Vial5SizeMlTB.Text = "0";
             this.Vial5SizeMlTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Vial5SizeMlTB.Visible = false;
             // 
             // mLinVial5TB
             // 
@@ -1957,6 +1975,7 @@
             this.mLinVial5TB.Size = new System.Drawing.Size(125, 34);
             this.mLinVial5TB.TabIndex = 64;
             this.mLinVial5TB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.mLinVial5TB.Visible = false;
             // 
             // Vial5WithdrawMlTB
             // 
@@ -2006,12 +2025,14 @@
             // 
             this.Vial6SizeMlTB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Vial6SizeMlTB.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.Vial6SizeMlTB.Enabled = false;
             this.Vial6SizeMlTB.Location = new System.Drawing.Point(2007, 16);
             this.Vial6SizeMlTB.Name = "Vial6SizeMlTB";
             this.Vial6SizeMlTB.Size = new System.Drawing.Size(125, 34);
             this.Vial6SizeMlTB.TabIndex = 7;
             this.Vial6SizeMlTB.Text = "0";
             this.Vial6SizeMlTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Vial6SizeMlTB.Visible = false;
             // 
             // mLinVial6TB
             // 
@@ -2023,6 +2044,7 @@
             this.mLinVial6TB.Size = new System.Drawing.Size(125, 34);
             this.mLinVial6TB.TabIndex = 77;
             this.mLinVial6TB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.mLinVial6TB.Visible = false;
             // 
             // Vial6WithdrawMlTB
             // 
@@ -2072,12 +2094,14 @@
             // 
             this.Vial1SizeMlTB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Vial1SizeMlTB.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.Vial1SizeMlTB.Enabled = false;
             this.Vial1SizeMlTB.Location = new System.Drawing.Point(707, 16);
             this.Vial1SizeMlTB.Name = "Vial1SizeMlTB";
             this.Vial1SizeMlTB.Size = new System.Drawing.Size(125, 34);
             this.Vial1SizeMlTB.TabIndex = 2;
             this.Vial1SizeMlTB.Text = "0";
             this.Vial1SizeMlTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Vial1SizeMlTB.Visible = false;
             // 
             // mLinBagTB
             // 
@@ -2089,6 +2113,7 @@
             this.mLinBagTB.Size = new System.Drawing.Size(125, 34);
             this.mLinBagTB.TabIndex = 89;
             this.mLinBagTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.mLinBagTB.Visible = false;
             // 
             // BagInPlaceTB
             // 

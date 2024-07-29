@@ -176,15 +176,13 @@ namespace SpaceUSB
         public int vialsExist;
         public bool okPolling = true;
         // *** vials exist bits ***
-        public int Bit_bag = 0b00000000; // bit  0 // not sure about it 
         public int Bit_vial1 = 0b00000001; // bit   1
-        public int Bit_vial2 = 0b10000000; // bit   2 // temp untill fix of dist board design
-        //public int Bit_vial2 = 0b00000010; // bit   2
+        public int Bit_vial2 = 0b00000010; // bit   2
         public int Bit_vial3 = 0b00000100; // bit   4
         public int Bit_vial4 = 0b00001000; // bit   8
         public int Bit_vial5 = 0b00010000; // bit  16
         public int Bit_vial6 = 0b00100000; // bit  32
-        //public int Bit_bag = 0b01000000; // bit  64 
+        public int Bit_bag = 0b01000000; // bit  64 
 
         public int maxPWtrials = 4;
         public int maxPWmonths = 5;
@@ -327,7 +325,7 @@ namespace SpaceUSB
                 cmdInProcess = Convert.ToBoolean(tResponse.tmcReply.value);
                 this.Invoke((MethodInvoker)delegate { CmdInProcTB.Text = $"{cmdInProcess}"; });
 
-                tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_motorIsMoving);
+                tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_MotorIsMoving);
                 motorIsMoving = Convert.ToBoolean(tResponse.tmcReply.value);
                 this.Invoke((MethodInvoker)delegate { MotorIsMovingTB.Text = $"{motorIsMoving}"; });
 
@@ -418,7 +416,7 @@ namespace SpaceUSB
                 TrinamicCode = Convert.ToInt32(tResponse.tmcReply.value);
                 this.Invoke((MethodInvoker)delegate { TrinamicCodeTB.Text = $"{TrinamicCode}"; });
 
-                tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_HardwareSerialNumber); // get serial #
+                tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_RobotSerialNumber); // get serial #
                 TrinamicSerialNum = Convert.ToInt32(tResponse.tmcReply.value);
                 this.Invoke((MethodInvoker)delegate { robotSerialTB.Text = $"{TrinamicSerialNum}"; });
 
@@ -430,9 +428,9 @@ namespace SpaceUSB
                 getGBresult = Convert.ToInt32(tResponse.tmcReply.value);
                 this.Invoke((MethodInvoker)delegate { getGBresultTB.Text = $"{getGBresult}"; });
 
-                tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_microLinBAG);  //GB_99
-                microLinBAG = Convert.ToInt32(tResponse.tmcReply.value);
-                this.Invoke((MethodInvoker)delegate { mLinBagTB.Text = $"{Convert.ToDouble(microLinBAG) / 1000}"; });
+                //tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_microLinBAG);  //GB_99
+                //microLinBAG = Convert.ToInt32(tResponse.tmcReply.value);
+                //this.Invoke((MethodInvoker)delegate { mLinBagTB.Text = $"{Convert.ToDouble(microLinBAG) / 1000}"; });
 
                 //tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_microLbagToFill);  //GB_27
                 //microLbagToFill = Convert.ToInt32(tResponse.tmcReply.value);
@@ -453,47 +451,47 @@ namespace SpaceUSB
 
                 this.Invoke((MethodInvoker)delegate { mLbagToFillTB.Text = $"{dblmLbagToFillTB}"; });
 
-                if (rgfloat.Match(Vial1SizeMlTB.Text).Success)        // floating point number
-                {
-                    tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_microLinVial_1);  //GB_197
-                    Vial1Volume = Convert.ToInt32(Convert.ToDouble(Vial1SizeMlTB.Text) * 1000 + Convert.ToDouble(tResponse.tmcReply.value));
-                    this.Invoke((MethodInvoker)delegate { mLinVial1TB.Text = $"{Convert.ToDouble(Vial1Volume) / 1000}"; });
-                }
+                //if (rgfloat.Match(Vial1SizeMlTB.Text).Success)        // floating point number
+                //{
+                //    tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_microLinVial_1);  //GB_197
+                //    Vial1Volume = Convert.ToInt32(Convert.ToDouble(Vial1SizeMlTB.Text) * 1000 + Convert.ToDouble(tResponse.tmcReply.value));
+                //    this.Invoke((MethodInvoker)delegate { mLinVial1TB.Text = $"{Convert.ToDouble(Vial1Volume) / 1000}"; });
+                //}
 
-                if (rgfloat.Match(Vial2SizeMlTB.Text).Success)        // floating point number
-                {
-                    tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_microLinVial_2);  //GB_198
-                    Vial2Volume = Convert.ToInt32(Convert.ToDouble(Vial2SizeMlTB.Text) * 1000 + Convert.ToDouble(tResponse.tmcReply.value));
-                    this.Invoke((MethodInvoker)delegate { mLinVial2TB.Text = $"{Convert.ToDouble(Vial2Volume) / 1000}"; });
-                }
+                //if (rgfloat.Match(Vial2SizeMlTB.Text).Success)        // floating point number
+                //{
+                //    tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_microLinVial_2);  //GB_198
+                //    Vial2Volume = Convert.ToInt32(Convert.ToDouble(Vial2SizeMlTB.Text) * 1000 + Convert.ToDouble(tResponse.tmcReply.value));
+                //    this.Invoke((MethodInvoker)delegate { mLinVial2TB.Text = $"{Convert.ToDouble(Vial2Volume) / 1000}"; });
+                //}
 
-                if (rgfloat.Match(Vial3SizeMlTB.Text).Success)        // floating point number
-                {
-                    tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_microLinVial_3);  //GB_199
-                    Vial3Volume = Convert.ToInt32(Convert.ToDouble(Vial3SizeMlTB.Text) * 1000 + Convert.ToDouble(tResponse.tmcReply.value));
-                    this.Invoke((MethodInvoker)delegate { mLinVial3TB.Text = $"{Convert.ToDouble(Vial3Volume) / 1000}"; });
-                }
+                //if (rgfloat.Match(Vial3SizeMlTB.Text).Success)        // floating point number
+                //{
+                //    tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_microLinVial_3);  //GB_199
+                //    Vial3Volume = Convert.ToInt32(Convert.ToDouble(Vial3SizeMlTB.Text) * 1000 + Convert.ToDouble(tResponse.tmcReply.value));
+                //    this.Invoke((MethodInvoker)delegate { mLinVial3TB.Text = $"{Convert.ToDouble(Vial3Volume) / 1000}"; });
+                //}
 
-                if (rgfloat.Match(Vial4SizeMlTB.Text).Success)        // floating point number
-                {
-                    tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_microLinVial_4);  //GB_200
-                    Vial4Volume = Convert.ToInt32(Convert.ToDouble(Vial4SizeMlTB.Text) * 1000 + Convert.ToDouble(tResponse.tmcReply.value));
-                    this.Invoke((MethodInvoker)delegate { mLinVial4TB.Text = $"{Convert.ToDouble(Vial4Volume) / 1000}"; });
-                }
+                //if (rgfloat.Match(Vial4SizeMlTB.Text).Success)        // floating point number
+                //{
+                //    tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_microLinVial_4);  //GB_200
+                //    Vial4Volume = Convert.ToInt32(Convert.ToDouble(Vial4SizeMlTB.Text) * 1000 + Convert.ToDouble(tResponse.tmcReply.value));
+                //    this.Invoke((MethodInvoker)delegate { mLinVial4TB.Text = $"{Convert.ToDouble(Vial4Volume) / 1000}"; });
+                //}
 
-                if (rgfloat.Match(Vial5SizeMlTB.Text).Success)        // floating point number
-                {
-                    tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_microLinVial_5);  //GB_201
-                    Vial5Volume = Convert.ToInt32(Convert.ToDouble(Vial5SizeMlTB.Text) * 1000 + Convert.ToDouble(tResponse.tmcReply.value));
-                    this.Invoke((MethodInvoker)delegate { mLinVial5TB.Text = $"{Convert.ToDouble(Vial5Volume) / 1000}"; });
-                }
+                //if (rgfloat.Match(Vial5SizeMlTB.Text).Success)        // floating point number
+                //{
+                //    tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_microLinVial_5);  //GB_201
+                //    Vial5Volume = Convert.ToInt32(Convert.ToDouble(Vial5SizeMlTB.Text) * 1000 + Convert.ToDouble(tResponse.tmcReply.value));
+                //    this.Invoke((MethodInvoker)delegate { mLinVial5TB.Text = $"{Convert.ToDouble(Vial5Volume) / 1000}"; });
+                //}
 
-                if (rgfloat.Match(Vial6SizeMlTB.Text).Success)        // floating point number
-                {
-                    tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_microLinVial_6);  //GB_202
-                    Vial6Volume = Convert.ToInt32(Convert.ToDouble(Vial6SizeMlTB.Text) * 1000 + Convert.ToDouble(tResponse.tmcReply.value));
-                    this.Invoke((MethodInvoker)delegate { mLinVial6TB.Text = $"{Convert.ToDouble(Vial6Volume) / 1000}"; });
-                }
+                //if (rgfloat.Match(Vial6SizeMlTB.Text).Success)        // floating point number
+                //{
+                //    tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_microLinVial_6);  //GB_202
+                //    Vial6Volume = Convert.ToInt32(Convert.ToDouble(Vial6SizeMlTB.Text) * 1000 + Convert.ToDouble(tResponse.tmcReply.value));
+                //    this.Invoke((MethodInvoker)delegate { mLinVial6TB.Text = $"{Convert.ToDouble(Vial6Volume) / 1000}"; });
+                //}
 
                 tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_vibrator4done);  //GB_121
                 vibrating4Done = Convert.ToInt32(tResponse.tmcReply.value);
@@ -1356,14 +1354,14 @@ namespace SpaceUSB
 
             //  ************ send RUN parameters to board *******************
 
-            tResponse = rTMCConn.SetSGP(AddressBank.GetParameterBank, SystemVariables.GB_BagSize_microL, BagSizeMicroL);
+            //tResponse = rTMCConn.SetSGP(AddressBank.GetParameterBank, SystemVariables.GB_BagSize_microL, BagSizeMicroL);
 
-            tResponse = rTMCConn.SetSGP(AddressBank.GetParameterBank, SystemVariables.GB_vialSize_microL_1, Vial1SizeMicroL);
-            tResponse = rTMCConn.SetSGP(AddressBank.GetParameterBank, SystemVariables.GB_vialSize_microL_2, Vial2SizeMicroL);
-            tResponse = rTMCConn.SetSGP(AddressBank.GetParameterBank, SystemVariables.GB_vialSize_microL_3, Vial3SizeMicroL);
-            tResponse = rTMCConn.SetSGP(AddressBank.GetParameterBank, SystemVariables.GB_vialSize_microL_4, Vial4SizeMicroL);
-            tResponse = rTMCConn.SetSGP(AddressBank.GetParameterBank, SystemVariables.GB_vialSize_microL_5, Vial5SizeMicroL);
-            tResponse = rTMCConn.SetSGP(AddressBank.GetParameterBank, SystemVariables.GB_vialSize_microL_6, Vial6SizeMicroL);
+            //tResponse = rTMCConn.SetSGP(AddressBank.GetParameterBank, SystemVariables.GB_vialSize_microL_1, Vial1SizeMicroL);
+            //tResponse = rTMCConn.SetSGP(AddressBank.GetParameterBank, SystemVariables.GB_vialSize_microL_2, Vial2SizeMicroL);
+            //tResponse = rTMCConn.SetSGP(AddressBank.GetParameterBank, SystemVariables.GB_vialSize_microL_3, Vial3SizeMicroL);
+            //tResponse = rTMCConn.SetSGP(AddressBank.GetParameterBank, SystemVariables.GB_vialSize_microL_4, Vial4SizeMicroL);
+            //tResponse = rTMCConn.SetSGP(AddressBank.GetParameterBank, SystemVariables.GB_vialSize_microL_5, Vial5SizeMicroL);
+            //tResponse = rTMCConn.SetSGP(AddressBank.GetParameterBank, SystemVariables.GB_vialSize_microL_6, Vial6SizeMicroL);
 
             tResponse = rTMCConn.SetSGP(AddressBank.GetParameterBank, SystemVariables.GB_microLtoFill_4, Vial4FillMicroL);
             tResponse = rTMCConn.SetSGP(AddressBank.GetParameterBank, SystemVariables.GB_microLtoFill_5, Vial5FillMicroL);
@@ -1942,7 +1940,7 @@ namespace SpaceUSB
                 return;
             }
             currentTAB = 4;
-            tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_showOverride);
+            tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_ShowOverride);
             showOverrride = Convert.ToBoolean(tResponse.tmcReply.value);
             if (showOverrride)
             {
@@ -1999,12 +1997,12 @@ namespace SpaceUSB
 
         private void showOverideRB_CheckedChanged(object sender, EventArgs e)
         {
-            tResponse = rTMCConn.SetSGPandStore(AddressBank.GetParameterBank, SystemVariables.GB_showOverride, "1");
+            tResponse = rTMCConn.SetSGPandStore(AddressBank.GetParameterBank, SystemVariables.GB_ShowOverride, "1");
         }
 
         private void normalRunRB_CheckedChanged(object sender, EventArgs e)
         {
-            tResponse = rTMCConn.SetSGPandStore(AddressBank.GetParameterBank, SystemVariables.GB_showOverride, "0");
+            tResponse = rTMCConn.SetSGPandStore(AddressBank.GetParameterBank, SystemVariables.GB_ShowOverride, "0");
         }
 
         private void disposeBottlesRB_CheckedChanged(object sender, EventArgs e)
@@ -3133,8 +3131,8 @@ namespace SpaceUSB
             setDockHeightTB.Text = $"{LoadingHight}";
             // this.Invoke((MethodInvoker)delegate { setDockHeightTB.Text = $"{LoadingHight}"; });
 
-            //tResponse = rTMCConn.SetSGPandStore(AddressBank.GetParameterBank, SystemVariables.GB_headAtBottom, setHeadAtBottomTB.Text);
-            tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_headAtBottom); //GB_52
+            //tResponse = rTMCConn.SetSGPandStore(AddressBank.GetParameterBank, SystemVariables.GB_HeadRotatePointDown, setHeadAtBottomTB.Text);
+            tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_HeadRotatePointDown); //GB_52
             linearHomePos = Convert.ToInt32(tResponse.tmcReply.value);
             setHeadAtBottomTB.Text = $"{linearHomePos}";
             // this.Invoke((MethodInvoker)delegate { setHeadAtBottomTB.Text = $"{linearHomePos}"; });
@@ -3159,20 +3157,20 @@ namespace SpaceUSB
             // this.Invoke((MethodInvoker)delegate { setVial4TopTB.Text = $"{setVial4BottomLocation}"; });
             //////////////
             ///
-            //tResponse = rTMCConn.SetSGPandStore(AddressBank.GetParameterBank, SystemVariables.GB_LinearLoading, setCapLoadingTB.Text);
-            tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_LinearLoading); //GB_54
+            //tResponse = rTMCConn.SetSGPandStore(AddressBank.GetParameterBank, SystemVariables.GB_linearSyringeLoading, setCapLoadingTB.Text);
+            tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_linearSyringeLoading); //GB_54
             setCapLoading = Convert.ToInt32(tResponse.tmcReply.value);
             setCapLoadingTB.Text = $"{setCapLoading}";
             // this.Invoke((MethodInvoker)delegate { setCapLoadingTB.Text = $"{setCapLoading}"; });
 
-            //tResponse = rTMCConn.SetSGPandStore(AddressBank.GetParameterBank, SystemVariables.GB_ArmVialPosition, setArmVialTB.Text);
-            tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_ArmVialPosition); // GB_47
+            //tResponse = rTMCConn.SetSGPandStore(AddressBank.GetParameterBank, SystemVariables.GB_ArmUnderVialPosition, setArmVialTB.Text);
+            tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_ArmUnderVialPosition); // GB_47
             ArmHomePosition = Convert.ToInt32(tResponse.tmcReply.value);
             setArmVialTB.Text = $"{ArmHomePosition}";
             //  this.Invoke((MethodInvoker)delegate { setArmVialTB.Text = $"{ArmHomePosition}"; });
 
-            //tResponse = rTMCConn.SetSGPandStore(AddressBank.GetParameterBank, SystemVariables.GB_DisposeDropVials456Pos, setArmDisposeVials456TB.Text);
-            tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_DisposeDropVials456Pos); // GB_24
+            //tResponse = rTMCConn.SetSGPandStore(AddressBank.GetParameterBank, SystemVariables.GB_ArmDropVials456Pos, setArmDisposeVials456TB.Text);
+            tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_ArmDropVials456Pos); // GB_24
             ArmDisposePosition = Convert.ToInt32(tResponse.tmcReply.value);
             setArmDisposeVials456TB.Text = $"{ArmDisposePosition}";
             //  this.Invoke((MethodInvoker)delegate { setArmDisposeVials456TB.Text = $"{ArmDisposePosition}"; });
@@ -3232,14 +3230,14 @@ namespace SpaceUSB
 
             ////////////////////
 
-            //tResponse = rTMCConn.SetSGPandStore(AddressBank.GetParameterBank, SystemVariables.GB_HeadRotateHomePos, setHeadRotateStartTB.Text);
-            tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_HeadRotateHomePos); // GB_49
+            //tResponse = rTMCConn.SetSGPandStore(AddressBank.GetParameterBank, SystemVariables.GB_HeadRotatePointLeft, setHeadRotateStartTB.Text);
+            tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_HeadRotatePointLeft); // GB_49
             HeadRotateHomePos = Convert.ToInt32(tResponse.tmcReply.value);
             setHeadRotateStartTB.Text = $"{HeadRotateHomePos}";
             //  this.Invoke((MethodInvoker)delegate { setHeadRotateStartTB.Text = $"{HeadRotateHomePos}"; });
 
-            //tResponse = rTMCConn.SetSGPandStore(AddressBank.GetParameterBank, SystemVariables.GB_HeadRotateAtTop, setHeadRotateTopTB.Text);
-            tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_HeadRotateAtTop); // GB_50
+            //tResponse = rTMCConn.SetSGPandStore(AddressBank.GetParameterBank, SystemVariables.GB_HeadRotatePointUp, setHeadRotateTopTB.Text);
+            tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_HeadRotatePointUp); // GB_50
             HeadRotateAtTop = Convert.ToInt32(tResponse.tmcReply.value);
             setHeadRotateTopTB.Text = $"{HeadRotateAtTop}";
             //  this.Invoke((MethodInvoker)delegate { setHeadRotateTopTB.Text = $"{HeadRotateAtTop}"; });
@@ -3503,13 +3501,13 @@ namespace SpaceUSB
             if (rgMinus.Match(setCapLoadingTB.Text).Success)        // did not match, a non number character is there
             {
                 //logAndShow($"A non-number value for the distance {setCapLoadingTB.Text}");
-                tResponse = rTMCConn.SetSGPandStore(AddressBank.GetParameterBank, SystemVariables.GB_LinearLoading, setCapLoadingTB.Text);
+                tResponse = rTMCConn.SetSGPandStore(AddressBank.GetParameterBank, SystemVariables.GB_linearSyringeLoading, setCapLoadingTB.Text);
             }
             refreshParams();
         }
         private void uploadCapLoading()
         {
-            tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_LinearLoading); //GB_54
+            tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_linearSyringeLoading); //GB_54
             setCapLoading = Convert.ToInt32(tResponse.tmcReply.value);
             last_setCapLoadingTB = $"{setCapLoading}";
         }
@@ -3653,13 +3651,13 @@ namespace SpaceUSB
             if (rgMinus.Match(setArmVialTB.Text).Success)        // did not match, a non number character is there
             {
                 //logAndShow($"A non-number value for the distance {setArmVialTB.Text}");
-                tResponse = rTMCConn.SetSGPandStore(AddressBank.GetParameterBank, SystemVariables.GB_ArmVialPosition, setArmVialTB.Text);
+                tResponse = rTMCConn.SetSGPandStore(AddressBank.GetParameterBank, SystemVariables.GB_ArmUnderVialPosition, setArmVialTB.Text);
             }
             refreshParams();
         }
         private void uploadArmVial()
         {
-            tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_ArmVialPosition); // GB_47
+            tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_ArmUnderVialPosition); // GB_47
             ArmHomePosition = Convert.ToInt32(tResponse.tmcReply.value);
             last_setArmVialTB = $"{ArmHomePosition}";
         }
@@ -3703,13 +3701,13 @@ namespace SpaceUSB
             if (rgMinus.Match(setArmDisposeVials456TB.Text).Success)        // did not match, a non number character is there
             {
                 //logAndShow($"A non-number value for the distance {setArmAtBotomTB.Text}");
-                tResponse = rTMCConn.SetSGPandStore(AddressBank.GetParameterBank, SystemVariables.GB_DisposeDropVials456Pos, setArmDisposeVials456TB.Text);
+                tResponse = rTMCConn.SetSGPandStore(AddressBank.GetParameterBank, SystemVariables.GB_ArmDropVials456Pos, setArmDisposeVials456TB.Text);
             }
             refreshParams();
         }
         private void uploadArmDisposeVials456()
         {
-            tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_DisposeDropVials456Pos); // GB_24
+            tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_ArmDropVials456Pos); // GB_24
             ArmDisposePosition = Convert.ToInt32(tResponse.tmcReply.value);
             last_setArmDisposeVials456TB = $"{ArmDisposePosition}";
         }
@@ -4113,14 +4111,14 @@ namespace SpaceUSB
             if (rgMinus.Match(setHeadRotateTopTB.Text).Success)        // did not match, a non number character is there
             {
                 //logAndShow($"A non-number value for the distance {setHeadRotateTopTB.Text}");
-                tResponse = rTMCConn.SetSGPandStore(AddressBank.GetParameterBank, SystemVariables.GB_HeadRotateAtTop, setHeadRotateTopTB.Text);
+                tResponse = rTMCConn.SetSGPandStore(AddressBank.GetParameterBank, SystemVariables.GB_HeadRotatePointUp, setHeadRotateTopTB.Text);
             }
             refreshParams();
         }
 
         private void uploadHeadRotateTop()
         {
-            tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_HeadRotateAtTop); // GB_50
+            tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_HeadRotatePointUp); // GB_50
             HeadRotateAtTop = Convert.ToInt32(tResponse.tmcReply.value);
             last_setHeadRotateTopTB = $"{HeadRotateAtTop}";
         }
@@ -4165,13 +4163,13 @@ namespace SpaceUSB
             if (rgMinus.Match(setHeadRotateStartTB.Text).Success)        // did not match, a non number character is there
             {
                 //logAndShow($"A non-number value for the distance {setHeadRotateStartTB.Text}");
-                tResponse = rTMCConn.SetSGPandStore(AddressBank.GetParameterBank, SystemVariables.GB_HeadRotateHomePos, setHeadRotateStartTB.Text);
+                tResponse = rTMCConn.SetSGPandStore(AddressBank.GetParameterBank, SystemVariables.GB_HeadRotatePointLeft, setHeadRotateStartTB.Text);
             }
             refreshParams();
         }
         private void uploadHeadRotateStart()
         {
-            tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_HeadRotateHomePos); // GB_49
+            tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_HeadRotatePointLeft); // GB_49
             HeadRotateHomePos = Convert.ToInt32(tResponse.tmcReply.value);
             last_setHeadRotateStartTB = $"{HeadRotateHomePos}";
         }
@@ -4215,13 +4213,13 @@ namespace SpaceUSB
             if (rgMinus.Match(setHeadAtBottomTB.Text).Success)        // did not match, a non number character is there
             {
                 //logAndShow($"A non-number value for the distance {setDisposeStartTB.Text}");
-                tResponse = rTMCConn.SetSGPandStore(AddressBank.GetParameterBank, SystemVariables.GB_headAtBottom, setHeadAtBottomTB.Text);
+                tResponse = rTMCConn.SetSGPandStore(AddressBank.GetParameterBank, SystemVariables.GB_HeadRotatePointDown, setHeadAtBottomTB.Text);
             }
             refreshParams();
         }
         private void uploadHeadAtBottom()
         {
-            tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_headAtBottom); //GB_52
+            tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_HeadRotatePointDown); //GB_52
             linearHomePos = Convert.ToInt32(tResponse.tmcReply.value);
             last_setHeadAtBottomTB = $"{linearHomePos}";
         }
@@ -4310,15 +4308,15 @@ namespace SpaceUSB
             vibrationTime56TB.Text = "0";
             vibrationTime4TB.Text = "0";
 
-            // clear volumes in the vials and bag
-            tResponse = rTMCConn.SetSGP(AddressBank.GetParameterBank, SystemVariables.GB_microLinVial_1, "0");   //GB_197
-            tResponse = rTMCConn.SetSGP(AddressBank.GetParameterBank, SystemVariables.GB_microLinVial_2, "0");   //GB_198
-            tResponse = rTMCConn.SetSGP(AddressBank.GetParameterBank, SystemVariables.GB_microLinVial_3, "0");   //GB_199
-            tResponse = rTMCConn.SetSGP(AddressBank.GetParameterBank, SystemVariables.GB_microLinVial_4, "0");   //GB_200
-            tResponse = rTMCConn.SetSGP(AddressBank.GetParameterBank, SystemVariables.GB_microLinVial_5, "0");   //GB_201
-            tResponse = rTMCConn.SetSGP(AddressBank.GetParameterBank, SystemVariables.GB_microLinVial_6, "0");   //GB_202
+            //// clear volumes in the vials and bag
+            //tResponse = rTMCConn.SetSGP(AddressBank.GetParameterBank, SystemVariables.GB_microLinVial_1, "0");   //GB_197
+            //tResponse = rTMCConn.SetSGP(AddressBank.GetParameterBank, SystemVariables.GB_microLinVial_2, "0");   //GB_198
+            //tResponse = rTMCConn.SetSGP(AddressBank.GetParameterBank, SystemVariables.GB_microLinVial_3, "0");   //GB_199
+            //tResponse = rTMCConn.SetSGP(AddressBank.GetParameterBank, SystemVariables.GB_microLinVial_4, "0");   //GB_200
+            //tResponse = rTMCConn.SetSGP(AddressBank.GetParameterBank, SystemVariables.GB_microLinVial_5, "0");   //GB_201
+            //tResponse = rTMCConn.SetSGP(AddressBank.GetParameterBank, SystemVariables.GB_microLinVial_6, "0");   //GB_202
 
-            tResponse = rTMCConn.SetSGP(AddressBank.GetParameterBank, SystemVariables.GB_microLinBAG, "0");   //GB_99
+            //tResponse = rTMCConn.SetSGP(AddressBank.GetParameterBank, SystemVariables.GB_microLinBAG, "0");   //GB_99
             BagSizeMlTB.Text = "0";
         }
 

@@ -102,13 +102,18 @@ namespace SpaceUSB
     public static class SystemVariables                 // GP
     {
         public const string GB_0 = "0";
+
         public const string GB_Syringe_Type = "1";
+
         public const string GB_2 = "2";   
         public const string GB_3 = "3";
         public const string GB_4 = "4";
         public const string GB_5 = "5";
-        public const string GB_HardwareSerialNumber = "6";
+
+        public const string GB_RobotSerialNumber = "6";
+
         public const string GB_7 = "7";  
+
         public const string GB_verticalCapPos = "8";
         public const string GB_BumpPosVert = "9"; 
         public const string GB_needleLength = "10"; 
@@ -121,14 +126,16 @@ namespace SpaceUSB
         public const string GB_accepted_diviation_range = "17"; 
         public const string GB_messuredAmountOfLiquid = "18";
         public const string GB_current_diviation = "19";
-        public const string GB_showOverride = "20";
+        public const string GB_ShowOverride = "20";
         public const string GB_linearSpaceBetweenVialsuM = "21";
         public const string GB_disposeYN = "22";
         public const string GB_DisposeDropVialsPos = "23";
-        public const string GB_DisposeDropVials456Pos = "24";
+        public const string GB_ArmDropVials456Pos = "24";
+
         public const string GB_25 = "25";
         public const string GB_26 = "26";          
         public const string GB_27 = "27";
+
         public const string GB_errors_syringe_bag = "28";
         /*
  // bit errors for parameter 28:
@@ -217,57 +224,69 @@ namespace SpaceUSB
         */
 
         public const string GB_linearCenterOfVial4AtTop = "46";
-        public const string GB_ArmVialPosition = "47";
+        public const string GB_ArmUnderVialPosition = "47";
         public const string GB_PistonHomePos = "48";
-        public const string GB_HeadRotateHomePos = "49";
-        public const string GB_HeadRotateAtTop = "50";
+        public const string GB_HeadRotatePointLeft = "49";
+        public const string GB_HeadRotatePointUp = "50";
         public const string GB_linearCenterOfVial4AtBottom = "51";
-        public const string GB_headAtBottom = "52";
+        public const string GB_HeadRotatePointDown = "52";
         public const string GB_linearCenterOfVial1 = "53";
-        public const string GB_LinearLoading = "54";
+        public const string GB_linearSyringeLoading = "54";
         public const string GB_armAtBottom = "55";
 
         // ***********************************************************************
         // from here on, GB cannot be stored (STGP) in the EEPROM
         // ***********************************************************************
         public const string GB_liquidDetected = "56";
+
         public const string GB_57 = "57";
         public const string GB_58 = "58";
-
         public const string GB_59 = "59";
-        public const string GB_needleLengthInMicroSteps = "60";
+        public const string GB_60 = "60";
 
-        public const string GB_61 = "61";
+        public const string GB_Calced_Top_Vert_Needle_Down_Allowed = "61";
+
         public const string GB_62 = "62";
         public const string GB_63 = "63";
-        public const string GB_64 = "64";    // was motorIsMoving = "64";
+        public const string GB_64 = "64";
+
         public const string GB_currentVialLinearLocation = "65";
-        public const string GB_GB_LinearCenterOfBag = "66";
-        public const string GB_67 = "67";
+        public const string GB_LinearCenterOfBag = "66";
+        public const string GB_linearSpaceBetweenVialsuS = "67";
+
         public const string GB_68 = "68";
         public const string GB_69 = "69";
 
         public const string GB_armMicroStepsPerMM = "70";
-        //public const string GB_limitarmBentMicroS = "71";
-        //public const string GB_NeedleArmError = "72";
+
+        public const string GB_71 = "71";
+        public const string GB_72 = "72";
         public const string GB_73 = "73";
         public const string GB_74 = "74";
-        public const string GB_DrawWaitTime = "75";
+        public const string GB_75 = "75";
+
         public const string GB_pistonMicroStepPer100microL = "76";
         public const string GB_thumbRestDistance = "77"; // analog value reading from laser distance sensor
-        public const string GB_78 = "78";
-        public const string GB_79 = "79";
+        public const string GB_pistonsRangePercentage = "78";
+        public const string GB_liquidPresence = "79";
+
         public const string GB_80 = "80";
+
         public const string GB_rotateMicroStepsPerMM = "81";
+
         public const string GB_82 = "82";
+
         public const string GB_NeedleVialError = "83";
+
         public const string GB_84 = "84";
-        public const string GB_85 = "85";
+
+        public const string GB_capHolderMicrostepsTolock = "85";
         public const string GB_CapHolderHolds = "86"; //  "1" = holds,    "0" = open
         public const string GB_CapHolderPulses = "87";
         public const string GB_slowCapHolder = "88";
         public const string GB_capWaitLoops = "89";
         public const string GB_microLtoWithdraw_current = "90";
+
         // microLtoWithdraw values
         public const string GB_microLtoWithdraw_1 = "91";
         public const string GB_microLtoWithdraw_2 = "92";
@@ -275,7 +294,6 @@ namespace SpaceUSB
         public const string GB_microLtoWithdraw_4 = "94";
         public const string GB_microLtoWithdraw_5 = "95";
         public const string GB_microLtoWithdraw_6 = "96";
-        public const string GB_CmdInProcess = "97";
         /*
             Bit_vial1      =  %00000001 // bit   1
             Bit_vial2      =  %00000010 // bit   2
@@ -285,6 +303,8 @@ namespace SpaceUSB
             Bit_vial6      =  %00100000 // bit  32
             Bit_bag        =  %01000000 // bit  64
         */
+
+        public const string GB_CmdInProcess = "97";
         public const string GB_CurrentState = "98";
         /*
             WAITING_INIT_CM         = 10       // this the state after the power up as well
@@ -297,20 +317,20 @@ namespace SpaceUSB
             STOPPED_TIME_OUT     = 80
             ABORTED              = 90
         */
-        public const string GB_microLinBAG = "99";
+        public const string GB_99 = "99";
         public const string GB_moveManualBackwards = "100";   // 1 = forward;  -1 = backward
         // vialSize_mL values
-        public const string GB_vialSize_microL_1 = "101";    
-        public const string GB_vialSize_microL_2 = "102";
-        public const string GB_vialSize_microL_3 = "103";
-        public const string GB_vialSize_microL_4 = "104";    
-        public const string GB_vialSize_microL_5 = "105";
-        public const string GB_vialSize_microL_6 = "106";
-        public const string GB_vialSize_microL_current = "107";
-        public const string GB_BagSize_microL = "108";
+        public const string GB_101 = "101";    
+        public const string GB_102 = "102";
+        public const string GB_103 = "103";
+        public const string GB_104 = "104";    
+        public const string GB_105 = "105";
+        public const string GB_106 = "106";
+        public const string GB_107 = "107";
+        public const string GB_108 = "108";
         public const string GB_109 = "109";
         public const string GB_110 = "110";
-        public const string GB_rotateVialsDown = "111";      // 1600
+        public const string GB_111 = "111";
         public const string GB_vibration4IsNeeded = "112";     
         public const string GB_vibration56IsNeeded = "113";     
         /*
@@ -327,15 +347,7 @@ namespace SpaceUSB
         public const string GB_vibrationTime_4_calc = "115";
         public const string GB_vibrationTime_56 = "116";             // [sec] input
         public const string GB_vibrationTime_56_calc = "117";
-        public const string GB_vibrationLocation = "118";
-        /*
-            Bit_vibrateDown      =  %00000001 // bit   1
-            Bit_vibrateUp        =  %00000010 // bit   2
-            Bit_vibrateHalfway   =  %00000100 // bit   4
-            Bit_vibrateLocation3 =  %00001000 // bit   8
-            Bit_vibrateLocation4 =  %00010000 // bit  16
-            Bit_vibrateLocation5 =  %00100000 // bit  32
-        */
+        public const string GB_118 = "118";
 
         // vibration strength for vials 4,56 -  1 / 2 / 3 / 4 / 5
         //++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -351,35 +363,73 @@ namespace SpaceUSB
         public const string GB_vibrationHz = "125";                   // data input  [Hz]  input
         public const string GB_126 = "126";
         public const string GB_vibrationIsNeeded = "127";
-        public const string GB_128 = "128";
+        public const string GB_vibrationTime_4_tmp = "128";
         public const string GB_vibrationTime_56_tmp = "129";
 
         // microLtoFill values
 
         public const string GB_microLtoFill_current =  "130";
-        public const string GB_microLtoFill_1 = "131";
-        public const string GB_microLtoFill_2 = "132";
-        public const string GB_microLtoFill_3 = "133";
+        public const string GB_131 = "131";
+        public const string GB_132 = "132";
+        public const string GB_133 = "133";
         public const string GB_microLtoFill_4 = "134";
         public const string GB_microLtoFill_5 = "135";
         public const string GB_microLtoFill_6 = "136";
 
+        public const string GB_137 = "137";
+        public const string GB_138 = "138";
+        public const string GB_139 = "139";
+
         public const string GB_FillingIsNeeded = "140";
-        public const string GB_Filling1IsNeeded = "141"; //// L.E.D //// for possible future use
-        public const string GB_Filling2IsNeeded = "142"; //// L.E.D //// for possible future use
-        public const string GB_Filling3IsNeeded = "143"; //// L.E.D //// for possible future use
+
+        public const string GB_141 = "141";
+        public const string GB_142 = "142";
+        public const string GB_143 = "143";
+
         public const string GB_Filling4IsNeeded = "144";
         public const string GB_Filling5IsNeeded = "145";
         public const string GB_Filling6IsNeeded = "146";
 
+        public const string GB_147 = "147";
+        public const string GB_148 = "148";
+        public const string GB_149 = "149";
+        public const string GB_150 = "150";
+        public const string GB_151 = "151";
+        public const string GB_152 = "152";
+        public const string GB_153 = "153";
+        public const string GB_154 = "154";
+        public const string GB_155 = "155";
+        public const string GB_156 = "156";
+        public const string GB_157 = "157";
+        public const string GB_158 = "158";
+        public const string GB_159 = "159";
+
         // current syringe
-        public const string GB_Max_Volume_current = "160";
+        public const string GB_160 = "160";
         public const string GB_microL_per_100mm_current = "161";
-        public const string GB_Syring_Length_current = "162";
+        public const string GB_162 = "162";
+
         public const string GB_163 = "163";
+        public const string GB_164 = "164";
+        public const string GB_165 = "165";
+        public const string GB_166 = "166";
+        public const string GB_167 = "167";
+        public const string GB_168 = "168";
+        public const string GB_169 = "169";
+        public const string GB_170 = "170";
+        public const string GB_171 = "171";
+        public const string GB_172 = "172";
+        public const string GB_173 = "173";
+        public const string GB_174 = "174";
+        public const string GB_175 = "175";
+        public const string GB_176 = "176";
+        public const string GB_177 = "177";
+        public const string GB_178 = "178";
+        public const string GB_179 = "179";
+        public const string GB_180 = "180";
+        public const string GB_181 = "181";
 
         // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-        // bubbles
         public const string GB_GoToAbsoluteInSteps = "182";
         public const string GB_numberOfKicks = "183";              //  10
         public const string GB_rotateBubblesUM = "184";            // 750 = 0.75mm
@@ -388,21 +438,36 @@ namespace SpaceUSB
 
         public const string GB_dispenseCycleTime01s = "187";       // calculates the time of the cycle evry 0.1 s
         public const string GB_dispenseCycleTimeMS = "188";        // calculates the time of the cycle evry ms
+
+        public const string GB_189 = "189";
+
         public const string GB_PigWasReplaced = "190";   
         public const string GB_inHomeCapHolderMotor = "191";       
         public const string GB_MulCenterOfVial = "192";            // for running average calculations
         public const string GB_adjustmentsTotal = "193";
+
+        public const string GB_194 = "194";
+
         public const string GB_TouchedLeftRef = "195";
         public const string GB_dipperInterruptHight = "196";
 
-        public const string GB_microLinVial_1 = "197";
-        public const string GB_microLinVial_2 = "198";
-        public const string GB_microLinVial_3 = "199";
-        public const string GB_microLinVial_4 = "200";
-        public const string GB_microLinVial_5 = "201";
-        public const string GB_microLinVial_6 = "202";
-        public const string GB_microLinVial_current = "203";
+        public const string GB_197 = "197";
+        public const string GB_198 = "198";
+        public const string GB_199 = "199";
+        public const string GB_200 = "200";
+        public const string GB_201 = "201";
+        public const string GB_202 = "202";
+        public const string GB_203 = "203";
+
         public const string GB_current_Vial = "204";
+
+        public const string GB_205 = "205";
+        public const string GB_206 = "206";
+        public const string GB_207 = "207";
+        public const string GB_208 = "208";
+        public const string GB_209 = "209";
+        public const string GB_210 = "210";
+
 
         public const string GB_vial1Bit = "211";  //  VIAL1_BIT
         public const string GB_vial2Bit = "212";  //  VIAL2_BIT
@@ -422,21 +487,49 @@ namespace SpaceUSB
             Bit_bag        =  %01000000 // bit  64
         */
 
+        public const string GB_219 = "219";
+        public const string GB_220 = "220";
+        public const string GB_221 = "221";
+
         public const string GB_currentVersion = "222";
+
+        public const string GB_223 = "223";
+
         public const string GB_readyToDraw = "224";
         public const string GB_initialVolume = "225";
-        public const string GB_motorIsMoving = "226";
+        public const string GB_MotorIsMoving = "226";
+
         public const string GB_227 = "227";
+
         public const string GB_HomingDone = "228";
         public const string GB_UnitsToMoveManual = "229";
-        public const string GB_230 = "230";
+
+        public const string GB_TempNumHolder = "230";
+
         public const string GB_airToPullBefore = "231";
+
         public const string GB_232 = "232";
         public const string GB_233 = "233";
         public const string GB_234 = "234";
+
         public const string GB_motorNumForHome = "235";
+
         public const string GB_236 = "236";
+
         public const string GB_microLbagToFill = "237";
+
+        public const string GB_238 = "238";
+        public const string GB_239 = "239";
+        public const string GB_240 = "240";
+        public const string GB_241 = "241";
+        public const string GB_242 = "242";
+        public const string GB_243 = "243";
+        public const string GB_244 = "244";
+        public const string GB_245 = "245";
+        public const string GB_246 = "246";
+        public const string GB_247 = "247";
+        public const string GB_248 = "248";
+        public const string GB_249 = "249";
 
         public const string GB_skipCheckVial456 = "250";             // temorary variable 5
         public const string GB_skipCheckBag = "251";
@@ -444,7 +537,7 @@ namespace SpaceUSB
         public const string GB_DrawFromVialWaitTime = "253";
         public const string GB_vialsToDrawFromCounter = "254";
 
-        public const string GB_InterruptCount = "255";
+        public const string GB_255 = "255";
 
                                   
     }
