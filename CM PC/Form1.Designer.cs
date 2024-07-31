@@ -3726,7 +3726,7 @@
             this.setBumpPosVertBtn.Name = "setBumpPosVertBtn";
             this.setBumpPosVertBtn.Size = new System.Drawing.Size(204, 56);
             this.setBumpPosVertBtn.TabIndex = 79;
-            this.setBumpPosVertBtn.Text = "set Needle Bump Vial 1 at Top";
+            this.setBumpPosVertBtn.Text = "set Needle Bump Vial 1 Top";
             this.setBumpPosVertBtn.UseVisualStyleBackColor = true;
             this.setBumpPosVertBtn.Click += new System.EventHandler(this.setBumpPosVertBtn_Click);
             // 
@@ -3849,7 +3849,7 @@
             this.setArmVialBtn.Name = "setArmVialBtn";
             this.setArmVialBtn.Size = new System.Drawing.Size(204, 56);
             this.setArmVialBtn.TabIndex = 78;
-            this.setArmVialBtn.Text = "set Arm at Top";
+            this.setArmVialBtn.Text = "set Arm Top";
             this.setArmVialBtn.UseVisualStyleBackColor = true;
             this.setArmVialBtn.Click += new System.EventHandler(this.setArmVialBtn_Click);
             // 
@@ -3895,7 +3895,7 @@
             this.setBumpBottomBtn.Name = "setBumpBottomBtn";
             this.setBumpBottomBtn.Size = new System.Drawing.Size(204, 56);
             this.setBumpBottomBtn.TabIndex = 68;
-            this.setBumpBottomBtn.Text = "set Needle Bump Vial 4 at Bottom";
+            this.setBumpBottomBtn.Text = "set Needle Bump Vial 4 Bottom";
             this.setBumpBottomBtn.UseVisualStyleBackColor = true;
             this.setBumpBottomBtn.Click += new System.EventHandler(this.setBumpBottomBtn_Click);
             // 
@@ -4004,7 +4004,7 @@
             this.setVial4TopBtn.Name = "setVial4TopBtn";
             this.setVial4TopBtn.Size = new System.Drawing.Size(134, 56);
             this.setVial4TopBtn.TabIndex = 87;
-            this.setVial4TopBtn.Text = "set center of\r\nVial 4 Top";
+            this.setVial4TopBtn.Text = "set center\r\nVial 4 Top";
             this.setVial4TopBtn.UseVisualStyleBackColor = true;
             this.setVial4TopBtn.Click += new System.EventHandler(this.setVial4TopBtn_Click);
             // 
@@ -4064,7 +4064,7 @@
             this.setVial4BottomBtn.Name = "setVial4BottomBtn";
             this.setVial4BottomBtn.Size = new System.Drawing.Size(134, 56);
             this.setVial4BottomBtn.TabIndex = 87;
-            this.setVial4BottomBtn.Text = "set center of\r\nVial 4 Bottom";
+            this.setVial4BottomBtn.Text = "set center\r\nVial 4 Bottom";
             this.setVial4BottomBtn.UseVisualStyleBackColor = true;
             this.setVial4BottomBtn.Click += new System.EventHandler(this.setVial4BottomBtn_Click);
             // 
@@ -4123,7 +4123,7 @@
             this.setArmAtBotomBtn.Name = "setArmAtBotomBtn";
             this.setArmAtBotomBtn.Size = new System.Drawing.Size(204, 56);
             this.setArmAtBotomBtn.TabIndex = 78;
-            this.setArmAtBotomBtn.Text = "set Arm At Bottom";
+            this.setArmAtBotomBtn.Text = "set Arm Bottom";
             this.setArmAtBotomBtn.UseVisualStyleBackColor = true;
             this.setArmAtBotomBtn.Click += new System.EventHandler(this.setArmAtBotomBtn_Click);
             // 
@@ -4182,7 +4182,7 @@
             this.setPistonStartBtn.Name = "setPistonStartBtn";
             this.setPistonStartBtn.Size = new System.Drawing.Size(204, 56);
             this.setPistonStartBtn.TabIndex = 79;
-            this.setPistonStartBtn.Text = "set Piston at 0ml";
+            this.setPistonStartBtn.Text = "set Piston 0ml";
             this.setPistonStartBtn.UseVisualStyleBackColor = true;
             this.setPistonStartBtn.Click += new System.EventHandler(this.setPistonBtn_Click);
             // 
@@ -4202,7 +4202,7 @@
             // 
             this.oopsDropVials123Btn.BackgroundImage = global::CMNameSpace.Properties.Resources.arrow_CCW;
             this.oopsDropVials123Btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.oopsDropVials123Btn.Location = new System.Drawing.Point(139, 4);
+            this.oopsDropVials123Btn.Location = new System.Drawing.Point(213, 4);
             this.oopsDropVials123Btn.Name = "oopsDropVials123Btn";
             this.oopsDropVials123Btn.Size = new System.Drawing.Size(26, 25);
             this.oopsDropVials123Btn.TabIndex = 86;
@@ -4239,9 +4239,9 @@
             // 
             this.setDropVials123Btn.Location = new System.Drawing.Point(3, 4);
             this.setDropVials123Btn.Name = "setDropVials123Btn";
-            this.setDropVials123Btn.Size = new System.Drawing.Size(134, 56);
+            this.setDropVials123Btn.Size = new System.Drawing.Size(204, 56);
             this.setDropVials123Btn.TabIndex = 81;
-            this.setDropVials123Btn.Text = "set Dispose at Drop\r\nVials 123 Position";
+            this.setDropVials123Btn.Text = "set Dispose Drop \r\nVials 1-3";
             this.setDropVials123Btn.UseVisualStyleBackColor = true;
             this.setDropVials123Btn.Click += new System.EventHandler(this.setDropVials123Btn_Click);
             // 
@@ -4300,7 +4300,7 @@
             this.setHeadAtBottomBtn.Name = "setHeadAtBottomBtn";
             this.setHeadAtBottomBtn.Size = new System.Drawing.Size(204, 56);
             this.setHeadAtBottomBtn.TabIndex = 76;
-            this.setHeadAtBottomBtn.Text = "set Head at Bottom";
+            this.setHeadAtBottomBtn.Text = "set syringe pointing  DOWN";
             this.setHeadAtBottomBtn.UseVisualStyleBackColor = true;
             this.setHeadAtBottomBtn.Click += new System.EventHandler(this.setHeadAtBottomBtn_Click);
             // 
@@ -4346,7 +4346,7 @@
             this.setArmDisposeVials456Btn.Name = "setArmDisposeVials456Btn";
             this.setArmDisposeVials456Btn.Size = new System.Drawing.Size(204, 56);
             this.setArmDisposeVials456Btn.TabIndex = 79;
-            this.setArmDisposeVials456Btn.Text = "set Arm at Drop\r\nVials 456 Position";
+            this.setArmDisposeVials456Btn.Text = "set Arm Drop Vials 4-6";
             this.setArmDisposeVials456Btn.UseVisualStyleBackColor = true;
             this.setArmDisposeVials456Btn.Click += new System.EventHandler(this.setArmDisposeVials456Btn_Click);
             // 
@@ -4566,7 +4566,7 @@
             this.setHeadRotateTopBtn.Name = "setHeadRotateTopBtn";
             this.setHeadRotateTopBtn.Size = new System.Drawing.Size(204, 56);
             this.setHeadRotateTopBtn.TabIndex = 80;
-            this.setHeadRotateTopBtn.Text = "set Head at Top";
+            this.setHeadRotateTopBtn.Text = "set syringe pointing UP";
             this.setHeadRotateTopBtn.UseVisualStyleBackColor = true;
             this.setHeadRotateTopBtn.Click += new System.EventHandler(this.setHeadRotateTopBtn_Click);
             // 
@@ -4625,7 +4625,7 @@
             this.setHeadRotateStartBtn.Name = "setHeadRotateStartBtn";
             this.setHeadRotateStartBtn.Size = new System.Drawing.Size(204, 56);
             this.setHeadRotateStartBtn.TabIndex = 80;
-            this.setHeadRotateStartBtn.Text = "set Head at Left";
+            this.setHeadRotateStartBtn.Text = "set syringe pointing LEFT";
             this.setHeadRotateStartBtn.UseVisualStyleBackColor = true;
             this.setHeadRotateStartBtn.Click += new System.EventHandler(this.setHeadRotateStartBtn_Click);
             // 

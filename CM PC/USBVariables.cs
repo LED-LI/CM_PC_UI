@@ -125,7 +125,7 @@ namespace SpaceUSB
         public const string GB_piston_defined_vol_uL = "16";
         public const string GB_accepted_diviation_range = "17"; 
         public const string GB_messuredAmountOfLiquid = "18";
-        public const string GB_current_diviation = "19";
+        public const string GB_liquid_detection_border_aval = "19";
         public const string GB_ShowOverride = "20";
         public const string GB_linearSpaceBetweenVialsuM = "21";
         public const string GB_disposeYN = "22";
