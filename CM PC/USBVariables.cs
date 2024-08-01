@@ -21,11 +21,11 @@ namespace SpaceUSB
     }
     public static class TrinamicInputs
     {
-        public const string In_thumbRestDistance = "0";
+        public const string In_liquidPresence = "0";
         public const string In_pwrDrawer = "1";
         public const string In_NeedleDetected = "2";
         public const string In_slidingDoor = "3";
-        public const string In_liquidPresence = "4";
+        public const string In_thumbRestDistance = "4";
         public const string In_drawerOverflow = "5";
         public const string In_drawerClose = "6";
         public const string In_capHolderHome = "7";
@@ -597,10 +597,10 @@ namespace SpaceUSB
         public const string homeVerticalMotor = "102";
         public const string homePistonMotor = "104";
         public const string positionPistonMotor = "106";
-        public const string func_108 = "108";
-        //public const string ejectSyringeFromTopVial = "108";
-        public const string func_110 = "110";
-        //public const string ejectSyringeFromBottomVial = "110";
+        //public const string func_108 = "108";
+        public const string ejectSyringeFromTopVial = "108";
+        //public const string func_110 = "110";
+        public const string ejectSyringeFromBottomVial = "110";
         public const string goIntoBag = "112";
         public const string Vibrate = "114";
         public const string checkVialPoppedOut = "116";

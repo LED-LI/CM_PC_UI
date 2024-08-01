@@ -132,7 +132,7 @@
             this.isVibrating56TB = new System.Windows.Forms.TextBox();
             this.vibrationTime4TB = new System.Windows.Forms.TextBox();
             this.Vial1WithdrawMlTB = new System.Windows.Forms.TextBox();
-            this.mLbagToFillTB = new System.Windows.Forms.TextBox();
+            this.BagSizeMlTB = new System.Windows.Forms.TextBox();
             this.panel24 = new System.Windows.Forms.Panel();
             this.label18 = new System.Windows.Forms.Label();
             this.TestVibrate56Btn = new System.Windows.Forms.Button();
@@ -1538,7 +1538,7 @@
             this.RunParametersTLP.Controls.Add(this.isVibrating56TB, 6, 5);
             this.RunParametersTLP.Controls.Add(this.vibrationTime4TB, 5, 6);
             this.RunParametersTLP.Controls.Add(this.Vial1WithdrawMlTB, 2, 0);
-            this.RunParametersTLP.Controls.Add(this.mLbagToFillTB, 1, 0);
+            this.RunParametersTLP.Controls.Add(this.BagSizeMlTB, 1, 0);
             this.RunParametersTLP.Controls.Add(this.panel24, 0, 2);
             this.RunParametersTLP.Controls.Add(this.TestVibrate56Btn, 6, 9);
             this.RunParametersTLP.Controls.Add(this.TestVibrate4Btn, 5, 9);
@@ -1983,17 +1983,17 @@
             this.Vial1WithdrawMlTB.Text = "0";
             this.Vial1WithdrawMlTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // mLbagToFillTB
+            // BagSizeMlTB
             // 
-            this.mLbagToFillTB.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.mLbagToFillTB.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.mLbagToFillTB.Enabled = false;
-            this.mLbagToFillTB.Location = new System.Drawing.Point(491, 20);
-            this.mLbagToFillTB.Name = "mLbagToFillTB";
-            this.mLbagToFillTB.Size = new System.Drawing.Size(125, 34);
-            this.mLbagToFillTB.TabIndex = 107;
-            this.mLbagToFillTB.Text = "0";
-            this.mLbagToFillTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.BagSizeMlTB.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.BagSizeMlTB.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.BagSizeMlTB.Enabled = false;
+            this.BagSizeMlTB.Location = new System.Drawing.Point(491, 20);
+            this.BagSizeMlTB.Name = "BagSizeMlTB";
+            this.BagSizeMlTB.Size = new System.Drawing.Size(125, 34);
+            this.BagSizeMlTB.TabIndex = 107;
+            this.BagSizeMlTB.Text = "0";
+            this.BagSizeMlTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // panel24
             // 
@@ -6598,7 +6598,7 @@
         private System.Windows.Forms.TextBox replyStatusTB;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Label label74;
-        private System.Windows.Forms.TextBox mLbagToFillTB;
+        private System.Windows.Forms.TextBox BagSizeMlTB;
         private System.Windows.Forms.TextBox runUserNameTB;
         private System.Windows.Forms.Panel panel24;
         private System.Windows.Forms.Panel panel26;

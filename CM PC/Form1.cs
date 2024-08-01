@@ -79,7 +79,7 @@ namespace SpaceUSB
         public double thumbRestDistance;
         public double thumbRestDistanceAvg = 0;
         public double thumbRestDistanceSum = 0;
-        public int thumbRestDistanceFilterSize = 10;
+        public int thumbRestDistanceFilterSize = 4;
         public int thumbRestDistanceCount = 1;
 
         public int linearSpaceBetweenVialsuM;
@@ -230,13 +230,13 @@ namespace SpaceUSB
                                            // and end Trinamic commands
         {
             // https://stackoverflow.com/questions/661561/how-do-i-update-the-gui-from-another-thread
-            double dblVial1WithdrawMicroL;
-            double dblVial2WithdrawMicroL;
-            double dblVial3WithdrawMicroL;
-            double dblVial4WithdrawMicroL;
-            double dblVial5WithdrawMicroL;
-            double dblVial6WithdrawMicroL;
-            double dblmLbagToFillTB;
+            //double dblVial1WithdrawMicroL;
+            //double dblVial2WithdrawMicroL;
+            //double dblVial3WithdrawMicroL;
+            //double dblVial4WithdrawMicroL;
+            //double dblVial5WithdrawMicroL;
+            //double dblVial6WithdrawMicroL;
+            //double dblmLbagToFillTB;
 
             while (true)
             {
@@ -266,30 +266,23 @@ namespace SpaceUSB
                     //tResponse = rTMCConn.RunCommand(GeneralFunctions.getLaserDistAVAL);
                     //tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_thumbRestDistance);
                     tResponse = rTMCConn.SetOutput(SwitchOutputs.Out_Multiplexer, "0");
-                    Thread.Sleep(100);   // wait 100 ms for the FUNC to finish
+                    //Thread.Sleep(100);   // wait 100 ms for the FUNC to finish
                     tResponse = rTMCConn.GetAnalogInput(TrinamicInputs.In_thumbRestDistance);
                     thumbRestDistance = Convert.ToDouble(tResponse.tmcReply.value);
 
-                    thumbRestDistanceSum += thumbRestDistance;                                  // sum input readings
-                    thumbRestDistanceAvg = thumbRestDistanceSum / thumbRestDistanceCount;       // avarage the sum by the amount of time the input was read and summed 
+                    //thumbRestDistanceSum += thumbRestDistance;                                  // sum input readings
+                    //thumbRestDistanceAvg = thumbRestDistanceSum / thumbRestDistanceCount;       // avarage the sum by the amount of time the input was read and summed 
+                    //thumbRestDistanceSum *= Convert.ToDouble(thumbRestDistanceFilterSize - 1) / thumbRestDistanceFilterSize;
+
+                    thumbRestDistanceAvg = (thumbRestDistance / thumbRestDistanceFilterSize) + (thumbRestDistanceAvg * (thumbRestDistanceFilterSize-1)/ thumbRestDistanceFilterSize);
 
                     v = thumbRestDistanceAvg * 100 / Values.maxAVAL;                            // convert averaged value to display as percentage
                     this.Invoke((MethodInvoker)delegate { LD_valTb.Text = $"{v,10:0.00}"; });
-
-                    if (thumbRestDistanceCount < thumbRestDistanceFilterSize)                   // limit the summing by the amount of times dictated nt thumbRestDistanceFilterSize
-                    {
-                        thumbRestDistanceCount++;
-                    }
-                    else
-                    {
-                        thumbRestDistanceSum *= Convert.ToDouble(thumbRestDistanceFilterSize - 1) / thumbRestDistanceFilterSize;
-                    }
-
-                    tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_linearSpaceBetweenVialsuM);
-                    linearSpaceBetweenVialsuM = Convert.ToInt32(tResponse.tmcReply.value);
-                    this.Invoke((MethodInvoker)delegate { linearSpaceBetweenVialsuMTB.Text = Convert.ToString(linearSpaceBetweenVialsuM, 10); });
-
                 }
+
+                tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_linearSpaceBetweenVialsuM);
+                linearSpaceBetweenVialsuM = Convert.ToInt32(tResponse.tmcReply.value);
+                this.Invoke((MethodInvoker)delegate { linearSpaceBetweenVialsuMTB.Text = Convert.ToString(linearSpaceBetweenVialsuM, 10); });
 
                 tResponse = rTMCConn.GetGAP(MotorsNum.M_HeadRotate, AddressBank.actualPosition);
                 v = Convert.ToDouble(tResponse.tmcReply.value) / StepsPerMM.M_RotateStepsPerDeg;
@@ -436,20 +429,20 @@ namespace SpaceUSB
                 //microLbagToFill = Convert.ToInt32(tResponse.tmcReply.value);
                 //this.Invoke((MethodInvoker)delegate { mLbagToFillTB.Text = $"{Convert.ToDouble(microLbagToFill) / 1000}"; });
 
-                dblVial1WithdrawMicroL = Convert.ToDouble(Vial1WithdrawMlTB.Text);
-                dblVial2WithdrawMicroL = Convert.ToDouble(Vial2WithdrawMlTB.Text);
-                dblVial3WithdrawMicroL = Convert.ToDouble(Vial3WithdrawMlTB.Text);
-                dblVial4WithdrawMicroL = Convert.ToDouble(Vial4WithdrawMlTB.Text);
-                dblVial5WithdrawMicroL = Convert.ToDouble(Vial5WithdrawMlTB.Text);
-                dblVial6WithdrawMicroL = Convert.ToDouble(Vial6WithdrawMlTB.Text);
-                dblmLbagToFillTB = dblVial1WithdrawMicroL
-                                              + dblVial2WithdrawMicroL
-                                              + dblVial3WithdrawMicroL
-                                              + dblVial4WithdrawMicroL
-                                              + dblVial5WithdrawMicroL
-                                              + dblVial6WithdrawMicroL;
+                //////dblVial1WithdrawMicroL = Convert.ToDouble(Vial1WithdrawMlTB.Text);
+                //////dblVial2WithdrawMicroL = Convert.ToDouble(Vial2WithdrawMlTB.Text);
+                //////dblVial3WithdrawMicroL = Convert.ToDouble(Vial3WithdrawMlTB.Text);
+                //////dblVial4WithdrawMicroL = Convert.ToDouble(Vial4WithdrawMlTB.Text);
+                //////dblVial5WithdrawMicroL = Convert.ToDouble(Vial5WithdrawMlTB.Text);
+                //////dblVial6WithdrawMicroL = Convert.ToDouble(Vial6WithdrawMlTB.Text);
+                //////dblmLbagToFillTB = dblVial1WithdrawMicroL
+                //////                              + dblVial2WithdrawMicroL
+                //////                              + dblVial3WithdrawMicroL
+                //////                              + dblVial4WithdrawMicroL
+                //////                              + dblVial5WithdrawMicroL
+                //////                              + dblVial6WithdrawMicroL;
 
-                this.Invoke((MethodInvoker)delegate { mLbagToFillTB.Text = $"{dblmLbagToFillTB}"; });
+                //this.Invoke((MethodInvoker)delegate { BagSizeMlTB.Text = $"{dblmLbagToFillTB}"; }); //  = $"{dblmLbagToFillTB}"; });
 
                 //if (rgfloat.Match(Vial1SizeMlTB.Text).Success)        // floating point number
                 //{
@@ -552,7 +545,7 @@ namespace SpaceUSB
                 if (!RunInProcess && (currentTAB == 2 || currentTAB == 5))
                 {
                     tResponse = rTMCConn.RunCommand(GeneralFunctions.screenAllVials);    // function 36
-                    Thread.Sleep(100);   // wait 100 ms for the program to finish to switch and thread sleep
+                    //Thread.Sleep(100);   // wait 100 ms for the program to finish to switch and thread sleep
 
                     //// calculate if syrige was replaced
                     //if (syringeInPlaceTB.Text == $"SYRINGE IN")                // syringe is in?
@@ -945,15 +938,17 @@ namespace SpaceUSB
                     return;  // exit
                 }
             }
-            //string toWrite = " RescueDose CM bag RUN report\n"
-            //               + "\n start Date: " + runDay
-            //               + "\n user: " + username + "\n\n"
-            //               + "==============================\n"
-            //               + "  Bag Size    Bag Volume [mL] \n"
-            //               + $"   {BagSizeMlTB.Text:10} {mLinBagTB.Text,24} \n\n"
-            //               + "  Vial#   Vial size  volume [mL] \n"
-            //               + "==============================\n\n";
-            //File.WriteAllText(fileName, toWrite);
+            string toWrite = " RescueDose CM bag RUN report\n"
+                           + "\n start Date: " + runDay
+                           + "\n user: " + username + "\n\n"
+                           + "==============================\n"
+                           //+ "  Bag Size    Bag Volume [mL] \n"
+                           + "  Bag Size [mL] \n"
+//                           + $"   {BagSizeMlTB.Text:10} {mLinBagTB.Text,24} \n\n"
+                           + $"   {BagSizeMlTB.Text:10} \n\n"
+                           //+ "  Vial#   Vial size  volume [mL] \n"
+                           + "==============================\n\n";
+            File.WriteAllText(fileName, toWrite);
             //this.Invoke((MethodInvoker)delegate { mLinBagTB.Text = ""; });
 
             for (i = 1; i <= 6; i++)                                // go over 18 bottles
@@ -1015,8 +1010,8 @@ namespace SpaceUSB
 
             string toWrite = " User: " + username + "\n\n"
                             + "==============================\n"
-            //                + "  Bag Size[mL]     \n"
-            //                + $"{BagSizeMlTB.Text} \n\n"
+                            + "  Bag Size[mL]     \n"
+                            + $"{BagSizeMlTB.Text} \n\n"
                             + "  # Vial withdraw fill [mL] \n"
                             + "==============================\n";
 
@@ -1109,27 +1104,30 @@ namespace SpaceUSB
 
             StreamReader sr = new StreamReader(FileToLoad);
 
-            for (i = 0; i < 5; i++)  // wait for first lines
+            for (i = 0; i < 3; i++)  // wait for first lines
             {
                 sr.ReadLine();
             }
 
             // read bag
             line = sr.ReadLine();
-            result = line.Split(' ');          // BagSize = result[0], BagVolume = result[1]
-            //BagSizeMlTB.Text = result[0];
 
+            line = sr.ReadLine();
+            result = line.Split(' ');          // BagSize = result[0], BagVolume = result[1]
+            line = sr.ReadLine();
+            result = line.Split(' ');
+            BagSizeMlTB.Text = result[0];
+            //this.Invoke((MethodInvoker)delegate { BagSizeMlTB.Text = $"{result[0]}"; });
             for (i = 0; i < 3; i++)  // wait for vial lines
             {
                 line = sr.ReadLine();
-                result = line.Split(' ');
             }
 
             // read vials
             for (i = 1; i <= 6; i++)
             {
                 line = sr.ReadLine();
-                result = line.Split(' ');          // vial = result[0], sizeOfVial = result[1], volume -= result[2]
+                result = line.Split(' ');          // vial = result[0], Withdraw = result[1], Fill = result[2]
 
                 //vialSize = $"Vial{i:D1}SizeMlTB";                              // 1 2 3 volume column
                 strWithdraw = $"Vial{i:D1}WithdrawMlTB";                         // 1 2 3 volume column
@@ -1147,7 +1145,7 @@ namespace SpaceUSB
                     }
                     if (c is TextBox && string.Equals(fillSize, c.Name))    // is volume?
                     {
-                        c.Text = result[3];
+                        c.Text = result[4];
                     }
                 }
             }
@@ -4339,22 +4337,22 @@ namespace SpaceUSB
 
         private void ejectSyringeTopBtn_Click(object sender, EventArgs e)
         {
-            goDistanceTB.Text = "70";
-            setManualDistance();
-            VerticalGoDown();
+            //goDistanceTB.Text = "70";
+            //setManualDistance();
+            //VerticalGoDown();
 
-            //tResponse = rTMCConn.RunCommand(GeneralFunctions.ejectSyringeFromTopVial);
-            //tstringToRUNtest();
+            tResponse = rTMCConn.RunCommand(GeneralFunctions.ejectSyringeFromTopVial);
+            tstringToRUNtest();
         }
 
         private void ejectSyingeBottomBtn_Click(object sender, EventArgs e)
         {
-            goDistanceTB.Text = "70";
-            setManualDistance();
-            VerticalGoUp();
+            //goDistanceTB.Text = "70";
+            //setManualDistance();
+            //VerticalGoUp();
 
-            //tResponse = rTMCConn.RunCommand(GeneralFunctions.ejectSyringeFromBottomVial);
-            //tstringToRUNtest();
+            tResponse = rTMCConn.RunCommand(GeneralFunctions.ejectSyringeFromBottomVial);
+            tstringToRUNtest();
         }
 
         // *****************************************************************************
