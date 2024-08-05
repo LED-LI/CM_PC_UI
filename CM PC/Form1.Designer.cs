@@ -407,18 +407,6 @@
             this.label57 = new System.Windows.Forms.Label();
             this.vialsExistTB = new System.Windows.Forms.TextBox();
             this.label54 = new System.Windows.Forms.Label();
-            this.hTB = new System.Windows.Forms.TextBox();
-            this.label40 = new System.Windows.Forms.Label();
-            this.iTB = new System.Windows.Forms.TextBox();
-            this.label55 = new System.Windows.Forms.Label();
-            this.lTB = new System.Windows.Forms.TextBox();
-            this.label32 = new System.Windows.Forms.Label();
-            this.jTB = new System.Windows.Forms.TextBox();
-            this.label33 = new System.Windows.Forms.Label();
-            this.kTB = new System.Windows.Forms.TextBox();
-            this.label50 = new System.Windows.Forms.Label();
-            this.mTB = new System.Windows.Forms.TextBox();
-            this.label49 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.Vial6ErrTB = new System.Windows.Forms.TextBox();
             this.label47 = new System.Windows.Forms.Label();
@@ -5399,18 +5387,6 @@
             this.groupBox3.Controls.Add(this.label57);
             this.groupBox3.Controls.Add(this.vialsExistTB);
             this.groupBox3.Controls.Add(this.label54);
-            this.groupBox3.Controls.Add(this.hTB);
-            this.groupBox3.Controls.Add(this.label40);
-            this.groupBox3.Controls.Add(this.iTB);
-            this.groupBox3.Controls.Add(this.label55);
-            this.groupBox3.Controls.Add(this.lTB);
-            this.groupBox3.Controls.Add(this.label32);
-            this.groupBox3.Controls.Add(this.jTB);
-            this.groupBox3.Controls.Add(this.label33);
-            this.groupBox3.Controls.Add(this.kTB);
-            this.groupBox3.Controls.Add(this.label50);
-            this.groupBox3.Controls.Add(this.mTB);
-            this.groupBox3.Controls.Add(this.label49);
             this.groupBox3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.Location = new System.Drawing.Point(371, 288);
             this.groupBox3.Name = "groupBox3";
@@ -5423,7 +5399,7 @@
             // 
             this.robotSerialTB.BackColor = System.Drawing.SystemColors.MenuBar;
             this.robotSerialTB.Enabled = false;
-            this.robotSerialTB.Location = new System.Drawing.Point(212, 241);
+            this.robotSerialTB.Location = new System.Drawing.Point(213, 163);
             this.robotSerialTB.Name = "robotSerialTB";
             this.robotSerialTB.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.robotSerialTB.Size = new System.Drawing.Size(115, 34);
@@ -5434,7 +5410,7 @@
             // 
             this.label79.AutoSize = true;
             this.label79.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label79.Location = new System.Drawing.Point(15, 243);
+            this.label79.Location = new System.Drawing.Point(14, 166);
             this.label79.Name = "label79";
             this.label79.Size = new System.Drawing.Size(172, 30);
             this.label79.TabIndex = 72;
@@ -5444,7 +5420,7 @@
             // 
             this.PcCodeTB.BackColor = System.Drawing.SystemColors.MenuBar;
             this.PcCodeTB.Enabled = false;
-            this.PcCodeTB.Location = new System.Drawing.Point(211, 303);
+            this.PcCodeTB.Location = new System.Drawing.Point(212, 232);
             this.PcCodeTB.Name = "PcCodeTB";
             this.PcCodeTB.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.PcCodeTB.Size = new System.Drawing.Size(116, 34);
@@ -5455,7 +5431,7 @@
             // 
             this.label77.AutoSize = true;
             this.label77.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label77.Location = new System.Drawing.Point(16, 303);
+            this.label77.Location = new System.Drawing.Point(15, 231);
             this.label77.Name = "label77";
             this.label77.Size = new System.Drawing.Size(141, 30);
             this.label77.TabIndex = 70;
@@ -5465,7 +5441,7 @@
             // 
             this.TrinamicCodeTB.BackColor = System.Drawing.SystemColors.MenuBar;
             this.TrinamicCodeTB.Enabled = false;
-            this.TrinamicCodeTB.Location = new System.Drawing.Point(211, 272);
+            this.TrinamicCodeTB.Location = new System.Drawing.Point(212, 197);
             this.TrinamicCodeTB.Name = "TrinamicCodeTB";
             this.TrinamicCodeTB.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.TrinamicCodeTB.Size = new System.Drawing.Size(116, 34);
@@ -5476,7 +5452,7 @@
             // 
             this.label57.AutoSize = true;
             this.label57.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label57.Location = new System.Drawing.Point(15, 273);
+            this.label57.Location = new System.Drawing.Point(14, 200);
             this.label57.Name = "label57";
             this.label57.Size = new System.Drawing.Size(194, 30);
             this.label57.TabIndex = 68;
@@ -5485,7 +5461,7 @@
             // vialsExistTB
             // 
             this.vialsExistTB.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.vialsExistTB.Location = new System.Drawing.Point(211, 30);
+            this.vialsExistTB.Location = new System.Drawing.Point(212, 31);
             this.vialsExistTB.Name = "vialsExistTB";
             this.vialsExistTB.Size = new System.Drawing.Size(114, 34);
             this.vialsExistTB.TabIndex = 56;
@@ -5495,126 +5471,11 @@
             // 
             this.label54.AutoSize = true;
             this.label54.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label54.Location = new System.Drawing.Point(31, 30);
+            this.label54.Location = new System.Drawing.Point(15, 40);
             this.label54.Name = "label54";
             this.label54.Size = new System.Drawing.Size(96, 30);
             this.label54.TabIndex = 55;
             this.label54.Text = "vials exist";
-            // 
-            // hTB
-            // 
-            this.hTB.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.hTB.Location = new System.Drawing.Point(212, 60);
-            this.hTB.Name = "hTB";
-            this.hTB.Size = new System.Drawing.Size(114, 34);
-            this.hTB.TabIndex = 18;
-            this.hTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label40
-            // 
-            this.label40.AutoSize = true;
-            this.label40.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label40.Location = new System.Drawing.Point(32, 60);
-            this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(46, 30);
-            this.label40.TabIndex = 9;
-            this.label40.Text = "hTB";
-            // 
-            // iTB
-            // 
-            this.iTB.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.iTB.Location = new System.Drawing.Point(212, 90);
-            this.iTB.Name = "iTB";
-            this.iTB.Size = new System.Drawing.Size(114, 34);
-            this.iTB.TabIndex = 54;
-            this.iTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label55
-            // 
-            this.label55.AutoSize = true;
-            this.label55.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label55.Location = new System.Drawing.Point(32, 90);
-            this.label55.Name = "label55";
-            this.label55.Size = new System.Drawing.Size(40, 30);
-            this.label55.TabIndex = 53;
-            this.label55.Text = "iTB";
-            // 
-            // lTB
-            // 
-            this.lTB.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.lTB.Location = new System.Drawing.Point(212, 180);
-            this.lTB.Name = "lTB";
-            this.lTB.Size = new System.Drawing.Size(114, 34);
-            this.lTB.TabIndex = 38;
-            this.lTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label32
-            // 
-            this.label32.AutoSize = true;
-            this.label32.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label32.Location = new System.Drawing.Point(33, 120);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(40, 30);
-            this.label32.TabIndex = 27;
-            this.label32.Text = "jTB";
-            // 
-            // jTB
-            // 
-            this.jTB.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.jTB.Location = new System.Drawing.Point(211, 120);
-            this.jTB.Name = "jTB";
-            this.jTB.Size = new System.Drawing.Size(114, 34);
-            this.jTB.TabIndex = 28;
-            this.jTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label33
-            // 
-            this.label33.AutoSize = true;
-            this.label33.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label33.Location = new System.Drawing.Point(34, 150);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(45, 30);
-            this.label33.TabIndex = 29;
-            this.label33.Text = "kTB";
-            // 
-            // kTB
-            // 
-            this.kTB.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.kTB.Location = new System.Drawing.Point(212, 150);
-            this.kTB.Name = "kTB";
-            this.kTB.Size = new System.Drawing.Size(114, 34);
-            this.kTB.TabIndex = 30;
-            this.kTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label50
-            // 
-            this.label50.AutoSize = true;
-            this.label50.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label50.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label50.Location = new System.Drawing.Point(34, 180);
-            this.label50.Name = "label50";
-            this.label50.Size = new System.Drawing.Size(40, 30);
-            this.label50.TabIndex = 37;
-            this.label50.Text = "lTB";
-            // 
-            // mTB
-            // 
-            this.mTB.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.mTB.Location = new System.Drawing.Point(212, 210);
-            this.mTB.Name = "mTB";
-            this.mTB.Size = new System.Drawing.Size(114, 34);
-            this.mTB.TabIndex = 39;
-            this.mTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label49
-            // 
-            this.label49.AutoSize = true;
-            this.label49.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label49.Location = new System.Drawing.Point(32, 210);
-            this.label49.Name = "label49";
-            this.label49.Size = new System.Drawing.Size(52, 30);
-            this.label49.TabIndex = 40;
-            this.label49.Text = "mTB";
             // 
             // groupBox4
             // 
@@ -5655,7 +5516,7 @@
             // 
             this.label47.AutoSize = true;
             this.label47.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label47.Location = new System.Drawing.Point(30, 184);
+            this.label47.Location = new System.Drawing.Point(17, 184);
             this.label47.Name = "label47";
             this.label47.Size = new System.Drawing.Size(131, 30);
             this.label47.TabIndex = 54;
@@ -5687,7 +5548,7 @@
             // 
             this.label30.AutoSize = true;
             this.label30.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label30.Location = new System.Drawing.Point(31, 34);
+            this.label30.Location = new System.Drawing.Point(18, 34);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(131, 30);
             this.label30.TabIndex = 41;
@@ -5697,7 +5558,7 @@
             // 
             this.label29.AutoSize = true;
             this.label29.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label29.Location = new System.Drawing.Point(31, 94);
+            this.label29.Location = new System.Drawing.Point(18, 94);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(131, 30);
             this.label29.TabIndex = 42;
@@ -5718,7 +5579,7 @@
             // 
             this.label48.AutoSize = true;
             this.label48.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label48.Location = new System.Drawing.Point(31, 154);
+            this.label48.Location = new System.Drawing.Point(18, 154);
             this.label48.Name = "label48";
             this.label48.Size = new System.Drawing.Size(131, 30);
             this.label48.TabIndex = 35;
@@ -5739,7 +5600,7 @@
             // 
             this.label38.AutoSize = true;
             this.label38.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label38.Location = new System.Drawing.Point(30, 214);
+            this.label38.Location = new System.Drawing.Point(17, 221);
             this.label38.Name = "label38";
             this.label38.Size = new System.Drawing.Size(191, 30);
             this.label38.TabIndex = 7;
@@ -5749,7 +5610,7 @@
             // 
             this.label51.AutoSize = true;
             this.label51.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label51.Location = new System.Drawing.Point(31, 124);
+            this.label51.Location = new System.Drawing.Point(18, 124);
             this.label51.Name = "label51";
             this.label51.Size = new System.Drawing.Size(131, 30);
             this.label51.TabIndex = 51;
@@ -5770,7 +5631,7 @@
             // 
             this.label52.AutoSize = true;
             this.label52.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label52.Location = new System.Drawing.Point(31, 64);
+            this.label52.Location = new System.Drawing.Point(18, 64);
             this.label52.Name = "label52";
             this.label52.Size = new System.Drawing.Size(131, 30);
             this.label52.TabIndex = 49;
@@ -5780,7 +5641,7 @@
             // 
             this.SyringeBagErrorsTB.BackColor = System.Drawing.SystemColors.MenuBar;
             this.SyringeBagErrorsTB.Enabled = false;
-            this.SyringeBagErrorsTB.Location = new System.Drawing.Point(211, 214);
+            this.SyringeBagErrorsTB.Location = new System.Drawing.Point(211, 220);
             this.SyringeBagErrorsTB.Name = "SyringeBagErrorsTB";
             this.SyringeBagErrorsTB.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.SyringeBagErrorsTB.Size = new System.Drawing.Size(114, 34);
@@ -6632,18 +6493,6 @@
         private System.Windows.Forms.Label label57;
         private System.Windows.Forms.TextBox vialsExistTB;
         private System.Windows.Forms.Label label54;
-        private System.Windows.Forms.TextBox hTB;
-        private System.Windows.Forms.Label label40;
-        private System.Windows.Forms.TextBox iTB;
-        private System.Windows.Forms.Label label55;
-        private System.Windows.Forms.TextBox lTB;
-        private System.Windows.Forms.Label label32;
-        private System.Windows.Forms.TextBox jTB;
-        private System.Windows.Forms.Label label33;
-        private System.Windows.Forms.TextBox kTB;
-        private System.Windows.Forms.Label label50;
-        private System.Windows.Forms.TextBox mTB;
-        private System.Windows.Forms.Label label49;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.TextBox Vial6ErrTB;
         private System.Windows.Forms.Label label47;

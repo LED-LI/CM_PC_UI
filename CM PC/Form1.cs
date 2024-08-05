@@ -266,7 +266,7 @@ namespace SpaceUSB
                     //tResponse = rTMCConn.RunCommand(GeneralFunctions.getLaserDistAVAL);
                     //tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_thumbRestDistance);
                     tResponse = rTMCConn.SetOutput(SwitchOutputs.Out_Multiplexer, "0");
-                    //Thread.Sleep(100);   // wait 100 ms for the FUNC to finish
+                    Thread.Sleep(100);   // wait 100 ms for the FUNC to finish
                     tResponse = rTMCConn.GetAnalogInput(TrinamicInputs.In_thumbRestDistance);
                     thumbRestDistance = Convert.ToDouble(tResponse.tmcReply.value);
 
@@ -544,6 +544,9 @@ namespace SpaceUSB
 
                 if (!RunInProcess && (currentTAB == 2 || currentTAB == 5))
                 {
+                    tResponse = rTMCConn.SetOutput(SwitchOutputs.Out_Multiplexer, "1");
+                    Thread.Sleep(100);   // wait 100 ms for the FUNC to finish
+
                     tResponse = rTMCConn.RunCommand(GeneralFunctions.screenAllVials);    // function 36
                     //Thread.Sleep(100);   // wait 100 ms for the program to finish to switch and thread sleep
 
@@ -1127,7 +1130,7 @@ namespace SpaceUSB
             for (i = 1; i <= 6; i++)
             {
                 line = sr.ReadLine();
-                result = line.Split(' ');          // vial = result[0], Withdraw = result[1], Fill = result[2]
+                result = line.Split(' ');          // vial = result[0], Withdraw = result[1], Fill = result[3]
 
                 //vialSize = $"Vial{i:D1}SizeMlTB";                              // 1 2 3 volume column
                 strWithdraw = $"Vial{i:D1}WithdrawMlTB";                         // 1 2 3 volume column
@@ -1145,7 +1148,8 @@ namespace SpaceUSB
                     }
                     if (c is TextBox && string.Equals(fillSize, c.Name))    // is volume?
                     {
-                        c.Text = result[4];
+                        c.Text = result[3];
+                        //c.Text = result[4];
                     }
                 }
             }
@@ -1971,21 +1975,21 @@ namespace SpaceUSB
             skipVial456 = Convert.ToBoolean(tResponse.tmcReply.value);
             if (skipVial456)
             {
-                dontskipvial456RB.Checked = true;
+                skipvial456RB.Checked = true;
             }
             else
             {
-                skipvial456RB.Checked = true;
+                dontskipvial456RB.Checked = true;
             }
             tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_skipCheckBag);
             skipBag = Convert.ToBoolean(tResponse.tmcReply.value);
             if (skipBag)
             {
-                dontskipbagRB.Checked = true;
+                skipbagRB.Checked = true;
             }
             else
             {
-                skipbagRB.Checked = true;
+                dontskipbagRB.Checked = true;
             }
 
         }
