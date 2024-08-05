@@ -132,9 +132,9 @@ namespace SpaceUSB
         public const string GB_DisposeDropVialsPos = "23";
         public const string GB_ArmDropVials456Pos = "24";
 
-        public const string GB_25 = "25";
-        public const string GB_26 = "26";          
-        public const string GB_27 = "27";
+        public const string GB_bypassSlidingDoorYN = "25";
+        public const string GB_bypassDrawerClosedYN = "26";          
+        public const string GB_bypassCheckOverFlowYN = "27";
 
         public const string GB_errors_syringe_bag = "28";
         /*
@@ -407,8 +407,8 @@ namespace SpaceUSB
         // current syringe
         public const string GB_160 = "160";
         public const string GB_microL_per_100mm_current = "161";
-        public const string GB_162 = "162";
 
+        public const string GB_162 = "162";
         public const string GB_163 = "163";
         public const string GB_164 = "164";
         public const string GB_165 = "165";
