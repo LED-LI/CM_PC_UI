@@ -464,47 +464,47 @@ namespace SpaceUSB
 
                 this.Invoke((MethodInvoker)delegate { mLbagToFillTB.Text = $"{dblmLbagToFillTB}"; });
 
-                //if (rgfloat.Match(Vial1SizeMlTB.Text).Success)        // floating point number
-                //{
-                //    tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_microLinVial_1);  //GB_197
-                //    Vial1Volume = Convert.ToInt32(Convert.ToDouble(Vial1SizeMlTB.Text) * 1000 + Convert.ToDouble(tResponse.tmcReply.value));
-                //    this.Invoke((MethodInvoker)delegate { mLinVial1TB.Text = $"{Convert.ToDouble(Vial1Volume) / 1000}"; });
-                //}
+                if (rgfloat.Match(Vial1SizeMlTB.Text).Success)        // floating point number
+                {
+                    tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_microLinVial_1);  //GB_197
+                    Vial1Volume = Convert.ToInt32(Convert.ToDouble(Vial1SizeMlTB.Text) * 1000 + Convert.ToDouble(tResponse.tmcReply.value));
+                    this.Invoke((MethodInvoker)delegate { mLinVial1TB.Text = $"{Convert.ToDouble(Vial1Volume) / 1000}"; });
+                }
 
-                //if (rgfloat.Match(Vial2SizeMlTB.Text).Success)        // floating point number
-                //{
-                //    tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_microLinVial_2);  //GB_198
-                //    Vial2Volume = Convert.ToInt32(Convert.ToDouble(Vial2SizeMlTB.Text) * 1000 + Convert.ToDouble(tResponse.tmcReply.value));
-                //    this.Invoke((MethodInvoker)delegate { mLinVial2TB.Text = $"{Convert.ToDouble(Vial2Volume) / 1000}"; });
-                //}
+                if (rgfloat.Match(Vial2SizeMlTB.Text).Success)        // floating point number
+                {
+                    tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_microLinVial_2);  //GB_198
+                    Vial2Volume = Convert.ToInt32(Convert.ToDouble(Vial2SizeMlTB.Text) * 1000 + Convert.ToDouble(tResponse.tmcReply.value));
+                    this.Invoke((MethodInvoker)delegate { mLinVial2TB.Text = $"{Convert.ToDouble(Vial2Volume) / 1000}"; });
+                }
 
-                //if (rgfloat.Match(Vial3SizeMlTB.Text).Success)        // floating point number
-                //{
-                //    tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_microLinVial_3);  //GB_199
-                //    Vial3Volume = Convert.ToInt32(Convert.ToDouble(Vial3SizeMlTB.Text) * 1000 + Convert.ToDouble(tResponse.tmcReply.value));
-                //    this.Invoke((MethodInvoker)delegate { mLinVial3TB.Text = $"{Convert.ToDouble(Vial3Volume) / 1000}"; });
-                //}
+                if (rgfloat.Match(Vial3SizeMlTB.Text).Success)        // floating point number
+                {
+                    tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_microLinVial_3);  //GB_199
+                    Vial3Volume = Convert.ToInt32(Convert.ToDouble(Vial3SizeMlTB.Text) * 1000 + Convert.ToDouble(tResponse.tmcReply.value));
+                    this.Invoke((MethodInvoker)delegate { mLinVial3TB.Text = $"{Convert.ToDouble(Vial3Volume) / 1000}"; });
+                }
 
-                //if (rgfloat.Match(Vial4SizeMlTB.Text).Success)        // floating point number
-                //{
-                //    tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_microLinVial_4);  //GB_200
-                //    Vial4Volume = Convert.ToInt32(Convert.ToDouble(Vial4SizeMlTB.Text) * 1000 + Convert.ToDouble(tResponse.tmcReply.value));
-                //    this.Invoke((MethodInvoker)delegate { mLinVial4TB.Text = $"{Convert.ToDouble(Vial4Volume) / 1000}"; });
-                //}
+                if (rgfloat.Match(Vial4SizeMlTB.Text).Success)        // floating point number
+                {
+                    tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_microLinVial_4);  //GB_200
+                    Vial4Volume = Convert.ToInt32(Convert.ToDouble(Vial4SizeMlTB.Text) * 1000 + Convert.ToDouble(tResponse.tmcReply.value));
+                    this.Invoke((MethodInvoker)delegate { mLinVial4TB.Text = $"{Convert.ToDouble(Vial4Volume) / 1000}"; });
+                }
 
-                //if (rgfloat.Match(Vial5SizeMlTB.Text).Success)        // floating point number
-                //{
-                //    tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_microLinVial_5);  //GB_201
-                //    Vial5Volume = Convert.ToInt32(Convert.ToDouble(Vial5SizeMlTB.Text) * 1000 + Convert.ToDouble(tResponse.tmcReply.value));
-                //    this.Invoke((MethodInvoker)delegate { mLinVial5TB.Text = $"{Convert.ToDouble(Vial5Volume) / 1000}"; });
-                //}
+                if (rgfloat.Match(Vial5SizeMlTB.Text).Success)        // floating point number
+                {
+                    tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_microLinVial_5);  //GB_201
+                    Vial5Volume = Convert.ToInt32(Convert.ToDouble(Vial5SizeMlTB.Text) * 1000 + Convert.ToDouble(tResponse.tmcReply.value));
+                    this.Invoke((MethodInvoker)delegate { mLinVial5TB.Text = $"{Convert.ToDouble(Vial5Volume) / 1000}"; });
+                }
 
-                //if (rgfloat.Match(Vial6SizeMlTB.Text).Success)        // floating point number
-                //{
-                //    tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_microLinVial_6);  //GB_202
-                //    Vial6Volume = Convert.ToInt32(Convert.ToDouble(Vial6SizeMlTB.Text) * 1000 + Convert.ToDouble(tResponse.tmcReply.value));
-                //    this.Invoke((MethodInvoker)delegate { mLinVial6TB.Text = $"{Convert.ToDouble(Vial6Volume) / 1000}"; });
-                //}
+                if (rgfloat.Match(Vial6SizeMlTB.Text).Success)        // floating point number
+                {
+                    tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_microLinVial_6);  //GB_202
+                    Vial6Volume = Convert.ToInt32(Convert.ToDouble(Vial6SizeMlTB.Text) * 1000 + Convert.ToDouble(tResponse.tmcReply.value));
+                    this.Invoke((MethodInvoker)delegate { mLinVial6TB.Text = $"{Convert.ToDouble(Vial6Volume) / 1000}"; });
+                }
 
                 tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_vibrator4done);  //GB_121
                 vibrating4Done = Convert.ToInt32(tResponse.tmcReply.value);
