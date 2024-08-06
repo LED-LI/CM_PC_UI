@@ -21,11 +21,13 @@ namespace SpaceUSB
     }
     public static class TrinamicInputs
     {
-        public const string In_thumbRestDistance = "0";
+        // public const string In_thumbRestDistance = "0";
+        public const string In_liquidPresence = "0";
         public const string In_pwrDrawer = "1";
         public const string In_NeedleDetected = "2";
         public const string In_slidingDoor = "3";
-        public const string In_liquidPresence = "4";
+        // public const string In_liquidPresence = "4";
+        public const string In_thumbRestDistance = "4";
         public const string In_drawerOverflow = "5";
         public const string In_drawerClose = "6";
         public const string In_capHolderHome = "7";
@@ -101,18 +103,26 @@ namespace SpaceUSB
     }
     public static class SystemVariables                 // GP
     {
-        public const string GB_0 = "0";
+        //public const string GB_0 = "0";
+        public const string GB_currentVersion = "0";
 
         public const string GB_Syringe_Type = "1";
 
-        public const string GB_2 = "2";   
-        public const string GB_3 = "3";
-        public const string GB_4 = "4";
-        public const string GB_5 = "5";
+        public const string GB_skipCheckVial456 = "2";             // temorary variable 5
+        public const string GB_skipCheckBag = "3";
 
-        public const string GB_RobotSerialNumber = "6";
+        //public const string GB_2 = "2";   
+        //public const string GB_3 = "3";
+        //public const string GB_4 = "4";
+        //public const string GB_5 = "5";
 
-        public const string GB_7 = "7";  
+        public const string GB_bypassSlidingDoorYN = "4";
+        public const string GB_bypassDrawerClosedYN = "5";
+        public const string GB_bypassCheckOverFlowYN = "6";
+        //public const string  // GB_7 = "7";  
+
+        public const string GB_RobotSerialNumber = "7"; // "6";
+
 
         public const string GB_verticalCapPos = "8";
         public const string GB_BumpPosVert = "9"; 
@@ -125,7 +135,8 @@ namespace SpaceUSB
         public const string GB_piston_defined_vol_uL = "16";
         public const string GB_accepted_diviation_range = "17"; 
         public const string GB_messuredAmountOfLiquid = "18";
-        public const string GB_current_diviation = "19";
+        // public const string GB_current_diviation = "19";
+        public const string GB_liquid_detection_border_aval = "19";
         public const string GB_ShowOverride = "20";
         public const string GB_linearSpaceBetweenVialsuM = "21";
         public const string GB_disposeYN = "22";
@@ -135,6 +146,9 @@ namespace SpaceUSB
         public const string GB_25 = "25";
         public const string GB_26 = "26";          
         public const string GB_27 = "27";
+        //public const string GB_bypassSlidingDoorYN = "25";
+        //public const string GB_bypassDrawerClosedYN = "26";          
+        //public const string GB_bypassCheckOverFlowYN = "27";
 
         public const string GB_errors_syringe_bag = "28";
         /*
@@ -491,7 +505,9 @@ namespace SpaceUSB
         public const string GB_220 = "220";
         public const string GB_221 = "221";
 
-        public const string GB_currentVersion = "222";
+        public const string GB_222 = "222";
+
+        //public const string GB_currentVersion = "222";
 
         public const string GB_223 = "223";
 
@@ -531,8 +547,11 @@ namespace SpaceUSB
         public const string GB_248 = "248";
         public const string GB_249 = "249";
 
-        public const string GB_skipCheckVial456 = "250";             // temorary variable 5
-        public const string GB_skipCheckBag = "251";
+        public const string GB_250 = "250";
+        public const string GB_251 = "251";
+
+        //public const string GB_skipCheckVial456 = "250";             // temorary variable 5
+        //public const string GB_skipCheckBag = "251";
         public const string GB_foundCenterOfNeedle = "252";
         public const string GB_DrawFromVialWaitTime = "253";
         public const string GB_vialsToDrawFromCounter = "254";
@@ -597,10 +616,10 @@ namespace SpaceUSB
         public const string homeVerticalMotor = "102";
         public const string homePistonMotor = "104";
         public const string positionPistonMotor = "106";
-        public const string func_108 = "108";
-        //public const string ejectSyringeFromTopVial = "108";
-        public const string func_110 = "110";
-        //public const string ejectSyringeFromBottomVial = "110";
+        //public const string func_108 = "108";
+        public const string ejectSyringeFromTopVial = "108";
+        //public const string func_110 = "110";
+        public const string ejectSyringeFromBottomVial = "110";
         public const string goIntoBag = "112";
         public const string Vibrate = "114";
         public const string checkVialPoppedOut = "116";

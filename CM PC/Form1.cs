@@ -79,7 +79,7 @@ namespace SpaceUSB
         public double thumbRestDistance;
         public double thumbRestDistanceAvg = 0;
         public double thumbRestDistanceSum = 0;
-        public int thumbRestDistanceFilterSize = 10;
+        public int thumbRestDistanceFilterSize = 4;
         public int thumbRestDistanceCount = 1;
 
         public int linearSpaceBetweenVialsuM;
@@ -270,26 +270,39 @@ namespace SpaceUSB
                     tResponse = rTMCConn.GetAnalogInput(TrinamicInputs.In_thumbRestDistance);
                     thumbRestDistance = Convert.ToDouble(tResponse.tmcReply.value);
 
-                    thumbRestDistanceSum += thumbRestDistance;                                  // sum input readings
-                    thumbRestDistanceAvg = thumbRestDistanceSum / thumbRestDistanceCount;       // avarage the sum by the amount of time the input was read and summed 
+                    // thumbRestDistanceSum += thumbRestDistance;                                  // sum input readings
+                    // thumbRestDistanceAvg = thumbRestDistanceSum / thumbRestDistanceCount;       // avarage the sum by the amount of time the input was read and summed 
+																															  
+                    //thumbRestDistanceSum += thumbRestDistance;                                  // sum input readings
+                    //thumbRestDistanceAvg = thumbRestDistanceSum / thumbRestDistanceCount;       // avarage the sum by the amount of time the input was read and summed 
+                    //thumbRestDistanceSum *= Convert.ToDouble(thumbRestDistanceFilterSize - 1) / thumbRestDistanceFilterSize;
+
+                    thumbRestDistanceAvg = (thumbRestDistance / thumbRestDistanceFilterSize) + (thumbRestDistanceAvg * (thumbRestDistanceFilterSize-1)/ thumbRestDistanceFilterSize);
+
+
+																																													 
 
                     v = thumbRestDistanceAvg * 100 / Values.maxAVAL;                            // convert averaged value to display as percentage
                     this.Invoke((MethodInvoker)delegate { LD_valTb.Text = $"{v,10:0.00}"; });
 
-                    if (thumbRestDistanceCount < thumbRestDistanceFilterSize)                   // limit the summing by the amount of times dictated nt thumbRestDistanceFilterSize
-                    {
-                        thumbRestDistanceCount++;
-                    }
-                    else
-                    {
-                        thumbRestDistanceSum *= Convert.ToDouble(thumbRestDistanceFilterSize - 1) / thumbRestDistanceFilterSize;
-                    }
+                    // if (thumbRestDistanceCount < thumbRestDistanceFilterSize)                   // limit the summing by the amount of times dictated nt thumbRestDistanceFilterSize
+                    // {
+                        // thumbRestDistanceCount++;
+                    // }
+                    // else
+                    // {
+                        // thumbRestDistanceSum *= Convert.ToDouble(thumbRestDistanceFilterSize - 1) / thumbRestDistanceFilterSize;
+                    // }
+                }
 
                     tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_linearSpaceBetweenVialsuM);
                     linearSpaceBetweenVialsuM = Convert.ToInt32(tResponse.tmcReply.value);
                     this.Invoke((MethodInvoker)delegate { linearSpaceBetweenVialsuMTB.Text = Convert.ToString(linearSpaceBetweenVialsuM, 10); });
 
-                }
+
+																														
+																					  
+																																			 
 
                 tResponse = rTMCConn.GetGAP(MotorsNum.M_HeadRotate, AddressBank.actualPosition);
                 v = Convert.ToDouble(tResponse.tmcReply.value) / StepsPerMM.M_RotateStepsPerDeg;
@@ -551,6 +564,9 @@ namespace SpaceUSB
 
                 if (!RunInProcess && (currentTAB == 2 || currentTAB == 5))
                 {
+                    // tResponse = rTMCConn.SetOutput(SwitchOutputs.Out_Multiplexer, "1");
+                    // Thread.Sleep(100);   // wait 100 ms for the FUNC to finish
+
                     tResponse = rTMCConn.RunCommand(GeneralFunctions.screenAllVials);    // function 36
                     Thread.Sleep(100);   // wait 100 ms for the program to finish to switch and thread sleep
 
@@ -698,8 +714,9 @@ namespace SpaceUSB
                       $"An Error occured in the robot:\r" +
                       $"==========================\r\r" +
                       $"\t machine was aborted \r\r" +
-                      $"\t 1- run HOME  \r" +
-                      $"\t 2- click RUN \r"
+                      $"\t run HOME  \r" +
+                      $"========================== \r"
+                      // $"\t 2- click RUN \r"
                     );
                 }
                 else
@@ -950,7 +967,9 @@ namespace SpaceUSB
                            + "\n user: " + username + "\n\n"
                            + "==============================\n"
                            + "  Bag Size    Bag Volume [mL] \n"
+												 
                            + $"   {BagSizeMlTB.Text:10} {mLinBagTB.Text,24} \n\n"
+															 
                            + "  Vial#   Vial size  volume [mL] \n"
                            + "==============================\n\n";
             File.WriteAllText(fileName, toWrite);
@@ -966,6 +985,7 @@ namespace SpaceUSB
                         dd = d;
                     }
                 }
+				   
                 strWithdraw = $"Vial{i:D1}WithdrawMlTB";                           // 1 2 3 volume column
                 foreach (Control f in RunParametersTLP.Controls)
                 {
@@ -1039,6 +1059,7 @@ namespace SpaceUSB
                         }
                         dd = d;
                     }
+																				  
                     else if (d is TextBox && string.Equals(strWithdraw, d.Name))
                     {
                         if (d.Text == "")
@@ -1115,7 +1136,11 @@ namespace SpaceUSB
 
             // read bag
             line = sr.ReadLine();
+
+								 
             result = line.Split(' ');          // BagSize = result[0], BagVolume = result[1]
+								 
+									 
             BagSizeMlTB.Text = result[0];
 
             for (i = 0; i < 3; i++)  // wait for vial lines
@@ -1147,6 +1172,7 @@ namespace SpaceUSB
                     if (c is TextBox && string.Equals(fillSize, c.Name))    // is volume?
                     {
                         c.Text = result[3];
+											 
                     }
                 }
             }
@@ -1315,6 +1341,7 @@ namespace SpaceUSB
                 Vial1WithdrawMicroL = Vial1SizeMicroL;
                 Vial1WithdrawMlTB.Text = Vial1SizeMlTB.Text;
             }
+				  
             else { Vial1WithdrawMicroL = Convert.ToString(intVial1WithdrawMicroL); }
 
             if (Vial2WithdrawMlTB.Text == asVialSize)
@@ -1322,6 +1349,7 @@ namespace SpaceUSB
                 Vial2WithdrawMicroL = Vial2SizeMicroL;
                 Vial2WithdrawMlTB.Text = Vial2SizeMlTB.Text;
             }
+				   
             else { Vial2WithdrawMicroL = Convert.ToString(intVial2WithdrawMicroL); }
 
             if (Vial3WithdrawMlTB.Text == asVialSize)
@@ -1329,6 +1357,7 @@ namespace SpaceUSB
                 Vial3WithdrawMicroL = Vial3SizeMicroL;
                 Vial3WithdrawMlTB.Text = Vial3SizeMlTB.Text;
             }
+				   
             else { Vial3WithdrawMicroL = Convert.ToString(intVial3WithdrawMicroL); }
 
             if (Vial4WithdrawMlTB.Text == asVialSize)
@@ -1336,6 +1365,7 @@ namespace SpaceUSB
                 Vial4WithdrawMicroL = Vial4SizeMicroL;
                 Vial4WithdrawMlTB.Text = Vial4SizeMlTB.Text;
             }
+				   
             else { Vial4WithdrawMicroL = Convert.ToString(intVial4WithdrawMicroL); }
 
             if (Vial5WithdrawMlTB.Text == asVialSize)
@@ -1343,6 +1373,7 @@ namespace SpaceUSB
                 Vial5WithdrawMicroL = Vial5SizeMicroL;
                 Vial5WithdrawMlTB.Text = Vial5SizeMlTB.Text;
             }
+				   
             else { Vial5WithdrawMicroL = Convert.ToString(intVial5WithdrawMicroL); }
 
             if (Vial6WithdrawMlTB.Text == asVialSize)
@@ -1350,6 +1381,7 @@ namespace SpaceUSB
                 Vial6WithdrawMicroL = Vial6SizeMicroL;
                 Vial6WithdrawMlTB.Text = Vial6SizeMlTB.Text;
             }
+				   
             else { Vial6WithdrawMicroL = Convert.ToString(intVial6WithdrawMicroL); }
 
             //  ************ send RUN parameters to board *******************
@@ -1966,21 +1998,21 @@ namespace SpaceUSB
             skipVial456 = Convert.ToBoolean(tResponse.tmcReply.value);
             if (skipVial456)
             {
-                dontskipvial456RB.Checked = true;
+                skipvial456RB.Checked = true;
             }
             else
             {
-                skipvial456RB.Checked = true;
+                dontskipvial456RB.Checked = true;
             }
             tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_skipCheckBag);
             skipBag = Convert.ToBoolean(tResponse.tmcReply.value);
             if (skipBag)
             {
-                dontskipbagRB.Checked = true;
+                skipbagRB.Checked = true;
             }
             else
             {
-                skipbagRB.Checked = true;
+                dontskipbagRB.Checked = true;
             }
 
         }
@@ -4295,6 +4327,7 @@ namespace SpaceUSB
                         d.Text = $"0";
                     }
                     else if (d is TextBox && string.Equals(strWithdraw, d.Name))
+																		   
                     {
                         d.Text = "0";    // asVialSize;
                     }
