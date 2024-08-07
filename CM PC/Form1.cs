@@ -51,7 +51,7 @@ namespace SpaceUSB
         public DateTime startProcessDate;
         public string cmFile;
         public string curentPrintFile;
-        //public string asVialSize = "vial_size";
+        public string asVialSize = "vial_size";
 
         public string last_setBumpPosVertTB;
         public string last_setDockHeightTB;
@@ -230,13 +230,13 @@ namespace SpaceUSB
                                            // and end Trinamic commands
         {
             // https://stackoverflow.com/questions/661561/how-do-i-update-the-gui-from-another-thread
-            //double dblVial1WithdrawMicroL;
-            //double dblVial2WithdrawMicroL;
-            //double dblVial3WithdrawMicroL;
-            //double dblVial4WithdrawMicroL;
-            //double dblVial5WithdrawMicroL;
-            //double dblVial6WithdrawMicroL;
-            //double dblmLbagToFillTB;
+            double dblVial1WithdrawMicroL;
+            double dblVial2WithdrawMicroL;
+            double dblVial3WithdrawMicroL;
+            double dblVial4WithdrawMicroL;
+            double dblVial5WithdrawMicroL;
+            double dblVial6WithdrawMicroL;
+            double dblmLbagToFillTB;
 
             while (true)
             {
@@ -270,19 +270,39 @@ namespace SpaceUSB
                     tResponse = rTMCConn.GetAnalogInput(TrinamicInputs.In_thumbRestDistance);
                     thumbRestDistance = Convert.ToDouble(tResponse.tmcReply.value);
 
+                    // thumbRestDistanceSum += thumbRestDistance;                                  // sum input readings
+                    // thumbRestDistanceAvg = thumbRestDistanceSum / thumbRestDistanceCount;       // avarage the sum by the amount of time the input was read and summed 
+																															  
                     //thumbRestDistanceSum += thumbRestDistance;                                  // sum input readings
                     //thumbRestDistanceAvg = thumbRestDistanceSum / thumbRestDistanceCount;       // avarage the sum by the amount of time the input was read and summed 
                     //thumbRestDistanceSum *= Convert.ToDouble(thumbRestDistanceFilterSize - 1) / thumbRestDistanceFilterSize;
 
                     thumbRestDistanceAvg = (thumbRestDistance / thumbRestDistanceFilterSize) + (thumbRestDistanceAvg * (thumbRestDistanceFilterSize-1)/ thumbRestDistanceFilterSize);
 
+
+																																													 
+
                     v = thumbRestDistanceAvg * 100 / Values.maxAVAL;                            // convert averaged value to display as percentage
                     this.Invoke((MethodInvoker)delegate { LD_valTb.Text = $"{v,10:0.00}"; });
+
+                    // if (thumbRestDistanceCount < thumbRestDistanceFilterSize)                   // limit the summing by the amount of times dictated nt thumbRestDistanceFilterSize
+                    // {
+                        // thumbRestDistanceCount++;
+                    // }
+                    // else
+                    // {
+                        // thumbRestDistanceSum *= Convert.ToDouble(thumbRestDistanceFilterSize - 1) / thumbRestDistanceFilterSize;
+                    // }
                 }
 
-                tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_linearSpaceBetweenVialsuM);
-                linearSpaceBetweenVialsuM = Convert.ToInt32(tResponse.tmcReply.value);
-                this.Invoke((MethodInvoker)delegate { linearSpaceBetweenVialsuMTB.Text = Convert.ToString(linearSpaceBetweenVialsuM, 10); });
+                    tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_linearSpaceBetweenVialsuM);
+                    linearSpaceBetweenVialsuM = Convert.ToInt32(tResponse.tmcReply.value);
+                    this.Invoke((MethodInvoker)delegate { linearSpaceBetweenVialsuMTB.Text = Convert.ToString(linearSpaceBetweenVialsuM, 10); });
+
+
+																														
+																					  
+																																			 
 
                 tResponse = rTMCConn.GetGAP(MotorsNum.M_HeadRotate, AddressBank.actualPosition);
                 v = Convert.ToDouble(tResponse.tmcReply.value) / StepsPerMM.M_RotateStepsPerDeg;
@@ -429,62 +449,62 @@ namespace SpaceUSB
                 //microLbagToFill = Convert.ToInt32(tResponse.tmcReply.value);
                 //this.Invoke((MethodInvoker)delegate { mLbagToFillTB.Text = $"{Convert.ToDouble(microLbagToFill) / 1000}"; });
 
-                //////dblVial1WithdrawMicroL = Convert.ToDouble(Vial1WithdrawMlTB.Text);
-                //////dblVial2WithdrawMicroL = Convert.ToDouble(Vial2WithdrawMlTB.Text);
-                //////dblVial3WithdrawMicroL = Convert.ToDouble(Vial3WithdrawMlTB.Text);
-                //////dblVial4WithdrawMicroL = Convert.ToDouble(Vial4WithdrawMlTB.Text);
-                //////dblVial5WithdrawMicroL = Convert.ToDouble(Vial5WithdrawMlTB.Text);
-                //////dblVial6WithdrawMicroL = Convert.ToDouble(Vial6WithdrawMlTB.Text);
-                //////dblmLbagToFillTB = dblVial1WithdrawMicroL
-                //////                              + dblVial2WithdrawMicroL
-                //////                              + dblVial3WithdrawMicroL
-                //////                              + dblVial4WithdrawMicroL
-                //////                              + dblVial5WithdrawMicroL
-                //////                              + dblVial6WithdrawMicroL;
+                dblVial1WithdrawMicroL = Convert.ToDouble(Vial1WithdrawMlTB.Text);
+                dblVial2WithdrawMicroL = Convert.ToDouble(Vial2WithdrawMlTB.Text);
+                dblVial3WithdrawMicroL = Convert.ToDouble(Vial3WithdrawMlTB.Text);
+                dblVial4WithdrawMicroL = Convert.ToDouble(Vial4WithdrawMlTB.Text);
+                dblVial5WithdrawMicroL = Convert.ToDouble(Vial5WithdrawMlTB.Text);
+                dblVial6WithdrawMicroL = Convert.ToDouble(Vial6WithdrawMlTB.Text);
+                dblmLbagToFillTB = dblVial1WithdrawMicroL
+                                              + dblVial2WithdrawMicroL
+                                              + dblVial3WithdrawMicroL
+                                              + dblVial4WithdrawMicroL
+                                              + dblVial5WithdrawMicroL
+                                              + dblVial6WithdrawMicroL;
 
-                //this.Invoke((MethodInvoker)delegate { BagSizeMlTB.Text = $"{dblmLbagToFillTB}"; }); //  = $"{dblmLbagToFillTB}"; });
+                this.Invoke((MethodInvoker)delegate { mLbagToFillTB.Text = $"{dblmLbagToFillTB}"; });
 
-                //if (rgfloat.Match(Vial1SizeMlTB.Text).Success)        // floating point number
-                //{
-                //    tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_microLinVial_1);  //GB_197
-                //    Vial1Volume = Convert.ToInt32(Convert.ToDouble(Vial1SizeMlTB.Text) * 1000 + Convert.ToDouble(tResponse.tmcReply.value));
-                //    this.Invoke((MethodInvoker)delegate { mLinVial1TB.Text = $"{Convert.ToDouble(Vial1Volume) / 1000}"; });
-                //}
+                if (rgfloat.Match(Vial1SizeMlTB.Text).Success)        // floating point number
+                {
+                    tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_microLinVial_1);  //GB_197
+                    Vial1Volume = Convert.ToInt32(Convert.ToDouble(Vial1SizeMlTB.Text) * 1000 + Convert.ToDouble(tResponse.tmcReply.value));
+                    this.Invoke((MethodInvoker)delegate { mLinVial1TB.Text = $"{Convert.ToDouble(Vial1Volume) / 1000}"; });
+                }
 
-                //if (rgfloat.Match(Vial2SizeMlTB.Text).Success)        // floating point number
-                //{
-                //    tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_microLinVial_2);  //GB_198
-                //    Vial2Volume = Convert.ToInt32(Convert.ToDouble(Vial2SizeMlTB.Text) * 1000 + Convert.ToDouble(tResponse.tmcReply.value));
-                //    this.Invoke((MethodInvoker)delegate { mLinVial2TB.Text = $"{Convert.ToDouble(Vial2Volume) / 1000}"; });
-                //}
+                if (rgfloat.Match(Vial2SizeMlTB.Text).Success)        // floating point number
+                {
+                    tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_microLinVial_2);  //GB_198
+                    Vial2Volume = Convert.ToInt32(Convert.ToDouble(Vial2SizeMlTB.Text) * 1000 + Convert.ToDouble(tResponse.tmcReply.value));
+                    this.Invoke((MethodInvoker)delegate { mLinVial2TB.Text = $"{Convert.ToDouble(Vial2Volume) / 1000}"; });
+                }
 
-                //if (rgfloat.Match(Vial3SizeMlTB.Text).Success)        // floating point number
-                //{
-                //    tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_microLinVial_3);  //GB_199
-                //    Vial3Volume = Convert.ToInt32(Convert.ToDouble(Vial3SizeMlTB.Text) * 1000 + Convert.ToDouble(tResponse.tmcReply.value));
-                //    this.Invoke((MethodInvoker)delegate { mLinVial3TB.Text = $"{Convert.ToDouble(Vial3Volume) / 1000}"; });
-                //}
+                if (rgfloat.Match(Vial3SizeMlTB.Text).Success)        // floating point number
+                {
+                    tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_microLinVial_3);  //GB_199
+                    Vial3Volume = Convert.ToInt32(Convert.ToDouble(Vial3SizeMlTB.Text) * 1000 + Convert.ToDouble(tResponse.tmcReply.value));
+                    this.Invoke((MethodInvoker)delegate { mLinVial3TB.Text = $"{Convert.ToDouble(Vial3Volume) / 1000}"; });
+                }
 
-                //if (rgfloat.Match(Vial4SizeMlTB.Text).Success)        // floating point number
-                //{
-                //    tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_microLinVial_4);  //GB_200
-                //    Vial4Volume = Convert.ToInt32(Convert.ToDouble(Vial4SizeMlTB.Text) * 1000 + Convert.ToDouble(tResponse.tmcReply.value));
-                //    this.Invoke((MethodInvoker)delegate { mLinVial4TB.Text = $"{Convert.ToDouble(Vial4Volume) / 1000}"; });
-                //}
+                if (rgfloat.Match(Vial4SizeMlTB.Text).Success)        // floating point number
+                {
+                    tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_microLinVial_4);  //GB_200
+                    Vial4Volume = Convert.ToInt32(Convert.ToDouble(Vial4SizeMlTB.Text) * 1000 + Convert.ToDouble(tResponse.tmcReply.value));
+                    this.Invoke((MethodInvoker)delegate { mLinVial4TB.Text = $"{Convert.ToDouble(Vial4Volume) / 1000}"; });
+                }
 
-                //if (rgfloat.Match(Vial5SizeMlTB.Text).Success)        // floating point number
-                //{
-                //    tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_microLinVial_5);  //GB_201
-                //    Vial5Volume = Convert.ToInt32(Convert.ToDouble(Vial5SizeMlTB.Text) * 1000 + Convert.ToDouble(tResponse.tmcReply.value));
-                //    this.Invoke((MethodInvoker)delegate { mLinVial5TB.Text = $"{Convert.ToDouble(Vial5Volume) / 1000}"; });
-                //}
+                if (rgfloat.Match(Vial5SizeMlTB.Text).Success)        // floating point number
+                {
+                    tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_microLinVial_5);  //GB_201
+                    Vial5Volume = Convert.ToInt32(Convert.ToDouble(Vial5SizeMlTB.Text) * 1000 + Convert.ToDouble(tResponse.tmcReply.value));
+                    this.Invoke((MethodInvoker)delegate { mLinVial5TB.Text = $"{Convert.ToDouble(Vial5Volume) / 1000}"; });
+                }
 
-                //if (rgfloat.Match(Vial6SizeMlTB.Text).Success)        // floating point number
-                //{
-                //    tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_microLinVial_6);  //GB_202
-                //    Vial6Volume = Convert.ToInt32(Convert.ToDouble(Vial6SizeMlTB.Text) * 1000 + Convert.ToDouble(tResponse.tmcReply.value));
-                //    this.Invoke((MethodInvoker)delegate { mLinVial6TB.Text = $"{Convert.ToDouble(Vial6Volume) / 1000}"; });
-                //}
+                if (rgfloat.Match(Vial6SizeMlTB.Text).Success)        // floating point number
+                {
+                    tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_microLinVial_6);  //GB_202
+                    Vial6Volume = Convert.ToInt32(Convert.ToDouble(Vial6SizeMlTB.Text) * 1000 + Convert.ToDouble(tResponse.tmcReply.value));
+                    this.Invoke((MethodInvoker)delegate { mLinVial6TB.Text = $"{Convert.ToDouble(Vial6Volume) / 1000}"; });
+                }
 
                 tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_vibrator4done);  //GB_121
                 vibrating4Done = Convert.ToInt32(tResponse.tmcReply.value);
@@ -544,11 +564,11 @@ namespace SpaceUSB
 
                 if (!RunInProcess && (currentTAB == 2 || currentTAB == 5))
                 {
-                    tResponse = rTMCConn.SetOutput(SwitchOutputs.Out_Multiplexer, "1");
-                    Thread.Sleep(100);   // wait 100 ms for the FUNC to finish
+                    // tResponse = rTMCConn.SetOutput(SwitchOutputs.Out_Multiplexer, "1");
+                    // Thread.Sleep(100);   // wait 100 ms for the FUNC to finish
 
                     tResponse = rTMCConn.RunCommand(GeneralFunctions.screenAllVials);    // function 36
-                    //Thread.Sleep(100);   // wait 100 ms for the program to finish to switch and thread sleep
+                    Thread.Sleep(100);   // wait 100 ms for the program to finish to switch and thread sleep
 
                     //// calculate if syrige was replaced
                     //if (syringeInPlaceTB.Text == $"SYRINGE IN")                // syringe is in?
@@ -694,8 +714,9 @@ namespace SpaceUSB
                       $"An Error occured in the robot:\r" +
                       $"==========================\r\r" +
                       $"\t machine was aborted \r\r" +
-                      $"\t 1- run HOME  \r" +
+                      $"\t run HOME  \r" +
                       $"========================== \r"
+                      // $"\t 2- click RUN \r"
                     );
                 }
                 else
@@ -710,7 +731,7 @@ namespace SpaceUSB
                       $"\tvolume Exceeds Bag size =\t      4\r" +
                       $"\tsyringe Is In =\t      8\r" +
                       $"\tsyringe Missing =\t      16\r" +
-                      //$"\tmachine Aborted =\t      32\r" +
+                      $"\tmachine Aborted =\t      32\r" +
                       $"_______________________ \r"
                     );
                 }
@@ -915,7 +936,7 @@ namespace SpaceUSB
         {
             int i;
             string strWithdraw;
-            //string vialSize;
+            string vialSize;
             string fileName;
             string fillSize;
             Control dd = new Control();
@@ -945,25 +966,26 @@ namespace SpaceUSB
                            + "\n start Date: " + runDay
                            + "\n user: " + username + "\n\n"
                            + "==============================\n"
-                           //+ "  Bag Size    Bag Volume [mL] \n"
-                           + "  Bag Size [mL] \n"
-//                           + $"   {BagSizeMlTB.Text:10} {mLinBagTB.Text,24} \n\n"
-                           + $"   {BagSizeMlTB.Text:10} \n\n"
-                           //+ "  Vial#   Vial size  volume [mL] \n"
+                           + "  Bag Size    Bag Volume [mL] \n"
+												 
+                           + $"   {BagSizeMlTB.Text:10} {mLinBagTB.Text,24} \n\n"
+															 
+                           + "  Vial#   Vial size  volume [mL] \n"
                            + "==============================\n\n";
             File.WriteAllText(fileName, toWrite);
-            //this.Invoke((MethodInvoker)delegate { mLinBagTB.Text = ""; });
+            this.Invoke((MethodInvoker)delegate { mLinBagTB.Text = ""; });
 
             for (i = 1; i <= 6; i++)                                // go over 18 bottles
             {
-                //vialSize = $"Vial{i:D1}SizeMlTB";                           // 1 2 3 volume column
-                //foreach (Control d in RunParametersTLP.Controls)
-                //{
-                //    if (d is TextBox && string.Equals(vialSize, d.Name))
-                //    {
-                //        dd = d;
-                //    }
-                //}
+                vialSize = $"Vial{i:D1}SizeMlTB";                           // 1 2 3 volume column
+                foreach (Control d in RunParametersTLP.Controls)
+                {
+                    if (d is TextBox && string.Equals(vialSize, d.Name))
+                    {
+                        dd = d;
+                    }
+                }
+				   
                 strWithdraw = $"Vial{i:D1}WithdrawMlTB";                           // 1 2 3 volume column
                 foreach (Control f in RunParametersTLP.Controls)
                 {
@@ -995,7 +1017,7 @@ namespace SpaceUSB
         // =========================
         private void SaveBtn_Click(object sender, EventArgs e)
         {
-            //string vialSize;
+            string vialSize;
             string strWithdraw;
             string fillSize;
             string fileNameLast = setupPath + lastSetupName;
@@ -1024,21 +1046,21 @@ namespace SpaceUSB
 
             for (i = 1; i <= 6; i++)                                // go over 18 bottles
             {
-                //vialSize = $"Vial{i:D1}SizeMlTB";                           // 1 2 3 volume column
+                vialSize = $"Vial{i:D1}SizeMlTB";                           // 1 2 3 volume column
                 strWithdraw = $"Vial{i:D1}WithdrawMlTB";                           // 1 2 3 volume column
                 fillSize = $"Vial{i:D1}FillMlTB";
                 foreach (Control d in RunParametersTLP.Controls)
                 {
-                    //if (d is TextBox && string.Equals(vialSize, d.Name))
-                    //{
-                    //    if (d.Text == "")
-                    //    {
-                    //        d.Text = "0";
-                    //    }
-                    //    dd = d;
-                    //}
-                    //else if (d is TextBox && string.Equals(strWithdraw, d.Name))
-                    if (d is TextBox && string.Equals(strWithdraw, d.Name))
+                    if (d is TextBox && string.Equals(vialSize, d.Name))
+                    {
+                        if (d.Text == "")
+                        {
+                            d.Text = "0";
+                        }
+                        dd = d;
+                    }
+																				  
+                    else if (d is TextBox && string.Equals(strWithdraw, d.Name))
                     {
                         if (d.Text == "")
                         {
@@ -1094,7 +1116,7 @@ namespace SpaceUSB
         private void loadSetupFileCore(string FileToLoad)
         {
             int i;
-            //string vialSize;
+            string vialSize;
             string strWithdraw;
             string fillSize;
             string line;
@@ -1107,7 +1129,7 @@ namespace SpaceUSB
 
             StreamReader sr = new StreamReader(FileToLoad);
 
-            for (i = 0; i < 3; i++)  // wait for first lines
+            for (i = 0; i < 5; i++)  // wait for first lines
             {
                 sr.ReadLine();
             }
@@ -1115,33 +1137,34 @@ namespace SpaceUSB
             // read bag
             line = sr.ReadLine();
 
-            line = sr.ReadLine();
+								 
             result = line.Split(' ');          // BagSize = result[0], BagVolume = result[1]
-            line = sr.ReadLine();
-            result = line.Split(' ');
+								 
+									 
             BagSizeMlTB.Text = result[0];
-            //this.Invoke((MethodInvoker)delegate { BagSizeMlTB.Text = $"{result[0]}"; });
+
             for (i = 0; i < 3; i++)  // wait for vial lines
             {
                 line = sr.ReadLine();
+                result = line.Split(' ');
             }
 
             // read vials
             for (i = 1; i <= 6; i++)
             {
                 line = sr.ReadLine();
-                result = line.Split(' ');          // vial = result[0], Withdraw = result[1], Fill = result[3]
+                result = line.Split(' ');          // vial = result[0], sizeOfVial = result[1], volume -= result[2]
 
-                //vialSize = $"Vial{i:D1}SizeMlTB";                              // 1 2 3 volume column
+                vialSize = $"Vial{i:D1}SizeMlTB";                              // 1 2 3 volume column
                 strWithdraw = $"Vial{i:D1}WithdrawMlTB";                         // 1 2 3 volume column
                 fillSize = $"Vial{i:D1}FillMlTB";
                 // now insert into table
                 foreach (Control c in RunParametersTLP.Controls)              // find the next ADD
                 {
-                    //if (c is TextBox && string.Equals(vialSize, c.Name))       // is volume?
-                    //{
-                    //    c.Text = result[1];
-                    //}
+                    if (c is TextBox && string.Equals(vialSize, c.Name))       // is volume?
+                    {
+                        c.Text = result[1];
+                    }
                     if (c is TextBox && string.Equals(strWithdraw, c.Name))    // is volume?
                     {
                         c.Text = result[2];
@@ -1149,7 +1172,7 @@ namespace SpaceUSB
                     if (c is TextBox && string.Equals(fillSize, c.Name))    // is volume?
                     {
                         c.Text = result[3];
-                        //c.Text = result[4];
+											 
                     }
                 }
             }
@@ -1179,14 +1202,14 @@ namespace SpaceUSB
         private void RunBtn_Click(object sender, EventArgs e)    // clicking run will start a thread for run
                                                                  // =========================================
         {
-            //string BagSizeMicroL;
+            string BagSizeMicroL;
 
-            //string Vial1SizeMicroL;
-            //string Vial2SizeMicroL;
-            //string Vial3SizeMicroL;
-            //string Vial4SizeMicroL;
-            //string Vial5SizeMicroL;
-            //string Vial6SizeMicroL;
+            string Vial1SizeMicroL;
+            string Vial2SizeMicroL;
+            string Vial3SizeMicroL;
+            string Vial4SizeMicroL;
+            string Vial5SizeMicroL;
+            string Vial6SizeMicroL;
 
             string Vial4FillMicroL;
             string Vial5FillMicroL;
@@ -1206,18 +1229,18 @@ namespace SpaceUSB
             int intVial5WithdrawMicroL;
             int intVial6WithdrawMicroL;
 
-            //int uLinVial1;
-            //int uLinVial2;
-            //int uLinVial3;
-            //int uLinVial4;
-            //int uLinVial5;
-            //int uLinVial6;
+            int uLinVial1;
+            int uLinVial2;
+            int uLinVial3;
+            int uLinVial4;
+            int uLinVial5;
+            int uLinVial6;
 
-            //if (BagSizeMlTB.Text == "0")
-            //{
-            //    logAndShow("Bag size cannot be 0");
-            //    return;
-            //}
+            if (BagSizeMlTB.Text == "0")
+            {
+                logAndShow("Bag size cannot be 0");
+                return;
+            }
 
             if (rTMCConn == null || !rTMCConn.TrinamicOK)
             {
@@ -1230,25 +1253,25 @@ namespace SpaceUSB
                 return;
             }
 
-            //BagSizeMicroL = Convert.ToString(Convert.ToInt32(Convert.ToDouble(BagSizeMlTB.Text) * 1000));
+            BagSizeMicroL = Convert.ToString(Convert.ToInt32(Convert.ToDouble(BagSizeMlTB.Text) * 1000));
 
-            //Vial1SizeMicroL = Convert.ToString(Convert.ToInt32(Convert.ToDouble(Vial1SizeMlTB.Text) * 1000));
-            //Vial2SizeMicroL = Convert.ToString(Convert.ToInt32(Convert.ToDouble(Vial2SizeMlTB.Text) * 1000));
-            //Vial3SizeMicroL = Convert.ToString(Convert.ToInt32(Convert.ToDouble(Vial3SizeMlTB.Text) * 1000));
-            //Vial4SizeMicroL = Convert.ToString(Convert.ToInt32(Convert.ToDouble(Vial4SizeMlTB.Text) * 1000));
-            //Vial5SizeMicroL = Convert.ToString(Convert.ToInt32(Convert.ToDouble(Vial5SizeMlTB.Text) * 1000));
-            //Vial6SizeMicroL = Convert.ToString(Convert.ToInt32(Convert.ToDouble(Vial6SizeMlTB.Text) * 1000));
+            Vial1SizeMicroL = Convert.ToString(Convert.ToInt32(Convert.ToDouble(Vial1SizeMlTB.Text) * 1000));
+            Vial2SizeMicroL = Convert.ToString(Convert.ToInt32(Convert.ToDouble(Vial2SizeMlTB.Text) * 1000));
+            Vial3SizeMicroL = Convert.ToString(Convert.ToInt32(Convert.ToDouble(Vial3SizeMlTB.Text) * 1000));
+            Vial4SizeMicroL = Convert.ToString(Convert.ToInt32(Convert.ToDouble(Vial4SizeMlTB.Text) * 1000));
+            Vial5SizeMicroL = Convert.ToString(Convert.ToInt32(Convert.ToDouble(Vial5SizeMlTB.Text) * 1000));
+            Vial6SizeMicroL = Convert.ToString(Convert.ToInt32(Convert.ToDouble(Vial6SizeMlTB.Text) * 1000));
 
             Vial4FillMicroL = Convert.ToString(Convert.ToInt32(Convert.ToDouble(Vial4FillMlTB.Text) * 1000));
             Vial5FillMicroL = Convert.ToString(Convert.ToInt32(Convert.ToDouble(Vial5FillMlTB.Text) * 1000));
             Vial6FillMicroL = Convert.ToString(Convert.ToInt32(Convert.ToDouble(Vial6FillMlTB.Text) * 1000));
 
-            //uLinVial1 = Convert.ToInt32(Convert.ToDouble(mLinVial1TB.Text) * 1000);
-            //uLinVial2 = Convert.ToInt32(Convert.ToDouble(mLinVial2TB.Text) * 1000);
-            //uLinVial3 = Convert.ToInt32(Convert.ToDouble(mLinVial3TB.Text) * 1000);
-            //uLinVial4 = Convert.ToInt32(Convert.ToDouble(mLinVial4TB.Text) * 1000);
-            //uLinVial5 = Convert.ToInt32(Convert.ToDouble(mLinVial5TB.Text) * 1000);
-            //uLinVial6 = Convert.ToInt32(Convert.ToDouble(mLinVial6TB.Text) * 1000);
+            uLinVial1 = Convert.ToInt32(Convert.ToDouble(mLinVial1TB.Text) * 1000);
+            uLinVial2 = Convert.ToInt32(Convert.ToDouble(mLinVial2TB.Text) * 1000);
+            uLinVial3 = Convert.ToInt32(Convert.ToDouble(mLinVial3TB.Text) * 1000);
+            uLinVial4 = Convert.ToInt32(Convert.ToDouble(mLinVial4TB.Text) * 1000);
+            uLinVial5 = Convert.ToInt32(Convert.ToDouble(mLinVial5TB.Text) * 1000);
+            uLinVial6 = Convert.ToInt32(Convert.ToDouble(mLinVial6TB.Text) * 1000);
 
             intVial1WithdrawMicroL = Convert.ToInt32(Convert.ToDouble(Vial1WithdrawMlTB.Text) * 1000);
             intVial2WithdrawMicroL = Convert.ToInt32(Convert.ToDouble(Vial2WithdrawMlTB.Text) * 1000);
@@ -1258,41 +1281,41 @@ namespace SpaceUSB
             intVial6WithdrawMicroL = Convert.ToInt32(Convert.ToDouble(Vial6WithdrawMlTB.Text) * 1000);
 
 
-            //if (uLinVial1 < intVial1WithdrawMicroL)
-            //{
-            //    logAndShow("The request to withdraw is more than the volume left in Vial 1 ");
-            //    return;
-            //}
+            if (uLinVial1 < intVial1WithdrawMicroL)
+            {
+                logAndShow("The request to withdraw is more than the volume left in Vial 1 ");
+                return;
+            }
 
-            //if (uLinVial2 < intVial2WithdrawMicroL)
-            //{
-            //    logAndShow("The request to withdraw is more than the volume left in Vial 2 ");
-            //    return;
-            //}
+            if (uLinVial2 < intVial2WithdrawMicroL)
+            {
+                logAndShow("The request to withdraw is more than the volume left in Vial 2 ");
+                return;
+            }
 
-            //if (uLinVial3 < intVial3WithdrawMicroL)
-            //{
-            //    logAndShow("The request to withdraw is more than the volume left in Vial 3 ");
-            //    return;
-            //}
+            if (uLinVial3 < intVial3WithdrawMicroL)
+            {
+                logAndShow("The request to withdraw is more than the volume left in Vial 3 ");
+                return;
+            }
 
-            //if (uLinVial4 < intVial4WithdrawMicroL)
-            //{
-            //    logAndShow("The request to withdraw is more than the volume left in Vial 4 ");
-            //    return;
-            //}
+            if (uLinVial4 < intVial4WithdrawMicroL)
+            {
+                logAndShow("The request to withdraw is more than the volume left in Vial 4 ");
+                return;
+            }
 
-            //if (uLinVial5 < intVial5WithdrawMicroL)
-            //{
-            //    logAndShow("The request to withdraw is more than the volume left in Vial 5 ");
-            //    return;
-            //}
+            if (uLinVial5 < intVial5WithdrawMicroL)
+            {
+                logAndShow("The request to withdraw is more than the volume left in Vial 5 ");
+                return;
+            }
 
-            //if (uLinVial6 < intVial6WithdrawMicroL)
-            //{
-            //    logAndShow("The request to withdraw is more than the volume left in Vial 6 ");
-            //    return;
-            //}
+            if (uLinVial6 < intVial6WithdrawMicroL)
+            {
+                logAndShow("The request to withdraw is more than the volume left in Vial 6 ");
+                return;
+            }
 
             // open run file
 
@@ -1313,53 +1336,53 @@ namespace SpaceUSB
 
             // check if "asVialSize", if yes, copy vial size //** "asVialSize" is not in use any more **//
 
-            //if (Vial1WithdrawMlTB.Text == asVialSize)
-            //{
-            //    Vial1WithdrawMicroL = Vial1SizeMicroL;
-            //    Vial1WithdrawMlTB.Text = Vial1SizeMlTB.Text;
-            //}
-            //else
-            { Vial1WithdrawMicroL = Convert.ToString(intVial1WithdrawMicroL); }
+            if (Vial1WithdrawMlTB.Text == asVialSize)
+            {
+                Vial1WithdrawMicroL = Vial1SizeMicroL;
+                Vial1WithdrawMlTB.Text = Vial1SizeMlTB.Text;
+            }
+				  
+            else { Vial1WithdrawMicroL = Convert.ToString(intVial1WithdrawMicroL); }
 
-            //if (Vial2WithdrawMlTB.Text == asVialSize)
-            //{
-            //    Vial2WithdrawMicroL = Vial2SizeMicroL;
-            //    Vial2WithdrawMlTB.Text = Vial2SizeMlTB.Text;
-            //}
-            //else 
-            { Vial2WithdrawMicroL = Convert.ToString(intVial2WithdrawMicroL); }
+            if (Vial2WithdrawMlTB.Text == asVialSize)
+            {
+                Vial2WithdrawMicroL = Vial2SizeMicroL;
+                Vial2WithdrawMlTB.Text = Vial2SizeMlTB.Text;
+            }
+				   
+            else { Vial2WithdrawMicroL = Convert.ToString(intVial2WithdrawMicroL); }
 
-            //if (Vial3WithdrawMlTB.Text == asVialSize)
-            //{
-            //    Vial3WithdrawMicroL = Vial3SizeMicroL;
-            //    Vial3WithdrawMlTB.Text = Vial3SizeMlTB.Text;
-            //}
-            //else 
-            { Vial3WithdrawMicroL = Convert.ToString(intVial3WithdrawMicroL); }
+            if (Vial3WithdrawMlTB.Text == asVialSize)
+            {
+                Vial3WithdrawMicroL = Vial3SizeMicroL;
+                Vial3WithdrawMlTB.Text = Vial3SizeMlTB.Text;
+            }
+				   
+            else { Vial3WithdrawMicroL = Convert.ToString(intVial3WithdrawMicroL); }
 
-            //if (Vial4WithdrawMlTB.Text == asVialSize)
-            //{
-            //    Vial4WithdrawMicroL = Vial4SizeMicroL;
-            //    Vial4WithdrawMlTB.Text = Vial4SizeMlTB.Text;
-            //}
-            //else 
-            { Vial4WithdrawMicroL = Convert.ToString(intVial4WithdrawMicroL); }
+            if (Vial4WithdrawMlTB.Text == asVialSize)
+            {
+                Vial4WithdrawMicroL = Vial4SizeMicroL;
+                Vial4WithdrawMlTB.Text = Vial4SizeMlTB.Text;
+            }
+				   
+            else { Vial4WithdrawMicroL = Convert.ToString(intVial4WithdrawMicroL); }
 
-            //if (Vial5WithdrawMlTB.Text == asVialSize)
-            //{
-            //    Vial5WithdrawMicroL = Vial5SizeMicroL;
-            //    Vial5WithdrawMlTB.Text = Vial5SizeMlTB.Text;
-            //}
-            //else 
-            { Vial5WithdrawMicroL = Convert.ToString(intVial5WithdrawMicroL); }
+            if (Vial5WithdrawMlTB.Text == asVialSize)
+            {
+                Vial5WithdrawMicroL = Vial5SizeMicroL;
+                Vial5WithdrawMlTB.Text = Vial5SizeMlTB.Text;
+            }
+				   
+            else { Vial5WithdrawMicroL = Convert.ToString(intVial5WithdrawMicroL); }
 
-            //if (Vial6WithdrawMlTB.Text == asVialSize)
-            //{
-            //    Vial6WithdrawMicroL = Vial6SizeMicroL;
-            //    Vial6WithdrawMlTB.Text = Vial6SizeMlTB.Text;
-            //}
-            //else 
-            { Vial6WithdrawMicroL = Convert.ToString(intVial6WithdrawMicroL); }
+            if (Vial6WithdrawMlTB.Text == asVialSize)
+            {
+                Vial6WithdrawMicroL = Vial6SizeMicroL;
+                Vial6WithdrawMlTB.Text = Vial6SizeMlTB.Text;
+            }
+				   
+            else { Vial6WithdrawMicroL = Convert.ToString(intVial6WithdrawMicroL); }
 
             //  ************ send RUN parameters to board *******************
 
@@ -4287,26 +4310,26 @@ namespace SpaceUSB
 
         private void ClrAllBtn_Click(object sender, EventArgs e)
         {
-            //string vialSize;
+            string vialSize;
             string strWithdraw;
             string fillSize;
             uint i;
 
             for (i = 1; i <= 6; i++)                                // go over 18 bottles
             {
-                //vialSize = $"Vial{i:D1}SizeMlTB";                           // 1 2 3 volume column
+                vialSize = $"Vial{i:D1}SizeMlTB";                           // 1 2 3 volume column
                 strWithdraw = $"Vial{i:D1}WithdrawMlTB";                     // 1 2 3 volume column
                 fillSize = $"Vial{i:D1}FillMlTB";
                 foreach (Control d in RunParametersTLP.Controls)
                 {
-                    //if (d is TextBox && string.Equals(vialSize, d.Name))
-                    //{
-                    //    d.Text = $"0";
-                    //}
-                    //else if (d is TextBox && string.Equals(strWithdraw, d.Name))
-                    if (d is TextBox && string.Equals(strWithdraw, d.Name))
+                    if (d is TextBox && string.Equals(vialSize, d.Name))
                     {
-                        d.Text = "0";    
+                        d.Text = $"0";
+                    }
+                    else if (d is TextBox && string.Equals(strWithdraw, d.Name))
+																		   
+                    {
+                        d.Text = "0";    // asVialSize;
                     }
                     else if (d is TextBox && string.Equals(fillSize, d.Name))
                     {
@@ -4327,7 +4350,7 @@ namespace SpaceUSB
             //tResponse = rTMCConn.SetSGP(AddressBank.GetParameterBank, SystemVariables.GB_microLinVial_6, "0");   //GB_202
 
             //tResponse = rTMCConn.SetSGP(AddressBank.GetParameterBank, SystemVariables.GB_microLinBAG, "0");   //GB_99
-            //BagSizeMlTB.Text = "0";
+            BagSizeMlTB.Text = "0";
         }
 
         private void refreshBtn_Click(object sender, EventArgs e)
@@ -4341,22 +4364,22 @@ namespace SpaceUSB
 
         private void ejectSyringeTopBtn_Click(object sender, EventArgs e)
         {
-            //goDistanceTB.Text = "70";
-            //setManualDistance();
-            //VerticalGoDown();
+            goDistanceTB.Text = "70";
+            setManualDistance();
+            VerticalGoDown();
 
-            tResponse = rTMCConn.RunCommand(GeneralFunctions.ejectSyringeFromTopVial);
-            tstringToRUNtest();
+            //tResponse = rTMCConn.RunCommand(GeneralFunctions.ejectSyringeFromTopVial);
+            //tstringToRUNtest();
         }
 
         private void ejectSyingeBottomBtn_Click(object sender, EventArgs e)
         {
-            //goDistanceTB.Text = "70";
-            //setManualDistance();
-            //VerticalGoUp();
+            goDistanceTB.Text = "70";
+            setManualDistance();
+            VerticalGoUp();
 
-            tResponse = rTMCConn.RunCommand(GeneralFunctions.ejectSyringeFromBottomVial);
-            tstringToRUNtest();
+            //tResponse = rTMCConn.RunCommand(GeneralFunctions.ejectSyringeFromBottomVial);
+            //tstringToRUNtest();
         }
 
         // *****************************************************************************
