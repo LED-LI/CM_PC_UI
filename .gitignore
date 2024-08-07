@@ -6,3 +6,12 @@
 
 /CM PC/obj
 /CM PC/bin
+CM installer/Debug/CM installer.msi
+CM PC/.vs/CM PC UI/v17/.suo
+CM PC/.vs/CM PC UI/v17/DocumentLayout.json
+CM PC/bin/Debug/CM UI.exe
+CM PC/bin/Debug/CM UI.pdb
+CM PC/obj/Debug/CM PC UI.csproj.FileListAbsolute.txt
+CM PC/obj/Debug/CM PC UI.csproj.GenerateResource.cache
+CM PC/obj/Debug/CM UI.exe
+CM PC/obj/Debug/CM UI.pdb
