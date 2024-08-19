@@ -4405,5 +4405,38 @@ namespace SpaceUSB
         // =============================================================
     }
 }
+/*
 
+3 references
+public partial class Form1 : Form
+
+int txtHeight;
+float txtFontSize;
+1 reference
+public Form1()
+
+InitializeComponent();
+
+txtHeight = textBox1.Size. Height;
+txtFontSize = textBox1.Font.Size;
+textBox1. Text = "Hey Dude! !";
+label1. Text = "What's up ?? ";
+
+I
+
+ 
+ 1 reference
+private void textBox1_SizeChanged(object sender, EventArgs e)
+
+float heightMult = Convert. ToInt32(textBox1.Size.Height / txtHeight);
+
+if (heightMult < 1.0)
+
+heightMult = 1.0F;
+
+textBox1. Font = new Font(textBox1.Font. FontFamily, heightMult * txtFontSize);
+label1.Font = new Font(label1.Font.FontFamily, heightMult * txtFontSize);
+
+}
+ */
 
