@@ -270,7 +270,11 @@
             this.setDockHeightTB = new System.Windows.Forms.TextBox();
             this.setDockHeightBtn = new System.Windows.Forms.Button();
             this.panel30 = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel10 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.oopsBumpPosVertBtn = new System.Windows.Forms.Button();
+            this.label87 = new System.Windows.Forms.Label();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.GoToBumpPosVertBtn = new System.Windows.Forms.Button();
             this.setBumpPosVertBtn = new System.Windows.Forms.Button();
             this.setBumpPosVertTB = new System.Windows.Forms.TextBox();
@@ -387,8 +391,6 @@
             this.label78 = new System.Windows.Forms.Label();
             this.runInProcessTB = new System.Windows.Forms.TextBox();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.label87 = new System.Windows.Forms.Label();
-            this.linearSpaceBetweenVialsuMTB = new System.Windows.Forms.TextBox();
             this.panel38 = new System.Windows.Forms.Panel();
             this.skipbagRB = new System.Windows.Forms.RadioButton();
             this.dontskipbagRB = new System.Windows.Forms.RadioButton();
@@ -539,6 +541,9 @@
             this.panel8.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel30.SuspendLayout();
+            this.tableLayoutPanel10.SuspendLayout();
+            this.tableLayoutPanel4.SuspendLayout();
+            this.tableLayoutPanel3.SuspendLayout();
             this.panel39.SuspendLayout();
             this.panel9.SuspendLayout();
             this.panel45.SuspendLayout();
@@ -3899,34 +3904,98 @@
             // 
             // panel30
             // 
-            this.panel30.Controls.Add(this.oopsBumpPosVertBtn);
-            this.panel30.Controls.Add(this.GoToBumpPosVertBtn);
-            this.panel30.Controls.Add(this.setBumpPosVertBtn);
-            this.panel30.Controls.Add(this.setBumpPosVertTB);
+            this.panel30.Controls.Add(this.tableLayoutPanel10);
             this.panel30.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel30.Location = new System.Drawing.Point(30, 724);
             this.panel30.Name = "panel30";
             this.panel30.Size = new System.Drawing.Size(337, 104);
             this.panel30.TabIndex = 67;
             // 
+            // tableLayoutPanel10
+            // 
+            this.tableLayoutPanel10.AutoSize = true;
+            this.tableLayoutPanel10.ColumnCount = 1;
+            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel10.Controls.Add(this.tableLayoutPanel4, 0, 0);
+            this.tableLayoutPanel10.Controls.Add(this.tableLayoutPanel3, 0, 1);
+            this.tableLayoutPanel10.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel10.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel10.Name = "tableLayoutPanel10";
+            this.tableLayoutPanel10.RowCount = 2;
+            this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel10.Size = new System.Drawing.Size(337, 104);
+            this.tableLayoutPanel10.TabIndex = 94;
+            // 
+            // tableLayoutPanel4
+            // 
+            this.tableLayoutPanel4.AutoSize = true;
+            this.tableLayoutPanel4.ColumnCount = 2;
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 85F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
+            this.tableLayoutPanel4.Controls.Add(this.oopsBumpPosVertBtn, 1, 0);
+            this.tableLayoutPanel4.Controls.Add(this.label87, 0, 0);
+            this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
+            this.tableLayoutPanel4.RowCount = 1;
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(331, 35);
+            this.tableLayoutPanel4.TabIndex = 95;
+            // 
             // oopsBumpPosVertBtn
             // 
+            this.oopsBumpPosVertBtn.AutoSize = true;
             this.oopsBumpPosVertBtn.BackgroundImage = global::CMNameSpace.Properties.Resources.arrow_CCW;
             this.oopsBumpPosVertBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.oopsBumpPosVertBtn.Location = new System.Drawing.Point(213, 4);
+            this.oopsBumpPosVertBtn.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.oopsBumpPosVertBtn.Location = new System.Drawing.Point(284, 3);
             this.oopsBumpPosVertBtn.Name = "oopsBumpPosVertBtn";
-            this.oopsBumpPosVertBtn.Size = new System.Drawing.Size(26, 25);
+            this.oopsBumpPosVertBtn.Size = new System.Drawing.Size(44, 29);
             this.oopsBumpPosVertBtn.TabIndex = 86;
             this.oopsBumpPosVertBtn.UseVisualStyleBackColor = true;
             this.oopsBumpPosVertBtn.Click += new System.EventHandler(this.oopsBumpPosVertBtn_Click);
             // 
+            // label87
+            // 
+            this.label87.AutoSize = true;
+            this.label87.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.label87.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label87.Enabled = false;
+            this.label87.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.label87.Location = new System.Drawing.Point(0, 0);
+            this.label87.Margin = new System.Windows.Forms.Padding(0);
+            this.label87.Name = "label87";
+            this.label87.Size = new System.Drawing.Size(281, 35);
+            this.label87.TabIndex = 82;
+            this.label87.Text = "Bump Vial 1 Top";
+            // 
+            // tableLayoutPanel3
+            // 
+            this.tableLayoutPanel3.AutoSize = true;
+            this.tableLayoutPanel3.ColumnCount = 3;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 45F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 19F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 36F));
+            this.tableLayoutPanel3.Controls.Add(this.GoToBumpPosVertBtn, 0, 0);
+            this.tableLayoutPanel3.Controls.Add(this.setBumpPosVertBtn, 1, 0);
+            this.tableLayoutPanel3.Controls.Add(this.setBumpPosVertTB, 2, 0);
+            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 44);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.RowCount = 1;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(331, 57);
+            this.tableLayoutPanel3.TabIndex = 94;
+            // 
             // GoToBumpPosVertBtn
             // 
-            this.GoToBumpPosVertBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.GoToBumpPosVertBtn.AutoSize = true;
             this.GoToBumpPosVertBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.GoToBumpPosVertBtn.Location = new System.Drawing.Point(3, 71);
+            this.GoToBumpPosVertBtn.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.GoToBumpPosVertBtn.Location = new System.Drawing.Point(3, 3);
             this.GoToBumpPosVertBtn.Name = "GoToBumpPosVertBtn";
-            this.GoToBumpPosVertBtn.Size = new System.Drawing.Size(58, 30);
+            this.GoToBumpPosVertBtn.Size = new System.Drawing.Size(142, 51);
             this.GoToBumpPosVertBtn.TabIndex = 84;
             this.GoToBumpPosVertBtn.Text = "GOTO";
             this.GoToBumpPosVertBtn.UseVisualStyleBackColor = false;
@@ -3934,22 +4003,25 @@
             // 
             // setBumpPosVertBtn
             // 
-            this.setBumpPosVertBtn.Location = new System.Drawing.Point(3, 3);
+            this.setBumpPosVertBtn.AutoSize = true;
+            this.setBumpPosVertBtn.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.setBumpPosVertBtn.Location = new System.Drawing.Point(149, 1);
+            this.setBumpPosVertBtn.Margin = new System.Windows.Forms.Padding(1);
             this.setBumpPosVertBtn.Name = "setBumpPosVertBtn";
-            this.setBumpPosVertBtn.Size = new System.Drawing.Size(204, 56);
+            this.setBumpPosVertBtn.Size = new System.Drawing.Size(60, 55);
             this.setBumpPosVertBtn.TabIndex = 79;
-            this.setBumpPosVertBtn.Text = "set Needle Bump Vial 1 at Top";
+            this.setBumpPosVertBtn.Text = "set";
             this.setBumpPosVertBtn.UseVisualStyleBackColor = true;
             this.setBumpPosVertBtn.Click += new System.EventHandler(this.setBumpPosVertBtn_Click);
             // 
             // setBumpPosVertTB
             // 
-            this.setBumpPosVertTB.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.setBumpPosVertTB.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.setBumpPosVertTB.BackColor = System.Drawing.SystemColors.MenuBar;
             this.setBumpPosVertTB.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.setBumpPosVertTB.Location = new System.Drawing.Point(236, 67);
+            this.setBumpPosVertTB.Location = new System.Drawing.Point(213, 11);
             this.setBumpPosVertTB.Name = "setBumpPosVertTB";
-            this.setBumpPosVertTB.Size = new System.Drawing.Size(98, 34);
+            this.setBumpPosVertTB.Size = new System.Drawing.Size(115, 34);
             this.setBumpPosVertTB.TabIndex = 66;
             this.setBumpPosVertTB.Text = "0";
             this.setBumpPosVertTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -5280,8 +5352,6 @@
             // groupBox6
             // 
             this.setupTLP.SetColumnSpan(this.groupBox6, 3);
-            this.groupBox6.Controls.Add(this.label87);
-            this.groupBox6.Controls.Add(this.linearSpaceBetweenVialsuMTB);
             this.groupBox6.Controls.Add(this.panel38);
             this.groupBox6.Controls.Add(this.panel37);
             this.groupBox6.Controls.Add(this.panel32);
@@ -5303,26 +5373,6 @@
             this.groupBox6.TabIndex = 63;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "for test";
-            // 
-            // label87
-            // 
-            this.label87.AutoSize = true;
-            this.label87.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label87.Location = new System.Drawing.Point(802, 121);
-            this.label87.Name = "label87";
-            this.label87.Size = new System.Drawing.Size(288, 30);
-            this.label87.TabIndex = 88;
-            this.label87.Text = "linear Space Between Vials [uM]";
-            // 
-            // linearSpaceBetweenVialsuMTB
-            // 
-            this.linearSpaceBetweenVialsuMTB.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.linearSpaceBetweenVialsuMTB.Location = new System.Drawing.Point(1096, 117);
-            this.linearSpaceBetweenVialsuMTB.Name = "linearSpaceBetweenVialsuMTB";
-            this.linearSpaceBetweenVialsuMTB.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.linearSpaceBetweenVialsuMTB.Size = new System.Drawing.Size(120, 34);
-            this.linearSpaceBetweenVialsuMTB.TabIndex = 89;
-            this.linearSpaceBetweenVialsuMTB.TextChanged += new System.EventHandler(this.linearSpaceBetweenVialsuMTB_TextChanged);
             // 
             // panel38
             // 
@@ -6487,6 +6537,12 @@
             this.panel3.PerformLayout();
             this.panel30.ResumeLayout(false);
             this.panel30.PerformLayout();
+            this.tableLayoutPanel10.ResumeLayout(false);
+            this.tableLayoutPanel10.PerformLayout();
+            this.tableLayoutPanel4.ResumeLayout(false);
+            this.tableLayoutPanel4.PerformLayout();
+            this.tableLayoutPanel3.ResumeLayout(false);
+            this.tableLayoutPanel3.PerformLayout();
             this.panel39.ResumeLayout(false);
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
@@ -7010,7 +7066,11 @@
         private System.Windows.Forms.TextBox setVial4BottomTB;
         private System.Windows.Forms.Button setVial4BottomBtn;
         private System.Windows.Forms.Label label87;
-        private System.Windows.Forms.TextBox linearSpaceBetweenVialsuMTB;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel10;
+        //private System.Windows.Forms.Label label87;
+        //private System.Windows.Forms.TextBox linearSpaceBetweenVialsuMTB;
     }
 }
 

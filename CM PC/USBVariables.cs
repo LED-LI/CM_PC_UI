@@ -257,11 +257,13 @@ namespace SpaceUSB
         public const string GB_62 = "62";
         public const string GB_63 = "63";
         public const string GB_64 = "64";
+        public const string GB_65 = "65";
 
-        public const string GB_currentVialLinearLocation = "65";
+        //public const string GB_currentVialLinearLocation = "65";
         public const string GB_LinearCenterOfBag = "66";
-        public const string GB_linearSpaceBetweenVialsuS = "67";
+        //public const string GB_linearSpaceBetweenVialsuS = "67";
 
+        public const string GB_67 = "67";
         public const string GB_68 = "68";
         public const string GB_69 = "69";
 

@@ -21,7 +21,7 @@ namespace SpaceUSB
     {
         //  all the following directories will be under the base directory:
 
-        public string pcCode = "2024-07-24";
+        public string pcCode = "2024-08-18";
 
         public string cmPath = "C:\\cmRUN\\";    // base directory. can be changed by the user
         public string logPath = "logfiles\\";
@@ -295,9 +295,9 @@ namespace SpaceUSB
                     // }
                 }
 
-                    tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_linearSpaceBetweenVialsuM);
-                    linearSpaceBetweenVialsuM = Convert.ToInt32(tResponse.tmcReply.value);
-                    this.Invoke((MethodInvoker)delegate { linearSpaceBetweenVialsuMTB.Text = Convert.ToString(linearSpaceBetweenVialsuM, 10); });
+                    //tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_linearSpaceBetweenVialsuM);
+                    //linearSpaceBetweenVialsuM = Convert.ToInt32(tResponse.tmcReply.value);
+                    //this.Invoke((MethodInvoker)delegate { linearSpaceBetweenVialsuMTB.Text = Convert.ToString(linearSpaceBetweenVialsuM, 10); });
 
 
 																														
@@ -449,12 +449,30 @@ namespace SpaceUSB
                 //microLbagToFill = Convert.ToInt32(tResponse.tmcReply.value);
                 //this.Invoke((MethodInvoker)delegate { mLbagToFillTB.Text = $"{Convert.ToDouble(microLbagToFill) / 1000}"; });
 
+                if (!rgNumber.Match(Vial1WithdrawMlTB.Text).Success)
+                    Vial1WithdrawMlTB.Text = "0";
                 dblVial1WithdrawMicroL = Convert.ToDouble(Vial1WithdrawMlTB.Text);
+
+                if (!rgNumber.Match(Vial2WithdrawMlTB.Text).Success)
+                    Vial2WithdrawMlTB.Text = "0";
                 dblVial2WithdrawMicroL = Convert.ToDouble(Vial2WithdrawMlTB.Text);
+
+                if (!rgNumber.Match(Vial3WithdrawMlTB.Text).Success)
+                    Vial3WithdrawMlTB.Text = "0";
                 dblVial3WithdrawMicroL = Convert.ToDouble(Vial3WithdrawMlTB.Text);
+
+                if (!rgNumber.Match(Vial4WithdrawMlTB.Text).Success)
+                    Vial4WithdrawMlTB.Text = "0";
                 dblVial4WithdrawMicroL = Convert.ToDouble(Vial4WithdrawMlTB.Text);
+
+                if (!rgNumber.Match(Vial5WithdrawMlTB.Text).Success)
+                    Vial5WithdrawMlTB.Text = "0";
                 dblVial5WithdrawMicroL = Convert.ToDouble(Vial5WithdrawMlTB.Text);
+
+                if (!rgNumber.Match(Vial6WithdrawMlTB.Text).Success)
+                    Vial6WithdrawMlTB.Text = "0";
                 dblVial6WithdrawMicroL = Convert.ToDouble(Vial6WithdrawMlTB.Text);
+
                 dblmLbagToFillTB = dblVial1WithdrawMicroL
                                               + dblVial2WithdrawMicroL
                                               + dblVial3WithdrawMicroL
@@ -3249,16 +3267,16 @@ namespace SpaceUSB
             LD_acceptedDev = Convert.ToInt32(tResponse.tmcReply.value);
             LD_acceptedDevTB.Text = $"{LD_acceptedDev}";
 
-            if ((LD_minVol != 0) && (LD_maxVol != 0) && (LD_definedVol != 0))
-            {
-                tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_messuredAmountOfLiquid); // GB_18
-                messuredAmountOfLiquid = Convert.ToInt32(tResponse.tmcReply.value);
-                messuredAmountOfLiquidTB.Text = $"{messuredAmountOfLiquid}";
-            }
-            else
-            {
+            //if ((LD_minVol != 0) && (LD_maxVol != 0) && (LD_definedVol != 0))
+            //{
+            //    tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_messuredAmountOfLiquid); // GB_18
+            //    messuredAmountOfLiquid = Convert.ToInt32(tResponse.tmcReply.value);
+            //    messuredAmountOfLiquidTB.Text = $"{messuredAmountOfLiquid}";
+            //}
+            //else
+            //{
                 messuredAmountOfLiquidTB.Text = "syringe data missing";
-            }
+            //}
 
             ////////////////////
 
@@ -4018,16 +4036,16 @@ namespace SpaceUSB
 
         // _____________ linearSpaceBetweenVialsuM _______________________________________________
 
-        private void linearSpaceBetweenVialsuMTB_TextChanged(object sender, EventArgs e)
-        {
-            if (rgNumber.Match(linearSpaceBetweenVialsuMTB.Text).Success)        // did not match, a non number character is there or a negative 
-            {
-                tResponse = rTMCConn.SetSGPandStore(AddressBank.GetParameterBank, SystemVariables.GB_linearSpaceBetweenVialsuM, linearSpaceBetweenVialsuMTB.Text);
+        //private void linearSpaceBetweenVialsuMTB_TextChanged(object sender, EventArgs e)
+        //{
+        //    if (rgNumber.Match(linearSpaceBetweenVialsuMTB.Text).Success)        // did not match, a non number character is there or a negative 
+        //    {
+        //        tResponse = rTMCConn.SetSGPandStore(AddressBank.GetParameterBank, SystemVariables.GB_linearSpaceBetweenVialsuM, linearSpaceBetweenVialsuMTB.Text);
 
-                //linearSpaceBetweenVialsuM = Convert.ToInt32(linearSpaceBetweenVialsuMTB.Text);
+        //        //linearSpaceBetweenVialsuM = Convert.ToInt32(linearSpaceBetweenVialsuMTB.Text);
 
-            }
-        }
+        //    }
+        //}
 
 
 
