@@ -612,7 +612,7 @@
             cmTC.Name = "cmTC";
             cmTC.RightToLeft = System.Windows.Forms.RightToLeft.No;
             cmTC.SelectedIndex = 0;
-            cmTC.Size = new System.Drawing.Size(2823, 1118);
+            cmTC.Size = new System.Drawing.Size(1604, 975);
             cmTC.TabIndex = 1;
             cmTC.TabStop = false;
             cmTC.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cmTC_KeyDown);
@@ -626,7 +626,7 @@
             this.adminTP.Location = new System.Drawing.Point(4, 30);
             this.adminTP.Name = "adminTP";
             this.adminTP.Padding = new System.Windows.Forms.Padding(3);
-            this.adminTP.Size = new System.Drawing.Size(2898, 1124);
+            this.adminTP.Size = new System.Drawing.Size(1596, 941);
             this.adminTP.TabIndex = 3;
             this.adminTP.Text = "USER - ADMIN";
             this.adminTP.Enter += new System.EventHandler(this.adminTP_Enter);
@@ -645,7 +645,7 @@
             this.UserAdminTLP.RowCount = 2;
             this.UserAdminTLP.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 38.96595F));
             this.UserAdminTLP.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 61.03405F));
-            this.UserAdminTLP.Size = new System.Drawing.Size(2888, 1114);
+            this.UserAdminTLP.Size = new System.Drawing.Size(1586, 931);
             this.UserAdminTLP.TabIndex = 78;
             // 
             // tableLayoutPanel9
@@ -669,7 +669,7 @@
             this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 17.51313F));
             this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 24.35424F));
             this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15.12915F));
-            this.tableLayoutPanel9.Size = new System.Drawing.Size(1118, 232);
+            this.tableLayoutPanel9.Size = new System.Drawing.Size(610, 232);
             this.tableLayoutPanel9.TabIndex = 78;
             // 
             // logoutBtn
@@ -679,7 +679,7 @@
             this.logoutBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.logoutBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
             this.logoutBtn.ForeColor = System.Drawing.Color.Navy;
-            this.logoutBtn.Location = new System.Drawing.Point(745, 4);
+            this.logoutBtn.Location = new System.Drawing.Point(408, 4);
             this.logoutBtn.Name = "logoutBtn";
             this.logoutBtn.Size = new System.Drawing.Size(134, 52);
             this.logoutBtn.TabIndex = 76;
@@ -729,7 +729,7 @@
             this.tableLayoutPanel9.SetColumnSpan(this.PWfileEmptyPnl, 3);
             this.PWfileEmptyPnl.Controls.Add(this.label62);
             this.PWfileEmptyPnl.Controls.Add(this.masterPWtb);
-            this.PWfileEmptyPnl.Location = new System.Drawing.Point(707, 143);
+            this.PWfileEmptyPnl.Location = new System.Drawing.Point(199, 143);
             this.PWfileEmptyPnl.Name = "PWfileEmptyPnl";
             this.PWfileEmptyPnl.Size = new System.Drawing.Size(407, 48);
             this.PWfileEmptyPnl.TabIndex = 75;
@@ -761,7 +761,7 @@
             this.tableLayoutPanel9.SetColumnSpan(this.userPWtlp, 3);
             this.userPWtlp.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.userPWtlp.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.userPWtlp.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 209F));
+            this.userPWtlp.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 211F));
             this.userPWtlp.Controls.Add(this.label64, 0, 1);
             this.userPWtlp.Controls.Add(this.enterPWbtn, 2, 0);
             this.userPWtlp.Controls.Add(this.userNameTB, 1, 0);
@@ -775,14 +775,14 @@
             this.userPWtlp.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.userPWtlp.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.userPWtlp.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.userPWtlp.Size = new System.Drawing.Size(1110, 73);
+            this.userPWtlp.Size = new System.Drawing.Size(602, 73);
             this.userPWtlp.TabIndex = 77;
             // 
             // label64
             // 
             this.label64.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label64.AutoSize = true;
-            this.label64.Location = new System.Drawing.Point(179, 42);
+            this.label64.Location = new System.Drawing.Point(52, 42);
             this.label64.Name = "label64";
             this.label64.Size = new System.Drawing.Size(91, 25);
             this.label64.TabIndex = 72;
@@ -793,7 +793,7 @@
             this.enterPWbtn.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.enterPWbtn.BackColor = System.Drawing.Color.AntiqueWhite;
             this.enterPWbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.enterPWbtn.Location = new System.Drawing.Point(965, 7);
+            this.enterPWbtn.Location = new System.Drawing.Point(456, 7);
             this.enterPWbtn.Name = "enterPWbtn";
             this.userPWtlp.SetRowSpan(this.enterPWbtn, 2);
             this.enterPWbtn.Size = new System.Drawing.Size(79, 58);
@@ -806,7 +806,7 @@
             // 
             this.userNameTB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.userNameTB.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.userNameTB.Location = new System.Drawing.Point(624, 3);
+            this.userNameTB.Location = new System.Drawing.Point(241, 3);
             this.userNameTB.Name = "userNameTB";
             this.userNameTB.Size = new System.Drawing.Size(102, 30);
             this.userNameTB.TabIndex = 65;
@@ -815,7 +815,7 @@
             // 
             this.userPWtb.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.userPWtb.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.userPWtb.Location = new System.Drawing.Point(624, 39);
+            this.userPWtb.Location = new System.Drawing.Point(241, 39);
             this.userPWtb.Name = "userPWtb";
             this.userPWtb.PasswordChar = '*';
             this.userPWtb.Size = new System.Drawing.Size(102, 30);
@@ -826,7 +826,7 @@
             // 
             this.label63.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label63.AutoSize = true;
-            this.label63.Location = new System.Drawing.Point(171, 5);
+            this.label63.Location = new System.Drawing.Point(44, 5);
             this.label63.Name = "label63";
             this.label63.Size = new System.Drawing.Size(107, 25);
             this.label63.TabIndex = 66;
@@ -840,7 +840,7 @@
             this.addToLogPnl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.addToLogPnl.Location = new System.Drawing.Point(4, 198);
             this.addToLogPnl.Name = "addToLogPnl";
-            this.addToLogPnl.Size = new System.Drawing.Size(1110, 30);
+            this.addToLogPnl.Size = new System.Drawing.Size(602, 30);
             this.addToLogPnl.TabIndex = 78;
             // 
             // addToLogTB
@@ -849,7 +849,7 @@
             this.addToLogTB.Dock = System.Windows.Forms.DockStyle.Fill;
             this.addToLogTB.Location = new System.Drawing.Point(106, 0);
             this.addToLogTB.Name = "addToLogTB";
-            this.addToLogTB.Size = new System.Drawing.Size(1004, 30);
+            this.addToLogTB.Size = new System.Drawing.Size(496, 30);
             this.addToLogTB.TabIndex = 74;
             // 
             // label72
@@ -866,9 +866,9 @@
             // 
             this.addRemovePnl.Controls.Add(this.addRemoveUsersTLP);
             this.addRemovePnl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.addRemovePnl.Location = new System.Drawing.Point(4, 437);
+            this.addRemovePnl.Location = new System.Drawing.Point(4, 366);
             this.addRemovePnl.Name = "addRemovePnl";
-            this.addRemovePnl.Size = new System.Drawing.Size(1118, 673);
+            this.addRemovePnl.Size = new System.Drawing.Size(610, 561);
             this.addRemovePnl.TabIndex = 69;
             this.addRemovePnl.TabStop = false;
             this.addRemovePnl.Text = "Add / Remove users";
@@ -919,14 +919,14 @@
             this.addRemoveUsersTLP.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.63333F));
             this.addRemoveUsersTLP.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.73782F));
             this.addRemoveUsersTLP.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.addRemoveUsersTLP.Size = new System.Drawing.Size(1112, 644);
+            this.addRemoveUsersTLP.Size = new System.Drawing.Size(604, 532);
             this.addRemoveUsersTLP.TabIndex = 77;
             // 
             // label65
             // 
             this.label65.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label65.AutoSize = true;
-            this.label65.Location = new System.Drawing.Point(3, 57);
+            this.label65.Location = new System.Drawing.Point(3, 43);
             this.label65.Name = "label65";
             this.label65.Size = new System.Drawing.Size(132, 25);
             this.label65.TabIndex = 77;
@@ -937,7 +937,7 @@
             this.newUserPwTB.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.newUserPwTB.BackColor = System.Drawing.SystemColors.MenuBar;
             this.addRemoveUsersTLP.SetColumnSpan(this.newUserPwTB, 2);
-            this.newUserPwTB.Location = new System.Drawing.Point(281, 54);
+            this.newUserPwTB.Location = new System.Drawing.Point(154, 41);
             this.newUserPwTB.Name = "newUserPwTB";
             this.newUserPwTB.Size = new System.Drawing.Size(146, 30);
             this.newUserPwTB.TabIndex = 75;
@@ -946,7 +946,7 @@
             // 
             this.label66.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label66.AutoSize = true;
-            this.label66.Location = new System.Drawing.Point(3, 109);
+            this.label66.Location = new System.Drawing.Point(3, 86);
             this.label66.Name = "label66";
             this.label66.Size = new System.Drawing.Size(96, 25);
             this.label66.TabIndex = 78;
@@ -957,7 +957,7 @@
             this.IsAdminCkb.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.IsAdminCkb.AutoSize = true;
             this.IsAdminCkb.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.IsAdminCkb.Location = new System.Drawing.Point(281, 113);
+            this.IsAdminCkb.Location = new System.Drawing.Point(154, 90);
             this.IsAdminCkb.MaximumSize = new System.Drawing.Size(25, 25);
             this.IsAdminCkb.Name = "IsAdminCkb";
             this.IsAdminCkb.Size = new System.Drawing.Size(18, 17);
@@ -969,7 +969,7 @@
             this.viewBackupBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.viewBackupBtn.BackColor = System.Drawing.Color.AntiqueWhite;
             this.viewBackupBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.viewBackupBtn.Location = new System.Drawing.Point(926, 565);
+            this.viewBackupBtn.Location = new System.Drawing.Point(482, 463);
             this.viewBackupBtn.Name = "viewBackupBtn";
             this.viewBackupBtn.Size = new System.Drawing.Size(93, 51);
             this.viewBackupBtn.TabIndex = 96;
@@ -982,7 +982,7 @@
             this.viewParamsBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.viewParamsBtn.BackColor = System.Drawing.Color.AntiqueWhite;
             this.viewParamsBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.viewParamsBtn.Location = new System.Drawing.Point(655, 565);
+            this.viewParamsBtn.Location = new System.Drawing.Point(338, 463);
             this.viewParamsBtn.Name = "viewParamsBtn";
             this.viewParamsBtn.Size = new System.Drawing.Size(79, 51);
             this.viewParamsBtn.TabIndex = 97;
@@ -995,7 +995,7 @@
             this.viewPwBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.viewPwBtn.BackColor = System.Drawing.Color.AntiqueWhite;
             this.viewPwBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.viewPwBtn.Location = new System.Drawing.Point(371, 565);
+            this.viewPwBtn.Location = new System.Drawing.Point(181, 463);
             this.viewPwBtn.Name = "viewPwBtn";
             this.viewPwBtn.Size = new System.Drawing.Size(91, 51);
             this.viewPwBtn.TabIndex = 98;
@@ -1008,7 +1008,7 @@
             this.viewLogBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.viewLogBtn.BackColor = System.Drawing.Color.AntiqueWhite;
             this.viewLogBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.viewLogBtn.Location = new System.Drawing.Point(91, 565);
+            this.viewLogBtn.Location = new System.Drawing.Point(28, 463);
             this.viewLogBtn.Name = "viewLogBtn";
             this.viewLogBtn.Size = new System.Drawing.Size(95, 51);
             this.viewLogBtn.TabIndex = 95;
@@ -1021,7 +1021,7 @@
             this.newUserBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.newUserBtn.BackColor = System.Drawing.Color.AntiqueWhite;
             this.newUserBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.newUserBtn.Location = new System.Drawing.Point(933, 41);
+            this.newUserBtn.Location = new System.Drawing.Point(489, 26);
             this.newUserBtn.Name = "newUserBtn";
             this.addRemoveUsersTLP.SetRowSpan(this.newUserBtn, 3);
             this.newUserBtn.Size = new System.Drawing.Size(79, 70);
@@ -1035,7 +1035,7 @@
             this.newUserNameTB.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.newUserNameTB.BackColor = System.Drawing.SystemColors.MenuBar;
             this.addRemoveUsersTLP.SetColumnSpan(this.newUserNameTB, 2);
-            this.newUserNameTB.Location = new System.Drawing.Point(281, 8);
+            this.newUserNameTB.Location = new System.Drawing.Point(154, 4);
             this.newUserNameTB.Name = "newUserNameTB";
             this.newUserNameTB.Size = new System.Drawing.Size(146, 30);
             this.newUserNameTB.TabIndex = 74;
@@ -1044,9 +1044,9 @@
             // 
             this.newUserTB.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.newUserTB.AutoSize = true;
-            this.newUserTB.Location = new System.Drawing.Point(3, 11);
+            this.newUserTB.Location = new System.Drawing.Point(3, 0);
             this.newUserTB.Name = "newUserTB";
-            this.newUserTB.Size = new System.Drawing.Size(148, 25);
+            this.newUserTB.Size = new System.Drawing.Size(99, 38);
             this.newUserTB.TabIndex = 75;
             this.newUserTB.Text = "New user name";
             // 
@@ -1054,7 +1054,7 @@
             // 
             this.label69.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label69.AutoSize = true;
-            this.label69.Location = new System.Drawing.Point(3, 173);
+            this.label69.Location = new System.Drawing.Point(3, 138);
             this.label69.Name = "label69";
             this.label69.Size = new System.Drawing.Size(112, 25);
             this.label69.TabIndex = 85;
@@ -1065,7 +1065,7 @@
             this.eraseUserTB.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.eraseUserTB.BackColor = System.Drawing.SystemColors.MenuBar;
             this.addRemoveUsersTLP.SetColumnSpan(this.eraseUserTB, 2);
-            this.eraseUserTB.Location = new System.Drawing.Point(281, 171);
+            this.eraseUserTB.Location = new System.Drawing.Point(154, 136);
             this.eraseUserTB.Name = "eraseUserTB";
             this.eraseUserTB.Size = new System.Drawing.Size(146, 30);
             this.eraseUserTB.TabIndex = 86;
@@ -1075,7 +1075,7 @@
             this.eraseUserBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.eraseUserBtn.BackColor = System.Drawing.Color.AntiqueWhite;
             this.eraseUserBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.eraseUserBtn.Location = new System.Drawing.Point(933, 173);
+            this.eraseUserBtn.Location = new System.Drawing.Point(489, 138);
             this.eraseUserBtn.Name = "eraseUserBtn";
             this.eraseUserBtn.Size = new System.Drawing.Size(79, 26);
             this.eraseUserBtn.TabIndex = 87;
@@ -1087,7 +1087,7 @@
             // 
             this.label68.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label68.AutoSize = true;
-            this.label68.Location = new System.Drawing.Point(3, 276);
+            this.label68.Location = new System.Drawing.Point(3, 223);
             this.label68.Name = "label68";
             this.label68.Size = new System.Drawing.Size(125, 25);
             this.label68.TabIndex = 82;
@@ -1099,7 +1099,7 @@
             this.FilesPathTB.BackColor = System.Drawing.SystemColors.MenuBar;
             this.addRemoveUsersTLP.SetColumnSpan(this.FilesPathTB, 2);
             this.FilesPathTB.Enabled = false;
-            this.FilesPathTB.Location = new System.Drawing.Point(281, 274);
+            this.FilesPathTB.Location = new System.Drawing.Point(154, 221);
             this.FilesPathTB.Name = "FilesPathTB";
             this.FilesPathTB.Size = new System.Drawing.Size(146, 30);
             this.FilesPathTB.TabIndex = 88;
@@ -1109,7 +1109,7 @@
             this.maxBadPWtb.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.maxBadPWtb.BackColor = System.Drawing.SystemColors.MenuBar;
             this.addRemoveUsersTLP.SetColumnSpan(this.maxBadPWtb, 2);
-            this.maxBadPWtb.Location = new System.Drawing.Point(281, 315);
+            this.maxBadPWtb.Location = new System.Drawing.Point(154, 258);
             this.maxBadPWtb.Name = "maxBadPWtb";
             this.maxBadPWtb.Size = new System.Drawing.Size(146, 30);
             this.maxBadPWtb.TabIndex = 90;
@@ -1119,7 +1119,7 @@
             // 
             this.label67.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label67.AutoSize = true;
-            this.label67.Location = new System.Drawing.Point(3, 316);
+            this.label67.Location = new System.Drawing.Point(3, 259);
             this.label67.Name = "label67";
             this.label67.Size = new System.Drawing.Size(142, 25);
             this.label67.TabIndex = 89;
@@ -1129,9 +1129,9 @@
             // 
             this.label70.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label70.AutoSize = true;
-            this.label70.Location = new System.Drawing.Point(3, 355);
+            this.label70.Location = new System.Drawing.Point(3, 288);
             this.label70.Name = "label70";
-            this.label70.Size = new System.Drawing.Size(148, 25);
+            this.label70.Size = new System.Drawing.Size(109, 38);
             this.label70.TabIndex = 91;
             this.label70.Text = "Months for PW:";
             // 
@@ -1140,7 +1140,7 @@
             this.monthsForPWtb.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.monthsForPWtb.BackColor = System.Drawing.SystemColors.MenuBar;
             this.addRemoveUsersTLP.SetColumnSpan(this.monthsForPWtb, 2);
-            this.monthsForPWtb.Location = new System.Drawing.Point(281, 353);
+            this.monthsForPWtb.Location = new System.Drawing.Point(154, 292);
             this.monthsForPWtb.Name = "monthsForPWtb";
             this.monthsForPWtb.Size = new System.Drawing.Size(146, 30);
             this.monthsForPWtb.TabIndex = 92;
@@ -1150,7 +1150,7 @@
             this.changeParamsBtn.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.changeParamsBtn.BackColor = System.Drawing.Color.AntiqueWhite;
             this.changeParamsBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.changeParamsBtn.Location = new System.Drawing.Point(933, 338);
+            this.changeParamsBtn.Location = new System.Drawing.Point(489, 265);
             this.changeParamsBtn.Name = "changeParamsBtn";
             this.addRemoveUsersTLP.SetRowSpan(this.changeParamsBtn, 4);
             this.changeParamsBtn.Size = new System.Drawing.Size(79, 96);
@@ -1164,7 +1164,7 @@
             this.label74.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label74.AutoSize = true;
             this.addRemoveUsersTLP.SetColumnSpan(this.label74, 3);
-            this.label74.Location = new System.Drawing.Point(3, 489);
+            this.label74.Location = new System.Drawing.Point(3, 403);
             this.label74.Name = "label74";
             this.label74.Size = new System.Drawing.Size(311, 25);
             this.label74.TabIndex = 101;
@@ -1178,7 +1178,7 @@
             this.RunTP.Margin = new System.Windows.Forms.Padding(3, 3, 10, 3);
             this.RunTP.Name = "RunTP";
             this.RunTP.Padding = new System.Windows.Forms.Padding(3);
-            this.RunTP.Size = new System.Drawing.Size(2898, 1124);
+            this.RunTP.Size = new System.Drawing.Size(1596, 941);
             this.RunTP.TabIndex = 0;
             this.RunTP.Text = "RUN";
             this.RunTP.Enter += new System.EventHandler(this.RunTP_Enter);
@@ -1203,8 +1203,8 @@
             this.RunSC.Panel2.Controls.Add(this.RunParametersTLP);
             this.RunSC.Panel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.RunSC.Panel2MinSize = 70;
-            this.RunSC.Size = new System.Drawing.Size(2892, 1118);
-            this.RunSC.SplitterDistance = 285;
+            this.RunSC.Size = new System.Drawing.Size(1590, 935);
+            this.RunSC.SplitterDistance = 237;
             this.RunSC.TabIndex = 0;
             // 
             // tableLayoutPanel12
@@ -1248,7 +1248,7 @@
             this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 31.79328F));
             this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.97881F));
             this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.43463F));
-            this.tableLayoutPanel12.Size = new System.Drawing.Size(2890, 283);
+            this.tableLayoutPanel12.Size = new System.Drawing.Size(1588, 235);
             this.tableLayoutPanel12.TabIndex = 0;
             // 
             // RunBtn
@@ -1260,7 +1260,7 @@
             this.RunBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.RunBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.RunBtn.ForeColor = System.Drawing.Color.Black;
-            this.RunBtn.Location = new System.Drawing.Point(1147, 28);
+            this.RunBtn.Location = new System.Drawing.Point(601, 21);
             this.RunBtn.Margin = new System.Windows.Forms.Padding(5);
             this.RunBtn.Name = "RunBtn";
             this.RunBtn.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -1281,7 +1281,7 @@
             this.RunAbortBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.RunAbortBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 20F, System.Drawing.FontStyle.Bold);
             this.RunAbortBtn.ForeColor = System.Drawing.Color.White;
-            this.RunAbortBtn.Location = new System.Drawing.Point(153, 17);
+            this.RunAbortBtn.Location = new System.Drawing.Point(53, 9);
             this.RunAbortBtn.Margin = new System.Windows.Forms.Padding(5);
             this.RunAbortBtn.Name = "RunAbortBtn";
             this.RunAbortBtn.Size = new System.Drawing.Size(139, 56);
@@ -1295,7 +1295,7 @@
             this.label28.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label28.AutoSize = true;
             this.label28.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.label28.Location = new System.Drawing.Point(2385, 232);
+            this.label28.Location = new System.Drawing.Point(1287, 190);
             this.label28.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(86, 28);
@@ -1311,7 +1311,7 @@
             this.RunHomeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.RunHomeBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.RunHomeBtn.ForeColor = System.Drawing.Color.Black;
-            this.RunHomeBtn.Location = new System.Drawing.Point(1452, 28);
+            this.RunHomeBtn.Location = new System.Drawing.Point(768, 21);
             this.RunHomeBtn.Margin = new System.Windows.Forms.Padding(5);
             this.RunHomeBtn.Name = "RunHomeBtn";
             this.RunHomeBtn.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -1331,11 +1331,11 @@
             this.CMrunsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CMrunsBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.CMrunsBtn.ForeColor = System.Drawing.Color.Black;
-            this.CMrunsBtn.Location = new System.Drawing.Point(2613, 9);
+            this.CMrunsBtn.Location = new System.Drawing.Point(1419, 6);
             this.CMrunsBtn.Margin = new System.Windows.Forms.Padding(5);
             this.CMrunsBtn.Name = "CMrunsBtn";
             this.CMrunsBtn.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.CMrunsBtn.Size = new System.Drawing.Size(244, 71);
+            this.CMrunsBtn.Size = new System.Drawing.Size(163, 63);
             this.CMrunsBtn.TabIndex = 51;
             this.CMrunsBtn.Text = "view RUNs";
             this.CMrunsBtn.UseVisualStyleBackColor = false;
@@ -1346,7 +1346,7 @@
             this.DateTimeNowTxt.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.DateTimeNowTxt.BackColor = System.Drawing.Color.AntiqueWhite;
             this.DateTimeNowTxt.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.DateTimeNowTxt.Location = new System.Drawing.Point(132, 117);
+            this.DateTimeNowTxt.Location = new System.Drawing.Point(32, 94);
             this.DateTimeNowTxt.Margin = new System.Windows.Forms.Padding(5);
             this.DateTimeNowTxt.Name = "DateTimeNowTxt";
             this.DateTimeNowTxt.Size = new System.Drawing.Size(181, 34);
@@ -1359,7 +1359,7 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(861, 232);
+            this.label1.Location = new System.Drawing.Point(453, 190);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(83, 28);
@@ -1371,7 +1371,7 @@
             this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.label8.Location = new System.Drawing.Point(1165, 232);
+            this.label8.Location = new System.Drawing.Point(619, 190);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(86, 28);
@@ -1383,7 +1383,7 @@
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.label7.Location = new System.Drawing.Point(1470, 232);
+            this.label7.Location = new System.Drawing.Point(786, 190);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(86, 28);
@@ -1395,7 +1395,7 @@
             this.label26.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label26.AutoSize = true;
             this.label26.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.label26.Location = new System.Drawing.Point(1774, 232);
+            this.label26.Location = new System.Drawing.Point(952, 190);
             this.label26.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(87, 28);
@@ -1407,7 +1407,7 @@
             this.label27.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label27.AutoSize = true;
             this.label27.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.label27.Location = new System.Drawing.Point(2080, 232);
+            this.label27.Location = new System.Drawing.Point(1120, 190);
             this.label27.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(86, 28);
@@ -1423,7 +1423,7 @@
             this.ClrAllBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ClrAllBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.ClrAllBtn.ForeColor = System.Drawing.Color.Black;
-            this.ClrAllBtn.Location = new System.Drawing.Point(842, 28);
+            this.ClrAllBtn.Location = new System.Drawing.Point(434, 21);
             this.ClrAllBtn.Margin = new System.Windows.Forms.Padding(5);
             this.ClrAllBtn.Name = "ClrAllBtn";
             this.ClrAllBtn.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -1442,7 +1442,7 @@
             this.loadSetupsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.loadSetupsBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.loadSetupsBtn.ForeColor = System.Drawing.Color.Black;
-            this.loadSetupsBtn.Location = new System.Drawing.Point(2062, 28);
+            this.loadSetupsBtn.Location = new System.Drawing.Point(1102, 21);
             this.loadSetupsBtn.Margin = new System.Windows.Forms.Padding(5);
             this.loadSetupsBtn.Name = "loadSetupsBtn";
             this.loadSetupsBtn.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -1462,7 +1462,7 @@
             this.SaveBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.SaveBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.SaveBtn.ForeColor = System.Drawing.Color.Black;
-            this.SaveBtn.Location = new System.Drawing.Point(2367, 28);
+            this.SaveBtn.Location = new System.Drawing.Point(1269, 21);
             this.SaveBtn.Margin = new System.Windows.Forms.Padding(5);
             this.SaveBtn.Name = "SaveBtn";
             this.SaveBtn.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -1481,7 +1481,7 @@
             this.refreshBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.refreshBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.refreshBtn.ForeColor = System.Drawing.Color.Black;
-            this.refreshBtn.Location = new System.Drawing.Point(537, 28);
+            this.refreshBtn.Location = new System.Drawing.Point(267, 21);
             this.refreshBtn.Margin = new System.Windows.Forms.Padding(5);
             this.refreshBtn.Name = "refreshBtn";
             this.refreshBtn.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -1496,7 +1496,7 @@
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.label4.Location = new System.Drawing.Point(2671, 232);
+            this.label4.Location = new System.Drawing.Point(1436, 190);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(128, 28);
@@ -1508,7 +1508,7 @@
             this.label12.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.label12.Location = new System.Drawing.Point(566, 232);
+            this.label12.Location = new System.Drawing.Point(296, 190);
             this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(63, 28);
@@ -1520,7 +1520,7 @@
             this.runUserNameTB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.runUserNameTB.BackColor = System.Drawing.Color.AntiqueWhite;
             this.runUserNameTB.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.runUserNameTB.Location = new System.Drawing.Point(130, 229);
+            this.runUserNameTB.Location = new System.Drawing.Point(30, 187);
             this.runUserNameTB.Name = "runUserNameTB";
             this.runUserNameTB.Size = new System.Drawing.Size(185, 34);
             this.runUserNameTB.TabIndex = 53;
@@ -1624,7 +1624,7 @@
             this.RunParametersTLP.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.264448F));
             this.RunParametersTLP.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.264448F));
             this.RunParametersTLP.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.267366F));
-            this.RunParametersTLP.Size = new System.Drawing.Size(2890, 827);
+            this.RunParametersTLP.Size = new System.Drawing.Size(1588, 692);
             this.RunParametersTLP.TabIndex = 1;
             this.RunParametersTLP.TabStop = true;
             // 
@@ -1632,7 +1632,7 @@
             // 
             this.BagSizeMlTB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.BagSizeMlTB.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.BagSizeMlTB.Location = new System.Drawing.Point(535, 17);
+            this.BagSizeMlTB.Location = new System.Drawing.Point(265, 12);
             this.BagSizeMlTB.Name = "BagSizeMlTB";
             this.BagSizeMlTB.Size = new System.Drawing.Size(125, 34);
             this.BagSizeMlTB.TabIndex = 1;
@@ -1644,7 +1644,7 @@
             this.mLinVial1TB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.mLinVial1TB.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.mLinVial1TB.Enabled = false;
-            this.mLinVial1TB.Location = new System.Drawing.Point(840, 85);
+            this.mLinVial1TB.Location = new System.Drawing.Point(432, 69);
             this.mLinVial1TB.Name = "mLinVial1TB";
             this.mLinVial1TB.Size = new System.Drawing.Size(125, 34);
             this.mLinVial1TB.TabIndex = 44;
@@ -1655,7 +1655,7 @@
             this.Vial3ErrorTB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Vial3ErrorTB.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.Vial3ErrorTB.Enabled = false;
-            this.Vial3ErrorTB.Location = new System.Drawing.Point(1450, 431);
+            this.Vial3ErrorTB.Location = new System.Drawing.Point(766, 359);
             this.Vial3ErrorTB.Name = "Vial3ErrorTB";
             this.Vial3ErrorTB.Size = new System.Drawing.Size(125, 34);
             this.Vial3ErrorTB.TabIndex = 42;
@@ -1666,7 +1666,7 @@
             this.Vial2ErrorTB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Vial2ErrorTB.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.Vial2ErrorTB.Enabled = false;
-            this.Vial2ErrorTB.Location = new System.Drawing.Point(1145, 431);
+            this.Vial2ErrorTB.Location = new System.Drawing.Point(599, 359);
             this.Vial2ErrorTB.Name = "Vial2ErrorTB";
             this.Vial2ErrorTB.Size = new System.Drawing.Size(125, 34);
             this.Vial2ErrorTB.TabIndex = 112;
@@ -1677,7 +1677,7 @@
             this.Vial1ErrorTB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Vial1ErrorTB.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.Vial1ErrorTB.Enabled = false;
-            this.Vial1ErrorTB.Location = new System.Drawing.Point(840, 431);
+            this.Vial1ErrorTB.Location = new System.Drawing.Point(432, 359);
             this.Vial1ErrorTB.Name = "Vial1ErrorTB";
             this.Vial1ErrorTB.Size = new System.Drawing.Size(125, 34);
             this.Vial1ErrorTB.TabIndex = 113;
@@ -1688,7 +1688,7 @@
             this.Vial3StatusTB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Vial3StatusTB.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.Vial3StatusTB.Enabled = false;
-            this.Vial3StatusTB.Location = new System.Drawing.Point(1450, 363);
+            this.Vial3StatusTB.Location = new System.Drawing.Point(766, 302);
             this.Vial3StatusTB.Name = "Vial3StatusTB";
             this.Vial3StatusTB.Size = new System.Drawing.Size(125, 34);
             this.Vial3StatusTB.TabIndex = 41;
@@ -1699,7 +1699,7 @@
             this.Vial2StatusTB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Vial2StatusTB.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.Vial2StatusTB.Enabled = false;
-            this.Vial2StatusTB.Location = new System.Drawing.Point(1145, 363);
+            this.Vial2StatusTB.Location = new System.Drawing.Point(599, 302);
             this.Vial2StatusTB.Name = "Vial2StatusTB";
             this.Vial2StatusTB.Size = new System.Drawing.Size(125, 34);
             this.Vial2StatusTB.TabIndex = 111;
@@ -1710,7 +1710,7 @@
             this.Vial1StatusTB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Vial1StatusTB.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.Vial1StatusTB.Enabled = false;
-            this.Vial1StatusTB.Location = new System.Drawing.Point(840, 363);
+            this.Vial1StatusTB.Location = new System.Drawing.Point(432, 302);
             this.Vial1StatusTB.Name = "Vial1StatusTB";
             this.Vial1StatusTB.Size = new System.Drawing.Size(125, 34);
             this.Vial1StatusTB.TabIndex = 99;
@@ -1721,7 +1721,7 @@
             this.Vial3InPlaceTB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Vial3InPlaceTB.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.Vial3InPlaceTB.Enabled = false;
-            this.Vial3InPlaceTB.Location = new System.Drawing.Point(1450, 292);
+            this.Vial3InPlaceTB.Location = new System.Drawing.Point(766, 242);
             this.Vial3InPlaceTB.Name = "Vial3InPlaceTB";
             this.Vial3InPlaceTB.Size = new System.Drawing.Size(125, 34);
             this.Vial3InPlaceTB.TabIndex = 40;
@@ -1732,7 +1732,7 @@
             this.Vial1InPlaceTB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Vial1InPlaceTB.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.Vial1InPlaceTB.Enabled = false;
-            this.Vial1InPlaceTB.Location = new System.Drawing.Point(840, 292);
+            this.Vial1InPlaceTB.Location = new System.Drawing.Point(432, 242);
             this.Vial1InPlaceTB.Name = "Vial1InPlaceTB";
             this.Vial1InPlaceTB.Size = new System.Drawing.Size(125, 34);
             this.Vial1InPlaceTB.TabIndex = 77;
@@ -1742,7 +1742,7 @@
             // 
             this.Vial3WithdrawMlTB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Vial3WithdrawMlTB.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.Vial3WithdrawMlTB.Location = new System.Drawing.Point(1450, 153);
+            this.Vial3WithdrawMlTB.Location = new System.Drawing.Point(766, 126);
             this.Vial3WithdrawMlTB.Name = "Vial3WithdrawMlTB";
             this.Vial3WithdrawMlTB.Size = new System.Drawing.Size(125, 34);
             this.Vial3WithdrawMlTB.TabIndex = 10;
@@ -1753,7 +1753,7 @@
             // 
             this.Vial2WithdrawMlTB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Vial2WithdrawMlTB.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.Vial2WithdrawMlTB.Location = new System.Drawing.Point(1145, 153);
+            this.Vial2WithdrawMlTB.Location = new System.Drawing.Point(599, 126);
             this.Vial2WithdrawMlTB.Name = "Vial2WithdrawMlTB";
             this.Vial2WithdrawMlTB.Size = new System.Drawing.Size(125, 34);
             this.Vial2WithdrawMlTB.TabIndex = 9;
@@ -1765,7 +1765,7 @@
             this.mLinVial3TB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.mLinVial3TB.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.mLinVial3TB.Enabled = false;
-            this.mLinVial3TB.Location = new System.Drawing.Point(1450, 85);
+            this.mLinVial3TB.Location = new System.Drawing.Point(766, 69);
             this.mLinVial3TB.Name = "mLinVial3TB";
             this.mLinVial3TB.Size = new System.Drawing.Size(125, 34);
             this.mLinVial3TB.TabIndex = 67;
@@ -1776,7 +1776,7 @@
             this.mLinVial2TB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.mLinVial2TB.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.mLinVial2TB.Enabled = false;
-            this.mLinVial2TB.Location = new System.Drawing.Point(1145, 85);
+            this.mLinVial2TB.Location = new System.Drawing.Point(599, 69);
             this.mLinVial2TB.Name = "mLinVial2TB";
             this.mLinVial2TB.Size = new System.Drawing.Size(125, 34);
             this.mLinVial2TB.TabIndex = 56;
@@ -1786,7 +1786,7 @@
             // 
             this.Vial3SizeMlTB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Vial3SizeMlTB.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.Vial3SizeMlTB.Location = new System.Drawing.Point(1450, 17);
+            this.Vial3SizeMlTB.Location = new System.Drawing.Point(766, 12);
             this.Vial3SizeMlTB.Name = "Vial3SizeMlTB";
             this.Vial3SizeMlTB.Size = new System.Drawing.Size(125, 34);
             this.Vial3SizeMlTB.TabIndex = 4;
@@ -1797,7 +1797,7 @@
             // 
             this.Vial2SizeMlTB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Vial2SizeMlTB.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.Vial2SizeMlTB.Location = new System.Drawing.Point(1145, 17);
+            this.Vial2SizeMlTB.Location = new System.Drawing.Point(599, 12);
             this.Vial2SizeMlTB.Name = "Vial2SizeMlTB";
             this.Vial2SizeMlTB.Size = new System.Drawing.Size(125, 34);
             this.Vial2SizeMlTB.TabIndex = 3;
@@ -1809,7 +1809,7 @@
             this.num01Lbl.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.num01Lbl.AutoSize = true;
             this.num01Lbl.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.num01Lbl.Location = new System.Drawing.Point(177, 20);
+            this.num01Lbl.Location = new System.Drawing.Point(77, 15);
             this.num01Lbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.num01Lbl.Name = "num01Lbl";
             this.num01Lbl.Size = new System.Drawing.Size(91, 28);
@@ -1821,7 +1821,7 @@
             this.num02Lbl.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.num02Lbl.AutoSize = true;
             this.num02Lbl.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.num02Lbl.Location = new System.Drawing.Point(124, 88);
+            this.num02Lbl.Location = new System.Drawing.Point(24, 72);
             this.num02Lbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.num02Lbl.Name = "num02Lbl";
             this.num02Lbl.Size = new System.Drawing.Size(197, 28);
@@ -1833,7 +1833,7 @@
             this.label13.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.label13.Location = new System.Drawing.Point(174, 366);
+            this.label13.Location = new System.Drawing.Point(73, 305);
             this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(98, 28);
@@ -1845,7 +1845,7 @@
             this.label14.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.label14.Location = new System.Drawing.Point(191, 434);
+            this.label14.Location = new System.Drawing.Point(90, 362);
             this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(64, 28);
@@ -1857,7 +1857,7 @@
             this.label17.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.label17.Location = new System.Drawing.Point(135, 692);
+            this.label17.Location = new System.Drawing.Point(35, 576);
             this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(175, 56);
@@ -1869,7 +1869,7 @@
             this.label16.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.label16.Location = new System.Drawing.Point(152, 624);
+            this.label16.Location = new System.Drawing.Point(52, 519);
             this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(141, 56);
@@ -1880,7 +1880,7 @@
             // 
             this.Vial4SizeMlTB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Vial4SizeMlTB.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.Vial4SizeMlTB.Location = new System.Drawing.Point(1755, 17);
+            this.Vial4SizeMlTB.Location = new System.Drawing.Point(933, 12);
             this.Vial4SizeMlTB.Name = "Vial4SizeMlTB";
             this.Vial4SizeMlTB.Size = new System.Drawing.Size(125, 34);
             this.Vial4SizeMlTB.TabIndex = 5;
@@ -1892,7 +1892,7 @@
             this.mLinVial4TB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.mLinVial4TB.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.mLinVial4TB.Enabled = false;
-            this.mLinVial4TB.Location = new System.Drawing.Point(1755, 85);
+            this.mLinVial4TB.Location = new System.Drawing.Point(933, 69);
             this.mLinVial4TB.Name = "mLinVial4TB";
             this.mLinVial4TB.Size = new System.Drawing.Size(125, 34);
             this.mLinVial4TB.TabIndex = 51;
@@ -1903,7 +1903,7 @@
             this.Vial4InPlaceTB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Vial4InPlaceTB.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.Vial4InPlaceTB.Enabled = false;
-            this.Vial4InPlaceTB.Location = new System.Drawing.Point(1755, 292);
+            this.Vial4InPlaceTB.Location = new System.Drawing.Point(933, 242);
             this.Vial4InPlaceTB.Name = "Vial4InPlaceTB";
             this.Vial4InPlaceTB.Size = new System.Drawing.Size(125, 34);
             this.Vial4InPlaceTB.TabIndex = 53;
@@ -1914,7 +1914,7 @@
             this.Vial4StatusTB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Vial4StatusTB.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.Vial4StatusTB.Enabled = false;
-            this.Vial4StatusTB.Location = new System.Drawing.Point(1755, 363);
+            this.Vial4StatusTB.Location = new System.Drawing.Point(933, 302);
             this.Vial4StatusTB.Name = "Vial4StatusTB";
             this.Vial4StatusTB.Size = new System.Drawing.Size(125, 34);
             this.Vial4StatusTB.TabIndex = 54;
@@ -1925,7 +1925,7 @@
             this.Vial4ErrorTB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Vial4ErrorTB.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.Vial4ErrorTB.Enabled = false;
-            this.Vial4ErrorTB.Location = new System.Drawing.Point(1755, 431);
+            this.Vial4ErrorTB.Location = new System.Drawing.Point(933, 359);
             this.Vial4ErrorTB.Name = "Vial4ErrorTB";
             this.Vial4ErrorTB.Size = new System.Drawing.Size(125, 34);
             this.Vial4ErrorTB.TabIndex = 55;
@@ -1936,7 +1936,7 @@
             this.vibrationHzTB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.vibrationHzTB.BackColor = System.Drawing.SystemColors.MenuBar;
             this.RunParametersTLP.SetColumnSpan(this.vibrationHzTB, 3);
-            this.vibrationHzTB.Location = new System.Drawing.Point(1928, 635);
+            this.vibrationHzTB.Location = new System.Drawing.Point(968, 530);
             this.vibrationHzTB.Name = "vibrationHzTB";
             this.vibrationHzTB.Size = new System.Drawing.Size(389, 34);
             this.vibrationHzTB.TabIndex = 19;
@@ -1950,7 +1950,7 @@
             this.vibrationStrengthTB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.vibrationStrengthTB.BackColor = System.Drawing.SystemColors.MenuBar;
             this.RunParametersTLP.SetColumnSpan(this.vibrationStrengthTB, 3);
-            this.vibrationStrengthTB.Location = new System.Drawing.Point(1928, 703);
+            this.vibrationStrengthTB.Location = new System.Drawing.Point(968, 587);
             this.vibrationStrengthTB.Name = "vibrationStrengthTB";
             this.vibrationStrengthTB.Size = new System.Drawing.Size(389, 34);
             this.vibrationStrengthTB.TabIndex = 20;
@@ -1963,7 +1963,7 @@
             // 
             this.Vial5SizeMlTB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Vial5SizeMlTB.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.Vial5SizeMlTB.Location = new System.Drawing.Point(2060, 17);
+            this.Vial5SizeMlTB.Location = new System.Drawing.Point(1100, 12);
             this.Vial5SizeMlTB.Name = "Vial5SizeMlTB";
             this.Vial5SizeMlTB.Size = new System.Drawing.Size(125, 34);
             this.Vial5SizeMlTB.TabIndex = 6;
@@ -1975,7 +1975,7 @@
             this.mLinVial5TB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.mLinVial5TB.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.mLinVial5TB.Enabled = false;
-            this.mLinVial5TB.Location = new System.Drawing.Point(2060, 85);
+            this.mLinVial5TB.Location = new System.Drawing.Point(1100, 69);
             this.mLinVial5TB.Name = "mLinVial5TB";
             this.mLinVial5TB.Size = new System.Drawing.Size(125, 34);
             this.mLinVial5TB.TabIndex = 64;
@@ -1985,7 +1985,7 @@
             // 
             this.Vial5WithdrawMlTB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Vial5WithdrawMlTB.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.Vial5WithdrawMlTB.Location = new System.Drawing.Point(2060, 153);
+            this.Vial5WithdrawMlTB.Location = new System.Drawing.Point(1100, 126);
             this.Vial5WithdrawMlTB.Name = "Vial5WithdrawMlTB";
             this.Vial5WithdrawMlTB.Size = new System.Drawing.Size(125, 34);
             this.Vial5WithdrawMlTB.TabIndex = 12;
@@ -1997,7 +1997,7 @@
             this.Vial5InPlaceTB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Vial5InPlaceTB.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.Vial5InPlaceTB.Enabled = false;
-            this.Vial5InPlaceTB.Location = new System.Drawing.Point(2060, 292);
+            this.Vial5InPlaceTB.Location = new System.Drawing.Point(1100, 242);
             this.Vial5InPlaceTB.Name = "Vial5InPlaceTB";
             this.Vial5InPlaceTB.Size = new System.Drawing.Size(125, 34);
             this.Vial5InPlaceTB.TabIndex = 66;
@@ -2008,7 +2008,7 @@
             this.Vial5StatusTB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Vial5StatusTB.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.Vial5StatusTB.Enabled = false;
-            this.Vial5StatusTB.Location = new System.Drawing.Point(2060, 363);
+            this.Vial5StatusTB.Location = new System.Drawing.Point(1100, 302);
             this.Vial5StatusTB.Name = "Vial5StatusTB";
             this.Vial5StatusTB.Size = new System.Drawing.Size(125, 34);
             this.Vial5StatusTB.TabIndex = 67;
@@ -2019,7 +2019,7 @@
             this.Vial5ErrorTB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Vial5ErrorTB.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.Vial5ErrorTB.Enabled = false;
-            this.Vial5ErrorTB.Location = new System.Drawing.Point(2060, 431);
+            this.Vial5ErrorTB.Location = new System.Drawing.Point(1100, 359);
             this.Vial5ErrorTB.Name = "Vial5ErrorTB";
             this.Vial5ErrorTB.Size = new System.Drawing.Size(125, 34);
             this.Vial5ErrorTB.TabIndex = 68;
@@ -2029,7 +2029,7 @@
             // 
             this.Vial6SizeMlTB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Vial6SizeMlTB.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.Vial6SizeMlTB.Location = new System.Drawing.Point(2365, 17);
+            this.Vial6SizeMlTB.Location = new System.Drawing.Point(1267, 12);
             this.Vial6SizeMlTB.Name = "Vial6SizeMlTB";
             this.Vial6SizeMlTB.Size = new System.Drawing.Size(125, 34);
             this.Vial6SizeMlTB.TabIndex = 7;
@@ -2041,7 +2041,7 @@
             this.mLinVial6TB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.mLinVial6TB.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.mLinVial6TB.Enabled = false;
-            this.mLinVial6TB.Location = new System.Drawing.Point(2365, 85);
+            this.mLinVial6TB.Location = new System.Drawing.Point(1267, 69);
             this.mLinVial6TB.Name = "mLinVial6TB";
             this.mLinVial6TB.Size = new System.Drawing.Size(125, 34);
             this.mLinVial6TB.TabIndex = 77;
@@ -2051,7 +2051,7 @@
             // 
             this.Vial6WithdrawMlTB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Vial6WithdrawMlTB.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.Vial6WithdrawMlTB.Location = new System.Drawing.Point(2365, 153);
+            this.Vial6WithdrawMlTB.Location = new System.Drawing.Point(1267, 126);
             this.Vial6WithdrawMlTB.Name = "Vial6WithdrawMlTB";
             this.Vial6WithdrawMlTB.Size = new System.Drawing.Size(125, 34);
             this.Vial6WithdrawMlTB.TabIndex = 13;
@@ -2063,7 +2063,7 @@
             this.Vial6InPlaceTB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Vial6InPlaceTB.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.Vial6InPlaceTB.Enabled = false;
-            this.Vial6InPlaceTB.Location = new System.Drawing.Point(2365, 292);
+            this.Vial6InPlaceTB.Location = new System.Drawing.Point(1267, 242);
             this.Vial6InPlaceTB.Name = "Vial6InPlaceTB";
             this.Vial6InPlaceTB.Size = new System.Drawing.Size(125, 34);
             this.Vial6InPlaceTB.TabIndex = 79;
@@ -2074,7 +2074,7 @@
             this.Vial6StatusTB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Vial6StatusTB.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.Vial6StatusTB.Enabled = false;
-            this.Vial6StatusTB.Location = new System.Drawing.Point(2365, 363);
+            this.Vial6StatusTB.Location = new System.Drawing.Point(1267, 302);
             this.Vial6StatusTB.Name = "Vial6StatusTB";
             this.Vial6StatusTB.Size = new System.Drawing.Size(125, 34);
             this.Vial6StatusTB.TabIndex = 80;
@@ -2085,7 +2085,7 @@
             this.Vial6ErrorTB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Vial6ErrorTB.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.Vial6ErrorTB.Enabled = false;
-            this.Vial6ErrorTB.Location = new System.Drawing.Point(2365, 431);
+            this.Vial6ErrorTB.Location = new System.Drawing.Point(1267, 359);
             this.Vial6ErrorTB.Name = "Vial6ErrorTB";
             this.Vial6ErrorTB.Size = new System.Drawing.Size(125, 34);
             this.Vial6ErrorTB.TabIndex = 81;
@@ -2095,7 +2095,7 @@
             // 
             this.Vial1SizeMlTB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Vial1SizeMlTB.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.Vial1SizeMlTB.Location = new System.Drawing.Point(840, 17);
+            this.Vial1SizeMlTB.Location = new System.Drawing.Point(432, 12);
             this.Vial1SizeMlTB.Name = "Vial1SizeMlTB";
             this.Vial1SizeMlTB.Size = new System.Drawing.Size(125, 34);
             this.Vial1SizeMlTB.TabIndex = 2;
@@ -2107,7 +2107,7 @@
             this.mLinBagTB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.mLinBagTB.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.mLinBagTB.Enabled = false;
-            this.mLinBagTB.Location = new System.Drawing.Point(535, 85);
+            this.mLinBagTB.Location = new System.Drawing.Point(265, 69);
             this.mLinBagTB.Name = "mLinBagTB";
             this.mLinBagTB.Size = new System.Drawing.Size(125, 34);
             this.mLinBagTB.TabIndex = 89;
@@ -2118,7 +2118,7 @@
             this.BagInPlaceTB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.BagInPlaceTB.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.BagInPlaceTB.Enabled = false;
-            this.BagInPlaceTB.Location = new System.Drawing.Point(535, 292);
+            this.BagInPlaceTB.Location = new System.Drawing.Point(265, 242);
             this.BagInPlaceTB.Name = "BagInPlaceTB";
             this.BagInPlaceTB.Size = new System.Drawing.Size(125, 34);
             this.BagInPlaceTB.TabIndex = 91;
@@ -2129,7 +2129,7 @@
             this.BagStatusTB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.BagStatusTB.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.BagStatusTB.Enabled = false;
-            this.BagStatusTB.Location = new System.Drawing.Point(535, 363);
+            this.BagStatusTB.Location = new System.Drawing.Point(265, 302);
             this.BagStatusTB.Name = "BagStatusTB";
             this.BagStatusTB.Size = new System.Drawing.Size(125, 34);
             this.BagStatusTB.TabIndex = 92;
@@ -2140,7 +2140,7 @@
             this.BagErrorTB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.BagErrorTB.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.BagErrorTB.Enabled = false;
-            this.BagErrorTB.Location = new System.Drawing.Point(535, 431);
+            this.BagErrorTB.Location = new System.Drawing.Point(265, 359);
             this.BagErrorTB.Name = "BagErrorTB";
             this.BagErrorTB.Size = new System.Drawing.Size(125, 34);
             this.BagErrorTB.TabIndex = 93;
@@ -2150,7 +2150,7 @@
             // 
             this.label20.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(138, 556);
+            this.label20.Location = new System.Drawing.Point(37, 462);
             this.label20.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(170, 56);
@@ -2162,7 +2162,7 @@
             this.label15.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.label15.Location = new System.Drawing.Point(154, 502);
+            this.label15.Location = new System.Drawing.Point(54, 419);
             this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(137, 28);
@@ -2174,7 +2174,7 @@
             this.isVibrating4TB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.isVibrating4TB.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.isVibrating4TB.Enabled = false;
-            this.isVibrating4TB.Location = new System.Drawing.Point(1755, 499);
+            this.isVibrating4TB.Location = new System.Drawing.Point(933, 416);
             this.isVibrating4TB.Name = "isVibrating4TB";
             this.isVibrating4TB.Size = new System.Drawing.Size(125, 34);
             this.isVibrating4TB.TabIndex = 56;
@@ -2187,7 +2187,7 @@
             this.isVibrating56TB.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.RunParametersTLP.SetColumnSpan(this.isVibrating56TB, 2);
             this.isVibrating56TB.Enabled = false;
-            this.isVibrating56TB.Location = new System.Drawing.Point(2147, 499);
+            this.isVibrating56TB.Location = new System.Drawing.Point(1118, 416);
             this.isVibrating56TB.Name = "isVibrating56TB";
             this.isVibrating56TB.Size = new System.Drawing.Size(257, 34);
             this.isVibrating56TB.TabIndex = 69;
@@ -2198,7 +2198,7 @@
             // 
             this.vibrationTime4TB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.vibrationTime4TB.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.vibrationTime4TB.Location = new System.Drawing.Point(1755, 567);
+            this.vibrationTime4TB.Location = new System.Drawing.Point(933, 473);
             this.vibrationTime4TB.Name = "vibrationTime4TB";
             this.vibrationTime4TB.Size = new System.Drawing.Size(125, 34);
             this.vibrationTime4TB.TabIndex = 17;
@@ -2211,7 +2211,7 @@
             // 
             this.Vial1WithdrawMlTB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Vial1WithdrawMlTB.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.Vial1WithdrawMlTB.Location = new System.Drawing.Point(840, 153);
+            this.Vial1WithdrawMlTB.Location = new System.Drawing.Point(432, 126);
             this.Vial1WithdrawMlTB.Name = "Vial1WithdrawMlTB";
             this.Vial1WithdrawMlTB.Size = new System.Drawing.Size(125, 34);
             this.Vial1WithdrawMlTB.TabIndex = 8;
@@ -2223,7 +2223,7 @@
             this.mLbagToFillTB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.mLbagToFillTB.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.mLbagToFillTB.Enabled = false;
-            this.mLbagToFillTB.Location = new System.Drawing.Point(535, 153);
+            this.mLbagToFillTB.Location = new System.Drawing.Point(265, 126);
             this.mLbagToFillTB.Name = "mLbagToFillTB";
             this.mLbagToFillTB.Size = new System.Drawing.Size(125, 34);
             this.mLbagToFillTB.TabIndex = 107;
@@ -2234,9 +2234,9 @@
             // 
             this.panel24.Controls.Add(this.label18);
             this.panel24.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel24.Location = new System.Drawing.Point(4, 276);
+            this.panel24.Location = new System.Drawing.Point(4, 232);
             this.panel24.Name = "panel24";
-            this.panel24.Size = new System.Drawing.Size(438, 67);
+            this.panel24.Size = new System.Drawing.Size(237, 55);
             this.panel24.TabIndex = 108;
             // 
             // label18
@@ -2244,7 +2244,7 @@
             this.label18.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.label18.Location = new System.Drawing.Point(136, 8);
+            this.label18.Location = new System.Drawing.Point(35, 8);
             this.label18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(175, 28);
@@ -2260,7 +2260,7 @@
             this.TestVibrate56Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.TestVibrate56Btn.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.TestVibrate56Btn.ForeColor = System.Drawing.Color.Black;
-            this.TestVibrate56Btn.Location = new System.Drawing.Point(2147, 774);
+            this.TestVibrate56Btn.Location = new System.Drawing.Point(1118, 646);
             this.TestVibrate56Btn.Name = "TestVibrate56Btn";
             this.TestVibrate56Btn.Size = new System.Drawing.Size(257, 32);
             this.TestVibrate56Btn.TabIndex = 80;
@@ -2276,7 +2276,7 @@
             this.TestVibrate4Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.TestVibrate4Btn.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.TestVibrate4Btn.ForeColor = System.Drawing.Color.Black;
-            this.TestVibrate4Btn.Location = new System.Drawing.Point(1755, 774);
+            this.TestVibrate4Btn.Location = new System.Drawing.Point(933, 646);
             this.TestVibrate4Btn.Name = "TestVibrate4Btn";
             this.TestVibrate4Btn.Size = new System.Drawing.Size(125, 32);
             this.TestVibrate4Btn.TabIndex = 80;
@@ -2288,7 +2288,7 @@
             // 
             this.num03Lbl.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.num03Lbl.AutoSize = true;
-            this.num03Lbl.Location = new System.Drawing.Point(146, 224);
+            this.num03Lbl.Location = new System.Drawing.Point(45, 186);
             this.num03Lbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.num03Lbl.Name = "num03Lbl";
             this.num03Lbl.Size = new System.Drawing.Size(154, 28);
@@ -2299,7 +2299,7 @@
             // 
             this.label19.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(115, 156);
+            this.label19.Location = new System.Drawing.Point(14, 129);
             this.label19.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(216, 28);
@@ -2310,7 +2310,7 @@
             // 
             this.Vial5FillMlTB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Vial5FillMlTB.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.Vial5FillMlTB.Location = new System.Drawing.Point(2060, 221);
+            this.Vial5FillMlTB.Location = new System.Drawing.Point(1100, 183);
             this.Vial5FillMlTB.Name = "Vial5FillMlTB";
             this.Vial5FillMlTB.Size = new System.Drawing.Size(125, 34);
             this.Vial5FillMlTB.TabIndex = 15;
@@ -2321,7 +2321,7 @@
             // 
             this.Vial6FillMlTB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Vial6FillMlTB.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.Vial6FillMlTB.Location = new System.Drawing.Point(2365, 221);
+            this.Vial6FillMlTB.Location = new System.Drawing.Point(1267, 183);
             this.Vial6FillMlTB.Name = "Vial6FillMlTB";
             this.Vial6FillMlTB.Size = new System.Drawing.Size(125, 34);
             this.Vial6FillMlTB.TabIndex = 16;
@@ -2332,7 +2332,7 @@
             // 
             this.Vial4WithdrawMlTB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Vial4WithdrawMlTB.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.Vial4WithdrawMlTB.Location = new System.Drawing.Point(1755, 153);
+            this.Vial4WithdrawMlTB.Location = new System.Drawing.Point(933, 126);
             this.Vial4WithdrawMlTB.Name = "Vial4WithdrawMlTB";
             this.Vial4WithdrawMlTB.Size = new System.Drawing.Size(125, 34);
             this.Vial4WithdrawMlTB.TabIndex = 11;
@@ -2343,7 +2343,7 @@
             // 
             this.Vial4FillMlTB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Vial4FillMlTB.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.Vial4FillMlTB.Location = new System.Drawing.Point(1755, 221);
+            this.Vial4FillMlTB.Location = new System.Drawing.Point(933, 183);
             this.Vial4FillMlTB.Name = "Vial4FillMlTB";
             this.Vial4FillMlTB.Size = new System.Drawing.Size(125, 34);
             this.Vial4FillMlTB.TabIndex = 14;
@@ -2355,7 +2355,7 @@
             this.vibrationTime56TB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.vibrationTime56TB.BackColor = System.Drawing.SystemColors.MenuBar;
             this.RunParametersTLP.SetColumnSpan(this.vibrationTime56TB, 2);
-            this.vibrationTime56TB.Location = new System.Drawing.Point(2147, 567);
+            this.vibrationTime56TB.Location = new System.Drawing.Point(1118, 473);
             this.vibrationTime56TB.Name = "vibrationTime56TB";
             this.vibrationTime56TB.Size = new System.Drawing.Size(257, 34);
             this.vibrationTime56TB.TabIndex = 18;
@@ -2369,7 +2369,7 @@
             this.syringeInPlaceTB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.syringeInPlaceTB.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.syringeInPlaceTB.Enabled = false;
-            this.syringeInPlaceTB.Location = new System.Drawing.Point(2669, 292);
+            this.syringeInPlaceTB.Location = new System.Drawing.Point(1434, 242);
             this.syringeInPlaceTB.Name = "syringeInPlaceTB";
             this.syringeInPlaceTB.Size = new System.Drawing.Size(132, 34);
             this.syringeInPlaceTB.TabIndex = 114;
@@ -2380,7 +2380,7 @@
             this.Vial2InPlaceTB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Vial2InPlaceTB.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.Vial2InPlaceTB.Enabled = false;
-            this.Vial2InPlaceTB.Location = new System.Drawing.Point(1145, 292);
+            this.Vial2InPlaceTB.Location = new System.Drawing.Point(599, 242);
             this.Vial2InPlaceTB.Name = "Vial2InPlaceTB";
             this.Vial2InPlaceTB.Size = new System.Drawing.Size(125, 34);
             this.Vial2InPlaceTB.TabIndex = 88;
@@ -3901,7 +3901,7 @@
             this.tableLayoutPanel27.Name = "tableLayoutPanel27";
             this.tableLayoutPanel27.RowCount = 1;
             this.tableLayoutPanel27.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel27.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 48F));
+            this.tableLayoutPanel27.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 46F));
             this.tableLayoutPanel27.Size = new System.Drawing.Size(379, 46);
             this.tableLayoutPanel27.TabIndex = 0;
             // 
@@ -4285,7 +4285,7 @@
             this.tableLayoutPanel29.Name = "tableLayoutPanel29";
             this.tableLayoutPanel29.RowCount = 1;
             this.tableLayoutPanel29.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel29.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 48F));
+            this.tableLayoutPanel29.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 46F));
             this.tableLayoutPanel29.Size = new System.Drawing.Size(379, 46);
             this.tableLayoutPanel29.TabIndex = 0;
             // 
@@ -5291,7 +5291,7 @@
             this.SetupsTP.Location = new System.Drawing.Point(4, 30);
             this.SetupsTP.Name = "SetupsTP";
             this.SetupsTP.Padding = new System.Windows.Forms.Padding(3);
-            this.SetupsTP.Size = new System.Drawing.Size(2898, 1124);
+            this.SetupsTP.Size = new System.Drawing.Size(2815, 1084);
             this.SetupsTP.TabIndex = 5;
             this.SetupsTP.Text = "setups";
             this.SetupsTP.Enter += new System.EventHandler(this.SetupsTP_Enter);
@@ -5323,7 +5323,7 @@
             this.setupTLP.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.setupTLP.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.setupTLP.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.setupTLP.Size = new System.Drawing.Size(2892, 1118);
+            this.setupTLP.Size = new System.Drawing.Size(2809, 1078);
             this.setupTLP.TabIndex = 1;
             // 
             // GBpanelPNL
@@ -5353,10 +5353,10 @@
             this.GBpanelPNL.Controls.Add(this.runInProcessTB);
             this.GBpanelPNL.Dock = System.Windows.Forms.DockStyle.Fill;
             this.GBpanelPNL.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.GBpanelPNL.Location = new System.Drawing.Point(1447, 226);
+            this.GBpanelPNL.Location = new System.Drawing.Point(1405, 218);
             this.GBpanelPNL.Name = "GBpanelPNL";
             this.setupTLP.SetRowSpan(this.GBpanelPNL, 5);
-            this.GBpanelPNL.Size = new System.Drawing.Size(1441, 548);
+            this.GBpanelPNL.Size = new System.Drawing.Size(1400, 528);
             this.GBpanelPNL.TabIndex = 60;
             this.GBpanelPNL.TabStop = false;
             this.GBpanelPNL.Text = "for debug";
@@ -5532,7 +5532,7 @@
             this.movingTB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.movingTB.BackColor = System.Drawing.SystemColors.MenuBar;
             this.movingTB.Enabled = false;
-            this.movingTB.Location = new System.Drawing.Point(573, 376);
+            this.movingTB.Location = new System.Drawing.Point(553, 366);
             this.movingTB.Name = "movingTB";
             this.movingTB.Size = new System.Drawing.Size(112, 34);
             this.movingTB.TabIndex = 67;
@@ -5585,10 +5585,10 @@
             this.groupBox6.Controls.Add(this.SGPtestTB);
             this.groupBox6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox6.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.groupBox6.Location = new System.Drawing.Point(4, 226);
+            this.groupBox6.Location = new System.Drawing.Point(4, 218);
             this.groupBox6.Name = "groupBox6";
             this.setupTLP.SetRowSpan(this.groupBox6, 5);
-            this.groupBox6.Size = new System.Drawing.Size(1436, 548);
+            this.groupBox6.Size = new System.Drawing.Size(1394, 528);
             this.groupBox6.TabIndex = 63;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "for test";
@@ -5817,7 +5817,7 @@
             this.robotTP.Location = new System.Drawing.Point(4, 30);
             this.robotTP.Name = "robotTP";
             this.robotTP.Padding = new System.Windows.Forms.Padding(3);
-            this.robotTP.Size = new System.Drawing.Size(2898, 1124);
+            this.robotTP.Size = new System.Drawing.Size(2815, 1084);
             this.robotTP.TabIndex = 6;
             this.robotTP.Text = "robot";
             this.robotTP.Enter += new System.EventHandler(this.robotTP_Enter);
@@ -5834,7 +5834,7 @@
             this.debugPnl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.debugPnl.Location = new System.Drawing.Point(3, 3);
             this.debugPnl.Name = "debugPnl";
-            this.debugPnl.Size = new System.Drawing.Size(2892, 1118);
+            this.debugPnl.Size = new System.Drawing.Size(2809, 1078);
             this.debugPnl.TabIndex = 65;
             // 
             // panel33
@@ -6682,7 +6682,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(2823, 1118);
+            this.ClientSize = new System.Drawing.Size(1604, 975);
             this.Controls.Add(cmTC);
             this.Font = new System.Drawing.Font("Segoe UI", 8.25F);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
