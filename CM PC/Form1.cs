@@ -1522,8 +1522,16 @@ namespace SpaceUSB
         {
             VerticalGoUp();
         }
+        private void VerticalUpArrowPnl_Click(object sender, EventArgs e)
+        {
+            VerticalGoUp();
+        }
 
         private void VerticalDownBtn_Click(object sender, EventArgs e)
+        {
+            VerticalGoDown();
+        }
+        private void VerticalDownArrowPnl_Click(object sender, EventArgs e)
         {
             VerticalGoDown();
         }
@@ -1558,8 +1566,16 @@ namespace SpaceUSB
         {
             LinearGoLeft();
         }
+        private void LinearLeftArrowPnl_Click(object sender, EventArgs e)
+        {
+            LinearGoLeft();
+        }
 
         private void LinearRightBtn_Click(object sender, EventArgs e)
+        {
+            LinearGoRight();
+        }
+        private void LinearRightArrowPnl_Click(object sender, EventArgs e)
         {
             LinearGoRight();
         }
@@ -1591,12 +1607,20 @@ namespace SpaceUSB
 
         // *** Arm motor control ***
 
-        private void ArmDownBtn_Click_1(object sender, EventArgs e)
+        private void ArmDownBtn_Click(object sender, EventArgs e)
+        {
+            ArmGoDown();
+        }
+        private void ArmDownArrowPnl_Click(object sender, EventArgs e)
         {
             ArmGoDown();
         }
 
         private void ArmUpBtn_Click(object sender, EventArgs e)
+        {
+            ArmGoUp();
+        }
+        private void ArmUpArrowPnl_Click(object sender, EventArgs e)
         {
             ArmGoUp();
         }
@@ -1632,8 +1656,16 @@ namespace SpaceUSB
         {
             PistonGoIn();
         }
+        private void PistonInArrowPnl_Click(object sender, EventArgs e)
+        {
+            PistonGoIn();
+        }
 
         private void PistonOutBtn_Click(object sender, EventArgs e)
+        {
+            PistonGoOut();
+        }
+        private void PistonOutArrowPnl_Click(object sender, EventArgs e)
         {
             PistonGoOut();
         }
@@ -1668,8 +1700,16 @@ namespace SpaceUSB
         {
             HeadRotateUp();
         }
+        private void SyringeDownArrowPnl_Click(object sender, EventArgs e)
+        {
+            HeadRotateUp();
+        }
 
         private void SyringeDownBtn_Click(object sender, EventArgs e)
+        {
+            HeadRotateDown();
+        }
+        private void SyringeUpArrowPnl_Click(object sender, EventArgs e)
         {
             HeadRotateDown();
         }
@@ -1704,8 +1744,16 @@ namespace SpaceUSB
         {
             DisposeGoOut();
         }
+        private void DisposeArrowPnl_Click(object sender, EventArgs e)
+        {
+            DisposeGoOut();
+        }
 
         private void DiposeBackBtn_Click(object sender, EventArgs e)
+        {
+            DisposeGoIn();
+        }
+        private void DisposeBackArrowPnl_Click(object sender, EventArgs e)
         {
             DisposeGoIn();
         }
@@ -1740,8 +1788,16 @@ namespace SpaceUSB
         {
             CapHolderHold();
         }
+        private void CapHoldArowPnl_Click(object sender, EventArgs e)
+        {
+            CapHolderHold();
+        }
 
         private void ReleaseCapBtn_Click(object sender, EventArgs e)
+        {
+            CapHolderRelease();
+        }
+        private void CapReleaseArowPnl_Click(object sender, EventArgs e)
         {
             CapHolderRelease();
         }
@@ -1931,32 +1987,61 @@ namespace SpaceUSB
         }
 
         private void cmTC_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (username == "") { return; }
-            if (isAdministrator == false) { return; }
-            if (currentTAB <= 2) { return; }               // only for calibrate OR setup
+        { //// temporaraly commented out instead of deleting  -  not needed keyboard shortcuts for now ...
+            //if (username == "") { return; }
+            //if (isAdministrator == false) { return; }
+            //if (currentTAB <= 2) { return; }               // only for calibrate OR setup
 
-            /*MessageBox.Show(
-                        ""
-                        + " KeyCode =  " + e.KeyCode.ToString()
-                        + "\r value=   " + e.KeyValue
-                        + "\r control= " + e.Control
-                        + "\r Alt=     " + e.Alt);
-            */
-            switch (Convert.ToInt32(e.KeyCode))            // move motors using keyboard
-            {
-                case (char)221: LinearGoRight(); break;    // "]"
-                case (char)219: LinearGoLeft(); break;     // "["
-                case (char)222: HeadRotateDown(); break;   // '"'
-                case (char)187: HeadRotateUp(); break;     // "+="
-                case (char)109: ArmGoDown(); break;        // "-" on key pad
-                case (char)107: ArmGoUp(); break;          // "+" on key pad
-                case (char)33: VerticalGoUp(); break;      // "page Up"
-                case (char)34: VerticalGoDown(); break;    // "page down"
-                case (char)36: PistonGoIn(); break;        // "Home"
-                case (char)35: PistonGoOut(); break;       // "End"
-            }
+            ///*MessageBox.Show(
+            //            ""
+            //            + " KeyCode =  " + e.KeyCode.ToString()
+            //            + "\r value=   " + e.KeyValue
+            //            + "\r control= " + e.Control
+            //            + "\r Alt=     " + e.Alt);
+            //*/
+            //switch (Convert.ToInt32(e.KeyCode))            // move motors using keyboard
+            //{
+            //    case (char)221: LinearGoRight(); break;    // "]"
+            //    case (char)219: LinearGoLeft(); break;     // "["
+            //    case (char)222: HeadRotateDown(); break;   // '"'
+            //    case (char)187: HeadRotateUp(); break;     // "+="
+            //    case (char)109: ArmGoDown(); break;        // "-" on key pad
+            //    case (char)107: ArmGoUp(); break;          // "+" on key pad
+            //    case (char)33: VerticalGoUp(); break;      // "page Up"
+            //    case (char)34: VerticalGoDown(); break;    // "page down"
+            //    case (char)36: PistonGoIn(); break;        // "Home"
+            //    case (char)35: PistonGoOut(); break;       // "End"
+            //}
+
         }
+
+        //private void cmTC_KeyDown(object sender, KeyEventArgs e)
+        //{
+        //    if (username == "") { return; }
+        //    if (isAdministrator == false) { return; }
+        //    if (currentTAB <= 2) { return; }               // only for calibrate OR setup
+
+        //    /*MessageBox.Show(
+        //                ""
+        //                + " KeyCode =  " + e.KeyCode.ToString()
+        //                + "\r value=   " + e.KeyValue
+        //                + "\r control= " + e.Control
+        //                + "\r Alt=     " + e.Alt);
+        //    */
+        //    switch (Convert.ToInt32(e.KeyCode))            // move motors using keyboard
+        //    {
+        //        case (char)221: LinearGoRight(); break;    // "]"
+        //        case (char)219: LinearGoLeft(); break;     // "["
+        //        case (char)222: HeadRotateDown(); break;   // '"'
+        //        case (char)187: HeadRotateUp(); break;     // "+="
+        //        case (char)109: ArmGoDown(); break;        // "-" on key pad
+        //        case (char)107: ArmGoUp(); break;          // "+" on key pad
+        //        case (char)33: VerticalGoUp(); break;      // "page Up"
+        //        case (char)34: VerticalGoDown(); break;    // "page down"
+        //        case (char)36: PistonGoIn(); break;        // "Home"
+        //        case (char)35: PistonGoOut(); break;       // "End"
+        //    }
+        //}
 
         // ***** set the tabs entered a number *****
         private void adminTP_Enter(object sender, EventArgs e)
@@ -3341,14 +3426,6 @@ namespace SpaceUSB
             uploadBumpPosVert();
             setBumpPosVert();
         }
-        private void setBumpPosVertTB_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
-        {
-            if (Convert.ToInt32(e.KeyCode) == (char)13)    //  Enter key pressed?
-            {
-                //uploadBumpPosVert();
-                //setBumpPosVert();
-            }
-        }
         private void setBumpPosVert()
         {
             if (rgMinus.Match(setBumpPosVertTB.Text).Success)        // did not match, a non number character is there
@@ -3391,14 +3468,6 @@ namespace SpaceUSB
             uploadDockHeight();
             setDockHeight();
         }
-        private void setDockHeightTB_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
-        {
-            if (Convert.ToInt32(e.KeyCode) == (char)13)    //  Enter key pressed?
-            {
-                uploadDockHeight();
-                setDockHeight();
-            }
-        }
         private void setDockHeight()
         {
             if (rgMinus.Match(setDockHeightTB.Text).Success)        // did not match, a non number character is there
@@ -3437,11 +3506,6 @@ namespace SpaceUSB
             //setBumpBottom();
         }
         private void setBumpBottomTB_Leave(object sender, EventArgs e)
-        {
-            uploadBumpBottom();
-            setBumpBottom();
-        }
-        private void setBumpBottomTB_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
         {
             uploadBumpBottom();
             setBumpBottom();
@@ -3488,14 +3552,6 @@ namespace SpaceUSB
             uploadlinearCenterOfVial1();
             centerOfVial1();
         }
-        private void setCenterOfVial1TB_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
-        {
-            if (Convert.ToInt32(e.KeyCode) == (char)13)    //  Enter key pressed?
-            {
-                //uploadlinearCenterOfVial1();
-                //centerOfVial1();
-            }
-        }
         private void centerOfVial1()
         {
             if (rgMinus.Match(setCenterOfVial1TB.Text).Success)        // did not match, a non number character is there
@@ -3537,14 +3593,6 @@ namespace SpaceUSB
         {
             uploadCapLoading();
             CapLoading();
-        }
-        private void setCapLoadingTB_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
-        {
-            if (Convert.ToInt32(e.KeyCode) == (char)13)    //  Enter key pressed?
-            {
-                //uploadCapLoading();
-                //CapLoading();
-            }
         }
         private void CapLoading()
         {
@@ -3588,14 +3636,6 @@ namespace SpaceUSB
             uploadVial4Bottom();
             setVial4Bottom();
         }
-        //private void setVial4BottomTB_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
-        //{
-        //    if (Convert.ToInt32(e.KeyCode) == (char)13)    //  Enter key pressed?
-        //    {
-        //        //uploadVial4Bottom();
-        //        //setVial4Bottom();
-        //    }
-        //}
         private void setVial4Bottom()
         {
             if (rgMinus.Match(setVial4BottomTB.Text).Success)        // did not match, a non number character is there
@@ -3638,14 +3678,6 @@ namespace SpaceUSB
             uploadVial4Top();
             setVial4Top();
         }
-        //private void setVial4TopTB_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
-        //{
-        //    if (Convert.ToInt32(e.KeyCode) == (char)13)    //  Enter key pressed?
-        //    {
-        //        //uploadVial4Top();
-        //        //setVial4Top();
-        //    }
-        //}
         private void setVial4Top()
         {
             if (rgMinus.Match(setVial4TopTB.Text).Success)        // did not match, a non number character is there
@@ -3687,14 +3719,6 @@ namespace SpaceUSB
         {
             uploadArmVial();
             setArmVial();
-        }
-        private void setArmVialTB_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
-        {
-            if (Convert.ToInt32(e.KeyCode) == (char)13)    //  Enter key pressed?
-            {
-                //uploadArmVial();
-                //setArmVial();
-            }
         }
         private void setArmVial()
         {
@@ -3738,14 +3762,6 @@ namespace SpaceUSB
             uploadArmDisposeVials456();
             setArmDisposeVials456();
         }
-        private void setArmDisposeVials456TB_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
-        {
-            if (Convert.ToInt32(e.KeyCode) == (char)13)    //  Enter key pressed?
-            {
-                //uploadArmDisposeVials456();
-                //setArmDisposeVials456();
-            }
-        }
         private void setArmDisposeVials456()
         {
             if (rgMinus.Match(setArmDisposeVials456TB.Text).Success)        // did not match, a non number character is there
@@ -3787,14 +3803,6 @@ namespace SpaceUSB
         {
             uploadArmAtBotom();
             setArmAtBotom();
-        }
-        private void setArmAtBotomTB_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
-        {
-            if (Convert.ToInt32(e.KeyCode) == (char)13)    //  Enter key pressed?
-            {
-                //uploadArmAtBotom();
-                //setArmAtBotom();
-            }
         }
         private void setArmAtBotom()
         {
@@ -3838,14 +3846,6 @@ namespace SpaceUSB
             uploadPistonStart();
             setPistonStart();
         }
-        private void setPistonStartTB_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
-        {
-            if (Convert.ToInt32(e.KeyCode) == (char)13)    //  Enter key pressed?
-            {
-                //uploadPistonStart();
-                //setPistonStart();
-            }
-        }
         private void setPistonStart()
         {
             if (rgMinus.Match(setPistonStartTB.Text).Success)        // did not match, a non number character is there
@@ -3884,14 +3884,6 @@ namespace SpaceUSB
             setLD_minVol();
         }
 
-        private void LD_minVolTB_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
-        {
-            if (Convert.ToInt32(e.KeyCode) == (char)13)    //  Enter key pressed?
-            {
-                //uploadLD_minVol();
-                //setLD_minVol();
-            }
-        }
 
         private void setLD_minVol()
         {
@@ -3929,14 +3921,6 @@ namespace SpaceUSB
             setLD_maxVol();
         }
 
-        private void LD_maxVolTB_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
-        {
-            if (Convert.ToInt32(e.KeyCode) == (char)13)    //  Enter key pressed?
-            {
-                //uploadLD_maxVol();
-                //setLD_maxVol();
-            }
-        }
 
         private void setLD_maxVol()
         {
@@ -3962,14 +3946,6 @@ namespace SpaceUSB
             setLD_definedVol();
         }
 
-        private void LD_definedVolTB_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
-        {
-            if (Convert.ToInt32(e.KeyCode) == (char)13)    //  Enter key pressed?
-            {
-                //uploaLD_definedVol();
-                //setLD_definedVol();
-            }
-        }
         private void setLD_definedVol()
         {
             if (rgMinus.Match(LD_definedVolTB.Text).Success)        // did not match, a non number character is there
@@ -3993,14 +3969,6 @@ namespace SpaceUSB
             setLD_acceptedDev();
         }
 
-        private void LD_acceptedDevTB_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
-        {
-            if (Convert.ToInt32(e.KeyCode) == (char)13)    //  Enter key pressed?
-            {
-                //uploadLD_acceptedDev();
-                //setLD_acceptedDev();
-            }
-        }
         private void setLD_acceptedDev()
         {
             if (rgMinus.Match(LD_acceptedDevTB.Text).Success)        // did not match, a non number character is there
@@ -4147,15 +4115,6 @@ namespace SpaceUSB
             setHeadRotateTop();
         }
 
-        private void setHeadRotateTopTB_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
-        {
-            if (Convert.ToInt32(e.KeyCode) == (char)13)    //  Enter key pressed?
-            {
-                //uploadHeadRotateTop();
-                //setHeadRotateTop();
-            }
-        }
-
         private void setHeadRotateTop()
         {
             if (rgMinus.Match(setHeadRotateTopTB.Text).Success)        // did not match, a non number character is there
@@ -4200,14 +4159,6 @@ namespace SpaceUSB
             setHeadRotateStart();
         }
 
-        private void setHeadRotateStartTB_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
-        {
-            if (Convert.ToInt32(e.KeyCode) == (char)13)    //  Enter key pressed?
-            {
-                //uploadHeadRotateStart();
-                //setHeadRotateStart();
-            }
-        }
         private void setHeadRotateStart()
         {
             if (rgMinus.Match(setHeadRotateStartTB.Text).Success)        // did not match, a non number character is there
@@ -4244,14 +4195,6 @@ namespace SpaceUSB
         {
             setHeadAtBottomTB.Text = last_setHeadAtBottomTB;
             setHeadAtBottom();
-        }
-        private void setHeadAtBottomTB_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
-        {
-            if (Convert.ToInt32(e.KeyCode) == (char)13)    //  Enter key pressed?
-            {
-                //uploadHeadAtBottom();
-                //setHeadAtBottom();
-            }
         }
         private void setHeadAtBottomTB_Leave(object sender, EventArgs e)
         {
@@ -4299,14 +4242,6 @@ namespace SpaceUSB
         {
             uploadDropVials123m();
             setDropVials123();
-        }
-        private void setDropVials123TB_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
-        {
-            if (Convert.ToInt32(e.KeyCode) == (char)13)    //  Enter key pressed?
-            {
-                //uploadDropVials123m();
-                //setDropVials123();
-            }
         }
         private void setDropVials123()
         {
@@ -4399,7 +4334,6 @@ namespace SpaceUSB
             //tResponse = rTMCConn.RunCommand(GeneralFunctions.ejectSyringeFromBottomVial);
             //tstringToRUNtest();
         }
-
         // *****************************************************************************
 
         // =============================================================
