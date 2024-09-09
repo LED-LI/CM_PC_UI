@@ -229,10 +229,10 @@
             this.tableLayoutPanel99 = new System.Windows.Forms.TableLayoutPanel();
             this.VerticalDownBtn = new System.Windows.Forms.Button();
             this.VerticalDownArrowPnl = new System.Windows.Forms.Panel();
+            this.VerticalHomeBtn = new System.Windows.Forms.Button();
             this.tableLayoutPanel98 = new System.Windows.Forms.TableLayoutPanel();
             this.VerticalUpArrowPnl = new System.Windows.Forms.Panel();
             this.VerticalUpBtn = new System.Windows.Forms.Button();
-            this.VerticalHomeBtn = new System.Windows.Forms.Button();
             this.tableLayoutPanel13 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel97 = new System.Windows.Forms.TableLayoutPanel();
             this.PistonInArrowPnl = new System.Windows.Forms.Panel();
@@ -242,21 +242,21 @@
             this.PistonOutArrowPnl = new System.Windows.Forms.Panel();
             this.PistonHomeBtn = new System.Windows.Forms.Button();
             this.tableLayoutPanel15 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel103 = new System.Windows.Forms.TableLayoutPanel();
-            this.SyringeDownBtn = new System.Windows.Forms.Button();
-            this.SyringeUpArrowPnl = new System.Windows.Forms.Panel();
             this.tableLayoutPanel102 = new System.Windows.Forms.TableLayoutPanel();
             this.SyringeDownArrowPnl = new System.Windows.Forms.Panel();
             this.SyringeUpBtn = new System.Windows.Forms.Button();
+            this.tableLayoutPanel103 = new System.Windows.Forms.TableLayoutPanel();
+            this.SyringeDownBtn = new System.Windows.Forms.Button();
+            this.SyringeUpArrowPnl = new System.Windows.Forms.Panel();
             this.HeadRotateHomeBtn = new System.Windows.Forms.Button();
             this.tableLayoutPanel16 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel106 = new System.Windows.Forms.TableLayoutPanel();
-            this.DiposeBackBtn = new System.Windows.Forms.Button();
-            this.DisposeBackArrowPnl = new System.Windows.Forms.Panel();
             this.tableLayoutPanel104 = new System.Windows.Forms.TableLayoutPanel();
             this.DisposeBtn = new System.Windows.Forms.Button();
             this.DisposeArrowPnl = new System.Windows.Forms.Panel();
             this.Spare51Btn = new System.Windows.Forms.Button();
+            this.tableLayoutPanel106 = new System.Windows.Forms.TableLayoutPanel();
+            this.DiposeBackBtn = new System.Windows.Forms.Button();
+            this.DisposeBackArrowPnl = new System.Windows.Forms.Panel();
             this.tableLayoutPanel17 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel105 = new System.Windows.Forms.TableLayoutPanel();
             this.HoldCapBtn = new System.Windows.Forms.Button();
@@ -657,11 +657,11 @@
             this.tableLayoutPanel97.SuspendLayout();
             this.tableLayoutPanel96.SuspendLayout();
             this.tableLayoutPanel15.SuspendLayout();
-            this.tableLayoutPanel103.SuspendLayout();
             this.tableLayoutPanel102.SuspendLayout();
+            this.tableLayoutPanel103.SuspendLayout();
             this.tableLayoutPanel16.SuspendLayout();
-            this.tableLayoutPanel106.SuspendLayout();
             this.tableLayoutPanel104.SuspendLayout();
+            this.tableLayoutPanel106.SuspendLayout();
             this.tableLayoutPanel17.SuspendLayout();
             this.tableLayoutPanel105.SuspendLayout();
             this.tableLayoutPanel95.SuspendLayout();
@@ -3543,6 +3543,20 @@
             this.VerticalDownArrowPnl.TabIndex = 2;
             this.VerticalDownArrowPnl.Click += new System.EventHandler(this.VerticalDownArrowPnl_Click);
             // 
+            // VerticalHomeBtn
+            // 
+            this.VerticalHomeBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.VerticalHomeBtn.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.VerticalHomeBtn.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.VerticalHomeBtn.Location = new System.Drawing.Point(76, 5);
+            this.VerticalHomeBtn.Margin = new System.Windows.Forms.Padding(0, 5, 0, 5);
+            this.VerticalHomeBtn.Name = "VerticalHomeBtn";
+            this.VerticalHomeBtn.Size = new System.Drawing.Size(102, 137);
+            this.VerticalHomeBtn.TabIndex = 0;
+            this.VerticalHomeBtn.Text = "HOME";
+            this.VerticalHomeBtn.UseVisualStyleBackColor = true;
+            this.VerticalHomeBtn.Click += new System.EventHandler(this.VerticalHomeBtn_Click);
+            // 
             // tableLayoutPanel98
             // 
             this.tableLayoutPanel98.AutoSize = true;
@@ -3592,20 +3606,6 @@
             this.VerticalUpBtn.Text = "Up";
             this.VerticalUpBtn.UseVisualStyleBackColor = false;
             this.VerticalUpBtn.Click += new System.EventHandler(this.VerticalUpBtn_Click);
-            // 
-            // VerticalHomeBtn
-            // 
-            this.VerticalHomeBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.VerticalHomeBtn.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.VerticalHomeBtn.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.VerticalHomeBtn.Location = new System.Drawing.Point(76, 5);
-            this.VerticalHomeBtn.Margin = new System.Windows.Forms.Padding(0, 5, 0, 5);
-            this.VerticalHomeBtn.Name = "VerticalHomeBtn";
-            this.VerticalHomeBtn.Size = new System.Drawing.Size(102, 137);
-            this.VerticalHomeBtn.TabIndex = 0;
-            this.VerticalHomeBtn.Text = "HOME";
-            this.VerticalHomeBtn.UseVisualStyleBackColor = true;
-            this.VerticalHomeBtn.Click += new System.EventHandler(this.VerticalHomeBtn_Click);
             // 
             // tableLayoutPanel13
             // 
@@ -3754,56 +3754,6 @@
             this.tableLayoutPanel15.Size = new System.Drawing.Size(256, 147);
             this.tableLayoutPanel15.TabIndex = 61;
             // 
-            // tableLayoutPanel103
-            // 
-            this.tableLayoutPanel103.AutoSize = true;
-            this.tableLayoutPanel103.ColumnCount = 1;
-            this.tableLayoutPanel103.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel103.Controls.Add(this.SyringeDownBtn, 0, 0);
-            this.tableLayoutPanel103.Controls.Add(this.SyringeUpArrowPnl, 0, 1);
-            this.tableLayoutPanel103.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel103.Location = new System.Drawing.Point(1, 1);
-            this.tableLayoutPanel103.Margin = new System.Windows.Forms.Padding(1);
-            this.tableLayoutPanel103.Name = "tableLayoutPanel103";
-            this.tableLayoutPanel103.RowCount = 2;
-            this.tableLayoutPanel103.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel103.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel103.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel103.Size = new System.Drawing.Size(74, 145);
-            this.tableLayoutPanel103.TabIndex = 105;
-            // 
-            // SyringeDownBtn
-            // 
-            this.SyringeDownBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.SyringeDownBtn.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.SyringeDownBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.SyringeDownBtn.FlatAppearance.BorderSize = 8;
-            this.SyringeDownBtn.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
-            this.SyringeDownBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.SyringeDownBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
-            this.SyringeDownBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.SyringeDownBtn.Font = new System.Drawing.Font("Segoe UI", 9.5F);
-            this.SyringeDownBtn.Location = new System.Drawing.Point(0, 0);
-            this.SyringeDownBtn.Margin = new System.Windows.Forms.Padding(0);
-            this.SyringeDownBtn.Name = "SyringeDownBtn";
-            this.SyringeDownBtn.Size = new System.Drawing.Size(74, 72);
-            this.SyringeDownBtn.TabIndex = 10;
-            this.SyringeDownBtn.Text = "Down\r\n[CCW]";
-            this.SyringeDownBtn.UseVisualStyleBackColor = false;
-            this.SyringeDownBtn.Click += new System.EventHandler(this.SyringeDownBtn_Click);
-            // 
-            // SyringeUpArrowPnl
-            // 
-            this.SyringeUpArrowPnl.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("SyringeUpArrowPnl.BackgroundImage")));
-            this.SyringeUpArrowPnl.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.SyringeUpArrowPnl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.SyringeUpArrowPnl.Location = new System.Drawing.Point(10, 82);
-            this.SyringeUpArrowPnl.Margin = new System.Windows.Forms.Padding(10);
-            this.SyringeUpArrowPnl.Name = "SyringeUpArrowPnl";
-            this.SyringeUpArrowPnl.Size = new System.Drawing.Size(54, 53);
-            this.SyringeUpArrowPnl.TabIndex = 2;
-            this.SyringeUpArrowPnl.Click += new System.EventHandler(this.SyringeUpArrowPnl_Click);
-            // 
             // tableLayoutPanel102
             // 
             this.tableLayoutPanel102.AutoSize = true;
@@ -3854,6 +3804,56 @@
             this.SyringeUpBtn.UseVisualStyleBackColor = false;
             this.SyringeUpBtn.Click += new System.EventHandler(this.SyringeUpBtn_Click);
             // 
+            // tableLayoutPanel103
+            // 
+            this.tableLayoutPanel103.AutoSize = true;
+            this.tableLayoutPanel103.ColumnCount = 1;
+            this.tableLayoutPanel103.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel103.Controls.Add(this.SyringeDownBtn, 0, 0);
+            this.tableLayoutPanel103.Controls.Add(this.SyringeUpArrowPnl, 0, 1);
+            this.tableLayoutPanel103.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel103.Location = new System.Drawing.Point(1, 1);
+            this.tableLayoutPanel103.Margin = new System.Windows.Forms.Padding(1);
+            this.tableLayoutPanel103.Name = "tableLayoutPanel103";
+            this.tableLayoutPanel103.RowCount = 2;
+            this.tableLayoutPanel103.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel103.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel103.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel103.Size = new System.Drawing.Size(74, 145);
+            this.tableLayoutPanel103.TabIndex = 105;
+            // 
+            // SyringeDownBtn
+            // 
+            this.SyringeDownBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.SyringeDownBtn.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.SyringeDownBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.SyringeDownBtn.FlatAppearance.BorderSize = 8;
+            this.SyringeDownBtn.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
+            this.SyringeDownBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.SyringeDownBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.SyringeDownBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.SyringeDownBtn.Font = new System.Drawing.Font("Segoe UI", 9.5F);
+            this.SyringeDownBtn.Location = new System.Drawing.Point(0, 0);
+            this.SyringeDownBtn.Margin = new System.Windows.Forms.Padding(0);
+            this.SyringeDownBtn.Name = "SyringeDownBtn";
+            this.SyringeDownBtn.Size = new System.Drawing.Size(74, 72);
+            this.SyringeDownBtn.TabIndex = 10;
+            this.SyringeDownBtn.Text = "Down\r\n[CCW]";
+            this.SyringeDownBtn.UseVisualStyleBackColor = false;
+            this.SyringeDownBtn.Click += new System.EventHandler(this.SyringeDownBtn_Click);
+            // 
+            // SyringeUpArrowPnl
+            // 
+            this.SyringeUpArrowPnl.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("SyringeUpArrowPnl.BackgroundImage")));
+            this.SyringeUpArrowPnl.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.SyringeUpArrowPnl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.SyringeUpArrowPnl.Location = new System.Drawing.Point(10, 82);
+            this.SyringeUpArrowPnl.Margin = new System.Windows.Forms.Padding(10);
+            this.SyringeUpArrowPnl.Name = "SyringeUpArrowPnl";
+            this.SyringeUpArrowPnl.Size = new System.Drawing.Size(54, 53);
+            this.SyringeUpArrowPnl.TabIndex = 2;
+            this.SyringeUpArrowPnl.Click += new System.EventHandler(this.SyringeUpArrowPnl_Click);
+            // 
             // HeadRotateHomeBtn
             // 
             this.HeadRotateHomeBtn.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -3884,55 +3884,6 @@
             this.tableLayoutPanel16.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel16.Size = new System.Drawing.Size(256, 147);
             this.tableLayoutPanel16.TabIndex = 62;
-            // 
-            // tableLayoutPanel106
-            // 
-            this.tableLayoutPanel106.AutoSize = true;
-            this.tableLayoutPanel106.ColumnCount = 1;
-            this.tableLayoutPanel106.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel106.Controls.Add(this.DiposeBackBtn, 0, 0);
-            this.tableLayoutPanel106.Controls.Add(this.DisposeBackArrowPnl, 0, 1);
-            this.tableLayoutPanel106.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel106.Location = new System.Drawing.Point(179, 1);
-            this.tableLayoutPanel106.Margin = new System.Windows.Forms.Padding(1);
-            this.tableLayoutPanel106.Name = "tableLayoutPanel106";
-            this.tableLayoutPanel106.RowCount = 2;
-            this.tableLayoutPanel106.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel106.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel106.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel106.Size = new System.Drawing.Size(76, 145);
-            this.tableLayoutPanel106.TabIndex = 108;
-            // 
-            // DiposeBackBtn
-            // 
-            this.DiposeBackBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.DiposeBackBtn.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DiposeBackBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.DiposeBackBtn.FlatAppearance.BorderSize = 8;
-            this.DiposeBackBtn.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
-            this.DiposeBackBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.DiposeBackBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
-            this.DiposeBackBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.DiposeBackBtn.Font = new System.Drawing.Font("Segoe UI", 9.5F);
-            this.DiposeBackBtn.Location = new System.Drawing.Point(0, 0);
-            this.DiposeBackBtn.Margin = new System.Windows.Forms.Padding(0);
-            this.DiposeBackBtn.Name = "DiposeBackBtn";
-            this.DiposeBackBtn.Size = new System.Drawing.Size(76, 72);
-            this.DiposeBackBtn.TabIndex = 12;
-            this.DiposeBackBtn.Text = "Back-\r\nward";
-            this.DiposeBackBtn.UseVisualStyleBackColor = false;
-            this.DiposeBackBtn.Click += new System.EventHandler(this.DiposeBackBtn_Click);
-            // 
-            // DisposeBackArrowPnl
-            // 
-            this.DisposeBackArrowPnl.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("DisposeBackArrowPnl.BackgroundImage")));
-            this.DisposeBackArrowPnl.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.DisposeBackArrowPnl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DisposeBackArrowPnl.Location = new System.Drawing.Point(3, 75);
-            this.DisposeBackArrowPnl.Name = "DisposeBackArrowPnl";
-            this.DisposeBackArrowPnl.Size = new System.Drawing.Size(70, 67);
-            this.DisposeBackArrowPnl.TabIndex = 2;
-            this.DisposeBackArrowPnl.Click += new System.EventHandler(this.DisposeBackArrowPnl_Click);
             // 
             // tableLayoutPanel104
             // 
@@ -3996,6 +3947,55 @@
             this.Spare51Btn.Text = "HOME";
             this.Spare51Btn.UseVisualStyleBackColor = true;
             this.Spare51Btn.Click += new System.EventHandler(this.Spare51Btn_Click);
+            // 
+            // tableLayoutPanel106
+            // 
+            this.tableLayoutPanel106.AutoSize = true;
+            this.tableLayoutPanel106.ColumnCount = 1;
+            this.tableLayoutPanel106.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel106.Controls.Add(this.DiposeBackBtn, 0, 0);
+            this.tableLayoutPanel106.Controls.Add(this.DisposeBackArrowPnl, 0, 1);
+            this.tableLayoutPanel106.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel106.Location = new System.Drawing.Point(179, 1);
+            this.tableLayoutPanel106.Margin = new System.Windows.Forms.Padding(1);
+            this.tableLayoutPanel106.Name = "tableLayoutPanel106";
+            this.tableLayoutPanel106.RowCount = 2;
+            this.tableLayoutPanel106.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel106.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel106.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel106.Size = new System.Drawing.Size(76, 145);
+            this.tableLayoutPanel106.TabIndex = 108;
+            // 
+            // DiposeBackBtn
+            // 
+            this.DiposeBackBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.DiposeBackBtn.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.DiposeBackBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.DiposeBackBtn.FlatAppearance.BorderSize = 8;
+            this.DiposeBackBtn.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
+            this.DiposeBackBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.DiposeBackBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.DiposeBackBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.DiposeBackBtn.Font = new System.Drawing.Font("Segoe UI", 9.5F);
+            this.DiposeBackBtn.Location = new System.Drawing.Point(0, 0);
+            this.DiposeBackBtn.Margin = new System.Windows.Forms.Padding(0);
+            this.DiposeBackBtn.Name = "DiposeBackBtn";
+            this.DiposeBackBtn.Size = new System.Drawing.Size(76, 72);
+            this.DiposeBackBtn.TabIndex = 12;
+            this.DiposeBackBtn.Text = "Back-\r\nward";
+            this.DiposeBackBtn.UseVisualStyleBackColor = false;
+            this.DiposeBackBtn.Click += new System.EventHandler(this.DiposeBackBtn_Click);
+            // 
+            // DisposeBackArrowPnl
+            // 
+            this.DisposeBackArrowPnl.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("DisposeBackArrowPnl.BackgroundImage")));
+            this.DisposeBackArrowPnl.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.DisposeBackArrowPnl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.DisposeBackArrowPnl.Location = new System.Drawing.Point(3, 75);
+            this.DisposeBackArrowPnl.Name = "DisposeBackArrowPnl";
+            this.DisposeBackArrowPnl.Size = new System.Drawing.Size(70, 67);
+            this.DisposeBackArrowPnl.TabIndex = 2;
+            this.DisposeBackArrowPnl.Click += new System.EventHandler(this.DisposeBackArrowPnl_Click);
             // 
             // tableLayoutPanel17
             // 
@@ -6916,7 +6916,7 @@
             this.label102.Name = "label102";
             this.label102.Size = new System.Drawing.Size(124, 58);
             this.label102.TabIndex = 82;
-            this.label102.Text = "Accepted \r\ndeviation [%]";
+            this.label102.Text = "Accepted \r\ndeviation %";
             this.label102.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label103
@@ -7122,6 +7122,7 @@
             this.oopsVial4BottomBtn.Size = new System.Drawing.Size(26, 26);
             this.oopsVial4BottomBtn.TabIndex = 90;
             this.oopsVial4BottomBtn.UseVisualStyleBackColor = true;
+            this.oopsVial4BottomBtn.Click += new System.EventHandler(this.oopsVial4BottomBtn_Click);
             // 
             // label105
             // 
@@ -7167,6 +7168,7 @@
             this.GoToVial4BottomBtn.TabIndex = 89;
             this.GoToVial4BottomBtn.Text = "GOTO";
             this.GoToVial4BottomBtn.UseVisualStyleBackColor = false;
+            this.GoToVial4BottomBtn.Click += new System.EventHandler(this.GoToVial4BottomBtn_Click);
             // 
             // setVial4BottomBtn
             // 
@@ -7180,6 +7182,7 @@
             this.setVial4BottomBtn.TabIndex = 87;
             this.setVial4BottomBtn.Text = "set";
             this.setVial4BottomBtn.UseVisualStyleBackColor = true;
+            this.setVial4BottomBtn.Click += new System.EventHandler(this.setVial4BottomBtn_Click);
             // 
             // setVial4BottomTB
             // 
@@ -7193,6 +7196,7 @@
             this.setVial4BottomTB.TabIndex = 88;
             this.setVial4BottomTB.Text = "0";
             this.setVial4BottomTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.setVial4BottomTB.Leave += new System.EventHandler(this.setVial4BottomTB_Leave);
             // 
             // panel44
             // 
@@ -8728,12 +8732,12 @@
             this.tableLayoutPanel96.ResumeLayout(false);
             this.tableLayoutPanel15.ResumeLayout(false);
             this.tableLayoutPanel15.PerformLayout();
-            this.tableLayoutPanel103.ResumeLayout(false);
             this.tableLayoutPanel102.ResumeLayout(false);
+            this.tableLayoutPanel103.ResumeLayout(false);
             this.tableLayoutPanel16.ResumeLayout(false);
             this.tableLayoutPanel16.PerformLayout();
-            this.tableLayoutPanel106.ResumeLayout(false);
             this.tableLayoutPanel104.ResumeLayout(false);
+            this.tableLayoutPanel106.ResumeLayout(false);
             this.tableLayoutPanel17.ResumeLayout(false);
             this.tableLayoutPanel17.PerformLayout();
             this.tableLayoutPanel105.ResumeLayout(false);

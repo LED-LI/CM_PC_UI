@@ -27,7 +27,7 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_44E30942F9F584084A657309E954161C"
+        "MsmKey" = "8:_786B3B0921573795DADA9C4BD63A51D8"
         "OwnerKey" = "8:_2F34DC5D89C64DFA82C1EBEFAB48B03B"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -39,6 +39,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_A32C664AD26E4C398F3DCB1C7A04E6D0"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_2F34DC5D89C64DFA82C1EBEFAB48B03B"
         "MsmSig" = "8:_UNDEFINED"
@@ -46,7 +52,7 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_44E30942F9F584084A657309E954161C"
+        "OwnerKey" = "8:_786B3B0921573795DADA9C4BD63A51D8"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -63,7 +69,7 @@
         "DisplayName" = "8:Debug"
         "IsDebugOnly" = "11:TRUE"
         "IsReleaseOnly" = "11:FALSE"
-        "OutputFilename" = "8:Debug\\CM installer.msi"
+        "OutputFilename" = "8:RD - CM UI.msi"
         "PackageFilesAs" = "3:2"
         "PackageFileSize" = "3:-2147483648"
         "CabType" = "3:1"
@@ -95,7 +101,7 @@
         "DisplayName" = "8:Release"
         "IsDebugOnly" = "11:FALSE"
         "IsReleaseOnly" = "11:TRUE"
-        "OutputFilename" = "8:Release\\CM installer.msi"
+        "OutputFilename" = "8:RD - CM UI.msi"
         "PackageFilesAs" = "3:2"
         "PackageFileSize" = "3:-2147483648"
         "CabType" = "3:1"
@@ -170,14 +176,14 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_44E30942F9F584084A657309E954161C"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_786B3B0921573795DADA9C4BD63A51D8"
             {
             "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyIsInGAC" = "11:TRUE"
             "AssemblyAsmDisplayName" = "8:BCL.easyPDF.Printer, Version=8.0.0.0, Culture=neutral, PublicKeyToken=e606b977315b2faf, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_44E30942F9F584084A657309E954161C"
+                    "_786B3B0921573795DADA9C4BD63A51D8"
                     {
                     "Name" = "8:BCL.easyPDF.Printer.dll"
                     "Attributes" = "3:512"
@@ -230,6 +236,26 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_A32C664AD26E4C398F3DCB1C7A04E6D0"
+            {
+            "SourcePath" = "8:..\\CM PC\\Resources\\CMicon.ico"
+            "TargetName" = "8:CMicon.ico"
+            "Tag" = "8:"
+            "Folder" = "8:_D1494A103A614845A9EFE4AFC35D468F"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
         }
@@ -311,12 +337,12 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:CM installer"
         "ProductCode" = "8:{41108237-FC8D-4C9C-81A4-E74B4BC90C8E}"
-        "PackageCode" = "8:{2F563C85-9A57-4EAB-8F5F-0D44F5479837}"
+        "PackageCode" = "8:{0B8FD2D8-B5C3-4D54-A806-5F6B79C278AD}"
         "UpgradeCode" = "8:{22B37968-A96A-42A4-9F96-088570BA3AB0}"
         "AspNetVersion" = "8:2.0.50727.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
-        "DetectNewerInstalledVersion" = "11:TRUE"
+        "DetectNewerInstalledVersion" = "11:FALSE"
         "InstallAllUsers" = "11:TRUE"
         "ProductVersion" = "8:1.1.0"
         "Manufacturer" = "8:RescueDose"
@@ -324,7 +350,7 @@
         "ARPHELPLINK" = "8:"
         "Title" = "8:CM installer"
         "Subject" = "8:"
-        "ARPCONTACT" = "8:Eli"
+        "ARPCONTACT" = "8:LED"
         "Keywords" = "8:"
         "ARPCOMMENTS" = "8:Interface to run CM trinamic control board"
         "ARPURLINFOABOUT" = "8:"
@@ -860,7 +886,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_2F34DC5D89C64DFA82C1EBEFAB48B03B"
             {
-            "SourcePath" = "8:..\\CM PC\\obj\\Debug\\CM UI.exe"
+            "SourcePath" = "8:..\\CM PC\\obj\\Debug\\RD - CM UI.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_D1494A103A614845A9EFE4AFC35D468F"

@@ -3,6 +3,13 @@
   "WorkspaceRootPath": "C:\\Users\\LED\\OneDrive - Light Instruments Ltd\\Documents\\GitHub\\CM_PC_UI\\CM PC\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{00000000-0000-0000-0000-000000000000}|\u003CSolution\u003E|CM PC UI||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{793DC976-5228-4DD7-8B2F-8ECCC20DA82C}|CM PC UI.csproj|c:\\users\\led\\onedrive - light instruments ltd\\documents\\github\\cm_pc_ui\\cm pc\\resources\\cmicon.ico||{177559E0-D141-11D0-92DF-00A0C9138C45}",
+      "RelativeMoniker": "D:0:0:{793DC976-5228-4DD7-8B2F-8ECCC20DA82C}|CM PC UI.csproj|solutionrelative:resources\\cmicon.ico||{177559E0-D141-11D0-92DF-00A0C9138C45}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{793DC976-5228-4DD7-8B2F-8ECCC20DA82C}|CM PC UI.csproj|c:\\users\\led\\onedrive - light instruments ltd\\documents\\github\\cm_pc_ui\\cm pc\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{793DC976-5228-4DD7-8B2F-8ECCC20DA82C}|CM PC UI.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
@@ -15,12 +22,7 @@
       "RelativeMoniker": "D:0:0:{793DC976-5228-4DD7-8B2F-8ECCC20DA82C}|CM PC UI.csproj|solutionrelative:form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{793DC976-5228-4DD7-8B2F-8ECCC20DA82C}|CM PC UI.csproj|C:\\Users\\LED\\OneDrive - Light Instruments Ltd\\Documents\\GitHub\\CM_PC_UI\\CM PC\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{793DC976-5228-4DD7-8B2F-8ECCC20DA82C}|CM PC UI.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{793DC976-5228-4DD7-8B2F-8ECCC20DA82C}|CM PC UI.csproj|C:\\Users\\LED\\OneDrive - Light Instruments Ltd\\Documents\\GitHub\\CM_PC_UI\\CM PC\\usbvariables.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{793DC976-5228-4DD7-8B2F-8ECCC20DA82C}|CM PC UI.csproj|solutionrelative:usbvariables.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{793DC976-5228-4DD7-8B2F-8ECCC20DA82C}|CM PC UI.csproj|c:\\users\\led\\onedrive - light instruments ltd\\documents\\github\\cm_pc_ui\\cm pc\\||{B270807C-D8C6-49EB-8EBE-8E8D566637A1}|5e9a8ac2-4f34-4521-858f-4c248ba31532"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,11 +32,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 164,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Form1.cs [Design]",
               "DocumentMoniker": "C:\\Users\\LED\\OneDrive - Light Instruments Ltd\\Documents\\GitHub\\CM_PC_UI\\CM PC\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",
@@ -47,16 +49,40 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "Form1.cs",
               "DocumentMoniker": "C:\\Users\\LED\\OneDrive - Light Instruments Ltd\\Documents\\GitHub\\CM_PC_UI\\CM PC\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",
               "ToolTip": "C:\\Users\\LED\\OneDrive - Light Instruments Ltd\\Documents\\GitHub\\CM_PC_UI\\CM PC\\Form1.cs",
               "RelativeToolTip": "Form1.cs",
-              "ViewState": "AQIAAPQGAABAAAAAAAAcwAcHAABIAAAA",
+              "ViewState": "AQIAABUOAAAAAAAAAIA5wDMOAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-28T06:53:53.141Z",
               "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CMicon.ico -  [English (United States)] - Icon [16x16, 32 bit, BMP]",
+              "DocumentMoniker": "C:\\Users\\LED\\OneDrive - Light Instruments Ltd\\Documents\\GitHub\\CM_PC_UI\\CM PC\\Resources\\CMicon.ico",
+              "RelativeDocumentMoniker": "Resources\\CMicon.ico",
+              "ToolTip": "C:\\Users\\LED\\OneDrive - Light Instruments Ltd\\Documents\\GitHub\\CM_PC_UI\\CM PC\\Resources\\CMicon.ico -  [English (United States)] - Icon [16x16, 32 bit, BMP]",
+              "RelativeToolTip": "Resources\\CMicon.ico -  [English (United States)] - Icon [16x16, 32 bit, BMP]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001525|",
+              "WhenOpened": "2024-09-09T06:44:47.209Z",
+              "EditorCaption": " -  [English (United States)] - Icon [16x16, 32 bit, BMP]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CM PC UI",
+              "DocumentMoniker": "C:\\Users\\LED\\OneDrive - Light Instruments Ltd\\Documents\\GitHub\\CM_PC_UI\\CM PC\\CM PC UI.csproj",
+              "RelativeDocumentMoniker": "CM PC UI.csproj",
+              "ToolTip": "C:\\Users\\LED\\OneDrive - Light Instruments Ltd\\Documents\\GitHub\\CM_PC_UI\\CM PC\\CM PC UI.csproj",
+              "RelativeToolTip": "CM PC UI.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-09-08T09:05:05.606Z",
               "EditorCaption": ""
             },
             {
@@ -77,20 +103,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\LED\\OneDrive - Light Instruments Ltd\\Documents\\GitHub\\CM_PC_UI\\CM PC\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\LED\\OneDrive - Light Instruments Ltd\\Documents\\GitHub\\CM_PC_UI\\CM PC\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAAhAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-06T10:18:00.484Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "Form1.Designer.cs",
               "DocumentMoniker": "C:\\Users\\LED\\OneDrive - Light Instruments Ltd\\Documents\\GitHub\\CM_PC_UI\\CM PC\\Form1.Designer.cs",
               "RelativeDocumentMoniker": "Form1.Designer.cs",
@@ -100,18 +113,6 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-28T07:32:21.921Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "USBVariables.cs",
-              "DocumentMoniker": "C:\\Users\\LED\\OneDrive - Light Instruments Ltd\\Documents\\GitHub\\CM_PC_UI\\CM PC\\USBVariables.cs",
-              "RelativeDocumentMoniker": "USBVariables.cs",
-              "ToolTip": "C:\\Users\\LED\\OneDrive - Light Instruments Ltd\\Documents\\GitHub\\CM_PC_UI\\CM PC\\USBVariables.cs",
-              "RelativeToolTip": "USBVariables.cs",
-              "ViewState": "AQIAAPEAAAAAAAAAAAAkwBkBAAAnAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-28T04:42:16.524Z"
             }
           ]
         }

@@ -7,7 +7,7 @@
     <ProjectGuid>{793DC976-5228-4DD7-8B2F-8ECCC20DA82C}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>CMNameSpace</RootNamespace>
-    <AssemblyName>CM UI</AssemblyName>
+    <AssemblyName>RD - CM UI</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -46,6 +46,9 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>CMicon.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="BCL.easyPDF.Printer">
@@ -122,6 +125,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\arrow left.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="CMicon.ico" />
+    <Content Include="favicon.ico" />
+    <Content Include="Resources\CMicon.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

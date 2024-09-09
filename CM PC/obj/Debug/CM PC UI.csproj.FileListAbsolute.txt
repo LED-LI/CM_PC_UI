@@ -32,16 +32,17 @@ C:\LI\Code\CM PC\CM PC\obj\Debug\CM PC UI.csproj.GenerateResource.cache
 C:\LI\Code\CM PC\CM PC\obj\Debug\CM PC UI.csproj.CoreCompileInputs.cache
 C:\LI\Code\CM PC\CM PC\obj\Debug\CM UI.exe
 C:\LI\Code\CM PC\CM PC\obj\Debug\CM UI.pdb
-C:\Users\LED\OneDrive - Light Instruments Ltd\Documents\GitHub\CM_PC_UI\CM PC\bin\Debug\CM UI.exe.config
-C:\Users\LED\OneDrive - Light Instruments Ltd\Documents\GitHub\CM_PC_UI\CM PC\bin\Debug\CM UI.exe
-C:\Users\LED\OneDrive - Light Instruments Ltd\Documents\GitHub\CM_PC_UI\CM PC\bin\Debug\CM UI.pdb
 C:\Users\LED\OneDrive - Light Instruments Ltd\Documents\GitHub\CM_PC_UI\CM PC\obj\Debug\CM PC UI.csproj.AssemblyReference.cache
 C:\Users\LED\OneDrive - Light Instruments Ltd\Documents\GitHub\CM_PC_UI\CM PC\obj\Debug\SpaceUSB.CMForm.resources
 C:\Users\LED\OneDrive - Light Instruments Ltd\Documents\GitHub\CM_PC_UI\CM PC\obj\Debug\CMNameSpace.Properties.Resources.resources
 C:\Users\LED\OneDrive - Light Instruments Ltd\Documents\GitHub\CM_PC_UI\CM PC\obj\Debug\CM PC UI.csproj.GenerateResource.cache
 C:\Users\LED\OneDrive - Light Instruments Ltd\Documents\GitHub\CM_PC_UI\CM PC\obj\Debug\CM PC UI.csproj.CoreCompileInputs.cache
-C:\Users\LED\OneDrive - Light Instruments Ltd\Documents\GitHub\CM_PC_UI\CM PC\obj\Debug\CM UI.exe
-C:\Users\LED\OneDrive - Light Instruments Ltd\Documents\GitHub\CM_PC_UI\CM PC\obj\Debug\CM UI.pdb
-C:\Users\LED\OneDrive - Light Instruments Ltd\Documents\GitHub\CM_PC_UI\CM PC\bin\Debug\en-US\CM UI.resources.dll
 C:\Users\LED\OneDrive - Light Instruments Ltd\Documents\GitHub\CM_PC_UI\CM PC\obj\Debug\SpaceUSB.CMForm.en-US.resources
-C:\Users\LED\OneDrive - Light Instruments Ltd\Documents\GitHub\CM_PC_UI\CM PC\obj\Debug\en-US\CM UI.resources.dll
+C:\Users\LED\OneDrive - Light Instruments Ltd\Documents\GitHub\CM_PC_UI\CM PC\bin\Debug\RD - CM UI.exe.config
+C:\Users\LED\OneDrive - Light Instruments Ltd\Documents\GitHub\CM_PC_UI\CM PC\bin\Debug\RD - CM UI.exe
+C:\Users\LED\OneDrive - Light Instruments Ltd\Documents\GitHub\CM_PC_UI\CM PC\bin\Debug\RD - CM UI.pdb
+C:\Users\LED\OneDrive - Light Instruments Ltd\Documents\GitHub\CM_PC_UI\CM PC\bin\Debug\en-US\RD - CM UI.resources.dll
+C:\Users\LED\OneDrive - Light Instruments Ltd\Documents\GitHub\CM_PC_UI\CM PC\obj\Debug\en-US\RD - CM UI.resources.dll
+C:\Users\LED\OneDrive - Light Instruments Ltd\Documents\GitHub\CM_PC_UI\CM PC\obj\Debug\RD - CM UI.exe
+C:\Users\LED\OneDrive - Light Instruments Ltd\Documents\GitHub\CM_PC_UI\CM PC\obj\Debug\RD - CM UI.pdb
+C:\Users\LED\OneDrive - Light Instruments Ltd\Documents\GitHub\CM_PC_UI\CM PC\obj\Debug\CM PC UI.csproj.Up2Date
