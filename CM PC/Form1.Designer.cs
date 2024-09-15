@@ -4097,6 +4097,7 @@
             // 
             // ReleaseCapBtn
             // 
+            this.ReleaseCapBtn.AutoSize = true;
             this.ReleaseCapBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ReleaseCapBtn.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ReleaseCapBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -4111,7 +4112,7 @@
             this.ReleaseCapBtn.Name = "ReleaseCapBtn";
             this.ReleaseCapBtn.Size = new System.Drawing.Size(76, 72);
             this.ReleaseCapBtn.TabIndex = 12;
-            this.ReleaseCapBtn.Text = "Release\r\ncap";
+            this.ReleaseCapBtn.Text = "Rls.\r\ncap";
             this.ReleaseCapBtn.UseVisualStyleBackColor = false;
             this.ReleaseCapBtn.Click += new System.EventHandler(this.ReleaseCapBtn_Click);
             // 
@@ -6289,7 +6290,7 @@
             this.setCapLoadingBtn.Name = "setCapLoadingBtn";
             this.setCapLoadingBtn.Size = new System.Drawing.Size(46, 42);
             this.setCapLoadingBtn.TabIndex = 79;
-            this.setCapLoadingBtn.Text = "Set";
+            this.setCapLoadingBtn.Text = "set";
             this.setCapLoadingBtn.UseVisualStyleBackColor = true;
             this.setCapLoadingBtn.Click += new System.EventHandler(this.setCapLoadingBtn_Click);
             // 
@@ -8742,6 +8743,7 @@
             this.tableLayoutPanel17.PerformLayout();
             this.tableLayoutPanel105.ResumeLayout(false);
             this.tableLayoutPanel95.ResumeLayout(false);
+            this.tableLayoutPanel95.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.panel40.ResumeLayout(false);

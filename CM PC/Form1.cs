@@ -1459,6 +1459,11 @@ namespace SpaceUSB
                             logAndShow("Please replace a new syring");
                             goto exit;  // exit
                         }
+            if (readyForNewCommand)
+            {
+           *** maybe put here ***
+            CSUB    VERIFY_READY_DRAW          // check if syringe, vial are loaded // keeps STATE WAITING_DISPENSE for easy recovery
+            }
             */
             RunInProcess = true;                                  // eliminate re-entrance
 
@@ -2835,7 +2840,35 @@ namespace SpaceUSB
             //            MessageBox.Show(message, "information", MessageBoxButtons.OK, MessageBoxIcon.Warning,
             //                                         MessageBoxDefaultButton.Button3, MessageBoxOptions.DefaultDesktopOnly);
             //this.TopMost = false; 
+            RunTP.Focus();
             return;
+        }
+
+        // =====================
+        //  select / focus
+        // =====================
+
+        //ControlSetFocus(control: CMForm);
+        //ControlSetFocus(cmTC);
+        //ControlSelect(CMForm);
+        //ControlSelect(cmTC);
+
+        public void ControlSetFocus(Control control)
+        {
+            // Set focus to the control, if it can receive focus.
+            if (control.CanFocus)
+            {
+                control.Focus();
+            }
+        }
+
+        public void ControlSelect(Control control)
+        {
+            // Select the control, if it can be selected.
+            if (control.CanSelect)
+            {
+                control.Select();
+            }
         }
 
         // =====================
@@ -2888,6 +2921,8 @@ namespace SpaceUSB
                 catch (Exception ex)
                 {
                     logAndShow($"{ex.Message}");
+                    //cmTC.Focus();
+                    //RunTP.Focus();
                 }
             }
         }
@@ -3460,8 +3495,8 @@ namespace SpaceUSB
         }
         private void oopsDockHeightBtn_Click(object sender, EventArgs e)
         {
-            //setDockHeightTB.Text = last_setDockHeightTB;
-            //setDockHeight();
+            setDockHeightTB.Text = last_setDockHeightTB;
+            setDockHeight();
         }
         private void setDockHeightTB_Leave(object sender, EventArgs e)
         {

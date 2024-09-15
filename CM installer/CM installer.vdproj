@@ -27,12 +27,6 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_786B3B0921573795DADA9C4BD63A51D8"
-        "OwnerKey" = "8:_2F34DC5D89C64DFA82C1EBEFAB48B03B"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_9BF8F40C1B8C63FB37C3E4781855AADA"
         "OwnerKey" = "8:_2F34DC5D89C64DFA82C1EBEFAB48B03B"
         "MsmSig" = "8:_UNDEFINED"
@@ -45,6 +39,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_E3EC2EABCBEEF1DA82019A0378339C5A"
+        "OwnerKey" = "8:_2F34DC5D89C64DFA82C1EBEFAB48B03B"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_2F34DC5D89C64DFA82C1EBEFAB48B03B"
         "MsmSig" = "8:_UNDEFINED"
@@ -52,7 +52,7 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_786B3B0921573795DADA9C4BD63A51D8"
+        "OwnerKey" = "8:_E3EC2EABCBEEF1DA82019A0378339C5A"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -176,37 +176,6 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_786B3B0921573795DADA9C4BD63A51D8"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:TRUE"
-            "AssemblyAsmDisplayName" = "8:BCL.easyPDF.Printer, Version=8.0.0.0, Culture=neutral, PublicKeyToken=e606b977315b2faf, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                    "_786B3B0921573795DADA9C4BD63A51D8"
-                    {
-                    "Name" = "8:BCL.easyPDF.Printer.dll"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:BCL.easyPDF.Printer.dll"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_EC8AFAFE7E214593890A86BF64893BBA"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:TRUE"
-            "IsolateTo" = "8:"
-            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_9BF8F40C1B8C63FB37C3E4781855AADA"
             {
             "AssemblyRegister" = "3:1"
@@ -256,6 +225,37 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_E3EC2EABCBEEF1DA82019A0378339C5A"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:BCL.easyPDF.Printer, Version=8.0.0.0, Culture=neutral, PublicKeyToken=e606b977315b2faf, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_E3EC2EABCBEEF1DA82019A0378339C5A"
+                    {
+                    "Name" = "8:BCL.easyPDF.Printer.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:BCL.easyPDF.Printer.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_EC8AFAFE7E214593890A86BF64893BBA"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
         }
@@ -337,7 +337,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:CM installer"
         "ProductCode" = "8:{41108237-FC8D-4C9C-81A4-E74B4BC90C8E}"
-        "PackageCode" = "8:{0B8FD2D8-B5C3-4D54-A806-5F6B79C278AD}"
+        "PackageCode" = "8:{7DB0F638-C2CD-4275-88B5-D0B092A48022}"
         "UpgradeCode" = "8:{22B37968-A96A-42A4-9F96-088570BA3AB0}"
         "AspNetVersion" = "8:2.0.50727.0"
         "RestartWWWService" = "11:FALSE"
@@ -468,7 +468,7 @@
             "Target" = "8:_2F34DC5D89C64DFA82C1EBEFAB48B03B"
             "Folder" = "8:_5BAB336B4D0F4F5996E35985CC2F2FA9"
             "WorkingFolder" = "8:_D1494A103A614845A9EFE4AFC35D468F"
-            "Icon" = "8:"
+            "Icon" = "8:_A32C664AD26E4C398F3DCB1C7A04E6D0"
             "Feature" = "8:"
             }
             "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_F086C0B469F744359D94A8902014C427"
