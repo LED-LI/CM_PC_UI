@@ -116,15 +116,11 @@
             this.num02Lbl = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
             this.Vial4SizeMlTB = new System.Windows.Forms.TextBox();
             this.mLinVial4TB = new System.Windows.Forms.TextBox();
             this.Vial4InPlaceTB = new System.Windows.Forms.TextBox();
             this.Vial4StatusTB = new System.Windows.Forms.TextBox();
             this.Vial4ErrorTB = new System.Windows.Forms.TextBox();
-            this.vibrationHzTB = new System.Windows.Forms.TextBox();
-            this.vibrationStrengthTB = new System.Windows.Forms.TextBox();
             this.Vial5SizeMlTB = new System.Windows.Forms.TextBox();
             this.mLinVial5TB = new System.Windows.Forms.TextBox();
             this.Vial5WithdrawMlTB = new System.Windows.Forms.TextBox();
@@ -151,8 +147,6 @@
             this.mLbagToFillTB = new System.Windows.Forms.TextBox();
             this.panel24 = new System.Windows.Forms.Panel();
             this.label18 = new System.Windows.Forms.Label();
-            this.TestVibrate56Btn = new System.Windows.Forms.Button();
-            this.TestVibrate4Btn = new System.Windows.Forms.Button();
             this.num03Lbl = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.Vial5FillMlTB = new System.Windows.Forms.TextBox();
@@ -497,10 +491,6 @@
             this.setGBbtn = new System.Windows.Forms.Button();
             this.setGBnumberTB = new System.Windows.Forms.TextBox();
             this.getGBnumberTB = new System.Windows.Forms.TextBox();
-            this.movingTB = new System.Windows.Forms.TextBox();
-            this.label61 = new System.Windows.Forms.Label();
-            this.label78 = new System.Windows.Forms.Label();
-            this.runInProcessTB = new System.Windows.Forms.TextBox();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.panel38 = new System.Windows.Forms.Panel();
             this.skipbagRB = new System.Windows.Forms.RadioButton();
@@ -522,6 +512,18 @@
             this.thumbRestDistanceFilterSizeTB = new System.Windows.Forms.TextBox();
             this.label56 = new System.Windows.Forms.Label();
             this.SGPtestTB = new System.Windows.Forms.TextBox();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.movingTB = new System.Windows.Forms.TextBox();
+            this.label78 = new System.Windows.Forms.Label();
+            this.label61 = new System.Windows.Forms.Label();
+            this.runInProcessTB = new System.Windows.Forms.TextBox();
+            this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.vibrationHzTB = new System.Windows.Forms.TextBox();
+            this.vibrationStrengthTB = new System.Windows.Forms.TextBox();
+            this.TestVibrate4Btn = new System.Windows.Forms.Button();
+            this.TestVibrate56Btn = new System.Windows.Forms.Button();
             this.robotTP = new System.Windows.Forms.TabPage();
             this.debugPnl = new System.Windows.Forms.Panel();
             this.panel33 = new System.Windows.Forms.Panel();
@@ -563,15 +565,6 @@
             this.Vial2ErrTB = new System.Windows.Forms.TextBox();
             this.label52 = new System.Windows.Forms.Label();
             this.SyringeBagErrorsTB = new System.Windows.Forms.TextBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.CyclesTotalTB = new System.Windows.Forms.TextBox();
-            this.label42 = new System.Windows.Forms.Label();
-            this.CmdInProcTB = new System.Windows.Forms.TextBox();
-            this.label34 = new System.Windows.Forms.Label();
-            this.HomingDoneTB = new System.Windows.Forms.TextBox();
-            this.MotorIsMovingTB = new System.Windows.Forms.TextBox();
-            this.label41 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.FindHomeErrorsTB = new System.Windows.Forms.TextBox();
             this.FindHomeTB = new System.Windows.Forms.Label();
@@ -603,6 +596,15 @@
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.CyclesTotalTB = new System.Windows.Forms.TextBox();
+            this.label42 = new System.Windows.Forms.Label();
+            this.CmdInProcTB = new System.Windows.Forms.TextBox();
+            this.label34 = new System.Windows.Forms.Label();
+            this.HomingDoneTB = new System.Windows.Forms.TextBox();
+            this.MotorIsMovingTB = new System.Windows.Forms.TextBox();
+            this.label41 = new System.Windows.Forms.Label();
             cmTC = new System.Windows.Forms.TabControl();
             cmTC.SuspendLayout();
             this.adminTP.SuspendLayout();
@@ -769,13 +771,15 @@
             this.panel37.SuspendLayout();
             this.panel32.SuspendLayout();
             this.panel31.SuspendLayout();
+            this.groupBox5.SuspendLayout();
+            this.groupBox7.SuspendLayout();
             this.robotTP.SuspendLayout();
             this.debugPnl.SuspendLayout();
             this.panel33.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
-            this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // cmTC
@@ -1669,6 +1673,7 @@
             this.refreshBtn.TabIndex = 36;
             this.refreshBtn.Text = "Refresh";
             this.refreshBtn.UseVisualStyleBackColor = false;
+            this.refreshBtn.Visible = false;
             this.refreshBtn.Click += new System.EventHandler(this.refreshBtn_Click);
             // 
             // label4
@@ -1741,15 +1746,11 @@
             this.RunParametersTLP.Controls.Add(this.num02Lbl, 0, 1);
             this.RunParametersTLP.Controls.Add(this.label13, 0, 5);
             this.RunParametersTLP.Controls.Add(this.label14, 0, 6);
-            this.RunParametersTLP.Controls.Add(this.label17, 0, 10);
-            this.RunParametersTLP.Controls.Add(this.label16, 0, 9);
             this.RunParametersTLP.Controls.Add(this.Vial4SizeMlTB, 5, 0);
             this.RunParametersTLP.Controls.Add(this.mLinVial4TB, 5, 1);
             this.RunParametersTLP.Controls.Add(this.Vial4InPlaceTB, 5, 4);
             this.RunParametersTLP.Controls.Add(this.Vial4StatusTB, 5, 5);
             this.RunParametersTLP.Controls.Add(this.Vial4ErrorTB, 5, 6);
-            this.RunParametersTLP.Controls.Add(this.vibrationHzTB, 5, 9);
-            this.RunParametersTLP.Controls.Add(this.vibrationStrengthTB, 5, 10);
             this.RunParametersTLP.Controls.Add(this.Vial5SizeMlTB, 6, 0);
             this.RunParametersTLP.Controls.Add(this.mLinVial5TB, 6, 1);
             this.RunParametersTLP.Controls.Add(this.Vial5WithdrawMlTB, 6, 2);
@@ -1775,8 +1776,6 @@
             this.RunParametersTLP.Controls.Add(this.Vial1WithdrawMlTB, 2, 2);
             this.RunParametersTLP.Controls.Add(this.mLbagToFillTB, 1, 2);
             this.RunParametersTLP.Controls.Add(this.panel24, 0, 4);
-            this.RunParametersTLP.Controls.Add(this.TestVibrate56Btn, 6, 11);
-            this.RunParametersTLP.Controls.Add(this.TestVibrate4Btn, 5, 11);
             this.RunParametersTLP.Controls.Add(this.num03Lbl, 0, 3);
             this.RunParametersTLP.Controls.Add(this.label19, 0, 2);
             this.RunParametersTLP.Controls.Add(this.Vial5FillMlTB, 6, 3);
@@ -1816,8 +1815,9 @@
             this.BagSizeMlTB.Name = "BagSizeMlTB";
             this.BagSizeMlTB.Size = new System.Drawing.Size(125, 34);
             this.BagSizeMlTB.TabIndex = 1;
-            this.BagSizeMlTB.Text = "0";
+            this.BagSizeMlTB.Text = "500";
             this.BagSizeMlTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.BagSizeMlTB.Visible = false;
             // 
             // mLinVial1TB
             // 
@@ -1829,6 +1829,7 @@
             this.mLinVial1TB.Size = new System.Drawing.Size(125, 34);
             this.mLinVial1TB.TabIndex = 44;
             this.mLinVial1TB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.mLinVial1TB.Visible = false;
             // 
             // Vial3ErrorTB
             // 
@@ -1840,6 +1841,7 @@
             this.Vial3ErrorTB.Size = new System.Drawing.Size(125, 34);
             this.Vial3ErrorTB.TabIndex = 42;
             this.Vial3ErrorTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Vial3ErrorTB.Visible = false;
             // 
             // Vial2ErrorTB
             // 
@@ -1851,6 +1853,7 @@
             this.Vial2ErrorTB.Size = new System.Drawing.Size(125, 34);
             this.Vial2ErrorTB.TabIndex = 112;
             this.Vial2ErrorTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Vial2ErrorTB.Visible = false;
             // 
             // Vial1ErrorTB
             // 
@@ -1862,6 +1865,7 @@
             this.Vial1ErrorTB.Size = new System.Drawing.Size(125, 34);
             this.Vial1ErrorTB.TabIndex = 113;
             this.Vial1ErrorTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Vial1ErrorTB.Visible = false;
             // 
             // Vial3StatusTB
             // 
@@ -1873,6 +1877,7 @@
             this.Vial3StatusTB.Size = new System.Drawing.Size(125, 34);
             this.Vial3StatusTB.TabIndex = 41;
             this.Vial3StatusTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Vial3StatusTB.Visible = false;
             // 
             // Vial2StatusTB
             // 
@@ -1884,6 +1889,7 @@
             this.Vial2StatusTB.Size = new System.Drawing.Size(125, 34);
             this.Vial2StatusTB.TabIndex = 111;
             this.Vial2StatusTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Vial2StatusTB.Visible = false;
             // 
             // Vial1StatusTB
             // 
@@ -1895,6 +1901,7 @@
             this.Vial1StatusTB.Size = new System.Drawing.Size(125, 34);
             this.Vial1StatusTB.TabIndex = 99;
             this.Vial1StatusTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Vial1StatusTB.Visible = false;
             // 
             // Vial3InPlaceTB
             // 
@@ -1950,6 +1957,7 @@
             this.mLinVial3TB.Size = new System.Drawing.Size(125, 34);
             this.mLinVial3TB.TabIndex = 67;
             this.mLinVial3TB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.mLinVial3TB.Visible = false;
             // 
             // mLinVial2TB
             // 
@@ -1961,6 +1969,7 @@
             this.mLinVial2TB.Size = new System.Drawing.Size(125, 34);
             this.mLinVial2TB.TabIndex = 56;
             this.mLinVial2TB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.mLinVial2TB.Visible = false;
             // 
             // Vial3SizeMlTB
             // 
@@ -1970,8 +1979,9 @@
             this.Vial3SizeMlTB.Name = "Vial3SizeMlTB";
             this.Vial3SizeMlTB.Size = new System.Drawing.Size(125, 34);
             this.Vial3SizeMlTB.TabIndex = 4;
-            this.Vial3SizeMlTB.Text = "0";
+            this.Vial3SizeMlTB.Text = "50";
             this.Vial3SizeMlTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Vial3SizeMlTB.Visible = false;
             // 
             // Vial2SizeMlTB
             // 
@@ -1981,8 +1991,9 @@
             this.Vial2SizeMlTB.Name = "Vial2SizeMlTB";
             this.Vial2SizeMlTB.Size = new System.Drawing.Size(125, 34);
             this.Vial2SizeMlTB.TabIndex = 3;
-            this.Vial2SizeMlTB.Text = "0";
+            this.Vial2SizeMlTB.Text = "50";
             this.Vial2SizeMlTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Vial2SizeMlTB.Visible = false;
             // 
             // num01Lbl
             // 
@@ -1995,6 +2006,7 @@
             this.num01Lbl.Size = new System.Drawing.Size(91, 28);
             this.num01Lbl.TabIndex = 0;
             this.num01Lbl.Text = "Size [ml]";
+            this.num01Lbl.Visible = false;
             // 
             // num02Lbl
             // 
@@ -2007,6 +2019,7 @@
             this.num02Lbl.Size = new System.Drawing.Size(197, 28);
             this.num02Lbl.TabIndex = 2;
             this.num02Lbl.Text = "Current volume [ml]";
+            this.num02Lbl.Visible = false;
             // 
             // label13
             // 
@@ -2019,6 +2032,7 @@
             this.label13.Size = new System.Drawing.Size(98, 28);
             this.label13.TabIndex = 4;
             this.label13.Text = "S t a t u s";
+            this.label13.Visible = false;
             // 
             // label14
             // 
@@ -2031,30 +2045,7 @@
             this.label14.Size = new System.Drawing.Size(64, 28);
             this.label14.TabIndex = 5;
             this.label14.Text = "Errors";
-            // 
-            // label17
-            // 
-            this.label17.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.label17.Location = new System.Drawing.Point(58, 608);
-            this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(175, 56);
-            this.label17.TabIndex = 8;
-            this.label17.Text = "vibration strength\r\n[% pwm] (10-100)";
-            // 
-            // label16
-            // 
-            this.label16.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.label16.Location = new System.Drawing.Point(75, 548);
-            this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(141, 56);
-            this.label16.TabIndex = 7;
-            this.label16.Text = "vibration HZ\r\n[1/sec] (4-100)";
+            this.label14.Visible = false;
             // 
             // Vial4SizeMlTB
             // 
@@ -2064,8 +2055,9 @@
             this.Vial4SizeMlTB.Name = "Vial4SizeMlTB";
             this.Vial4SizeMlTB.Size = new System.Drawing.Size(125, 34);
             this.Vial4SizeMlTB.TabIndex = 5;
-            this.Vial4SizeMlTB.Text = "0";
+            this.Vial4SizeMlTB.Text = "50";
             this.Vial4SizeMlTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Vial4SizeMlTB.Visible = false;
             // 
             // mLinVial4TB
             // 
@@ -2077,6 +2069,7 @@
             this.mLinVial4TB.Size = new System.Drawing.Size(125, 34);
             this.mLinVial4TB.TabIndex = 51;
             this.mLinVial4TB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.mLinVial4TB.Visible = false;
             // 
             // Vial4InPlaceTB
             // 
@@ -2099,6 +2092,7 @@
             this.Vial4StatusTB.Size = new System.Drawing.Size(125, 34);
             this.Vial4StatusTB.TabIndex = 54;
             this.Vial4StatusTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Vial4StatusTB.Visible = false;
             // 
             // Vial4ErrorTB
             // 
@@ -2110,34 +2104,7 @@
             this.Vial4ErrorTB.Size = new System.Drawing.Size(125, 34);
             this.Vial4ErrorTB.TabIndex = 55;
             this.Vial4ErrorTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // vibrationHzTB
-            // 
-            this.vibrationHzTB.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.vibrationHzTB.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.RunParametersTLP.SetColumnSpan(this.vibrationHzTB, 3);
-            this.vibrationHzTB.Location = new System.Drawing.Point(1190, 559);
-            this.vibrationHzTB.Name = "vibrationHzTB";
-            this.vibrationHzTB.Size = new System.Drawing.Size(389, 34);
-            this.vibrationHzTB.TabIndex = 19;
-            this.vibrationHzTB.Text = "25";
-            this.vibrationHzTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.vibrationHzTB.Leave += new System.EventHandler(this.vibrationHzTB_Leave);
-            this.vibrationHzTB.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.vibrationHzTB_PreviewKeyDown);
-            // 
-            // vibrationStrengthTB
-            // 
-            this.vibrationStrengthTB.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.vibrationStrengthTB.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.RunParametersTLP.SetColumnSpan(this.vibrationStrengthTB, 3);
-            this.vibrationStrengthTB.Location = new System.Drawing.Point(1190, 619);
-            this.vibrationStrengthTB.Name = "vibrationStrengthTB";
-            this.vibrationStrengthTB.Size = new System.Drawing.Size(389, 34);
-            this.vibrationStrengthTB.TabIndex = 20;
-            this.vibrationStrengthTB.Text = "40";
-            this.vibrationStrengthTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.vibrationStrengthTB.Leave += new System.EventHandler(this.vibrationStrengthTB_Leave);
-            this.vibrationStrengthTB.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.vibrationStrengthTB_PreviewKeyDown);
+            this.Vial4ErrorTB.Visible = false;
             // 
             // Vial5SizeMlTB
             // 
@@ -2147,8 +2114,9 @@
             this.Vial5SizeMlTB.Name = "Vial5SizeMlTB";
             this.Vial5SizeMlTB.Size = new System.Drawing.Size(125, 34);
             this.Vial5SizeMlTB.TabIndex = 6;
-            this.Vial5SizeMlTB.Text = "0";
+            this.Vial5SizeMlTB.Text = "50";
             this.Vial5SizeMlTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Vial5SizeMlTB.Visible = false;
             // 
             // mLinVial5TB
             // 
@@ -2160,6 +2128,7 @@
             this.mLinVial5TB.Size = new System.Drawing.Size(125, 34);
             this.mLinVial5TB.TabIndex = 64;
             this.mLinVial5TB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.mLinVial5TB.Visible = false;
             // 
             // Vial5WithdrawMlTB
             // 
@@ -2193,6 +2162,7 @@
             this.Vial5StatusTB.Size = new System.Drawing.Size(125, 34);
             this.Vial5StatusTB.TabIndex = 67;
             this.Vial5StatusTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Vial5StatusTB.Visible = false;
             // 
             // Vial5ErrorTB
             // 
@@ -2204,6 +2174,7 @@
             this.Vial5ErrorTB.Size = new System.Drawing.Size(125, 34);
             this.Vial5ErrorTB.TabIndex = 68;
             this.Vial5ErrorTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Vial5ErrorTB.Visible = false;
             // 
             // Vial6SizeMlTB
             // 
@@ -2213,8 +2184,9 @@
             this.Vial6SizeMlTB.Name = "Vial6SizeMlTB";
             this.Vial6SizeMlTB.Size = new System.Drawing.Size(125, 34);
             this.Vial6SizeMlTB.TabIndex = 7;
-            this.Vial6SizeMlTB.Text = "0";
+            this.Vial6SizeMlTB.Text = "50";
             this.Vial6SizeMlTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Vial6SizeMlTB.Visible = false;
             // 
             // mLinVial6TB
             // 
@@ -2226,6 +2198,7 @@
             this.mLinVial6TB.Size = new System.Drawing.Size(125, 34);
             this.mLinVial6TB.TabIndex = 77;
             this.mLinVial6TB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.mLinVial6TB.Visible = false;
             // 
             // Vial6WithdrawMlTB
             // 
@@ -2259,6 +2232,7 @@
             this.Vial6StatusTB.Size = new System.Drawing.Size(125, 34);
             this.Vial6StatusTB.TabIndex = 80;
             this.Vial6StatusTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Vial6StatusTB.Visible = false;
             // 
             // Vial6ErrorTB
             // 
@@ -2270,6 +2244,7 @@
             this.Vial6ErrorTB.Size = new System.Drawing.Size(125, 34);
             this.Vial6ErrorTB.TabIndex = 81;
             this.Vial6ErrorTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Vial6ErrorTB.Visible = false;
             // 
             // Vial1SizeMlTB
             // 
@@ -2279,8 +2254,9 @@
             this.Vial1SizeMlTB.Name = "Vial1SizeMlTB";
             this.Vial1SizeMlTB.Size = new System.Drawing.Size(125, 34);
             this.Vial1SizeMlTB.TabIndex = 2;
-            this.Vial1SizeMlTB.Text = "0";
+            this.Vial1SizeMlTB.Text = "50";
             this.Vial1SizeMlTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Vial1SizeMlTB.Visible = false;
             // 
             // mLinBagTB
             // 
@@ -2292,6 +2268,7 @@
             this.mLinBagTB.Size = new System.Drawing.Size(125, 34);
             this.mLinBagTB.TabIndex = 89;
             this.mLinBagTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.mLinBagTB.Visible = false;
             // 
             // BagInPlaceTB
             // 
@@ -2314,6 +2291,7 @@
             this.BagStatusTB.Size = new System.Drawing.Size(125, 34);
             this.BagStatusTB.TabIndex = 92;
             this.BagStatusTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.BagStatusTB.Visible = false;
             // 
             // BagErrorTB
             // 
@@ -2325,6 +2303,7 @@
             this.BagErrorTB.Size = new System.Drawing.Size(125, 34);
             this.BagErrorTB.TabIndex = 93;
             this.BagErrorTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.BagErrorTB.Visible = false;
             // 
             // label20
             // 
@@ -2409,6 +2388,7 @@
             this.mLbagToFillTB.TabIndex = 107;
             this.mLbagToFillTB.Text = "0";
             this.mLbagToFillTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.mLbagToFillTB.Visible = false;
             // 
             // panel24
             // 
@@ -2430,39 +2410,6 @@
             this.label18.Size = new System.Drawing.Size(175, 28);
             this.label18.TabIndex = 4;
             this.label18.Text = "Bag / Vial in place";
-            // 
-            // TestVibrate56Btn
-            // 
-            this.TestVibrate56Btn.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.TestVibrate56Btn.BackColor = System.Drawing.Color.Bisque;
-            this.RunParametersTLP.SetColumnSpan(this.TestVibrate56Btn, 2);
-            this.TestVibrate56Btn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.TestVibrate56Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.TestVibrate56Btn.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.TestVibrate56Btn.ForeColor = System.Drawing.Color.Black;
-            this.TestVibrate56Btn.Location = new System.Drawing.Point(1356, 684);
-            this.TestVibrate56Btn.Name = "TestVibrate56Btn";
-            this.TestVibrate56Btn.Size = new System.Drawing.Size(257, 32);
-            this.TestVibrate56Btn.TabIndex = 80;
-            this.TestVibrate56Btn.Text = "Test Vibrate 5 and 6";
-            this.TestVibrate56Btn.UseVisualStyleBackColor = false;
-            this.TestVibrate56Btn.Click += new System.EventHandler(this.TestVibrate56Btn_Click);
-            // 
-            // TestVibrate4Btn
-            // 
-            this.TestVibrate4Btn.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.TestVibrate4Btn.BackColor = System.Drawing.Color.Bisque;
-            this.TestVibrate4Btn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.TestVibrate4Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.TestVibrate4Btn.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.TestVibrate4Btn.ForeColor = System.Drawing.Color.Black;
-            this.TestVibrate4Btn.Location = new System.Drawing.Point(1123, 684);
-            this.TestVibrate4Btn.Name = "TestVibrate4Btn";
-            this.TestVibrate4Btn.Size = new System.Drawing.Size(125, 32);
-            this.TestVibrate4Btn.TabIndex = 80;
-            this.TestVibrate4Btn.Text = "Test vibrate 4";
-            this.TestVibrate4Btn.UseVisualStyleBackColor = false;
-            this.TestVibrate4Btn.Click += new System.EventHandler(this.TestVibrate4Btn_Click);
             // 
             // num03Lbl
             // 
@@ -7268,9 +7215,13 @@
             this.setupTLP.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.setupTLP.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.setupTLP.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.setupTLP.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.setupTLP.Controls.Add(this.GBpanelPNL, 3, 2);
-            this.setupTLP.Controls.Add(this.groupBox6, 0, 2);
+            this.setupTLP.Controls.Add(this.GBpanelPNL, 3, 0);
+            this.setupTLP.Controls.Add(this.groupBox6, 0, 0);
+            this.setupTLP.Controls.Add(this.groupBox7, 0, 5);
+            this.setupTLP.Controls.Add(this.TestVibrate4Btn, 0, 8);
+            this.setupTLP.Controls.Add(this.TestVibrate56Btn, 1, 8);
+            this.setupTLP.Controls.Add(this.groupBox5, 2, 5);
+            this.setupTLP.Controls.Add(this.groupBox2, 4, 5);
             this.setupTLP.Dock = System.Windows.Forms.DockStyle.Fill;
             this.setupTLP.Location = new System.Drawing.Point(3, 3);
             this.setupTLP.Name = "setupTLP";
@@ -7285,6 +7236,7 @@
             this.setupTLP.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.setupTLP.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.setupTLP.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.setupTLP.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.setupTLP.Size = new System.Drawing.Size(1888, 993);
             this.setupTLP.TabIndex = 1;
             // 
@@ -7309,13 +7261,9 @@
             this.GBpanelPNL.Controls.Add(this.setGBbtn);
             this.GBpanelPNL.Controls.Add(this.setGBnumberTB);
             this.GBpanelPNL.Controls.Add(this.getGBnumberTB);
-            this.GBpanelPNL.Controls.Add(this.movingTB);
-            this.GBpanelPNL.Controls.Add(this.label61);
-            this.GBpanelPNL.Controls.Add(this.label78);
-            this.GBpanelPNL.Controls.Add(this.runInProcessTB);
             this.GBpanelPNL.Dock = System.Windows.Forms.DockStyle.Fill;
             this.GBpanelPNL.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.GBpanelPNL.Location = new System.Drawing.Point(946, 202);
+            this.GBpanelPNL.Location = new System.Drawing.Point(946, 4);
             this.GBpanelPNL.Name = "GBpanelPNL";
             this.setupTLP.SetRowSpan(this.GBpanelPNL, 5);
             this.GBpanelPNL.Size = new System.Drawing.Size(938, 488);
@@ -7335,9 +7283,9 @@
             // runCommandTB
             // 
             this.runCommandTB.BackColor = System.Drawing.Color.AntiqueWhite;
-            this.runCommandTB.Location = new System.Drawing.Point(304, 156);
+            this.runCommandTB.Location = new System.Drawing.Point(304, 179);
             this.runCommandTB.Name = "runCommandTB";
-            this.runCommandTB.Size = new System.Drawing.Size(110, 30);
+            this.runCommandTB.Size = new System.Drawing.Size(119, 34);
             this.runCommandTB.TabIndex = 84;
             this.runCommandTB.Text = "RUN cmd";
             this.runCommandTB.UseVisualStyleBackColor = false;
@@ -7346,7 +7294,7 @@
             // commandToRunTB
             // 
             this.commandToRunTB.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.commandToRunTB.Location = new System.Drawing.Point(163, 158);
+            this.commandToRunTB.Location = new System.Drawing.Point(163, 179);
             this.commandToRunTB.Name = "commandToRunTB";
             this.commandToRunTB.Size = new System.Drawing.Size(112, 34);
             this.commandToRunTB.TabIndex = 83;
@@ -7365,7 +7313,7 @@
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(27, 160);
+            this.label21.Location = new System.Drawing.Point(1, 179);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(167, 28);
             this.label21.TabIndex = 82;
@@ -7374,7 +7322,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(376, 28);
+            this.label5.Location = new System.Drawing.Point(411, 28);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(64, 28);
             this.label5.TabIndex = 81;
@@ -7384,7 +7332,7 @@
             // 
             this.setGBresultTB.BackColor = System.Drawing.SystemColors.MenuBar;
             this.setGBresultTB.Enabled = false;
-            this.setGBresultTB.Location = new System.Drawing.Point(390, 53);
+            this.setGBresultTB.Location = new System.Drawing.Point(425, 60);
             this.setGBresultTB.Name = "setGBresultTB";
             this.setGBresultTB.Size = new System.Drawing.Size(112, 34);
             this.setGBresultTB.TabIndex = 80;
@@ -7402,7 +7350,7 @@
             // label60
             // 
             this.label60.AutoSize = true;
-            this.label60.Location = new System.Drawing.Point(376, 82);
+            this.label60.Location = new System.Drawing.Point(411, 98);
             this.label60.Name = "label60";
             this.label60.Size = new System.Drawing.Size(64, 28);
             this.label60.TabIndex = 79;
@@ -7411,7 +7359,7 @@
             // label73
             // 
             this.label73.AutoSize = true;
-            this.label73.Location = new System.Drawing.Point(11, 82);
+            this.label73.Location = new System.Drawing.Point(1, 98);
             this.label73.Name = "label73";
             this.label73.Size = new System.Drawing.Size(108, 28);
             this.label73.TabIndex = 78;
@@ -7429,7 +7377,7 @@
             // label58
             // 
             this.label58.AutoSize = true;
-            this.label58.Location = new System.Drawing.Point(11, 28);
+            this.label58.Location = new System.Drawing.Point(1, 28);
             this.label58.Name = "label58";
             this.label58.Size = new System.Drawing.Size(108, 28);
             this.label58.TabIndex = 76;
@@ -7438,7 +7386,7 @@
             // setGBvalueTB
             // 
             this.setGBvalueTB.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.setGBvalueTB.Location = new System.Drawing.Point(163, 52);
+            this.setGBvalueTB.Location = new System.Drawing.Point(163, 60);
             this.setGBvalueTB.Name = "setGBvalueTB";
             this.setGBvalueTB.Size = new System.Drawing.Size(112, 34);
             this.setGBvalueTB.TabIndex = 71;
@@ -7450,7 +7398,7 @@
             // 
             this.getGBresultTB.BackColor = System.Drawing.SystemColors.MenuBar;
             this.getGBresultTB.Enabled = false;
-            this.getGBresultTB.Location = new System.Drawing.Point(390, 106);
+            this.getGBresultTB.Location = new System.Drawing.Point(425, 129);
             this.getGBresultTB.Name = "getGBresultTB";
             this.getGBresultTB.Size = new System.Drawing.Size(112, 34);
             this.getGBresultTB.TabIndex = 74;
@@ -7459,9 +7407,9 @@
             // setGBbtn
             // 
             this.setGBbtn.BackColor = System.Drawing.Color.AntiqueWhite;
-            this.setGBbtn.Location = new System.Drawing.Point(304, 51);
+            this.setGBbtn.Location = new System.Drawing.Point(304, 60);
             this.setGBbtn.Name = "setGBbtn";
-            this.setGBbtn.Size = new System.Drawing.Size(70, 30);
+            this.setGBbtn.Size = new System.Drawing.Size(80, 34);
             this.setGBbtn.TabIndex = 72;
             this.setGBbtn.Text = "SET GB";
             this.setGBbtn.UseVisualStyleBackColor = false;
@@ -7470,7 +7418,7 @@
             // setGBnumberTB
             // 
             this.setGBnumberTB.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.setGBnumberTB.Location = new System.Drawing.Point(25, 52);
+            this.setGBnumberTB.Location = new System.Drawing.Point(25, 60);
             this.setGBnumberTB.Name = "setGBnumberTB";
             this.setGBnumberTB.Size = new System.Drawing.Size(112, 34);
             this.setGBnumberTB.TabIndex = 70;
@@ -7481,54 +7429,13 @@
             // getGBnumberTB
             // 
             this.getGBnumberTB.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.getGBnumberTB.Location = new System.Drawing.Point(25, 106);
+            this.getGBnumberTB.Location = new System.Drawing.Point(25, 129);
             this.getGBnumberTB.Name = "getGBnumberTB";
             this.getGBnumberTB.Size = new System.Drawing.Size(112, 34);
             this.getGBnumberTB.TabIndex = 68;
             this.getGBnumberTB.Text = "0";
             this.getGBnumberTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.getGBnumberTB.TextChanged += new System.EventHandler(this.getGBnumberTB_TextChanged);
-            // 
-            // movingTB
-            // 
-            this.movingTB.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.movingTB.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.movingTB.Enabled = false;
-            this.movingTB.Location = new System.Drawing.Point(322, 346);
-            this.movingTB.Name = "movingTB";
-            this.movingTB.Size = new System.Drawing.Size(112, 34);
-            this.movingTB.TabIndex = 67;
-            this.movingTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label61
-            // 
-            this.label61.AutoSize = true;
-            this.label61.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label61.Location = new System.Drawing.Point(25, 225);
-            this.label61.Name = "label61";
-            this.label61.Size = new System.Drawing.Size(134, 30);
-            this.label61.TabIndex = 55;
-            this.label61.Text = "run In Process";
-            // 
-            // label78
-            // 
-            this.label78.AutoSize = true;
-            this.label78.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label78.Location = new System.Drawing.Point(25, 279);
-            this.label78.Name = "label78";
-            this.label78.Size = new System.Drawing.Size(111, 30);
-            this.label78.TabIndex = 66;
-            this.label78.Text = "for moving";
-            // 
-            // runInProcessTB
-            // 
-            this.runInProcessTB.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.runInProcessTB.Enabled = false;
-            this.runInProcessTB.Location = new System.Drawing.Point(163, 222);
-            this.runInProcessTB.Name = "runInProcessTB";
-            this.runInProcessTB.Size = new System.Drawing.Size(112, 34);
-            this.runInProcessTB.TabIndex = 54;
-            this.runInProcessTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // groupBox6
             // 
@@ -7547,7 +7454,7 @@
             this.groupBox6.Controls.Add(this.SGPtestTB);
             this.groupBox6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox6.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.groupBox6.Location = new System.Drawing.Point(4, 202);
+            this.groupBox6.Location = new System.Drawing.Point(4, 4);
             this.groupBox6.Name = "groupBox6";
             this.setupTLP.SetRowSpan(this.groupBox6, 5);
             this.groupBox6.Size = new System.Drawing.Size(935, 488);
@@ -7560,7 +7467,7 @@
             this.panel38.BackColor = System.Drawing.Color.AntiqueWhite;
             this.panel38.Controls.Add(this.skipbagRB);
             this.panel38.Controls.Add(this.dontskipbagRB);
-            this.panel38.Location = new System.Drawing.Point(438, 321);
+            this.panel38.Location = new System.Drawing.Point(34, 209);
             this.panel38.Name = "panel38";
             this.panel38.Size = new System.Drawing.Size(303, 79);
             this.panel38.TabIndex = 87;
@@ -7594,7 +7501,7 @@
             this.panel37.BackColor = System.Drawing.Color.AntiqueWhite;
             this.panel37.Controls.Add(this.skipvial456RB);
             this.panel37.Controls.Add(this.dontskipvial456RB);
-            this.panel37.Location = new System.Drawing.Point(438, 222);
+            this.panel37.Location = new System.Drawing.Point(355, 209);
             this.panel37.Name = "panel37";
             this.panel37.Size = new System.Drawing.Size(303, 79);
             this.panel37.TabIndex = 87;
@@ -7614,7 +7521,7 @@
             // 
             this.dontskipvial456RB.AutoSize = true;
             this.dontskipvial456RB.Checked = true;
-            this.dontskipvial456RB.Location = new System.Drawing.Point(13, 15);
+            this.dontskipvial456RB.Location = new System.Drawing.Point(13, 12);
             this.dontskipvial456RB.Name = "dontskipvial456RB";
             this.dontskipvial456RB.Size = new System.Drawing.Size(240, 32);
             this.dontskipvial456RB.TabIndex = 0;
@@ -7628,7 +7535,7 @@
             this.panel32.BackColor = System.Drawing.Color.AntiqueWhite;
             this.panel32.Controls.Add(this.showOverideRB);
             this.panel32.Controls.Add(this.normalRunRB);
-            this.panel32.Location = new System.Drawing.Point(438, 121);
+            this.panel32.Location = new System.Drawing.Point(355, 121);
             this.panel32.Name = "panel32";
             this.panel32.Size = new System.Drawing.Size(303, 79);
             this.panel32.TabIndex = 86;
@@ -7662,7 +7569,7 @@
             this.panel31.BackColor = System.Drawing.Color.AntiqueWhite;
             this.panel31.Controls.Add(this.NoDisposeRB);
             this.panel31.Controls.Add(this.disposeBottlesRB);
-            this.panel31.Location = new System.Drawing.Point(438, 26);
+            this.panel31.Location = new System.Drawing.Point(355, 26);
             this.panel31.Name = "panel31";
             this.panel31.Size = new System.Drawing.Size(303, 79);
             this.panel31.TabIndex = 85;
@@ -7695,7 +7602,7 @@
             // 
             this.replyStatusTB.BackColor = System.Drawing.SystemColors.MenuBar;
             this.replyStatusTB.Enabled = false;
-            this.replyStatusTB.Location = new System.Drawing.Point(217, 79);
+            this.replyStatusTB.Location = new System.Drawing.Point(217, 93);
             this.replyStatusTB.Name = "replyStatusTB";
             this.replyStatusTB.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.replyStatusTB.Size = new System.Drawing.Size(120, 34);
@@ -7705,7 +7612,7 @@
             // 
             this.label25.AutoSize = true;
             this.label25.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label25.Location = new System.Drawing.Point(18, 82);
+            this.label25.Location = new System.Drawing.Point(7, 97);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(204, 30);
             this.label25.TabIndex = 70;
@@ -7715,7 +7622,7 @@
             // 
             this.ReplyValueTB.BackColor = System.Drawing.SystemColors.MenuBar;
             this.ReplyValueTB.Enabled = false;
-            this.ReplyValueTB.Location = new System.Drawing.Point(217, 47);
+            this.ReplyValueTB.Location = new System.Drawing.Point(217, 59);
             this.ReplyValueTB.Name = "ReplyValueTB";
             this.ReplyValueTB.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.ReplyValueTB.Size = new System.Drawing.Size(120, 34);
@@ -7725,7 +7632,7 @@
             // 
             this.label76.AutoSize = true;
             this.label76.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label76.Location = new System.Drawing.Point(18, 50);
+            this.label76.Location = new System.Drawing.Point(7, 61);
             this.label76.Name = "label76";
             this.label76.Size = new System.Drawing.Size(184, 30);
             this.label76.TabIndex = 62;
@@ -7735,28 +7642,31 @@
             // 
             this.label86.AutoSize = true;
             this.label86.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label86.Location = new System.Drawing.Point(802, 19);
+            this.label86.Location = new System.Drawing.Point(7, 133);
             this.label86.Name = "label86";
             this.label86.Size = new System.Drawing.Size(270, 30);
             this.label86.TabIndex = 55;
             this.label86.Text = "ThumbRest distance filter size";
+            this.label86.Visible = false;
             // 
             // thumbRestDistanceFilterSizeTB
             // 
             this.thumbRestDistanceFilterSizeTB.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.thumbRestDistanceFilterSizeTB.Location = new System.Drawing.Point(1096, 15);
+            this.thumbRestDistanceFilterSizeTB.Enabled = false;
+            this.thumbRestDistanceFilterSizeTB.Location = new System.Drawing.Point(217, 169);
             this.thumbRestDistanceFilterSizeTB.Name = "thumbRestDistanceFilterSizeTB";
             this.thumbRestDistanceFilterSizeTB.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.thumbRestDistanceFilterSizeTB.Size = new System.Drawing.Size(120, 34);
             this.thumbRestDistanceFilterSizeTB.TabIndex = 59;
             this.thumbRestDistanceFilterSizeTB.Text = " ";
+            this.thumbRestDistanceFilterSizeTB.Visible = false;
             this.thumbRestDistanceFilterSizeTB.TextChanged += new System.EventHandler(this.thumbRestDistanceFilterSizeTB_TextChanged);
             // 
             // label56
             // 
             this.label56.AutoSize = true;
             this.label56.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label56.Location = new System.Drawing.Point(19, 20);
+            this.label56.Location = new System.Drawing.Point(7, 25);
             this.label56.Name = "label56";
             this.label56.Size = new System.Drawing.Size(123, 30);
             this.label56.TabIndex = 55;
@@ -7766,11 +7676,161 @@
             // 
             this.SGPtestTB.BackColor = System.Drawing.SystemColors.MenuBar;
             this.SGPtestTB.Enabled = false;
-            this.SGPtestTB.Location = new System.Drawing.Point(217, 16);
+            this.SGPtestTB.Location = new System.Drawing.Point(217, 25);
             this.SGPtestTB.Name = "SGPtestTB";
             this.SGPtestTB.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.SGPtestTB.Size = new System.Drawing.Size(120, 34);
             this.SGPtestTB.TabIndex = 59;
+            // 
+            // groupBox5
+            // 
+            this.setupTLP.SetColumnSpan(this.groupBox5, 2);
+            this.groupBox5.Controls.Add(this.movingTB);
+            this.groupBox5.Controls.Add(this.label78);
+            this.groupBox5.Controls.Add(this.label61);
+            this.groupBox5.Controls.Add(this.runInProcessTB);
+            this.groupBox5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox5.Location = new System.Drawing.Point(632, 499);
+            this.groupBox5.Name = "groupBox5";
+            this.setupTLP.SetRowSpan(this.groupBox5, 3);
+            this.groupBox5.Size = new System.Drawing.Size(621, 290);
+            this.groupBox5.TabIndex = 87;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "status info";
+            // 
+            // movingTB
+            // 
+            this.movingTB.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.movingTB.Enabled = false;
+            this.movingTB.Location = new System.Drawing.Point(163, 80);
+            this.movingTB.Name = "movingTB";
+            this.movingTB.Size = new System.Drawing.Size(112, 29);
+            this.movingTB.TabIndex = 67;
+            this.movingTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label78
+            // 
+            this.label78.AutoSize = true;
+            this.label78.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label78.Location = new System.Drawing.Point(6, 82);
+            this.label78.Name = "label78";
+            this.label78.Size = new System.Drawing.Size(97, 25);
+            this.label78.TabIndex = 66;
+            this.label78.Text = "for moving";
+            // 
+            // label61
+            // 
+            this.label61.AutoSize = true;
+            this.label61.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label61.Location = new System.Drawing.Point(6, 40);
+            this.label61.Name = "label61";
+            this.label61.Size = new System.Drawing.Size(120, 25);
+            this.label61.TabIndex = 55;
+            this.label61.Text = "run In Process";
+            // 
+            // runInProcessTB
+            // 
+            this.runInProcessTB.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.runInProcessTB.Enabled = false;
+            this.runInProcessTB.Location = new System.Drawing.Point(163, 38);
+            this.runInProcessTB.Name = "runInProcessTB";
+            this.runInProcessTB.Size = new System.Drawing.Size(112, 29);
+            this.runInProcessTB.TabIndex = 54;
+            this.runInProcessTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // groupBox7
+            // 
+            this.setupTLP.SetColumnSpan(this.groupBox7, 2);
+            this.groupBox7.Controls.Add(this.label16);
+            this.groupBox7.Controls.Add(this.label17);
+            this.groupBox7.Controls.Add(this.vibrationHzTB);
+            this.groupBox7.Controls.Add(this.vibrationStrengthTB);
+            this.groupBox7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox7.Location = new System.Drawing.Point(4, 499);
+            this.groupBox7.Name = "groupBox7";
+            this.setupTLP.SetRowSpan(this.groupBox7, 3);
+            this.groupBox7.Size = new System.Drawing.Size(621, 290);
+            this.groupBox7.TabIndex = 88;
+            this.groupBox7.TabStop = false;
+            this.groupBox7.Text = "Vibration settings";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.label16.Location = new System.Drawing.Point(7, 42);
+            this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(141, 56);
+            this.label16.TabIndex = 84;
+            this.label16.Text = "vibration HZ\r\n[1/sec] (4-100)";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.label17.Location = new System.Drawing.Point(7, 109);
+            this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(175, 56);
+            this.label17.TabIndex = 86;
+            this.label17.Text = "vibration strength\r\n[% pwm] (10-100)";
+            // 
+            // vibrationHzTB
+            // 
+            this.vibrationHzTB.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.vibrationHzTB.Location = new System.Drawing.Point(217, 56);
+            this.vibrationHzTB.Name = "vibrationHzTB";
+            this.vibrationHzTB.Size = new System.Drawing.Size(178, 29);
+            this.vibrationHzTB.TabIndex = 83;
+            this.vibrationHzTB.Text = "25";
+            this.vibrationHzTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.vibrationHzTB.Leave += new System.EventHandler(this.vibrationHzTB_Leave);
+            this.vibrationHzTB.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.vibrationHzTB_PreviewKeyDown);
+            // 
+            // vibrationStrengthTB
+            // 
+            this.vibrationStrengthTB.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.vibrationStrengthTB.Location = new System.Drawing.Point(217, 123);
+            this.vibrationStrengthTB.Name = "vibrationStrengthTB";
+            this.vibrationStrengthTB.Size = new System.Drawing.Size(200, 29);
+            this.vibrationStrengthTB.TabIndex = 85;
+            this.vibrationStrengthTB.Text = "40";
+            this.vibrationStrengthTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.vibrationStrengthTB.Leave += new System.EventHandler(this.vibrationStrengthTB_Leave);
+            this.vibrationStrengthTB.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.vibrationStrengthTB_PreviewKeyDown);
+            // 
+            // TestVibrate4Btn
+            // 
+            this.TestVibrate4Btn.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.TestVibrate4Btn.BackColor = System.Drawing.Color.Bisque;
+            this.TestVibrate4Btn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.TestVibrate4Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.TestVibrate4Btn.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.TestVibrate4Btn.ForeColor = System.Drawing.Color.Black;
+            this.TestVibrate4Btn.Location = new System.Drawing.Point(82, 817);
+            this.TestVibrate4Btn.Name = "TestVibrate4Btn";
+            this.TestVibrate4Btn.Size = new System.Drawing.Size(150, 50);
+            this.TestVibrate4Btn.TabIndex = 81;
+            this.TestVibrate4Btn.Text = "Test vibrate 4";
+            this.TestVibrate4Btn.UseVisualStyleBackColor = false;
+            this.TestVibrate4Btn.Click += new System.EventHandler(this.TestVibrate4Btn_Click);
+            // 
+            // TestVibrate56Btn
+            // 
+            this.TestVibrate56Btn.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.TestVibrate56Btn.BackColor = System.Drawing.Color.Bisque;
+            this.TestVibrate56Btn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.TestVibrate56Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.TestVibrate56Btn.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.TestVibrate56Btn.ForeColor = System.Drawing.Color.Black;
+            this.TestVibrate56Btn.Location = new System.Drawing.Point(346, 817);
+            this.TestVibrate56Btn.Name = "TestVibrate56Btn";
+            this.TestVibrate56Btn.Size = new System.Drawing.Size(250, 50);
+            this.TestVibrate56Btn.TabIndex = 82;
+            this.TestVibrate56Btn.Text = "Test Vibrate 5 and 6";
+            this.TestVibrate56Btn.UseVisualStyleBackColor = false;
+            this.TestVibrate56Btn.Click += new System.EventHandler(this.TestVibrate56Btn_Click);
             // 
             // robotTP
             // 
@@ -7791,7 +7851,6 @@
             this.debugPnl.Controls.Add(this.panel33);
             this.debugPnl.Controls.Add(this.groupBox3);
             this.debugPnl.Controls.Add(this.groupBox4);
-            this.debugPnl.Controls.Add(this.groupBox2);
             this.debugPnl.Controls.Add(this.groupBox1);
             this.debugPnl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.debugPnl.Location = new System.Drawing.Point(3, 3);
@@ -7952,6 +8011,7 @@
             this.hTB.Size = new System.Drawing.Size(114, 34);
             this.hTB.TabIndex = 18;
             this.hTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.hTB.Visible = false;
             // 
             // label40
             // 
@@ -7962,6 +8022,7 @@
             this.label40.Size = new System.Drawing.Size(46, 30);
             this.label40.TabIndex = 9;
             this.label40.Text = "hTB";
+            this.label40.Visible = false;
             // 
             // iTB
             // 
@@ -7971,6 +8032,7 @@
             this.iTB.Size = new System.Drawing.Size(114, 34);
             this.iTB.TabIndex = 54;
             this.iTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.iTB.Visible = false;
             // 
             // label55
             // 
@@ -7981,6 +8043,7 @@
             this.label55.Size = new System.Drawing.Size(40, 30);
             this.label55.TabIndex = 53;
             this.label55.Text = "iTB";
+            this.label55.Visible = false;
             // 
             // lTB
             // 
@@ -7990,6 +8053,7 @@
             this.lTB.Size = new System.Drawing.Size(114, 34);
             this.lTB.TabIndex = 38;
             this.lTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.lTB.Visible = false;
             // 
             // label32
             // 
@@ -8000,6 +8064,7 @@
             this.label32.Size = new System.Drawing.Size(40, 30);
             this.label32.TabIndex = 27;
             this.label32.Text = "jTB";
+            this.label32.Visible = false;
             // 
             // jTB
             // 
@@ -8009,6 +8074,7 @@
             this.jTB.Size = new System.Drawing.Size(114, 34);
             this.jTB.TabIndex = 28;
             this.jTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.jTB.Visible = false;
             // 
             // label33
             // 
@@ -8019,6 +8085,7 @@
             this.label33.Size = new System.Drawing.Size(45, 30);
             this.label33.TabIndex = 29;
             this.label33.Text = "kTB";
+            this.label33.Visible = false;
             // 
             // kTB
             // 
@@ -8028,6 +8095,7 @@
             this.kTB.Size = new System.Drawing.Size(114, 34);
             this.kTB.TabIndex = 30;
             this.kTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.kTB.Visible = false;
             // 
             // label50
             // 
@@ -8039,6 +8107,7 @@
             this.label50.Size = new System.Drawing.Size(40, 30);
             this.label50.TabIndex = 37;
             this.label50.Text = "lTB";
+            this.label50.Visible = false;
             // 
             // mTB
             // 
@@ -8048,6 +8117,7 @@
             this.mTB.Size = new System.Drawing.Size(114, 34);
             this.mTB.TabIndex = 39;
             this.mTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.mTB.Visible = false;
             // 
             // label49
             // 
@@ -8058,6 +8128,7 @@
             this.label49.Size = new System.Drawing.Size(52, 30);
             this.label49.TabIndex = 40;
             this.label49.Text = "mTB";
+            this.label49.Visible = false;
             // 
             // groupBox4
             // 
@@ -8229,105 +8300,6 @@
             this.SyringeBagErrorsTB.Size = new System.Drawing.Size(114, 34);
             this.SyringeBagErrorsTB.TabIndex = 20;
             this.SyringeBagErrorsTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.label6);
-            this.groupBox2.Controls.Add(this.CyclesTotalTB);
-            this.groupBox2.Controls.Add(this.label42);
-            this.groupBox2.Controls.Add(this.CmdInProcTB);
-            this.groupBox2.Controls.Add(this.label34);
-            this.groupBox2.Controls.Add(this.HomingDoneTB);
-            this.groupBox2.Controls.Add(this.MotorIsMovingTB);
-            this.groupBox2.Controls.Add(this.label41);
-            this.groupBox2.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.groupBox2.Location = new System.Drawing.Point(17, 402);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(352, 244);
-            this.groupBox2.TabIndex = 56;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "in process";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label6.Location = new System.Drawing.Point(23, 116);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(184, 30);
-            this.label6.TabIndex = 70;
-            this.label6.Text = "Cycles Total (GB 12)";
-            // 
-            // CyclesTotalTB
-            // 
-            this.CyclesTotalTB.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.CyclesTotalTB.Enabled = false;
-            this.CyclesTotalTB.Location = new System.Drawing.Point(249, 113);
-            this.CyclesTotalTB.Name = "CyclesTotalTB";
-            this.CyclesTotalTB.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.CyclesTotalTB.Size = new System.Drawing.Size(88, 34);
-            this.CyclesTotalTB.TabIndex = 71;
-            this.CyclesTotalTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label42
-            // 
-            this.label42.AutoSize = true;
-            this.label42.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label42.Location = new System.Drawing.Point(24, 55);
-            this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(263, 30);
-            this.label42.TabIndex = 11;
-            this.label42.Text = "command in process (GB 97)";
-            // 
-            // CmdInProcTB
-            // 
-            this.CmdInProcTB.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.CmdInProcTB.Enabled = false;
-            this.CmdInProcTB.Location = new System.Drawing.Point(249, 52);
-            this.CmdInProcTB.Name = "CmdInProcTB";
-            this.CmdInProcTB.Size = new System.Drawing.Size(88, 34);
-            this.CmdInProcTB.TabIndex = 16;
-            this.CmdInProcTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label34
-            // 
-            this.label34.AutoSize = true;
-            this.label34.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label34.Location = new System.Drawing.Point(24, 25);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(228, 30);
-            this.label34.TabIndex = 3;
-            this.label34.Text = "motor is moving (GB 16)";
-            // 
-            // HomingDoneTB
-            // 
-            this.HomingDoneTB.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.HomingDoneTB.Enabled = false;
-            this.HomingDoneTB.Location = new System.Drawing.Point(249, 82);
-            this.HomingDoneTB.Name = "HomingDoneTB";
-            this.HomingDoneTB.Size = new System.Drawing.Size(88, 34);
-            this.HomingDoneTB.TabIndex = 17;
-            this.HomingDoneTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // MotorIsMovingTB
-            // 
-            this.MotorIsMovingTB.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.MotorIsMovingTB.Enabled = false;
-            this.MotorIsMovingTB.Location = new System.Drawing.Point(249, 22);
-            this.MotorIsMovingTB.Name = "MotorIsMovingTB";
-            this.MotorIsMovingTB.Size = new System.Drawing.Size(88, 34);
-            this.MotorIsMovingTB.TabIndex = 15;
-            this.MotorIsMovingTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label41
-            // 
-            this.label41.AutoSize = true;
-            this.label41.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label41.Location = new System.Drawing.Point(24, 85);
-            this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(201, 30);
-            this.label41.TabIndex = 10;
-            this.label41.Text = "homing done (GB 18)";
             // 
             // groupBox1
             // 
@@ -8639,6 +8611,108 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
+            // groupBox2
+            // 
+            this.setupTLP.SetColumnSpan(this.groupBox2, 2);
+            this.groupBox2.Controls.Add(this.label6);
+            this.groupBox2.Controls.Add(this.CyclesTotalTB);
+            this.groupBox2.Controls.Add(this.label42);
+            this.groupBox2.Controls.Add(this.CmdInProcTB);
+            this.groupBox2.Controls.Add(this.label34);
+            this.groupBox2.Controls.Add(this.HomingDoneTB);
+            this.groupBox2.Controls.Add(this.MotorIsMovingTB);
+            this.groupBox2.Controls.Add(this.label41);
+            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox2.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.groupBox2.Location = new System.Drawing.Point(1260, 499);
+            this.groupBox2.Name = "groupBox2";
+            this.setupTLP.SetRowSpan(this.groupBox2, 3);
+            this.groupBox2.Size = new System.Drawing.Size(624, 290);
+            this.groupBox2.TabIndex = 89;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "in process";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label6.Location = new System.Drawing.Point(17, 133);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(184, 30);
+            this.label6.TabIndex = 70;
+            this.label6.Text = "Cycles Total (GB 12)";
+            // 
+            // CyclesTotalTB
+            // 
+            this.CyclesTotalTB.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.CyclesTotalTB.Enabled = false;
+            this.CyclesTotalTB.Location = new System.Drawing.Point(291, 131);
+            this.CyclesTotalTB.Name = "CyclesTotalTB";
+            this.CyclesTotalTB.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.CyclesTotalTB.Size = new System.Drawing.Size(88, 34);
+            this.CyclesTotalTB.TabIndex = 71;
+            this.CyclesTotalTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label42
+            // 
+            this.label42.AutoSize = true;
+            this.label42.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label42.Location = new System.Drawing.Point(17, 61);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(263, 30);
+            this.label42.TabIndex = 11;
+            this.label42.Text = "command in process (GB 97)";
+            // 
+            // CmdInProcTB
+            // 
+            this.CmdInProcTB.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.CmdInProcTB.Enabled = false;
+            this.CmdInProcTB.Location = new System.Drawing.Point(291, 59);
+            this.CmdInProcTB.Name = "CmdInProcTB";
+            this.CmdInProcTB.Size = new System.Drawing.Size(88, 34);
+            this.CmdInProcTB.TabIndex = 16;
+            this.CmdInProcTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label34.Location = new System.Drawing.Point(17, 25);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(228, 30);
+            this.label34.TabIndex = 3;
+            this.label34.Text = "motor is moving (GB 16)";
+            // 
+            // HomingDoneTB
+            // 
+            this.HomingDoneTB.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.HomingDoneTB.Enabled = false;
+            this.HomingDoneTB.Location = new System.Drawing.Point(291, 95);
+            this.HomingDoneTB.Name = "HomingDoneTB";
+            this.HomingDoneTB.Size = new System.Drawing.Size(88, 34);
+            this.HomingDoneTB.TabIndex = 17;
+            this.HomingDoneTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // MotorIsMovingTB
+            // 
+            this.MotorIsMovingTB.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.MotorIsMovingTB.Enabled = false;
+            this.MotorIsMovingTB.Location = new System.Drawing.Point(290, 23);
+            this.MotorIsMovingTB.Name = "MotorIsMovingTB";
+            this.MotorIsMovingTB.Size = new System.Drawing.Size(88, 34);
+            this.MotorIsMovingTB.TabIndex = 15;
+            this.MotorIsMovingTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label41
+            // 
+            this.label41.AutoSize = true;
+            this.label41.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label41.Location = new System.Drawing.Point(17, 97);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(201, 30);
+            this.label41.TabIndex = 10;
+            this.label41.Text = "homing done (GB 18)";
+            // 
             // CMForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
@@ -8941,6 +9015,10 @@
             this.panel32.PerformLayout();
             this.panel31.ResumeLayout(false);
             this.panel31.PerformLayout();
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
+            this.groupBox7.ResumeLayout(false);
+            this.groupBox7.PerformLayout();
             this.robotTP.ResumeLayout(false);
             this.debugPnl.ResumeLayout(false);
             this.panel33.ResumeLayout(false);
@@ -8948,10 +9026,10 @@
             this.groupBox3.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -9106,9 +9184,7 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label17;
         private System.Windows.Forms.TextBox Vial1SizeMlTB;
-        private System.Windows.Forms.Label label16;
         private System.Windows.Forms.TextBox Vial4SizeMlTB;
         private System.Windows.Forms.TextBox mLinVial4TB;
         private System.Windows.Forms.TextBox Vial4WithdrawMlTB;
@@ -9116,8 +9192,6 @@
         private System.Windows.Forms.TextBox Vial4StatusTB;
         private System.Windows.Forms.TextBox Vial4ErrorTB;
         private System.Windows.Forms.TextBox isVibrating4TB;
-        private System.Windows.Forms.TextBox vibrationHzTB;
-        private System.Windows.Forms.TextBox vibrationStrengthTB;
         private System.Windows.Forms.TextBox Vial5SizeMlTB;
         private System.Windows.Forms.TextBox mLinVial5TB;
         private System.Windows.Forms.TextBox Vial5WithdrawMlTB;
@@ -9195,8 +9269,6 @@
         private System.Windows.Forms.Panel panel25;
         private System.Windows.Forms.Button setBumpPosVertBtn;
         private System.Windows.Forms.Button refreshBtn;
-        private System.Windows.Forms.Button TestVibrate56Btn;
-        private System.Windows.Forms.Button TestVibrate4Btn;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Button setBumpBottomBtn;
         private System.Windows.Forms.Label label19;
@@ -9241,15 +9313,6 @@
         private System.Windows.Forms.TextBox Vial2ErrTB;
         private System.Windows.Forms.Label label52;
         private System.Windows.Forms.TextBox SyringeBagErrorsTB;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox CyclesTotalTB;
-        private System.Windows.Forms.Label label42;
-        private System.Windows.Forms.TextBox CmdInProcTB;
-        private System.Windows.Forms.Label label34;
-        private System.Windows.Forms.TextBox HomingDoneTB;
-        private System.Windows.Forms.TextBox MotorIsMovingTB;
-        private System.Windows.Forms.Label label41;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox FindHomeErrorsTB;
         private System.Windows.Forms.Label FindHomeTB;
@@ -9529,6 +9592,23 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel86;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel112;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel113;
+        private System.Windows.Forms.Button TestVibrate4Btn;
+        private System.Windows.Forms.Button TestVibrate56Btn;
+        private System.Windows.Forms.TextBox vibrationHzTB;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.TextBox vibrationStrengthTB;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.GroupBox groupBox7;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox CyclesTotalTB;
+        private System.Windows.Forms.Label label42;
+        private System.Windows.Forms.TextBox CmdInProcTB;
+        private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.TextBox HomingDoneTB;
+        private System.Windows.Forms.TextBox MotorIsMovingTB;
+        private System.Windows.Forms.Label label41;
         //private System.Windows.Forms.Label label87;
         //private System.Windows.Forms.TextBox linearSpaceBetweenVialsuMTB;
     }

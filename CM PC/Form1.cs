@@ -105,6 +105,8 @@ namespace SpaceUSB
         //public bool syringeWasRemoved = false;
         public bool inLDcalibLocation = false;
         public bool b;
+        public Boolean showOverrride;
+
 
         // *** E R R O R S ***
         public int errorsSyringeBag;
@@ -212,6 +214,7 @@ namespace SpaceUSB
 
             if (!File.Exists(cmPath + pwPath + pwFileName))     // password file exists?
             {
+                ClrAll(); // push default values to vial containers for first file writing
                 logAndShow("PW file does not exist. \n\nTry master PW, then create your master user name");
                 PWfileEmptyPnl.Visible = true;          // enable master PW entrance, PW = DATE
                 userPWtlp.Visible = false;
@@ -240,7 +243,8 @@ namespace SpaceUSB
 
             while (true)
             {
-                this.Invoke((MethodInvoker)delegate { PcCodeTB.Text = pcCode; });
+                if (currentTAB == 5)
+                    this.Invoke((MethodInvoker)delegate { PcCodeTB.Text = pcCode; });
 
                 if (rTMCConn == null || !rTMCConn.TrinamicOK || aborted) continue;  // leaves the itteration as long that the conditions are true
 
@@ -450,27 +454,27 @@ namespace SpaceUSB
                 //this.Invoke((MethodInvoker)delegate { mLbagToFillTB.Text = $"{Convert.ToDouble(microLbagToFill) / 1000}"; });
 
                 if (!rgNumber.Match(Vial1WithdrawMlTB.Text).Success)
-                    Vial1WithdrawMlTB.Text = "0";
+                    Vial1WithdrawMlTB.Text = "50";
                 dblVial1WithdrawMicroL = Convert.ToDouble(Vial1WithdrawMlTB.Text);
 
                 if (!rgNumber.Match(Vial2WithdrawMlTB.Text).Success)
-                    Vial2WithdrawMlTB.Text = "0";
+                    Vial2WithdrawMlTB.Text = "50";
                 dblVial2WithdrawMicroL = Convert.ToDouble(Vial2WithdrawMlTB.Text);
 
                 if (!rgNumber.Match(Vial3WithdrawMlTB.Text).Success)
-                    Vial3WithdrawMlTB.Text = "0";
+                    Vial3WithdrawMlTB.Text = "50";
                 dblVial3WithdrawMicroL = Convert.ToDouble(Vial3WithdrawMlTB.Text);
 
                 if (!rgNumber.Match(Vial4WithdrawMlTB.Text).Success)
-                    Vial4WithdrawMlTB.Text = "0";
+                    Vial4WithdrawMlTB.Text = "50";
                 dblVial4WithdrawMicroL = Convert.ToDouble(Vial4WithdrawMlTB.Text);
 
                 if (!rgNumber.Match(Vial5WithdrawMlTB.Text).Success)
-                    Vial5WithdrawMlTB.Text = "0";
+                    Vial5WithdrawMlTB.Text = "50";
                 dblVial5WithdrawMicroL = Convert.ToDouble(Vial5WithdrawMlTB.Text);
 
                 if (!rgNumber.Match(Vial6WithdrawMlTB.Text).Success)
-                    Vial6WithdrawMlTB.Text = "0";
+                    Vial6WithdrawMlTB.Text = "50";
                 dblVial6WithdrawMicroL = Convert.ToDouble(Vial6WithdrawMlTB.Text);
 
                 dblmLbagToFillTB = dblVial1WithdrawMicroL
@@ -1486,7 +1490,7 @@ namespace SpaceUSB
 
             Thread.Sleep(300);  // wait before polling the "ready for new command
 
-            while (!readyForNewCommand)            // wait for the end of "MULTI"
+            while (!readyForNewCommand || showOverrride)            // wait for the end of "MULTI"
             {
                 //blink RunBtn
                 RunBtn.BackColor = Color.Bisque;
@@ -2070,7 +2074,7 @@ namespace SpaceUSB
         }
         private void SetupsTP_Enter(object sender, EventArgs e)
         {
-            Boolean showOverrride;
+            //Boolean showOverrride;
             Boolean disposeYN;
             Boolean skipVial456;
             Boolean skipBag;
@@ -2138,11 +2142,13 @@ namespace SpaceUSB
         private void showOverideRB_CheckedChanged(object sender, EventArgs e)
         {
             tResponse = rTMCConn.SetSGPandStore(AddressBank.GetParameterBank, SystemVariables.GB_ShowOverride, "1");
+            showOverrride = true;
         }
 
         private void normalRunRB_CheckedChanged(object sender, EventArgs e)
         {
             tResponse = rTMCConn.SetSGPandStore(AddressBank.GetParameterBank, SystemVariables.GB_ShowOverride, "0");
+            showOverrride = false;
         }
 
         private void disposeBottlesRB_CheckedChanged(object sender, EventArgs e)
@@ -2840,7 +2846,8 @@ namespace SpaceUSB
             //            MessageBox.Show(message, "information", MessageBoxButtons.OK, MessageBoxIcon.Warning,
             //                                         MessageBoxDefaultButton.Button3, MessageBoxOptions.DefaultDesktopOnly);
             //this.TopMost = false; 
-            RunTP.Focus();
+            //_ = RunTP.Focus();
+            //RunTP.Select();
             return;
         }
 
@@ -4295,8 +4302,7 @@ namespace SpaceUSB
         }
 
         // *****************************************************************************
-
-        private void ClrAllBtn_Click(object sender, EventArgs e)
+        private void ClrAll()
         {
             string vialSize;
             string strWithdraw;
@@ -4312,10 +4318,10 @@ namespace SpaceUSB
                 {
                     if (d is TextBox && string.Equals(vialSize, d.Name))
                     {
-                        d.Text = $"0";
+                        d.Text = $"50";
                     }
                     else if (d is TextBox && string.Equals(strWithdraw, d.Name))
-																		   
+
                     {
                         d.Text = "0";    // asVialSize;
                     }
@@ -4338,11 +4344,20 @@ namespace SpaceUSB
             //tResponse = rTMCConn.SetSGP(AddressBank.GetParameterBank, SystemVariables.GB_microLinVial_6, "0");   //GB_202
 
             //tResponse = rTMCConn.SetSGP(AddressBank.GetParameterBank, SystemVariables.GB_microLinBAG, "0");   //GB_99
-            BagSizeMlTB.Text = "0";
+            BagSizeMlTB.Text = "500";
+        }
+
+
+        private void ClrAllBtn_Click(object sender, EventArgs e)
+        {
+            ClrAll();
         }
 
         private void refreshBtn_Click(object sender, EventArgs e)
         {
+            //////// expiriment 
+            ////////////ClrAllBtn_Click(sender,e);
+            //////// end of expiriment
             tResponse = rTMCConn.RunCommand(GeneralFunctions.screenAllVials);
             tstringToRUNtest();    // display on "for RUN cmd"
                                    //mLbagToFillTB.Text = Convert.ToString(Convert.ToDouble(Vial1WithdrawMlTB.Text) + Convert.ToDouble(Vial2WithdrawMlTB.Text)
