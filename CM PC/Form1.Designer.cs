@@ -512,11 +512,6 @@
             this.thumbRestDistanceFilterSizeTB = new System.Windows.Forms.TextBox();
             this.label56 = new System.Windows.Forms.Label();
             this.SGPtestTB = new System.Windows.Forms.TextBox();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.movingTB = new System.Windows.Forms.TextBox();
-            this.label78 = new System.Windows.Forms.Label();
-            this.label61 = new System.Windows.Forms.Label();
-            this.runInProcessTB = new System.Windows.Forms.TextBox();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
@@ -524,6 +519,20 @@
             this.vibrationStrengthTB = new System.Windows.Forms.TextBox();
             this.TestVibrate4Btn = new System.Windows.Forms.Button();
             this.TestVibrate56Btn = new System.Windows.Forms.Button();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.movingTB = new System.Windows.Forms.TextBox();
+            this.label78 = new System.Windows.Forms.Label();
+            this.label61 = new System.Windows.Forms.Label();
+            this.runInProcessTB = new System.Windows.Forms.TextBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.CyclesTotalTB = new System.Windows.Forms.TextBox();
+            this.label42 = new System.Windows.Forms.Label();
+            this.CmdInProcTB = new System.Windows.Forms.TextBox();
+            this.label34 = new System.Windows.Forms.Label();
+            this.HomingDoneTB = new System.Windows.Forms.TextBox();
+            this.MotorIsMovingTB = new System.Windows.Forms.TextBox();
+            this.label41 = new System.Windows.Forms.Label();
             this.robotTP = new System.Windows.Forms.TabPage();
             this.debugPnl = new System.Windows.Forms.Panel();
             this.panel33 = new System.Windows.Forms.Panel();
@@ -596,15 +605,6 @@
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.CyclesTotalTB = new System.Windows.Forms.TextBox();
-            this.label42 = new System.Windows.Forms.Label();
-            this.CmdInProcTB = new System.Windows.Forms.TextBox();
-            this.label34 = new System.Windows.Forms.Label();
-            this.HomingDoneTB = new System.Windows.Forms.TextBox();
-            this.MotorIsMovingTB = new System.Windows.Forms.TextBox();
-            this.label41 = new System.Windows.Forms.Label();
             cmTC = new System.Windows.Forms.TabControl();
             cmTC.SuspendLayout();
             this.adminTP.SuspendLayout();
@@ -771,15 +771,15 @@
             this.panel37.SuspendLayout();
             this.panel32.SuspendLayout();
             this.panel31.SuspendLayout();
-            this.groupBox5.SuspendLayout();
             this.groupBox7.SuspendLayout();
+            this.groupBox5.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.robotTP.SuspendLayout();
             this.debugPnl.SuspendLayout();
             this.panel33.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // cmTC
@@ -7682,62 +7682,6 @@
             this.SGPtestTB.Size = new System.Drawing.Size(120, 34);
             this.SGPtestTB.TabIndex = 59;
             // 
-            // groupBox5
-            // 
-            this.setupTLP.SetColumnSpan(this.groupBox5, 2);
-            this.groupBox5.Controls.Add(this.movingTB);
-            this.groupBox5.Controls.Add(this.label78);
-            this.groupBox5.Controls.Add(this.label61);
-            this.groupBox5.Controls.Add(this.runInProcessTB);
-            this.groupBox5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox5.Location = new System.Drawing.Point(632, 499);
-            this.groupBox5.Name = "groupBox5";
-            this.setupTLP.SetRowSpan(this.groupBox5, 3);
-            this.groupBox5.Size = new System.Drawing.Size(621, 290);
-            this.groupBox5.TabIndex = 87;
-            this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "status info";
-            // 
-            // movingTB
-            // 
-            this.movingTB.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.movingTB.Enabled = false;
-            this.movingTB.Location = new System.Drawing.Point(163, 80);
-            this.movingTB.Name = "movingTB";
-            this.movingTB.Size = new System.Drawing.Size(112, 29);
-            this.movingTB.TabIndex = 67;
-            this.movingTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label78
-            // 
-            this.label78.AutoSize = true;
-            this.label78.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label78.Location = new System.Drawing.Point(6, 82);
-            this.label78.Name = "label78";
-            this.label78.Size = new System.Drawing.Size(97, 25);
-            this.label78.TabIndex = 66;
-            this.label78.Text = "for moving";
-            // 
-            // label61
-            // 
-            this.label61.AutoSize = true;
-            this.label61.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label61.Location = new System.Drawing.Point(6, 40);
-            this.label61.Name = "label61";
-            this.label61.Size = new System.Drawing.Size(120, 25);
-            this.label61.TabIndex = 55;
-            this.label61.Text = "run In Process";
-            // 
-            // runInProcessTB
-            // 
-            this.runInProcessTB.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.runInProcessTB.Enabled = false;
-            this.runInProcessTB.Location = new System.Drawing.Point(163, 38);
-            this.runInProcessTB.Name = "runInProcessTB";
-            this.runInProcessTB.Size = new System.Drawing.Size(112, 29);
-            this.runInProcessTB.TabIndex = 54;
-            this.runInProcessTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // groupBox7
             // 
             this.setupTLP.SetColumnSpan(this.groupBox7, 2);
@@ -7831,6 +7775,164 @@
             this.TestVibrate56Btn.Text = "Test Vibrate 5 and 6";
             this.TestVibrate56Btn.UseVisualStyleBackColor = false;
             this.TestVibrate56Btn.Click += new System.EventHandler(this.TestVibrate56Btn_Click);
+            // 
+            // groupBox5
+            // 
+            this.setupTLP.SetColumnSpan(this.groupBox5, 2);
+            this.groupBox5.Controls.Add(this.movingTB);
+            this.groupBox5.Controls.Add(this.label78);
+            this.groupBox5.Controls.Add(this.label61);
+            this.groupBox5.Controls.Add(this.runInProcessTB);
+            this.groupBox5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox5.Location = new System.Drawing.Point(632, 499);
+            this.groupBox5.Name = "groupBox5";
+            this.setupTLP.SetRowSpan(this.groupBox5, 3);
+            this.groupBox5.Size = new System.Drawing.Size(621, 290);
+            this.groupBox5.TabIndex = 87;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "status info";
+            // 
+            // movingTB
+            // 
+            this.movingTB.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.movingTB.Enabled = false;
+            this.movingTB.Location = new System.Drawing.Point(163, 80);
+            this.movingTB.Name = "movingTB";
+            this.movingTB.Size = new System.Drawing.Size(112, 29);
+            this.movingTB.TabIndex = 67;
+            this.movingTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label78
+            // 
+            this.label78.AutoSize = true;
+            this.label78.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label78.Location = new System.Drawing.Point(6, 82);
+            this.label78.Name = "label78";
+            this.label78.Size = new System.Drawing.Size(97, 25);
+            this.label78.TabIndex = 66;
+            this.label78.Text = "for moving";
+            // 
+            // label61
+            // 
+            this.label61.AutoSize = true;
+            this.label61.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label61.Location = new System.Drawing.Point(6, 40);
+            this.label61.Name = "label61";
+            this.label61.Size = new System.Drawing.Size(120, 25);
+            this.label61.TabIndex = 55;
+            this.label61.Text = "run In Process";
+            // 
+            // runInProcessTB
+            // 
+            this.runInProcessTB.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.runInProcessTB.Enabled = false;
+            this.runInProcessTB.Location = new System.Drawing.Point(163, 38);
+            this.runInProcessTB.Name = "runInProcessTB";
+            this.runInProcessTB.Size = new System.Drawing.Size(112, 29);
+            this.runInProcessTB.TabIndex = 54;
+            this.runInProcessTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // groupBox2
+            // 
+            this.setupTLP.SetColumnSpan(this.groupBox2, 2);
+            this.groupBox2.Controls.Add(this.label6);
+            this.groupBox2.Controls.Add(this.CyclesTotalTB);
+            this.groupBox2.Controls.Add(this.label42);
+            this.groupBox2.Controls.Add(this.CmdInProcTB);
+            this.groupBox2.Controls.Add(this.label34);
+            this.groupBox2.Controls.Add(this.HomingDoneTB);
+            this.groupBox2.Controls.Add(this.MotorIsMovingTB);
+            this.groupBox2.Controls.Add(this.label41);
+            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox2.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.groupBox2.Location = new System.Drawing.Point(1260, 499);
+            this.groupBox2.Name = "groupBox2";
+            this.setupTLP.SetRowSpan(this.groupBox2, 3);
+            this.groupBox2.Size = new System.Drawing.Size(624, 290);
+            this.groupBox2.TabIndex = 89;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "in process";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label6.Location = new System.Drawing.Point(17, 133);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(184, 30);
+            this.label6.TabIndex = 70;
+            this.label6.Text = "Cycles Total (GB 12)";
+            // 
+            // CyclesTotalTB
+            // 
+            this.CyclesTotalTB.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.CyclesTotalTB.Enabled = false;
+            this.CyclesTotalTB.Location = new System.Drawing.Point(291, 131);
+            this.CyclesTotalTB.Name = "CyclesTotalTB";
+            this.CyclesTotalTB.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.CyclesTotalTB.Size = new System.Drawing.Size(88, 34);
+            this.CyclesTotalTB.TabIndex = 71;
+            this.CyclesTotalTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label42
+            // 
+            this.label42.AutoSize = true;
+            this.label42.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label42.Location = new System.Drawing.Point(17, 61);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(263, 30);
+            this.label42.TabIndex = 11;
+            this.label42.Text = "command in process (GB 97)";
+            // 
+            // CmdInProcTB
+            // 
+            this.CmdInProcTB.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.CmdInProcTB.Enabled = false;
+            this.CmdInProcTB.Location = new System.Drawing.Point(291, 59);
+            this.CmdInProcTB.Name = "CmdInProcTB";
+            this.CmdInProcTB.Size = new System.Drawing.Size(88, 34);
+            this.CmdInProcTB.TabIndex = 16;
+            this.CmdInProcTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label34.Location = new System.Drawing.Point(17, 25);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(228, 30);
+            this.label34.TabIndex = 3;
+            this.label34.Text = "motor is moving (GB 16)";
+            // 
+            // HomingDoneTB
+            // 
+            this.HomingDoneTB.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.HomingDoneTB.Enabled = false;
+            this.HomingDoneTB.Location = new System.Drawing.Point(291, 95);
+            this.HomingDoneTB.Name = "HomingDoneTB";
+            this.HomingDoneTB.Size = new System.Drawing.Size(88, 34);
+            this.HomingDoneTB.TabIndex = 17;
+            this.HomingDoneTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // MotorIsMovingTB
+            // 
+            this.MotorIsMovingTB.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.MotorIsMovingTB.Enabled = false;
+            this.MotorIsMovingTB.Location = new System.Drawing.Point(290, 23);
+            this.MotorIsMovingTB.Name = "MotorIsMovingTB";
+            this.MotorIsMovingTB.Size = new System.Drawing.Size(88, 34);
+            this.MotorIsMovingTB.TabIndex = 15;
+            this.MotorIsMovingTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label41
+            // 
+            this.label41.AutoSize = true;
+            this.label41.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label41.Location = new System.Drawing.Point(17, 97);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(201, 30);
+            this.label41.TabIndex = 10;
+            this.label41.Text = "homing done (GB 18)";
             // 
             // robotTP
             // 
@@ -8611,108 +8713,6 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
-            // groupBox2
-            // 
-            this.setupTLP.SetColumnSpan(this.groupBox2, 2);
-            this.groupBox2.Controls.Add(this.label6);
-            this.groupBox2.Controls.Add(this.CyclesTotalTB);
-            this.groupBox2.Controls.Add(this.label42);
-            this.groupBox2.Controls.Add(this.CmdInProcTB);
-            this.groupBox2.Controls.Add(this.label34);
-            this.groupBox2.Controls.Add(this.HomingDoneTB);
-            this.groupBox2.Controls.Add(this.MotorIsMovingTB);
-            this.groupBox2.Controls.Add(this.label41);
-            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox2.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.groupBox2.Location = new System.Drawing.Point(1260, 499);
-            this.groupBox2.Name = "groupBox2";
-            this.setupTLP.SetRowSpan(this.groupBox2, 3);
-            this.groupBox2.Size = new System.Drawing.Size(624, 290);
-            this.groupBox2.TabIndex = 89;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "in process";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label6.Location = new System.Drawing.Point(17, 133);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(184, 30);
-            this.label6.TabIndex = 70;
-            this.label6.Text = "Cycles Total (GB 12)";
-            // 
-            // CyclesTotalTB
-            // 
-            this.CyclesTotalTB.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.CyclesTotalTB.Enabled = false;
-            this.CyclesTotalTB.Location = new System.Drawing.Point(291, 131);
-            this.CyclesTotalTB.Name = "CyclesTotalTB";
-            this.CyclesTotalTB.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.CyclesTotalTB.Size = new System.Drawing.Size(88, 34);
-            this.CyclesTotalTB.TabIndex = 71;
-            this.CyclesTotalTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label42
-            // 
-            this.label42.AutoSize = true;
-            this.label42.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label42.Location = new System.Drawing.Point(17, 61);
-            this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(263, 30);
-            this.label42.TabIndex = 11;
-            this.label42.Text = "command in process (GB 97)";
-            // 
-            // CmdInProcTB
-            // 
-            this.CmdInProcTB.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.CmdInProcTB.Enabled = false;
-            this.CmdInProcTB.Location = new System.Drawing.Point(291, 59);
-            this.CmdInProcTB.Name = "CmdInProcTB";
-            this.CmdInProcTB.Size = new System.Drawing.Size(88, 34);
-            this.CmdInProcTB.TabIndex = 16;
-            this.CmdInProcTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label34
-            // 
-            this.label34.AutoSize = true;
-            this.label34.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label34.Location = new System.Drawing.Point(17, 25);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(228, 30);
-            this.label34.TabIndex = 3;
-            this.label34.Text = "motor is moving (GB 16)";
-            // 
-            // HomingDoneTB
-            // 
-            this.HomingDoneTB.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.HomingDoneTB.Enabled = false;
-            this.HomingDoneTB.Location = new System.Drawing.Point(291, 95);
-            this.HomingDoneTB.Name = "HomingDoneTB";
-            this.HomingDoneTB.Size = new System.Drawing.Size(88, 34);
-            this.HomingDoneTB.TabIndex = 17;
-            this.HomingDoneTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // MotorIsMovingTB
-            // 
-            this.MotorIsMovingTB.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.MotorIsMovingTB.Enabled = false;
-            this.MotorIsMovingTB.Location = new System.Drawing.Point(290, 23);
-            this.MotorIsMovingTB.Name = "MotorIsMovingTB";
-            this.MotorIsMovingTB.Size = new System.Drawing.Size(88, 34);
-            this.MotorIsMovingTB.TabIndex = 15;
-            this.MotorIsMovingTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label41
-            // 
-            this.label41.AutoSize = true;
-            this.label41.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label41.Location = new System.Drawing.Point(17, 97);
-            this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(201, 30);
-            this.label41.TabIndex = 10;
-            this.label41.Text = "homing done (GB 18)";
-            // 
             // CMForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
@@ -9015,10 +9015,12 @@
             this.panel32.PerformLayout();
             this.panel31.ResumeLayout(false);
             this.panel31.PerformLayout();
-            this.groupBox5.ResumeLayout(false);
-            this.groupBox5.PerformLayout();
             this.groupBox7.ResumeLayout(false);
             this.groupBox7.PerformLayout();
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.robotTP.ResumeLayout(false);
             this.debugPnl.ResumeLayout(false);
             this.panel33.ResumeLayout(false);
@@ -9028,8 +9030,6 @@
             this.groupBox4.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
 
         }

@@ -21,7 +21,7 @@ namespace SpaceUSB
     {
         //  all the following directories will be under the base directory:
 
-        public string pcCode = "2024-08-18";
+        public string pcCode = "2024-09-30";
 
         public string cmPath = "C:\\cmRUN\\";    // base directory. can be changed by the user
         public string logPath = "logfiles\\";
@@ -1465,25 +1465,33 @@ namespace SpaceUSB
                         }
             if (readyForNewCommand)
             {
-           *** maybe put here ***
-            CSUB    VERIFY_READY_DRAW          // check if syringe, vial are loaded // keeps STATE WAITING_DISPENSE for easy recovery
+            
             }
             */
-            RunInProcess = true;                                  // eliminate re-entrance
 
-            this.Invoke((MethodInvoker)delegate { RunParametersTLP.Enabled = false; });
-            this.Invoke((MethodInvoker)delegate { calibrateTLP.Enabled = false; });
+            //tResponse = rTMCConn.RunCommand(GeneralFunctions.VERIFY_READY_DRAW); // check if syringe, vial are loaded // keeps STATE WAITING_DISPENSE for easy recovery
+           
+            tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_CurrentState);
+            // GB_CurrentState must be = WAITING_DISPENSE ( = 30)
 
-            if (!readyForNewCommand)
+            if ((Convert.ToInt32(tResponse.tmcReply.value) != 30) && (!cmdInProcess && !motorIsMoving))     // replacing if (!readyForNewCommand)
             {
-                logAndShow("The Robot is busy, wait and try again");
+                logAndShow("The Robot isn't ready, please intitiate HOME and try again");
                 goto exit;  // exit
+                            
             }
+                
+            //}
             if (rTMCConn.TrinamicAborted())
             {
                 logAndShow(" Robot aborted, please intitiate HOME");
                 goto exit;  // exit
             }
+
+            RunInProcess = true;                                  // eliminate re-entrance
+
+            this.Invoke((MethodInvoker)delegate { RunParametersTLP.Enabled = false; });
+            this.Invoke((MethodInvoker)delegate { calibrateTLP.Enabled = false; });
 
             tResponse = rTMCConn.RunCommand(GeneralFunctions.DRAW_DOSE);   // run draw process
             tstringToRUNtest();
