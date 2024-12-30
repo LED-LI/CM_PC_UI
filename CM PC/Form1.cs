@@ -21,7 +21,7 @@ namespace SpaceUSB
     {
         //  all the following directories will be under the base directory:
 
-        public string pcCode = "2024-12-29";
+        public string pcCode = "2024-12-30";
 
         public string cmPath = "C:\\cmRUN\\";    // base directory. can be changed by the user
         public string logPath = "logfiles\\";
@@ -4412,22 +4412,120 @@ namespace SpaceUSB
         // *****************************************************************************
         // *****************************************************************************
 
-          ////////////////////////////////////////////////////////////
-         ////////////////////// Tilt and Shake //////////////////////
         ////////////////////////////////////////////////////////////
-        
-            //////////
-           //////////
-          // Tilt //
-         //////////
-        //////////
-        
-        //// *** set Number Of Tilts ***
+        ////////////////////// Tilt and Shake //////////////////////
+        ////////////////////////////////////////////////////////////
 
+        //////////
+        //////////
+        // Tilt //
+        //////////
+        //////////
+       
+        ////// ***************************************
+        ///// *** set axis Acceleration For Tilts ***
+        //// ***************************************
+
+        private void TBaxisAccelerationForTilts_Leave(object sender, EventArgs e)
+        {
+            SetAxisAccelerationForTilts();
+        }
+
+        private void TBaxisAccelerationForTilts_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
+        {
+            SetAxisAccelerationForTilts();
+        }
+
+
+
+        private void SetAxisAccelerationForTilts()
+        {
+            if (rgNumber.Match(TBaxisAccelerationForTilts.Text).Success
+                && Convert.ToInt32(TBaxisAccelerationForTilts.Text) <= 100
+                && Convert.ToInt32(TBaxisAccelerationForTilts.Text) >= 4)        // did not match, a non number character is there
+            {
+                tResponse = rTMCConn.SetSGP(AddressBank.GetParameterBank, SystemVariables.GB_axisAccelerationForTilts, TBnumberOfTilts.Text);
+            }
+            else
+            {
+                TBaxisAccelerationForTilts.Text = "25";
+                logAndShow("wrong number, or not between 4 and 100");
+            }
+        }
+
+        ////// **********************************
+        ///// *** set Axis Current For Tilts ***
+        //// **********************************
+
+        private void TBaxisCurrentForTilts_Leave(object sender, EventArgs e)
+        {
+                SetAxisCurrentForTilts();
+        }
+
+        private void TBaxisCurrentForTilts_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
+        {
+            if (Convert.ToInt32(e.KeyCode) == (char)13)    //  Enter key pressed?
+            {
+                SetAxisCurrentForTilts();
+            }
+        }
+
+        private void SetAxisCurrentForTilts()
+        {
+            if (rgNumber.Match(TBaxisCurrentForTilts.Text).Success
+                && Convert.ToInt32(TBaxisCurrentForTilts.Text) <= 100
+                && Convert.ToInt32(TBaxisCurrentForTilts.Text) >= 4)        // did not match, a non number character is there
+            {
+                tResponse = rTMCConn.SetSGP(AddressBank.GetParameterBank, SystemVariables.GB_axisCurrentForTilts, TBaxisCurrentForTilts.Text);
+            }
+            else
+            {
+                TBaxisCurrentForTilts.Text = "25";
+                logAndShow("wrong number, or not between 4 and 100");
+            }
+        }
+
+
+        ////// ********************************
+        ///// *** set Axis Speed For Tilts ***
+        //// ********************************
+
+        private void TBaxisSpeedForTilts_Leave(object sender, EventArgs e)
+        {
+            SetAxisSpeedForTilts();
+        }
+
+        private void TBaxisSpeedForTilts_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
+        {
+            if (Convert.ToInt32(e.KeyCode) == (char)13)    //  Enter key pressed?
+            {
+                SetAxisSpeedForTilts();
+            }
+        }
+
+        private void SetAxisSpeedForTilts()
+        {
+            if (rgNumber.Match(TBaxisSpeedForTilts.Text).Success
+                && Convert.ToInt32(TBaxisSpeedForTilts.Text) <= 100
+                && Convert.ToInt32(TBaxisSpeedForTilts.Text) >= 4)        // did not match, a non number character is there
+            {
+                tResponse = rTMCConn.SetSGP(AddressBank.GetParameterBank, SystemVariables.GB_axisSpeedForTilts, TBaxisSpeedForTilts.Text);
+            }
+            else
+            {
+                TBaxisSpeedForTilts.Text = "25";
+                logAndShow("wrong number, or not between 4 and 100");
+            }
+        }
+
+        ///// ***************************
+        //// *** set Number Of Tilts ***
+        /// ***************************
+        
         private void TBnumberOfTilts_Leave(object sender, EventArgs e)
         {
             {
-                setNumberOfTilts();
+                SetNumberOfTilts();
             }
         }
 
@@ -4435,11 +4533,11 @@ namespace SpaceUSB
         {
             if (Convert.ToInt32(e.KeyCode) == (char)13)    //  Enter key pressed?
             {
-                setNumberOfTilts();
+                SetNumberOfTilts();
             }
         }
 
-        private void setNumberOfTilts()
+        private void SetNumberOfTilts()
         {
             if (rgNumber.Match(TBnumberOfTilts.Text).Success
                 && Convert.ToInt32(TBnumberOfTilts.Text) <= 100
@@ -4453,89 +4551,188 @@ namespace SpaceUSB
                 logAndShow("wrong number, or not between 4 and 100");
             }
         }
+
+
         ///////////
         ///////////
         // Shake //
         ///////////
         ///////////
 
+        ////// ***************************************
+        ///// *** set axis Acceleration For Shakes ***
+        //// ***************************************
 
-        ////// *** set Number Of Shakes ***
+        private void TBaxisAccelerationForShakes_Leave(object sender, EventArgs e)
+        {
+            SetAxisAccelerationForShakes();
+        }
 
+        private void TBaxisAccelerationForShakes_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
+        {
+            SetAxisAccelerationForShakes();
+        }
+
+
+
+        private void SetAxisAccelerationForShakes()
+        {
+            if (rgNumber.Match(TBaxisAccelerationForShakes.Text).Success
+                && Convert.ToInt32(TBaxisAccelerationForShakes.Text) <= 100
+                && Convert.ToInt32(TBaxisAccelerationForShakes.Text) >= 4)        // did not match, a non number character is there
+            {
+                tResponse = rTMCConn.SetSGP(AddressBank.GetParameterBank, SystemVariables.GB_axisAccelerationForShakes, TBnumberOfShakes.Text);
+            }
+            else
+            {
+                TBaxisAccelerationForShakes.Text = "25";
+                logAndShow("wrong number, or not between 4 and 100");
+            }
+        }
+
+        ////// **********************************
+        ///// *** set Axis Current For Shakes ***
+        //// **********************************
+
+        private void TBaxisCurrentForShakes_Leave(object sender, EventArgs e)
+        {
+            SetAxisCurrentForShakes();
+        }
+
+        private void TBaxisCurrentForShakes_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
+        {
+            if (Convert.ToInt32(e.KeyCode) == (char)13)    //  Enter key pressed?
+            {
+                SetAxisCurrentForShakes();
+            }
+        }
+
+        private void SetAxisCurrentForShakes()
+        {
+            if (rgNumber.Match(TBaxisCurrentForShakes.Text).Success
+                && Convert.ToInt32(TBaxisCurrentForShakes.Text) <= 100
+                && Convert.ToInt32(TBaxisCurrentForShakes.Text) >= 4)        // did not match, a non number character is there
+            {
+                tResponse = rTMCConn.SetSGP(AddressBank.GetParameterBank, SystemVariables.GB_axisCurrentForShakes, TBaxisCurrentForShakes.Text);
+            }
+            else
+            {
+                TBaxisCurrentForShakes.Text = "25";
+                logAndShow("wrong number, or not between 4 and 100");
+            }
+        }
+
+
+        ////// ********************************
+        ///// *** set Axis Speed For Shakes ***
+        //// ********************************
+
+        private void TBaxisSpeedForShakes_Leave(object sender, EventArgs e)
+        {
+            SetAxisSpeedForShakes();
+        }
+
+        private void TBaxisSpeedForShakes_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
+        {
+            if (Convert.ToInt32(e.KeyCode) == (char)13)    //  Enter key pressed?
+            {
+                SetAxisSpeedForShakes();
+            }
+        }
+
+        private void SetAxisSpeedForShakes()
+        {
+            if (rgNumber.Match(TBaxisSpeedForShakes.Text).Success
+                && Convert.ToInt32(TBaxisSpeedForShakes.Text) <= 100
+                && Convert.ToInt32(TBaxisSpeedForShakes.Text) >= 4)        // did not match, a non number character is there
+            {
+                tResponse = rTMCConn.SetSGP(AddressBank.GetParameterBank, SystemVariables.GB_axisSpeedForShakes, TBaxisSpeedForShakes.Text);
+            }
+            else
+            {
+                TBaxisSpeedForShakes.Text = "25";
+                logAndShow("wrong number, or not between 4 and 100");
+            }
+        }
+
+        ///// *********************************
+        //// *** set Shake Travel Distance ***
+        /// *********************************
+
+        private void TBshakeTravelDistance_Leave(object sender, EventArgs e)
+        {
+            {
+                SetShakeTravelDistance();
+            }
+        }
+
+        private void TBshakeTravelDistance_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
+        {
+            if (Convert.ToInt32(e.KeyCode) == (char)13)    //  Enter key pressed?
+            {
+                SetShakeTravelDistance();
+            }
+        }
+
+        private void SetShakeTravelDistance()
+        {
+            if (rgNumber.Match(TBshakeTravelDistance.Text).Success
+                && Convert.ToInt32(TBshakeTravelDistance.Text) <= 100
+                && Convert.ToInt32(TBshakeTravelDistance.Text) >= 4)        // did not match, a non number character is there
+            {
+                tResponse = rTMCConn.SetSGP(AddressBank.GetParameterBank, SystemVariables.GB_shakeTravelDistance, TBshakeTravelDistance.Text);
+            }
+            else
+            {
+                TBshakeTravelDistance.Text = "25";
+                logAndShow("wrong number, or not between 4 and 100");
+            }
+        }
+
+        ///// ****************************
+        //// *** set Number Of Shakes ***
+        /// ****************************
 
         private void TBnumberOfShakes_Leave(object sender, EventArgs e)
         {
-            //    {
-            //        setNumberOfShakes();
-            //    }
+            {
+                SetNumberOfShakes();
+            }
         }
 
         private void TBnumberOfShakes_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
         {
-            //    if (Convert.ToInt32(e.KeyCode) == (char)13)    //  Enter key pressed?
-            //    {
-            //        setNumberOfShakes();
-            //    }
+            if (Convert.ToInt32(e.KeyCode) == (char)13)    //  Enter key pressed?
+            {
+                SetNumberOfShakes();
+            }
         }
 
-        //private void setNumberOfShakes()
-        //{
-        //    if (rgNumber.Match(TBnumberOfShakes.Text).Success
-        //        && Convert.ToInt32(TBnumberOfShakes.Text) <= 100
-        //        && Convert.ToInt32(TBnumberOfShakes.Text) >= 4)        // did not match, a non number character is there
-        //    {
-        //        tResponse = rTMCConn.SetSGP(AddressBank.GetParameterBank, SystemVariables.GB_numberOfShakes, TBnumberOfShakes.Text);
-        //    }
-        //    else
-        //    {
-        //        TBnumberOfShakes.Text = "25";
-        //        logAndShow("wrong number, or not between 4 and 100");
-        //    }
-        //}
+        private void SetNumberOfShakes()
+        {
+            if (rgNumber.Match(TBnumberOfShakes.Text).Success
+                && Convert.ToInt32(TBnumberOfShakes.Text) <= 100
+                && Convert.ToInt32(TBnumberOfShakes.Text) >= 4)        // did not match, a non number character is there
+            {
+                tResponse = rTMCConn.SetSGP(AddressBank.GetParameterBank, SystemVariables.GB_numberOfShakes, TBnumberOfShakes.Text);
+            }
+            else
+            {
+                TBnumberOfShakes.Text = "25";
+                logAndShow("wrong number, or not between 4 and 100");
+            }
+        }
 
 
 
+        //////
+        ///// *****************************************************************************
+        //// *****************************************************************************
+        /// *****************************************************************************
+        //
 
 
-        // *****************************************************************************
-        // *****************************************************************************
-        // *****************************************************************************
 
         // =============================================================
     }
 }
-/*
-
-3 references
-public partial class Form1 : Form
-
-int txtHeight;
-float txtFontSize;
-1 reference
-public Form1()
-
-InitializeComponent();
-
-txtHeight = textBox1.Size. Height;
-txtFontSize = textBox1.Font.Size;
-textBox1. Text = "Hey Dude! !";
-label1. Text = "What's up ?? ";
-
-I
-
- 
- 1 reference
-private void textBox1_SizeChanged(object sender, EventArgs e)
-
-float heightMult = Convert. ToInt32(textBox1.Size.Height / txtHeight);
-
-if (heightMult < 1.0)
-
-heightMult = 1.0F;
-
-textBox1. Font = new Font(textBox1.Font. FontFamily, heightMult * txtFontSize);
-label1.Font = new Font(label1.Font.FontFamily, heightMult * txtFontSize);
-
-}
- */
-

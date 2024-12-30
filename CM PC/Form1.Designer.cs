@@ -516,9 +516,9 @@
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.vibrationHzTB = new System.Windows.Forms.TextBox();
-            this.vibrationStrengthTB = new System.Windows.Forms.TextBox();
-            this.TestVibrate4Btn = new System.Windows.Forms.Button();
             this.TestVibrate56Btn = new System.Windows.Forms.Button();
+            this.TestVibrate4Btn = new System.Windows.Forms.Button();
+            this.vibrationStrengthTB = new System.Windows.Forms.TextBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.movingTB = new System.Windows.Forms.TextBox();
             this.label78 = new System.Windows.Forms.Label();
@@ -7714,6 +7714,7 @@
             this.groupBox7.Controls.Add(this.TestVibrate4Btn);
             this.groupBox7.Controls.Add(this.vibrationStrengthTB);
             this.groupBox7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox7.Enabled = false;
             this.groupBox7.Location = new System.Drawing.Point(4, 499);
             this.groupBox7.Name = "groupBox7";
             this.setupTLP.SetRowSpan(this.groupBox7, 3);
@@ -7721,7 +7722,6 @@
             this.groupBox7.TabIndex = 88;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Vibration settings";
-            this.groupBox7.Visible = false;
             // 
             // label16
             // 
@@ -7757,17 +7757,21 @@
             this.vibrationHzTB.Leave += new System.EventHandler(this.vibrationHzTB_Leave);
             this.vibrationHzTB.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.vibrationHzTB_PreviewKeyDown);
             // 
-            // vibrationStrengthTB
+            // TestVibrate56Btn
             // 
-            this.vibrationStrengthTB.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.vibrationStrengthTB.Location = new System.Drawing.Point(217, 123);
-            this.vibrationStrengthTB.Name = "vibrationStrengthTB";
-            this.vibrationStrengthTB.Size = new System.Drawing.Size(66, 29);
-            this.vibrationStrengthTB.TabIndex = 85;
-            this.vibrationStrengthTB.Text = "40";
-            this.vibrationStrengthTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.vibrationStrengthTB.Leave += new System.EventHandler(this.vibrationStrengthTB_Leave);
-            this.vibrationStrengthTB.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.vibrationStrengthTB_PreviewKeyDown);
+            this.TestVibrate56Btn.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.TestVibrate56Btn.BackColor = System.Drawing.Color.Bisque;
+            this.TestVibrate56Btn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.TestVibrate56Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.TestVibrate56Btn.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.TestVibrate56Btn.ForeColor = System.Drawing.Color.Black;
+            this.TestVibrate56Btn.Location = new System.Drawing.Point(47, 229);
+            this.TestVibrate56Btn.Name = "TestVibrate56Btn";
+            this.TestVibrate56Btn.Size = new System.Drawing.Size(250, 50);
+            this.TestVibrate56Btn.TabIndex = 82;
+            this.TestVibrate56Btn.Text = "Test Vibrate 5 and 6";
+            this.TestVibrate56Btn.UseVisualStyleBackColor = false;
+            this.TestVibrate56Btn.Click += new System.EventHandler(this.TestVibrate56Btn_Click);
             // 
             // TestVibrate4Btn
             // 
@@ -7785,21 +7789,17 @@
             this.TestVibrate4Btn.UseVisualStyleBackColor = false;
             this.TestVibrate4Btn.Click += new System.EventHandler(this.TestVibrate4Btn_Click);
             // 
-            // TestVibrate56Btn
+            // vibrationStrengthTB
             // 
-            this.TestVibrate56Btn.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.TestVibrate56Btn.BackColor = System.Drawing.Color.Bisque;
-            this.TestVibrate56Btn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.TestVibrate56Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.TestVibrate56Btn.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.TestVibrate56Btn.ForeColor = System.Drawing.Color.Black;
-            this.TestVibrate56Btn.Location = new System.Drawing.Point(47, 229);
-            this.TestVibrate56Btn.Name = "TestVibrate56Btn";
-            this.TestVibrate56Btn.Size = new System.Drawing.Size(250, 50);
-            this.TestVibrate56Btn.TabIndex = 82;
-            this.TestVibrate56Btn.Text = "Test Vibrate 5 and 6";
-            this.TestVibrate56Btn.UseVisualStyleBackColor = false;
-            this.TestVibrate56Btn.Click += new System.EventHandler(this.TestVibrate56Btn_Click);
+            this.vibrationStrengthTB.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.vibrationStrengthTB.Location = new System.Drawing.Point(217, 123);
+            this.vibrationStrengthTB.Name = "vibrationStrengthTB";
+            this.vibrationStrengthTB.Size = new System.Drawing.Size(66, 29);
+            this.vibrationStrengthTB.TabIndex = 85;
+            this.vibrationStrengthTB.Text = "40";
+            this.vibrationStrengthTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.vibrationStrengthTB.Leave += new System.EventHandler(this.vibrationStrengthTB_Leave);
+            this.vibrationStrengthTB.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.vibrationStrengthTB_PreviewKeyDown);
             // 
             // groupBox5
             // 
@@ -8148,6 +8148,8 @@
             this.TBaxisAccelerationForShakes.TabIndex = 85;
             this.TBaxisAccelerationForShakes.Text = "0";
             this.TBaxisAccelerationForShakes.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TBaxisAccelerationForShakes.Leave += new System.EventHandler(this.TBaxisAccelerationForShakes_Leave);
+            this.TBaxisAccelerationForShakes.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.TBaxisAccelerationForShakes_PreviewKeyDown);
             // 
             // TBnumberOfTilts
             // 
@@ -8170,6 +8172,8 @@
             this.TBaxisAccelerationForTilts.TabIndex = 85;
             this.TBaxisAccelerationForTilts.Text = "0";
             this.TBaxisAccelerationForTilts.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TBaxisAccelerationForTilts.Leave += new System.EventHandler(this.TBaxisAccelerationForTilts_Leave);
+            this.TBaxisAccelerationForTilts.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.TBaxisAccelerationForTilts_PreviewKeyDown);
             // 
             // TBshakeTravelDistance
             // 
@@ -8180,6 +8184,8 @@
             this.TBshakeTravelDistance.TabIndex = 85;
             this.TBshakeTravelDistance.Text = "0";
             this.TBshakeTravelDistance.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TBshakeTravelDistance.Leave += new System.EventHandler(this.TBshakeTravelDistance_Leave);
+            this.TBshakeTravelDistance.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.TBshakeTravelDistance_PreviewKeyDown);
             // 
             // TBaxisCurrentForShakes
             // 
@@ -8190,6 +8196,8 @@
             this.TBaxisCurrentForShakes.TabIndex = 85;
             this.TBaxisCurrentForShakes.Text = "0";
             this.TBaxisCurrentForShakes.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TBaxisCurrentForShakes.Leave += new System.EventHandler(this.TBaxisCurrentForShakes_Leave);
+            this.TBaxisCurrentForShakes.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.TBaxisCurrentForShakes_PreviewKeyDown);
             // 
             // TBaxisSpeedForShakes
             // 
@@ -8200,6 +8208,8 @@
             this.TBaxisSpeedForShakes.TabIndex = 85;
             this.TBaxisSpeedForShakes.Text = "0";
             this.TBaxisSpeedForShakes.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TBaxisSpeedForShakes.Leave += new System.EventHandler(this.TBaxisSpeedForShakes_Leave);
+            this.TBaxisSpeedForShakes.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.TBaxisSpeedForShakes_PreviewKeyDown);
             // 
             // TBaxisCurrentForTilts
             // 
@@ -8210,6 +8220,8 @@
             this.TBaxisCurrentForTilts.TabIndex = 85;
             this.TBaxisCurrentForTilts.Text = "0";
             this.TBaxisCurrentForTilts.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TBaxisCurrentForTilts.Leave += new System.EventHandler(this.TBaxisCurrentForTilts_Leave);
+            this.TBaxisCurrentForTilts.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.TBaxisCurrentForTilts_PreviewKeyDown);
             // 
             // TBaxisSpeedForTilts
             // 
@@ -8220,6 +8232,8 @@
             this.TBaxisSpeedForTilts.TabIndex = 85;
             this.TBaxisSpeedForTilts.Text = "0";
             this.TBaxisSpeedForTilts.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TBaxisSpeedForTilts.Leave += new System.EventHandler(this.TBaxisSpeedForTilts_Leave);
+            this.TBaxisSpeedForTilts.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.TBaxisSpeedForTilts_PreviewKeyDown);
             // 
             // robotTP
             // 
