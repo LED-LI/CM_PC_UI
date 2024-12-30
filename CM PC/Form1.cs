@@ -4506,8 +4506,8 @@ namespace SpaceUSB
         private void SetAxisSpeedForTilts()
         {
             if (rgNumber.Match(TBaxisSpeedForTilts.Text).Success
-                && Convert.ToInt32(TBaxisSpeedForTilts.Text) <= 100
-                && Convert.ToInt32(TBaxisSpeedForTilts.Text) >= 4)        // did not match, a non number character is there
+                && Convert.ToInt32(TBaxisSpeedForTilts.Text) <= 2047
+                && Convert.ToInt32(TBaxisSpeedForTilts.Text) >= 1)        // did not match, a non number character is there
             {
                 tResponse = rTMCConn.SetSGP(AddressBank.GetParameterBank, SystemVariables.GB_axisSpeedForTilts, TBaxisSpeedForTilts.Text);
             }
