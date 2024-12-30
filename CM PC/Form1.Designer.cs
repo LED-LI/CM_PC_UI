@@ -533,6 +533,28 @@
             this.HomingDoneTB = new System.Windows.Forms.TextBox();
             this.MotorIsMovingTB = new System.Windows.Forms.TextBox();
             this.label41 = new System.Windows.Forms.Label();
+            this.TestTiltBtn = new System.Windows.Forms.Button();
+            this.groupBox8 = new System.Windows.Forms.GroupBox();
+            this.label108 = new System.Windows.Forms.Label();
+            this.label120 = new System.Windows.Forms.Label();
+            this.label115 = new System.Windows.Forms.Label();
+            this.label112 = new System.Windows.Forms.Label();
+            this.label114 = new System.Windows.Forms.Label();
+            this.label111 = new System.Windows.Forms.Label();
+            this.label118 = new System.Windows.Forms.Label();
+            this.label113 = new System.Windows.Forms.Label();
+            this.label116 = new System.Windows.Forms.Label();
+            this.label110 = new System.Windows.Forms.Label();
+            this.label107 = new System.Windows.Forms.Label();
+            this.TBnumberOfShakes = new System.Windows.Forms.TextBox();
+            this.TBaxisAccelerationForShakes = new System.Windows.Forms.TextBox();
+            this.TBnumberOfTilts = new System.Windows.Forms.TextBox();
+            this.TBaxisAccelerationForTilts = new System.Windows.Forms.TextBox();
+            this.TBshakeTravelDistance = new System.Windows.Forms.TextBox();
+            this.TBaxisCurrentForShakes = new System.Windows.Forms.TextBox();
+            this.TBaxisSpeedForShakes = new System.Windows.Forms.TextBox();
+            this.TBaxisCurrentForTilts = new System.Windows.Forms.TextBox();
+            this.TBaxisSpeedForTilts = new System.Windows.Forms.TextBox();
             this.robotTP = new System.Windows.Forms.TabPage();
             this.debugPnl = new System.Windows.Forms.Panel();
             this.panel33 = new System.Windows.Forms.Panel();
@@ -774,6 +796,7 @@
             this.groupBox7.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.groupBox8.SuspendLayout();
             this.robotTP.SuspendLayout();
             this.debugPnl.SuspendLayout();
             this.panel33.SuspendLayout();
@@ -7218,10 +7241,10 @@
             this.setupTLP.Controls.Add(this.GBpanelPNL, 3, 0);
             this.setupTLP.Controls.Add(this.groupBox6, 0, 0);
             this.setupTLP.Controls.Add(this.groupBox7, 0, 5);
-            this.setupTLP.Controls.Add(this.TestVibrate4Btn, 0, 8);
-            this.setupTLP.Controls.Add(this.TestVibrate56Btn, 1, 8);
-            this.setupTLP.Controls.Add(this.groupBox5, 2, 5);
+            this.setupTLP.Controls.Add(this.groupBox5, 3, 5);
             this.setupTLP.Controls.Add(this.groupBox2, 4, 5);
+            this.setupTLP.Controls.Add(this.TestTiltBtn, 2, 8);
+            this.setupTLP.Controls.Add(this.groupBox8, 1, 5);
             this.setupTLP.Dock = System.Windows.Forms.DockStyle.Fill;
             this.setupTLP.Location = new System.Drawing.Point(3, 3);
             this.setupTLP.Name = "setupTLP";
@@ -7684,19 +7707,21 @@
             // 
             // groupBox7
             // 
-            this.setupTLP.SetColumnSpan(this.groupBox7, 2);
             this.groupBox7.Controls.Add(this.label16);
             this.groupBox7.Controls.Add(this.label17);
             this.groupBox7.Controls.Add(this.vibrationHzTB);
+            this.groupBox7.Controls.Add(this.TestVibrate56Btn);
+            this.groupBox7.Controls.Add(this.TestVibrate4Btn);
             this.groupBox7.Controls.Add(this.vibrationStrengthTB);
             this.groupBox7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox7.Location = new System.Drawing.Point(4, 499);
             this.groupBox7.Name = "groupBox7";
             this.setupTLP.SetRowSpan(this.groupBox7, 3);
-            this.groupBox7.Size = new System.Drawing.Size(621, 290);
+            this.groupBox7.Size = new System.Drawing.Size(307, 290);
             this.groupBox7.TabIndex = 88;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Vibration settings";
+            this.groupBox7.Visible = false;
             // 
             // label16
             // 
@@ -7725,7 +7750,7 @@
             this.vibrationHzTB.BackColor = System.Drawing.SystemColors.MenuBar;
             this.vibrationHzTB.Location = new System.Drawing.Point(217, 56);
             this.vibrationHzTB.Name = "vibrationHzTB";
-            this.vibrationHzTB.Size = new System.Drawing.Size(178, 29);
+            this.vibrationHzTB.Size = new System.Drawing.Size(66, 29);
             this.vibrationHzTB.TabIndex = 83;
             this.vibrationHzTB.Text = "25";
             this.vibrationHzTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -7737,7 +7762,7 @@
             this.vibrationStrengthTB.BackColor = System.Drawing.SystemColors.MenuBar;
             this.vibrationStrengthTB.Location = new System.Drawing.Point(217, 123);
             this.vibrationStrengthTB.Name = "vibrationStrengthTB";
-            this.vibrationStrengthTB.Size = new System.Drawing.Size(200, 29);
+            this.vibrationStrengthTB.Size = new System.Drawing.Size(66, 29);
             this.vibrationStrengthTB.TabIndex = 85;
             this.vibrationStrengthTB.Text = "40";
             this.vibrationStrengthTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -7752,7 +7777,7 @@
             this.TestVibrate4Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.TestVibrate4Btn.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.TestVibrate4Btn.ForeColor = System.Drawing.Color.Black;
-            this.TestVibrate4Btn.Location = new System.Drawing.Point(82, 817);
+            this.TestVibrate4Btn.Location = new System.Drawing.Point(7, 173);
             this.TestVibrate4Btn.Name = "TestVibrate4Btn";
             this.TestVibrate4Btn.Size = new System.Drawing.Size(150, 50);
             this.TestVibrate4Btn.TabIndex = 81;
@@ -7768,7 +7793,7 @@
             this.TestVibrate56Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.TestVibrate56Btn.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.TestVibrate56Btn.ForeColor = System.Drawing.Color.Black;
-            this.TestVibrate56Btn.Location = new System.Drawing.Point(346, 817);
+            this.TestVibrate56Btn.Location = new System.Drawing.Point(47, 229);
             this.TestVibrate56Btn.Name = "TestVibrate56Btn";
             this.TestVibrate56Btn.Size = new System.Drawing.Size(250, 50);
             this.TestVibrate56Btn.TabIndex = 82;
@@ -7778,16 +7803,15 @@
             // 
             // groupBox5
             // 
-            this.setupTLP.SetColumnSpan(this.groupBox5, 2);
             this.groupBox5.Controls.Add(this.movingTB);
             this.groupBox5.Controls.Add(this.label78);
             this.groupBox5.Controls.Add(this.label61);
             this.groupBox5.Controls.Add(this.runInProcessTB);
             this.groupBox5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox5.Location = new System.Drawing.Point(632, 499);
+            this.groupBox5.Location = new System.Drawing.Point(946, 499);
             this.groupBox5.Name = "groupBox5";
             this.setupTLP.SetRowSpan(this.groupBox5, 3);
-            this.groupBox5.Size = new System.Drawing.Size(621, 290);
+            this.groupBox5.Size = new System.Drawing.Size(307, 290);
             this.groupBox5.TabIndex = 87;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "status info";
@@ -7933,6 +7957,269 @@
             this.label41.Size = new System.Drawing.Size(201, 30);
             this.label41.TabIndex = 10;
             this.label41.Text = "homing done (GB 18)";
+            // 
+            // TestTiltBtn
+            // 
+            this.TestTiltBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.TestTiltBtn.BackColor = System.Drawing.Color.Bisque;
+            this.TestTiltBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.TestTiltBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.TestTiltBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.TestTiltBtn.ForeColor = System.Drawing.Color.Black;
+            this.TestTiltBtn.Location = new System.Drawing.Point(710, 817);
+            this.TestTiltBtn.Name = "TestTiltBtn";
+            this.TestTiltBtn.Size = new System.Drawing.Size(150, 50);
+            this.TestTiltBtn.TabIndex = 81;
+            this.TestTiltBtn.Text = "Test Tilt";
+            this.TestTiltBtn.UseVisualStyleBackColor = false;
+            this.TestTiltBtn.Click += new System.EventHandler(this.TestTilt_Click);
+            // 
+            // groupBox8
+            // 
+            this.setupTLP.SetColumnSpan(this.groupBox8, 2);
+            this.groupBox8.Controls.Add(this.label108);
+            this.groupBox8.Controls.Add(this.label120);
+            this.groupBox8.Controls.Add(this.label115);
+            this.groupBox8.Controls.Add(this.label112);
+            this.groupBox8.Controls.Add(this.label114);
+            this.groupBox8.Controls.Add(this.label111);
+            this.groupBox8.Controls.Add(this.label118);
+            this.groupBox8.Controls.Add(this.label113);
+            this.groupBox8.Controls.Add(this.label116);
+            this.groupBox8.Controls.Add(this.label110);
+            this.groupBox8.Controls.Add(this.label107);
+            this.groupBox8.Controls.Add(this.TBnumberOfShakes);
+            this.groupBox8.Controls.Add(this.TBaxisAccelerationForShakes);
+            this.groupBox8.Controls.Add(this.TBnumberOfTilts);
+            this.groupBox8.Controls.Add(this.TBaxisAccelerationForTilts);
+            this.groupBox8.Controls.Add(this.TBshakeTravelDistance);
+            this.groupBox8.Controls.Add(this.TBaxisCurrentForShakes);
+            this.groupBox8.Controls.Add(this.TBaxisSpeedForShakes);
+            this.groupBox8.Controls.Add(this.TBaxisCurrentForTilts);
+            this.groupBox8.Controls.Add(this.TBaxisSpeedForTilts);
+            this.groupBox8.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox8.Location = new System.Drawing.Point(318, 499);
+            this.groupBox8.Name = "groupBox8";
+            this.setupTLP.SetRowSpan(this.groupBox8, 3);
+            this.groupBox8.Size = new System.Drawing.Size(621, 290);
+            this.groupBox8.TabIndex = 90;
+            this.groupBox8.TabStop = false;
+            this.groupBox8.Text = "Tilt and Shake";
+            // 
+            // label108
+            // 
+            this.label108.AutoSize = true;
+            this.label108.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.label108.Location = new System.Drawing.Point(5, 155);
+            this.label108.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label108.Name = "label108";
+            this.label108.Size = new System.Drawing.Size(81, 28);
+            this.label108.TabIndex = 86;
+            this.label108.Text = "Shakes:";
+            // 
+            // label120
+            // 
+            this.label120.AutoSize = true;
+            this.label120.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.label120.Location = new System.Drawing.Point(309, 156);
+            this.label120.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label120.Name = "label120";
+            this.label120.Size = new System.Drawing.Size(64, 28);
+            this.label120.TabIndex = 86;
+            this.label120.Text = "Travel";
+            // 
+            // label115
+            // 
+            this.label115.AutoSize = true;
+            this.label115.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.label115.Location = new System.Drawing.Point(245, 156);
+            this.label115.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label115.Name = "label115";
+            this.label115.Size = new System.Drawing.Size(49, 28);
+            this.label115.TabIndex = 86;
+            this.label115.Text = "SPD";
+            // 
+            // label112
+            // 
+            this.label112.AutoSize = true;
+            this.label112.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.label112.Location = new System.Drawing.Point(245, 25);
+            this.label112.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label112.Name = "label112";
+            this.label112.Size = new System.Drawing.Size(49, 28);
+            this.label112.TabIndex = 86;
+            this.label112.Text = "SPD";
+            // 
+            // label114
+            // 
+            this.label114.AutoSize = true;
+            this.label114.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.label114.Location = new System.Drawing.Point(173, 156);
+            this.label114.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label114.Name = "label114";
+            this.label114.Size = new System.Drawing.Size(50, 28);
+            this.label114.TabIndex = 86;
+            this.label114.Text = "CUR";
+            // 
+            // label111
+            // 
+            this.label111.AutoSize = true;
+            this.label111.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.label111.Location = new System.Drawing.Point(173, 25);
+            this.label111.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label111.Name = "label111";
+            this.label111.Size = new System.Drawing.Size(50, 28);
+            this.label111.TabIndex = 86;
+            this.label111.Text = "CUR";
+            // 
+            // label118
+            // 
+            this.label118.AutoSize = true;
+            this.label118.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.label118.Location = new System.Drawing.Point(371, 156);
+            this.label118.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label118.Name = "label118";
+            this.label118.Size = new System.Drawing.Size(84, 28);
+            this.label118.TabIndex = 86;
+            this.label118.Text = "NUM of";
+            // 
+            // label113
+            // 
+            this.label113.AutoSize = true;
+            this.label113.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.label113.Location = new System.Drawing.Point(103, 156);
+            this.label113.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label113.Name = "label113";
+            this.label113.Size = new System.Drawing.Size(48, 28);
+            this.label113.TabIndex = 86;
+            this.label113.Text = "ACC";
+            // 
+            // label116
+            // 
+            this.label116.AutoSize = true;
+            this.label116.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.label116.Location = new System.Drawing.Point(370, 25);
+            this.label116.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label116.Name = "label116";
+            this.label116.Size = new System.Drawing.Size(84, 28);
+            this.label116.TabIndex = 86;
+            this.label116.Text = "NUM of";
+            // 
+            // label110
+            // 
+            this.label110.AutoSize = true;
+            this.label110.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.label110.Location = new System.Drawing.Point(103, 25);
+            this.label110.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label110.Name = "label110";
+            this.label110.Size = new System.Drawing.Size(48, 28);
+            this.label110.TabIndex = 86;
+            this.label110.Text = "ACC";
+            // 
+            // label107
+            // 
+            this.label107.AutoSize = true;
+            this.label107.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.label107.Location = new System.Drawing.Point(5, 29);
+            this.label107.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label107.Name = "label107";
+            this.label107.Size = new System.Drawing.Size(54, 28);
+            this.label107.TabIndex = 86;
+            this.label107.Text = "Tilts:";
+            // 
+            // TBnumberOfShakes
+            // 
+            this.TBnumberOfShakes.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.TBnumberOfShakes.Location = new System.Drawing.Point(380, 187);
+            this.TBnumberOfShakes.Name = "TBnumberOfShakes";
+            this.TBnumberOfShakes.Size = new System.Drawing.Size(66, 29);
+            this.TBnumberOfShakes.TabIndex = 85;
+            this.TBnumberOfShakes.Text = "0";
+            this.TBnumberOfShakes.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TBnumberOfShakes.Leave += new System.EventHandler(this.TBnumberOfShakes_Leave);
+            this.TBnumberOfShakes.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.TBnumberOfShakes_PreviewKeyDown);
+            // 
+            // TBaxisAccelerationForShakes
+            // 
+            this.TBaxisAccelerationForShakes.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.TBaxisAccelerationForShakes.Location = new System.Drawing.Point(94, 187);
+            this.TBaxisAccelerationForShakes.Name = "TBaxisAccelerationForShakes";
+            this.TBaxisAccelerationForShakes.Size = new System.Drawing.Size(66, 29);
+            this.TBaxisAccelerationForShakes.TabIndex = 85;
+            this.TBaxisAccelerationForShakes.Text = "0";
+            this.TBaxisAccelerationForShakes.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // TBnumberOfTilts
+            // 
+            this.TBnumberOfTilts.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.TBnumberOfTilts.Location = new System.Drawing.Point(379, 56);
+            this.TBnumberOfTilts.Name = "TBnumberOfTilts";
+            this.TBnumberOfTilts.Size = new System.Drawing.Size(66, 29);
+            this.TBnumberOfTilts.TabIndex = 85;
+            this.TBnumberOfTilts.Text = "0";
+            this.TBnumberOfTilts.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TBnumberOfTilts.Leave += new System.EventHandler(this.TBnumberOfTilts_Leave);
+            this.TBnumberOfTilts.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.TBnumberOfTilts_PreviewKeyDown);
+            // 
+            // TBaxisAccelerationForTilts
+            // 
+            this.TBaxisAccelerationForTilts.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.TBaxisAccelerationForTilts.Location = new System.Drawing.Point(94, 56);
+            this.TBaxisAccelerationForTilts.Name = "TBaxisAccelerationForTilts";
+            this.TBaxisAccelerationForTilts.Size = new System.Drawing.Size(66, 29);
+            this.TBaxisAccelerationForTilts.TabIndex = 85;
+            this.TBaxisAccelerationForTilts.Text = "0";
+            this.TBaxisAccelerationForTilts.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // TBshakeTravelDistance
+            // 
+            this.TBshakeTravelDistance.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.TBshakeTravelDistance.Location = new System.Drawing.Point(308, 187);
+            this.TBshakeTravelDistance.Name = "TBshakeTravelDistance";
+            this.TBshakeTravelDistance.Size = new System.Drawing.Size(66, 29);
+            this.TBshakeTravelDistance.TabIndex = 85;
+            this.TBshakeTravelDistance.Text = "0";
+            this.TBshakeTravelDistance.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // TBaxisCurrentForShakes
+            // 
+            this.TBaxisCurrentForShakes.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.TBaxisCurrentForShakes.Location = new System.Drawing.Point(165, 187);
+            this.TBaxisCurrentForShakes.Name = "TBaxisCurrentForShakes";
+            this.TBaxisCurrentForShakes.Size = new System.Drawing.Size(66, 29);
+            this.TBaxisCurrentForShakes.TabIndex = 85;
+            this.TBaxisCurrentForShakes.Text = "0";
+            this.TBaxisCurrentForShakes.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // TBaxisSpeedForShakes
+            // 
+            this.TBaxisSpeedForShakes.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.TBaxisSpeedForShakes.Location = new System.Drawing.Point(236, 187);
+            this.TBaxisSpeedForShakes.Name = "TBaxisSpeedForShakes";
+            this.TBaxisSpeedForShakes.Size = new System.Drawing.Size(66, 29);
+            this.TBaxisSpeedForShakes.TabIndex = 85;
+            this.TBaxisSpeedForShakes.Text = "0";
+            this.TBaxisSpeedForShakes.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // TBaxisCurrentForTilts
+            // 
+            this.TBaxisCurrentForTilts.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.TBaxisCurrentForTilts.Location = new System.Drawing.Point(165, 56);
+            this.TBaxisCurrentForTilts.Name = "TBaxisCurrentForTilts";
+            this.TBaxisCurrentForTilts.Size = new System.Drawing.Size(66, 29);
+            this.TBaxisCurrentForTilts.TabIndex = 85;
+            this.TBaxisCurrentForTilts.Text = "0";
+            this.TBaxisCurrentForTilts.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // TBaxisSpeedForTilts
+            // 
+            this.TBaxisSpeedForTilts.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.TBaxisSpeedForTilts.Location = new System.Drawing.Point(236, 56);
+            this.TBaxisSpeedForTilts.Name = "TBaxisSpeedForTilts";
+            this.TBaxisSpeedForTilts.Size = new System.Drawing.Size(66, 29);
+            this.TBaxisSpeedForTilts.TabIndex = 85;
+            this.TBaxisSpeedForTilts.Text = "0";
+            this.TBaxisSpeedForTilts.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // robotTP
             // 
@@ -9021,6 +9308,8 @@
             this.groupBox5.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.groupBox8.ResumeLayout(false);
+            this.groupBox8.PerformLayout();
             this.robotTP.ResumeLayout(false);
             this.debugPnl.ResumeLayout(false);
             this.panel33.ResumeLayout(false);
@@ -9609,6 +9898,28 @@
         private System.Windows.Forms.TextBox HomingDoneTB;
         private System.Windows.Forms.TextBox MotorIsMovingTB;
         private System.Windows.Forms.Label label41;
+        private System.Windows.Forms.Button TestTiltBtn;
+        private System.Windows.Forms.GroupBox groupBox8;
+        private System.Windows.Forms.Label label107;
+        private System.Windows.Forms.TextBox TBaxisSpeedForTilts;
+        private System.Windows.Forms.Label label108;
+        private System.Windows.Forms.Label label115;
+        private System.Windows.Forms.Label label112;
+        private System.Windows.Forms.Label label114;
+        private System.Windows.Forms.Label label111;
+        private System.Windows.Forms.Label label113;
+        private System.Windows.Forms.Label label110;
+        private System.Windows.Forms.TextBox TBaxisAccelerationForShakes;
+        private System.Windows.Forms.TextBox TBaxisAccelerationForTilts;
+        private System.Windows.Forms.TextBox TBaxisCurrentForShakes;
+        private System.Windows.Forms.TextBox TBaxisSpeedForShakes;
+        private System.Windows.Forms.TextBox TBaxisCurrentForTilts;
+        private System.Windows.Forms.Label label116;
+        private System.Windows.Forms.TextBox TBnumberOfTilts;
+        private System.Windows.Forms.Label label120;
+        private System.Windows.Forms.Label label118;
+        private System.Windows.Forms.TextBox TBnumberOfShakes;
+        private System.Windows.Forms.TextBox TBshakeTravelDistance;
         //private System.Windows.Forms.Label label87;
         //private System.Windows.Forms.TextBox linearSpaceBetweenVialsuMTB;
     }

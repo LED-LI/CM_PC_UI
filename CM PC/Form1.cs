@@ -21,7 +21,7 @@ namespace SpaceUSB
     {
         //  all the following directories will be under the base directory:
 
-        public string pcCode = "2024-12-11";
+        public string pcCode = "2024-12-29";
 
         public string cmPath = "C:\\cmRUN\\";    // base directory. can be changed by the user
         public string logPath = "logfiles\\";
@@ -3151,6 +3151,19 @@ namespace SpaceUSB
         }
 
         //  *********************************************************************************
+        private void TestTilt_Click(object sender, EventArgs e)
+        {
+            //tResponse = rTMCConn.SetSGP(AddressBank.GetParameterBank, SystemVariables.GB_vibrationTime_4, vibrationTime4TB.Text);
+            //tResponse = rTMCConn.SetSGP(AddressBank.GetParameterBank, SystemVariables.GB_vibration4IsNeeded, "1");
+            //tResponse = rTMCConn.SetSGP(AddressBank.GetParameterBank, SystemVariables.GB_vibrationTime_56, "0");
+            //tResponse = rTMCConn.SetSGP(AddressBank.GetParameterBank, SystemVariables.GB_vibrationHz, vibrationHzTB.Text);
+            //tResponse = rTMCConn.SetSGP(AddressBank.GetParameterBank, SystemVariables.GB_vibrStrengthPercentCalc, vibrationStrengthTB.Text);
+            tstringToSGPtest();
+            tResponse = rTMCConn.RunCommand(GeneralFunctions.Tilt);
+            tstringToRUNtest();    // display on "for RUN cmd"
+        }
+
+        //  *********************************************************************************
 
         // *** set vibration time 4 ***
         private void vibrationTime4TB_Leave(object sender, EventArgs e)
@@ -4392,6 +4405,100 @@ namespace SpaceUSB
             //tResponse = rTMCConn.RunCommand(GeneralFunctions.ejectSyringeFromBottomVial);
             //tstringToRUNtest();
         }
+
+
+        // *****************************************************************************
+        // *****************************************************************************
+        // *****************************************************************************
+        // *****************************************************************************
+
+          ////////////////////////////////////////////////////////////
+         ////////////////////// Tilt and Shake //////////////////////
+        ////////////////////////////////////////////////////////////
+        
+            //////////
+           //////////
+          // Tilt //
+         //////////
+        //////////
+        
+        //// *** set Number Of Tilts ***
+
+        private void TBnumberOfTilts_Leave(object sender, EventArgs e)
+        {
+            {
+                setNumberOfTilts();
+            }
+        }
+
+        private void TBnumberOfTilts_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
+        {
+            if (Convert.ToInt32(e.KeyCode) == (char)13)    //  Enter key pressed?
+            {
+                setNumberOfTilts();
+            }
+        }
+
+        private void setNumberOfTilts()
+        {
+            if (rgNumber.Match(TBnumberOfTilts.Text).Success
+                && Convert.ToInt32(TBnumberOfTilts.Text) <= 100
+                && Convert.ToInt32(TBnumberOfTilts.Text) >= 4)        // did not match, a non number character is there
+            {
+                tResponse = rTMCConn.SetSGP(AddressBank.GetParameterBank, SystemVariables.GB_numberOfTilts, TBnumberOfTilts.Text);
+            }
+            else
+            {
+                TBnumberOfTilts.Text = "25";
+                logAndShow("wrong number, or not between 4 and 100");
+            }
+        }
+        ///////////
+        ///////////
+        // Shake //
+        ///////////
+        ///////////
+
+
+        ////// *** set Number Of Shakes ***
+
+
+        private void TBnumberOfShakes_Leave(object sender, EventArgs e)
+        {
+            //    {
+            //        setNumberOfShakes();
+            //    }
+        }
+
+        private void TBnumberOfShakes_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
+        {
+            //    if (Convert.ToInt32(e.KeyCode) == (char)13)    //  Enter key pressed?
+            //    {
+            //        setNumberOfShakes();
+            //    }
+        }
+
+        //private void setNumberOfShakes()
+        //{
+        //    if (rgNumber.Match(TBnumberOfShakes.Text).Success
+        //        && Convert.ToInt32(TBnumberOfShakes.Text) <= 100
+        //        && Convert.ToInt32(TBnumberOfShakes.Text) >= 4)        // did not match, a non number character is there
+        //    {
+        //        tResponse = rTMCConn.SetSGP(AddressBank.GetParameterBank, SystemVariables.GB_numberOfShakes, TBnumberOfShakes.Text);
+        //    }
+        //    else
+        //    {
+        //        TBnumberOfShakes.Text = "25";
+        //        logAndShow("wrong number, or not between 4 and 100");
+        //    }
+        //}
+
+
+
+
+
+        // *****************************************************************************
+        // *****************************************************************************
         // *****************************************************************************
 
         // =============================================================

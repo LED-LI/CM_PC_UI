@@ -1,5 +1,5 @@
 ﻿// last modified by : LED
-// last modified at : 2024-08-06
+// last modified at : 2024-12-29
 
 namespace SpaceUSB
 {
@@ -572,18 +572,42 @@ namespace SpaceUSB
         public const string GB_238 = "238";
         public const string GB_239 = "239";
         public const string GB_240 = "240";
-        public const string GB_241 = "241";
-        public const string GB_242 = "242";
-        public const string GB_243 = "243";
-        public const string GB_244 = "244";
-        public const string GB_245 = "245";
-        public const string GB_246 = "246";
-        public const string GB_247 = "247";
-        public const string GB_248 = "248";
-        public const string GB_249 = "249";
+        // ----------- shakes and tilts - to replace the vibrators ------------ //
+        ///////////                                                       // -- //
+        // Tilts //                                                       // -- //
+        ///////////                                                       // -- //
+        public const string GB_axisAccelerationForTilts      = "241";     // -- //
+        public const string GB_axisCurrentForTilts           = "242";     // -- //
+        public const string GB_axisSpeedForTilts             = "243";     // -- //
+        // -------------------------------------                          // -- //
+        public const string GB_numberOfTilts                 = "244";     // -- //
+        public const string GB_tiltsCounter                  = "245";     // -- //
+        ////////////                                                      // -- //
+        // Shakes //                                                      // -- //
+        ////////////                                                      // -- //
+        public const string GB_axisAccelerationForShakes     = "246";     // -- //
+        public const string GB_axisCurrentForShakes          = "247";     // -- //
+        public const string GB_axisSpeedForShakes            = "248";     // -- //
+        // -------------------------------------                          // -- //
+        public const string GB_numberOfShakes                = "249";     // -- //
+        public const string GB_shakesCounter                 = "250";     // -- //
+        // -------------------------------------                          // -- //
+        public const string GB_shakeTravelDistance           = "251";     // -- //
+        // -------------------------------------------------------------------- //
+        // -------------------------------------------------------------------- //
 
-        public const string GB_250 = "250";
-        public const string GB_251 = "251";
+        //public const string GB_241 = "241";
+        //public const string GB_242 = "242";
+        //public const string GB_243 = "243";
+        //public const string GB_244 = "244";
+        //public const string GB_245 = "245";
+        //public const string GB_246 = "246";
+        //public const string GB_247 = "247";
+        //public const string GB_248 = "248";
+        //public const string GB_249 = "249";
+
+        //public const string GB_250 = "250";
+        //public const string GB_251 = "251";
 
         //public const string GB_skipCheckVial456 = "250";             // temorary variable 5
         //public const string GB_skipCheckBag = "251";
@@ -687,6 +711,8 @@ namespace SpaceUSB
         public const string func_168 = "168";
         public const string func_170 = "170";
         public const string func_172 = "172";
-        public const int lastFunction = 174;
+        public const string Tilt = "174";
+        
+        public const int lastFunction = 256;
     }
 }
