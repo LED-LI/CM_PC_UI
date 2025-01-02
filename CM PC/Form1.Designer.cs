@@ -2926,11 +2926,13 @@
             this.LD_valTb.Name = "LD_valTb";
             this.LD_valTb.Size = new System.Drawing.Size(122, 29);
             this.LD_valTb.TabIndex = 37;
+            this.LD_valTb.Visible = false;
             // 
             // label84
             // 
             this.label84.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label84.AutoSize = true;
+            this.label84.Enabled = false;
             this.label84.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Bold);
             this.label84.Location = new System.Drawing.Point(130, 10);
             this.label84.Margin = new System.Windows.Forms.Padding(2);
@@ -2939,6 +2941,7 @@
             this.label84.TabIndex = 36;
             this.label84.Text = "Laser Distance";
             this.label84.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label84.Visible = false;
             // 
             // M_PistonLocationTb
             // 
@@ -6572,6 +6575,7 @@
             this.tableLayoutPanel69.Controls.Add(this.tableLayoutPanel73, 0, 0);
             this.tableLayoutPanel69.Controls.Add(this.tableLayoutPanel70, 0, 0);
             this.tableLayoutPanel69.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel69.Enabled = false;
             this.tableLayoutPanel69.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel69.Margin = new System.Windows.Forms.Padding(1);
             this.tableLayoutPanel69.Name = "tableLayoutPanel69";
@@ -6579,6 +6583,7 @@
             this.tableLayoutPanel69.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel69.Size = new System.Drawing.Size(256, 96);
             this.tableLayoutPanel69.TabIndex = 97;
+            this.tableLayoutPanel69.Visible = false;
             // 
             // tableLayoutPanel73
             // 
@@ -6828,10 +6833,12 @@
             // 
             this.panel36.Controls.Add(this.tableLayoutPanel68);
             this.panel36.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel36.Enabled = false;
             this.panel36.Location = new System.Drawing.Point(813, 774);
             this.panel36.Name = "panel36";
             this.panel36.Size = new System.Drawing.Size(256, 96);
             this.panel36.TabIndex = 93;
+            this.panel36.Visible = false;
             // 
             // tableLayoutPanel68
             // 
@@ -7152,6 +7159,7 @@
             this.panel44.Controls.Add(this.label22);
             this.panel44.Controls.Add(this.messuredAmountOfLiquidTB);
             this.panel44.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel44.Enabled = false;
             this.panel44.Location = new System.Drawing.Point(1339, 877);
             this.panel44.Name = "panel44";
             this.panel44.Size = new System.Drawing.Size(256, 96);

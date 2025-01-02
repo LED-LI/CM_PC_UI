@@ -271,42 +271,42 @@ namespace SpaceUSB
                     //tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_thumbRestDistance);
                     tResponse = rTMCConn.SetOutput(SwitchOutputs.Out_Multiplexer, "0");
                     Thread.Sleep(100);   // wait 100 ms for the FUNC to finish
-                    tResponse = rTMCConn.GetAnalogInput(TrinamicInputs.In_thumbRestDistance);
-                    thumbRestDistance = Convert.ToDouble(tResponse.tmcReply.value);
+                                         //////////////////////////////////////////////////////////////////////////////tResponse = rTMCConn.GetAnalogInput(TrinamicInputs.In_thumbRestDistance);
+                                         //////////////////////////////////////////////////////////////////////////////thumbRestDistance = Convert.ToDouble(tResponse.tmcReply.value);
 
                     // thumbRestDistanceSum += thumbRestDistance;                                  // sum input readings
                     // thumbRestDistanceAvg = thumbRestDistanceSum / thumbRestDistanceCount;       // avarage the sum by the amount of time the input was read and summed 
-																															  
+
                     //thumbRestDistanceSum += thumbRestDistance;                                  // sum input readings
                     //thumbRestDistanceAvg = thumbRestDistanceSum / thumbRestDistanceCount;       // avarage the sum by the amount of time the input was read and summed 
                     //thumbRestDistanceSum *= Convert.ToDouble(thumbRestDistanceFilterSize - 1) / thumbRestDistanceFilterSize;
 
-                    thumbRestDistanceAvg = (thumbRestDistance / thumbRestDistanceFilterSize) + (thumbRestDistanceAvg * (thumbRestDistanceFilterSize-1)/ thumbRestDistanceFilterSize);
+                    //////////////////////////////////////////////////////////////////////////////thumbRestDistanceAvg = (thumbRestDistance / thumbRestDistanceFilterSize) + (thumbRestDistanceAvg * (thumbRestDistanceFilterSize-1)/ thumbRestDistanceFilterSize);
 
 
-																																													 
 
-                    v = thumbRestDistanceAvg * 100 / Values.maxAVAL;                            // convert averaged value to display as percentage
-                    this.Invoke((MethodInvoker)delegate { LD_valTb.Text = $"{v,10:0.00}"; });
+
+                    //////////////////////////////////////////////////////////////////////////////v = thumbRestDistanceAvg * 100 / Values.maxAVAL;                            // convert averaged value to display as percentage
+                    //////////////////////////////////////////////////////////////////////////////this.Invoke((MethodInvoker)delegate { LD_valTb.Text = $"{v,10:0.00}"; });
 
                     // if (thumbRestDistanceCount < thumbRestDistanceFilterSize)                   // limit the summing by the amount of times dictated nt thumbRestDistanceFilterSize
                     // {
-                        // thumbRestDistanceCount++;
+                    // thumbRestDistanceCount++;
                     // }
                     // else
                     // {
-                        // thumbRestDistanceSum *= Convert.ToDouble(thumbRestDistanceFilterSize - 1) / thumbRestDistanceFilterSize;
+                    // thumbRestDistanceSum *= Convert.ToDouble(thumbRestDistanceFilterSize - 1) / thumbRestDistanceFilterSize;
                     // }
                 }
 
-                    //tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_linearSpaceBetweenVialsuM);
-                    //linearSpaceBetweenVialsuM = Convert.ToInt32(tResponse.tmcReply.value);
-                    //this.Invoke((MethodInvoker)delegate { linearSpaceBetweenVialsuMTB.Text = Convert.ToString(linearSpaceBetweenVialsuM, 10); });
+                //tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_linearSpaceBetweenVialsuM);
+                //linearSpaceBetweenVialsuM = Convert.ToInt32(tResponse.tmcReply.value);
+                //this.Invoke((MethodInvoker)delegate { linearSpaceBetweenVialsuMTB.Text = Convert.ToString(linearSpaceBetweenVialsuM, 10); });
 
 
-																														
-																					  
-																																			 
+
+
+
 
                 tResponse = rTMCConn.GetGAP(MotorsNum.M_HeadRotate, AddressBank.actualPosition);
                 v = Convert.ToDouble(tResponse.tmcReply.value) / StepsPerMM.M_RotateStepsPerDeg;
@@ -551,7 +551,7 @@ namespace SpaceUSB
                 }
 
                 // arrange locations of invoking according to tabs - this goes to tab 3
-                this.Invoke((MethodInvoker)delegate { thumbRestDistanceFilterSizeTB.Text = $"{thumbRestDistanceFilterSize}"; });
+                //////////////////////////////////////////////////////////////////////////////this.Invoke((MethodInvoker)delegate { thumbRestDistanceFilterSizeTB.Text = $"{thumbRestDistanceFilterSize}"; });
                 this.Invoke((MethodInvoker)delegate { runInProcessTB.Text = $"{RunInProcess}"; });
                 ///////////////////////////////////////////////////////////////////////
 
@@ -3386,21 +3386,21 @@ namespace SpaceUSB
 
             ////////////////////
 
-            tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_min_vol_laserDist_AVAL); // GB_14
-            LD_minVol = Convert.ToInt32(tResponse.tmcReply.value);
-            LD_minVolTB.Text = $"{LD_minVol}";
-
-            tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_max_vol_laserDist_AVAL); // GB_15
-            LD_maxVol = Convert.ToInt32(tResponse.tmcReply.value);
-            LD_maxVolTB.Text = $"{LD_maxVol}";
-
-            tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_piston_defined_vol_uL); // GB_16
-            LD_definedVol = Convert.ToInt32(tResponse.tmcReply.value);
-            LD_definedVolTB.Text = $"{LD_definedVol}";
-
-            tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_accepted_diviation_range); // GB_17
-            LD_acceptedDev = Convert.ToInt32(tResponse.tmcReply.value);
-            LD_acceptedDevTB.Text = $"{LD_acceptedDev}";
+            ////////////////////////////////////////////////////////////////////////////// tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_min_vol_laserDist_AVAL); // GB_14
+            ////////////////////////////////////////////////////////////////////////////// LD_minVol = Convert.ToInt32(tResponse.tmcReply.value);
+            ////////////////////////////////////////////////////////////////////////////// LD_minVolTB.Text = $"{LD_minVol}";
+            ////////////////////////////////////////////////////////////////////////////// 
+            ////////////////////////////////////////////////////////////////////////////// tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_max_vol_laserDist_AVAL); // GB_15
+            ////////////////////////////////////////////////////////////////////////////// LD_maxVol = Convert.ToInt32(tResponse.tmcReply.value);
+            ////////////////////////////////////////////////////////////////////////////// LD_maxVolTB.Text = $"{LD_maxVol}";
+            ////////////////////////////////////////////////////////////////////////////// 
+            ////////////////////////////////////////////////////////////////////////////// tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_piston_defined_vol_uL); // GB_16
+            ////////////////////////////////////////////////////////////////////////////// LD_definedVol = Convert.ToInt32(tResponse.tmcReply.value);
+            ////////////////////////////////////////////////////////////////////////////// LD_definedVolTB.Text = $"{LD_definedVol}";
+            ////////////////////////////////////////////////////////////////////////////// 
+            ////////////////////////////////////////////////////////////////////////////// tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_accepted_diviation_range); // GB_17
+            ////////////////////////////////////////////////////////////////////////////// LD_acceptedDev = Convert.ToInt32(tResponse.tmcReply.value);
+            ////////////////////////////////////////////////////////////////////////////// LD_acceptedDevTB.Text = $"{LD_acceptedDev}";
 
             //if ((LD_minVol != 0) && (LD_maxVol != 0) && (LD_definedVol != 0))
             //{
@@ -3410,7 +3410,7 @@ namespace SpaceUSB
             //}
             //else
             //{
-                messuredAmountOfLiquidTB.Text = "syringe data missing";
+            ////////////////////////////////////////////////////////////////////////////// messuredAmountOfLiquidTB.Text = "syringe data missing";
             //}
 
             ////////////////////
@@ -3917,92 +3917,92 @@ namespace SpaceUSB
 
         private void LD_minVolBtn_Click(object sender, EventArgs e)
         {
-            uploadLD_minVol();
-            LD_minVolTB.Text = Convert.ToString(Convert.ToInt32(thumbRestDistance));
-            setLD_minVol();
+            //////////////////////////////////////////////////////////////////////////////  uploadLD_minVol();
+            //////////////////////////////////////////////////////////////////////////////  LD_minVolTB.Text = Convert.ToString(Convert.ToInt32(thumbRestDistance));
+            //////////////////////////////////////////////////////////////////////////////  setLD_minVol();
         }
 
         private void oopsLD_minVolTB_Click(object sender, EventArgs e)
         {
-            LD_minVolTB.Text = last_LD_minVolTB;
-            setLD_minVol();
+            //////////////////////////////////////////////////////////////////////////////  LD_minVolTB.Text = last_LD_minVolTB;
+            //////////////////////////////////////////////////////////////////////////////  setLD_minVol();
         }
 
         private void LD_minVolTB_Leave(object sender, EventArgs e)
         {
-            uploadLD_minVol();
-            setLD_minVol();
+            //////////////////////////////////////////////////////////////////////////////  uploadLD_minVol();
+            //////////////////////////////////////////////////////////////////////////////  setLD_minVol();
         }
 
 
         private void setLD_minVol()
         {
-            if (rgMinus.Match(LD_minVolTB.Text).Success)        // did not match, a non number character is there
-            {
-                tResponse = rTMCConn.SetSGPandStore(AddressBank.GetParameterBank, SystemVariables.GB_min_vol_laserDist_AVAL, LD_minVolTB.Text);
-            }
-            refreshParams();
+            ////////////////////////////////////////////////////////////////////////////// if (rgMinus.Match(LD_minVolTB.Text).Success)        // did not match, a non number character is there
+            ////////////////////////////////////////////////////////////////////////////// {
+            //////////////////////////////////////////////////////////////////////////////     tResponse = rTMCConn.SetSGPandStore(AddressBank.GetParameterBank, SystemVariables.GB_min_vol_laserDist_AVAL, LD_minVolTB.Text);
+            ////////////////////////////////////////////////////////////////////////////// }
+            ////////////////////////////////////////////////////////////////////////////// refreshParams();
         }
         private void uploadLD_minVol()
         {
-            tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_min_vol_laserDist_AVAL); // GB_14
-            LD_minVol = Convert.ToInt32(tResponse.tmcReply.value);
-            last_LD_minVolTB = $"{LD_minVol}";
+            //////////////////////////////////////////////////////////////////////////////   tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_min_vol_laserDist_AVAL); // GB_14
+            //////////////////////////////////////////////////////////////////////////////   LD_minVol = Convert.ToInt32(tResponse.tmcReply.value);
+            //////////////////////////////////////////////////////////////////////////////   last_LD_minVolTB = $"{LD_minVol}";
         }
 
         // _____________LD_maxVolBtn_______________________________________________
 
         private void LD_maxVolBtn_Click(object sender, EventArgs e)
         {
-            uploadLD_maxVol();
-            LD_maxVolTB.Text = Convert.ToString(Convert.ToInt32(thumbRestDistance));
-            setLD_maxVol();
+            //////////////////////////////////////////////////////////////////////////////    uploadLD_maxVol();
+            //////////////////////////////////////////////////////////////////////////////    LD_maxVolTB.Text = Convert.ToString(Convert.ToInt32(thumbRestDistance));
+            //////////////////////////////////////////////////////////////////////////////    setLD_maxVol();
         }
 
         private void oopsLD_maxVolTB_Click(object sender, EventArgs e)
         {
-            LD_maxVolTB.Text = last_LD_maxVolTB;
-            setLD_maxVol();
+            //////////////////////////////////////////////////////////////////////////////    LD_maxVolTB.Text = last_LD_maxVolTB;
+            //////////////////////////////////////////////////////////////////////////////    setLD_maxVol();
         }
 
         private void LD_maxVolTB_Leave(object sender, EventArgs e)
         {
-            uploadLD_maxVol();
-            setLD_maxVol();
+            //////////////////////////////////////////////////////////////////////////////   uploadLD_maxVol();
+            //////////////////////////////////////////////////////////////////////////////   setLD_maxVol();
         }
 
 
         private void setLD_maxVol()
         {
-            if (rgMinus.Match(LD_maxVolTB.Text).Success)        // did not match, a non number character is there
-            {
-                tResponse = rTMCConn.SetSGPandStore(AddressBank.GetParameterBank, SystemVariables.GB_max_vol_laserDist_AVAL, LD_maxVolTB.Text);
-            }
-            refreshParams();
+            //////////////////////////////////////////////////////////////////////////////   if (rgMinus.Match(LD_maxVolTB.Text).Success)        // did not match, a non number character is there
+            //////////////////////////////////////////////////////////////////////////////   {
+            //////////////////////////////////////////////////////////////////////////////       tResponse = rTMCConn.SetSGPandStore(AddressBank.GetParameterBank, SystemVariables.GB_max_vol_laserDist_AVAL, LD_maxVolTB.Text);
+            //////////////////////////////////////////////////////////////////////////////   }
+            //////////////////////////////////////////////////////////////////////////////   refreshParams();
         }
 
         private void uploadLD_maxVol()
         {
-            tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_max_vol_laserDist_AVAL); // GB_15
-            LD_maxVol = Convert.ToInt32(tResponse.tmcReply.value);
-            last_LD_maxVolTB = $"{LD_maxVol}";
+            //////////////////////////////////////////////////////////////////////////////  tResponse = rTMCConn.GetGGP(AddressBank.GetParameterBank, SystemVariables.GB_max_vol_laserDist_AVAL); // GB_15
+            //////////////////////////////////////////////////////////////////////////////  LD_maxVol = Convert.ToInt32(tResponse.tmcReply.value);
+            //////////////////////////////////////////////////////////////////////////////  last_LD_maxVolTB = $"{LD_maxVol}";
         }
 
         // ________________LD_definedVol_____________
 
         private void LD_definedVolTB_Leave(object sender, EventArgs e)
         {
-            //uploadLD_definedVol();
-            setLD_definedVol();
+            //////////////////////////////////////////////////////////////////////////////    //uploadLD_definedVol();
+            //////////////////////////////////////////////////////////////////////////////    setLD_definedVol();
         }
 
         private void setLD_definedVol()
         {
-            if (rgMinus.Match(LD_definedVolTB.Text).Success)        // did not match, a non number character is there
-            {
-                tResponse = rTMCConn.SetSGPandStore(AddressBank.GetParameterBank, SystemVariables.GB_piston_defined_vol_uL, LD_definedVolTB.Text);
-            }
-            refreshParams();
+            //////////////////////////////////////////////////////////////////////////////   if (rgMinus.Match(LD_definedVolTB.Text).Success)        // did not match, a non number character is there
+            //////////////////////////////////////////////////////////////////////////////   {
+            //////////////////////////////////////////////////////////////////////////////       tResponse = rTMCConn.SetSGPandStore(AddressBank.GetParameterBank, SystemVariables.GB_piston_defined_vol_uL, LD_definedVolTB.Text);
+            //////////////////////////////////////////////////////////////////////////////   }
+            //////////////////////////////////////////////////////////////////////////////   refreshParams();
         }
         //private void uploadLD_definedVol() // not needed
         //{
@@ -4015,17 +4015,17 @@ namespace SpaceUSB
         // ________________LD_acceptedDev_____________
         private void LD_acceptedDevTB_Leave(object sender, EventArgs e)
         {
-            //uploadLD_acceptedDev();
-            setLD_acceptedDev();
+            //////////////////////////////////////////////////////////////////////////////   //uploadLD_acceptedDev();
+            //////////////////////////////////////////////////////////////////////////////   setLD_acceptedDev();
         }
 
         private void setLD_acceptedDev()
         {
-            if (rgMinus.Match(LD_acceptedDevTB.Text).Success)        // did not match, a non number character is there
-            {
-                tResponse = rTMCConn.SetSGPandStore(AddressBank.GetParameterBank, SystemVariables.GB_accepted_diviation_range, LD_acceptedDevTB.Text);
-            }
-            refreshParams();
+            //////////////////////////////////////////////////////////////////////////////    if (rgMinus.Match(LD_acceptedDevTB.Text).Success)        // did not match, a non number character is there
+            //////////////////////////////////////////////////////////////////////////////    {
+            //////////////////////////////////////////////////////////////////////////////        tResponse = rTMCConn.SetSGPandStore(AddressBank.GetParameterBank, SystemVariables.GB_accepted_diviation_range, LD_acceptedDevTB.Text);
+            //////////////////////////////////////////////////////////////////////////////    }
+            //////////////////////////////////////////////////////////////////////////////    refreshParams();
         }
         //private void uploadLD_acceptedDev() // not needed
         //{
@@ -4038,18 +4038,18 @@ namespace SpaceUSB
 
         private void thumbRestDistanceFilterSizeTB_TextChanged(object sender, EventArgs e)
         {
-            if (rgNumber.Match(thumbRestDistanceFilterSizeTB.Text).Success)        // did not match, a non number character is there or a negative 
-            {
-                thumbRestDistanceFilterSize = Convert.ToInt32(thumbRestDistanceFilterSizeTB.Text);
-                if (thumbRestDistanceFilterSize < 1)
-                    thumbRestDistanceFilterSize = 1;
-
-                // after the filter size has been changed - the filtering variables needs to be reset
-                thumbRestDistanceAvg = 0;
-                thumbRestDistanceSum = 0;
-                thumbRestDistanceCount = 1;
-            }
-            refreshParams();
+            //////////////////////////////////////////////////////////////////////////////   if (rgNumber.Match(thumbRestDistanceFilterSizeTB.Text).Success)        // did not match, a non number character is there or a negative 
+            //////////////////////////////////////////////////////////////////////////////   {
+            //////////////////////////////////////////////////////////////////////////////       thumbRestDistanceFilterSize = Convert.ToInt32(thumbRestDistanceFilterSizeTB.Text);
+            //////////////////////////////////////////////////////////////////////////////       if (thumbRestDistanceFilterSize < 1)
+            //////////////////////////////////////////////////////////////////////////////           thumbRestDistanceFilterSize = 1;
+            ////////////////////////////////////////////////////////////////////////////// 
+            //////////////////////////////////////////////////////////////////////////////       // after the filter size has been changed - the filtering variables needs to be reset
+            //////////////////////////////////////////////////////////////////////////////       thumbRestDistanceAvg = 0;
+            //////////////////////////////////////////////////////////////////////////////       thumbRestDistanceSum = 0;
+            //////////////////////////////////////////////////////////////////////////////       thumbRestDistanceCount = 1;
+            //////////////////////////////////////////////////////////////////////////////   }
+            //////////////////////////////////////////////////////////////////////////////   refreshParams();
         }
 
         // _____________ linearSpaceBetweenVialsuM _______________________________________________
