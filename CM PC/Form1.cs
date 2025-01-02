@@ -4473,8 +4473,8 @@ namespace SpaceUSB
         private void SetAxisCurrentForTilts()
         {
             if (rgNumber.Match(TBaxisCurrentForTilts.Text).Success
-                && Convert.ToInt32(TBaxisCurrentForTilts.Text) <= 100
-                && Convert.ToInt32(TBaxisCurrentForTilts.Text) >= 4)        // did not match, a non number character is there
+                && Convert.ToInt32(TBaxisCurrentForTilts.Text) <= 255
+                && Convert.ToInt32(TBaxisCurrentForTilts.Text) >= 1)        // did not match, a non number character is there
             {
                 tResponse = rTMCConn.SetSGP(AddressBank.GetParameterBank, SystemVariables.GB_axisCurrentForTilts, TBaxisCurrentForTilts.Text);
             }
