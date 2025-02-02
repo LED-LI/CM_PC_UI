@@ -753,7 +753,7 @@ namespace SpaceUSB
                       $"\tvolume Exceeds Bag size =\t      4\r" +
                       $"\tsyringe Is In =\t      8\r" +
                       $"\tsyringe Missing =\t      16\r" +
-                      $"\tmachine Aborted =\t      32\r" +
+                      //$"\tmachine Aborted =\t      32\r" +
                       $"_______________________ \r"
                     );
                 }
