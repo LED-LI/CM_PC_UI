@@ -562,7 +562,8 @@ namespace SpaceUSB
 
         public const string GB_232 = "232";
         public const string GB_233 = "233";
-        public const string GB_234 = "234";
+        public const string GB_ScreenVialsForRUNTab = "234";
+        //public const string GB_234 = "234";
 
         public const string GB_motorNumForHome = "235";
 

@@ -589,6 +589,7 @@ namespace SpaceUSB
                     // tResponse = rTMCConn.SetOutput(SwitchOutputs.Out_Multiplexer, "1");
                     // Thread.Sleep(100);   // wait 100 ms for the FUNC to finish
 
+                    tResponse = rTMCConn.SetSGP(AddressBank.GetParameterBank, SystemVariables.GB_ScreenVialsForRUNTab, "1");   //GB_234
                     tResponse = rTMCConn.RunCommand(GeneralFunctions.screenAllVials);    // function 36
                     Thread.Sleep(100);   // wait 100 ms for the program to finish to switch and thread sleep
 
@@ -4366,7 +4367,9 @@ namespace SpaceUSB
             //////// expiriment 
             ////////////ClrAllBtn_Click(sender,e);
             //////// end of expiriment
-            tResponse = rTMCConn.RunCommand(GeneralFunctions.screenAllVials);
+            
+            tResponse = rTMCConn.SetSGP(AddressBank.GetParameterBank, SystemVariables.GB_ScreenVialsForRUNTab, "1");   //GB_234
+                        tResponse = rTMCConn.RunCommand(GeneralFunctions.screenAllVials);
             tstringToRUNtest();    // display on "for RUN cmd"
                                    //mLbagToFillTB.Text = Convert.ToString(Convert.ToDouble(Vial1WithdrawMlTB.Text) + Convert.ToDouble(Vial2WithdrawMlTB.Text)
                                    //                                    + Convert.ToDouble(Vial3WithdrawMlTB.Text) + Convert.ToDouble(Vial4WithdrawMlTB.Text)
